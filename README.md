@@ -4,5 +4,7 @@ A domain-model for soils, in the form of a set of classes and properties that de
 THe model is substantially based on the Australian Soil and Land Survey Field Handbook, and defines slots where the values from the 'vocabularies' defined in ajacent repositories may be used. 
 
 Import prior work includes:
+
 (i) [Soil Information Transfer and Evaluation System (SITES)](https://www.asris.csiro.au/downloads/Sites_v2.zip) 
+
 (ii) [ANZSoilML](https://github.com/ANZSoilData/ANZSoilML)
