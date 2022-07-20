@@ -1,7 +1,7 @@
-# def-au-entity
+# def-au-domain
 A domain-model for soils, in the form of a set of classes and properties that define the entities ('features' in GIS-speak) that comprise the important concepts in soils.
 
-THe model is substantially based on the Australian Soil and Land Survey Field Handbook, and defines slots where the values from the 'vocabularies' defined in the adjacent repositories [https://github.com/ANZSoilData/def-au-asls-*](https://github.com/ANZSoilData/) may be used. 
+The model is substantially based on the Australian Soil and Land Survey Field Handbook, and defines slots where the values from the 'vocabularies' defined in the adjacent repositories [https://github.com/ANZSoilData/def-au-asls-*](https://github.com/ANZSoilData/) may be used. 
 
 Important prior work includes:
 
