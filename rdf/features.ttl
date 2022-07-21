@@ -1,0 +1,432 @@
+# baseURI: https://anzsoil.org/def/au/feature
+# imports: http://purl.org/dc/terms/
+# imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.opengis.net/ont/sf
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/prov-o#
+# imports: http://www.w3.org/ns/sosa/prov
+# imports: http://www.w3.org/ns/ssn/
+# imports: http://www.w3.org/ns/ssn/ext
+# imports: https://anzsoil.org/def/au/property
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sfeat: <https://anzsoil.org/def/au/feature/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sprop: <https://anzsoil.org/def/au/property/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://anzsoil.org/def/au/feature>
+  a owl:Ontology ;
+  dcterms:contributor <https://orcid.org/0000-0002-2991-2308> ;
+  dcterms:created "2022-07-21" ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:creator <mailto:peter.wilson@csiro.au> ;
+  dcterms:description "A domain-model for Australian soil data - features" ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:modified "2022-07-21" ;
+  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports dcterms: ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.opengis.net/ont/sf> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/prov-o#> ;
+  owl:imports sosa:prov ;
+  owl:imports ssn: ;
+  owl:imports ssn:ext ;
+  owl:imports <https://anzsoil.org/def/au/property> ;
+.
+sfeat:Horizon
+  a owl:Class ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:colour ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:colourMoisture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizonDepthLower ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizonDepthUpper ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizonName ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizonNameSuffix ;
+    ] ;
+  skos:prefLabel "Soil horizon" ;
+.
+sfeat:LandSurface
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:aggradation ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:coarseFragmentsAbundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:depthToWater ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:elevation ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:elevationMethod ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:inundationFrequency ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:microrelief ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:outcropAbundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:runoff ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:aspect ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:coarseFragmentsLithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:coarseFragmentsShape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:coarseFragmentsSize ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:coarseFragmentsStrength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:inundationDepth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:inundationDuration ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:inundationVelocity ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:outcropLithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:siteDisturbance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:erosion ;
+    ] ;
+  skos:prefLabel "Land surface" ;
+.
+sfeat:Landform
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  skos:prefLabel "Landform" ;
+.
+sfeat:LandformElement
+  a owl:Class ;
+  rdfs:subClassOf sfeat:Landform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:geomorphologyAgent ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:geomorphologyMode ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:height ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:length ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:slopeValue ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:underlyingMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:width ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass skos:Concept ;
+      owl:onProperty sprop:landformElementName ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass skos:Concept ;
+      owl:onProperty sprop:morphologicalType ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass skos:Concept ;
+      owl:onProperty sprop:slopeClass ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "Landform Element (~40m)" ;
+.
+sfeat:LandformPattern
+  a owl:Class ;
+  rdfs:subClassOf sfeat:Landform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:geomorphologyAgent ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:geomorphologyMode ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:geomorphologyStatus ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:modalSlope ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:relief ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelDepthWidth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelDevelopment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelDirectionality ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelMigration ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelNetwork ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelPattern ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:streamChannelSpacing ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:componentLandformElement ;
+    ] ;
+  skos:prefLabel "Landform Pattern (>600m)" ;
+.
+sfeat:Layer
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  skos:prefLabel "General soil layer - covers both depth-defined and pedogenic-defined cases" ;
+.
+sfeat:Site
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      rdfs:comment "links to activities may be better routed through Site-Visits, rather than the site directly" ;
+      owl:onProperty sprop:relatedActivity ;
+      owl:someValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              sosa:Sampling
+              sosa:Observation
+              sosa:ObservationCollection
+            ) ;
+        ] ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:annualRainfall ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:siteType ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:state ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:describer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:airPhoto ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:mapSheet ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:locationWithinLandform ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty geo:hasGeometry ;
+      owl:someValuesFrom <http://www.opengis.net/ont/sf#Point> ;
+    ] ;
+  skos:prefLabel "Soil sampling and observation site" ;
+.
+sfeat:SiteVisit
+  a owl:Class ;
+  rdfs:subClassOf prov:Activity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:describer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sprop:relatedActivity ;
+      owl:someValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              sosa:Observation
+              sosa:Sampling
+              sosa:ObservationCollection
+            ) ;
+        ] ;
+    ] ;
+  skos:prefLabel "Site Visit" ;
+.
+sfeat:SoilProfile
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizonRDepth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:profileObservationType ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizon ;
+    ] ;
+  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
+  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
+  skos:prefLabel "Soil profile" ;
+.
