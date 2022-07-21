@@ -41,6 +41,27 @@
   owl:imports ssn: ;
   owl:imports ssn:ext ;
 .
+sprop:CoarseFragments
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance> ;
+      owl:onProperty sprop:coarseFragmentsAbundance ;
+    ] ;
+  skos:prefLabel "Coarse Fragments" ;
+.
+sprop:Geomorphology
+  a owl:Class ;
+  skos:prefLabel "Geomorphology" ;
+.
+sprop:Inundation
+  a owl:Class ;
+  skos:prefLabel "Inundation" ;
+.
+sprop:abundance
+  a owl:ObjectProperty ;
+  skos:prefLabel "abundance" ;
+.
 sprop:aggradation
   a owl:ObjectProperty ;
   skos:prefLabel "aggradation" ;
@@ -66,6 +87,11 @@ sprop:coarseFragmentsAbundance
 sprop:coarseFragmentsLithology
   a owl:ObjectProperty ;
   skos:prefLabel "lithology of coarse fragments" ;
+.
+sprop:coarseFragmentsProperties
+  a owl:ObjectProperty ;
+  rdfs:range sprop:CoarseFragments ;
+  skos:prefLabel "coarse fragments properties" ;
 .
 sprop:coarseFragmentsShape
   a owl:ObjectProperty ;

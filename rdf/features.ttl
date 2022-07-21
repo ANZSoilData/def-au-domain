@@ -24,6 +24,9 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+geo:Feature
+  rdfs:subClassOf prov:Entity ;
+.
 <https://anzsoil.org/def/au/feature>
   a owl:Ontology ;
   dcterms:contributor <https://orcid.org/0000-0002-2991-2308> ;
@@ -46,7 +49,7 @@
 .
 sfeat:Horizon
   a owl:Class ;
-  rdfs:subClassOf prov:Entity ;
+  rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -322,10 +325,31 @@ sfeat:Layer
   rdfs:subClassOf geo:Feature ;
   skos:prefLabel "General soil layer - covers both depth-defined and pedogenic-defined cases" ;
 .
+sfeat:Profile
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizonRDepth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:profileObservationType ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sprop:horizon ;
+    ] ;
+  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
+  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
+  skos:prefLabel "Soil profile" ;
+.
 sfeat:Site
   a owl:Class ;
   rdfs:subClassOf geo:Feature ;
-  rdfs:subClassOf prov:Entity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       rdfs:comment "links to activities may be better routed through Site-Visits, rather than the site directly" ;
@@ -407,26 +431,4 @@ sfeat:SiteVisit
         ] ;
     ] ;
   skos:prefLabel "Site Visit" ;
-.
-sfeat:SoilProfile
-  a owl:Class ;
-  rdfs:subClassOf geo:Feature ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:horizonRDepth ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:profileObservationType ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:horizon ;
-    ] ;
-  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
-  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
-  skos:prefLabel "Soil profile" ;
 .
