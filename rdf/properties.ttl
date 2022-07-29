@@ -1,11 +1,8 @@
 # baseURI: https://anzsoil.org/def/au/property
-# imports: http://purl.org/dc/terms/
+# imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
-# imports: http://www.w3.org/2004/02/skos/core
-# imports: http://www.w3.org/ns/prov-o#
 # imports: http://www.w3.org/ns/sosa/prov
-# imports: http://www.w3.org/ns/ssn/
 # imports: http://www.w3.org/ns/ssn/ext
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -32,13 +29,10 @@
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-07-29" ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
-  owl:imports dcterms: ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
-  owl:imports <http://www.w3.org/2004/02/skos/core> ;
-  owl:imports <http://www.w3.org/ns/prov-o#> ;
   owl:imports sosa:prov ;
-  owl:imports ssn: ;
   owl:imports ssn:ext ;
   skos:changeNote "2022-07-29 - ObservableProperty resources automatically populated from ASLS vocabularies" ;
 .
