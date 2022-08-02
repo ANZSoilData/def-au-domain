@@ -678,6 +678,16 @@ sprop:mapSheet
   a owl:ObjectProperty ;
   skos:prefLabel "on map-sheet" ;
 .
+sprop:material-strength
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/material-strength"^^xsd:anyURI ;
+  skos:definition "The strength of a specimen of material may be crudely estimated in the field by striking it with the head-end or the pick-end of a geological hammer or by trying to cut it with a knife, and then referring to Table 32 (ASLS Field Handbook). These estimates refer to the unconfined (or uniaxial) compressive strength. The strength is that of the intact material rather than that of the mass, the strength of which has generally been reduced by the development of fractures and other phenomena."@en ;
+  skos:narrower sprop:coarse-fragments-strength ;
+  skos:narrower sprop:segregations-strength ;
+  skos:narrower sprop:substrate-material-strength ;
+  skos:prefLabel "Strength of material"@en ;
+.
 sprop:material-structure
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -1067,10 +1077,8 @@ sprop:streamwise-channel-pattern
 sprop:strength
   a skos:Concept ;
   a sosa:ObservableProperty ;
-  skos:narrower sprop:coarse-fragments-strength ;
   skos:narrower sprop:consistence-strength ;
-  skos:narrower sprop:segregations-strength ;
-  skos:narrower sprop:substrate-material-strength ;
+  skos:narrower sprop:material-strength ;
   skos:prefLabel "Strength of material" ;
 .
 sprop:structure-artificial-aggregates
