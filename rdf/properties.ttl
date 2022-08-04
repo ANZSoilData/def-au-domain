@@ -55,10 +55,6 @@ sprop:Inundation
   a owl:Class ;
   skos:prefLabel "Inundation" ;
 .
-sprop:abundance
-  a owl:ObjectProperty ;
-  skos:prefLabel "abundance" ;
-.
 sprop:aggradation
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -140,11 +136,6 @@ sprop:coarse-fragments-strength
   skos:definition "Strength of coarse fragments is the same as for 'Strength of material. The strength of a specimen of soil substrate material may be crudely estimated in the field by striking it with the head-end or the pick-end of a geological hammer or by trying to cut it with a knife, and then referring to Table 32 (ASLS Field Handbook). These estimates refer to the unconfined (or uniaxial) compressive strength. The strength is that of the intact material rather than that of the mass, the strength of which has generally been reduced by the development of fractures and other phenomena."@en ;
   skos:prefLabel "Strength of coarse fragments"@en ;
 .
-sprop:colour
-  a owl:ObjectProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/colour"^^xsd:anyURI ;
-  skos:prefLabel "Munsell colour" ;
-.
 sprop:colour-stat
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -162,11 +153,6 @@ Soil colours rarely match the chart colour chips perfectly. They should be match
 The soil colour is measured on the surface of a freshly broken aggregate of moist soil. Moisten the soil if it is dry. Record the colour when the visible moisture film disappears from the surface of the moistened broken aggregate. The aggregate should be held as close as possible to the colour chips. Take care not to smear the broken surface, as this can give an incorrect recording of the colour of the soil matrix.
 Dry colours may also be recorded."""@en ;
   skos:prefLabel "Colour value"@en ;
-.
-sprop:component-landform-element
-  a owl:ObjectProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/component-landform-element"^^xsd:anyURI ;
-  skos:prefLabel "component landform element" ;
 .
 sprop:condition-of-surface-soil-when-dry
   a skos:Concept ;
@@ -301,10 +287,6 @@ sprop:drainage-height
   skos:definition "This is the height of the point of soil observation above the flat, depression or stream channel that forms the effective bottom of the toposequence. Give drainage height in metres."@en ;
   skos:prefLabel "Drainage height"@en ;
 .
-sprop:drainageHeightMethod
-  a owl:ObjectProperty ;
-  skos:prefLabel "Means of evaluation of drainage height" ;
-.
 sprop:effervescence-of-carbonate-in-fine-earth
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -349,14 +331,6 @@ sprop:elevation-relative
   skos:narrower sprop:drainage-height ;
   skos:narrower sprop:elevation ;
   skos:prefLabel "Relative elevation"@en ;
-.
-sprop:elevationMethod
-  a owl:ObjectProperty ;
-  skos:prefLabel "Means of evaluation of elevation" ;
-.
-sprop:erosion
-  a owl:ObjectProperty ;
-  skos:prefLabel "erosion - choose more specialized property" ;
 .
 sprop:erosion-gully
   a skos:Concept ;
@@ -527,14 +501,6 @@ sprop:geomorphological-agent
   skos:definition "Geomorphological agent that plays a role in producing distinctive landform elements."@en ;
   skos:prefLabel "Geomorphological agent"@en ;
 .
-sprop:geomorphologyMode
-  a owl:ObjectProperty ;
-  skos:prefLabel "mode of geomorphological activity" ;
-.
-sprop:geomorphologyStatus
-  a owl:ObjectProperty ;
-  skos:prefLabel "status of geomorphological activity" ;
-.
 sprop:gilgai-microrelief-proportions
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -563,10 +529,6 @@ sprop:grain-size
   skos:definition "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin." ;
   skos:prefLabel "Grain size" ;
 .
-sprop:horizon
-  a owl:ObjectProperty ;
-  skos:prefLabel "soil horizon within this profile" ;
-.
 sprop:horizon-boundary-distinctness
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -580,14 +542,6 @@ sprop:horizon-boundary-shape
   dcterms:identifier "https://anzsoil.org/def/au/property/horizon-boundary-shape"^^xsd:anyURI ;
   skos:definition "Shape of boundary between horizons {@en}" ;
   skos:prefLabel "Boundary shape"@en ;
-.
-sprop:horizonName
-  a owl:ObjectProperty ;
-  skos:prefLabel "soil horizon name or notation" ;
-.
-sprop:horizonNameSuffix
-  a owl:ObjectProperty ;
-  skos:prefLabel "soil horizon name suffix" ;
 .
 sprop:hummocky-microrelief-type
   a skos:Concept ;
@@ -623,10 +577,6 @@ sprop:inundation-runon-velocity
   dcterms:identifier "https://anzsoil.org/def/au/property/inundation-runon-velocity"^^xsd:anyURI ;
   skos:definition "As a guide, the surface velocity in a river is typically 1–2 m/s. "@en ;
   skos:prefLabel "Runon velocity of inundation"@en ;
-.
-sprop:landformElementName
-  a owl:ObjectProperty ;
-  skos:prefLabel "element name" ;
 .
 sprop:length
   a skos:Concept ;
@@ -674,10 +624,6 @@ sprop:map-scale
   skos:definition "Map scale"@en ;
   skos:prefLabel "Map scale"@en ;
 .
-sprop:mapSheet
-  a owl:ObjectProperty ;
-  skos:prefLabel "on map-sheet" ;
-.
 sprop:material-strength
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -693,10 +639,6 @@ sprop:material-structure
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/material-structure"^^xsd:anyURI ;
   skos:prefLabel "Structure" ;
-.
-sprop:microrelief
-  a owl:ObjectProperty ;
-  skos:prefLabel "microrelief - zero, or choose one of the more specialized properties" ;
 .
 sprop:microrelief-component-sampled
   a skos:Concept ;
@@ -792,6 +734,14 @@ sprop:mottle-type
   skos:definition "The type of mottle can suggest the origin of the mottles."@en ;
   skos:prefLabel "Mottle type"@en ;
 .
+sprop:observableProperty_1
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/observableProperty_1" ;
+  skos:definition "full definition of observable-property #1" ;
+  skos:note "Additional annotation" ;
+  skos:prefLabel "Label for observable-property #1" ;
+.
 sprop:observation-depth
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -805,14 +755,6 @@ sprop:other-microrelief-type
   dcterms:identifier "https://anzsoil.org/def/au/property/other-microrelief-type"^^xsd:anyURI ;
   skos:definition "Type of other microrelief"@en ;
   skos:prefLabel "Type of other microrelief"@en ;
-.
-sprop:outcropAbundance
-  a owl:ObjectProperty ;
-  skos:prefLabel "abundance of rock outcrop" ;
-.
-sprop:outcropLithology
-  a owl:ObjectProperty ;
-  skos:prefLabel "lithological type of rock outcrop" ;
 .
 sprop:pans-cementation
   a skos:Concept ;
@@ -841,15 +783,6 @@ sprop:pans-type
   dcterms:identifier "https://anzsoil.org/def/au/property/pans-type"^^xsd:anyURI ;
   skos:definition "Type of pan"@en ;
   skos:prefLabel "Type of pan"@en ;
-.
-sprop:profileObservationType
-  a owl:ObjectProperty ;
-  skos:prefLabel "Type of soil profile observation (sampling method)" ;
-.
-sprop:relatedActivity
-  a owl:ObjectProperty ;
-  rdfs:range prov:Activity ;
-  skos:prefLabel "related activity" ;
 .
 sprop:relative-inclination-of-slope-elements
   a skos:Concept ;
@@ -951,19 +884,6 @@ sprop:segregations-strength
   skos:definition "Strength may be recorded where appropriate"@en ;
   skos:prefLabel "Strength of segregations"@en ;
 .
-sprop:site
-  a owl:ObjectProperty ;
-  skos:prefLabel "related Site" ;
-.
-sprop:siteDisturbance
-  a owl:ObjectProperty ;
-  skos:prefLabel "disturbance of site" ;
-.
-sprop:siteType
-  a owl:ObjectProperty ;
-  rdfs:subPropertyOf dcterms:type ;
-  skos:prefLabel "type of site" ;
-.
 sprop:slope-class
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -1008,10 +928,6 @@ Moderately moist is the drier half of the available moisture range.
 Moist is the wetter half of the available moisture range.
 Wet is at, or exceeding, field capacity. Will wet and/or stick to fingers when moulded."""@en ;
   skos:prefLabel "Soil water status"@en ;
-.
-sprop:state
-  a owl:ObjectProperty ;
-  skos:prefLabel "in State" ;
 .
 sprop:stream-channel-development
   a skos:Concept ;
@@ -1139,9 +1055,14 @@ sprop:texture
   dcterms:identifier "https://anzsoil.org/def/au/property/texture"^^xsd:anyURI ;
   skos:prefLabel "Texture" ;
 .
-sprop:underlyingMaterial
-  a owl:ObjectProperty ;
-  skos:prefLabel "underlying material" ;
+sprop:top-property_1
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/top-property_1" ;
+  skos:definition "additional annotation" ;
+  skos:member sprop:observableProperty_1 ;
+  skos:note "Full definition of top observable property #1" ;
+  skos:prefLabel "Top observable-property #1" ;
 .
 sprop:voids-cracks
   a skos:Concept ;
