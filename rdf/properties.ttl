@@ -742,6 +742,14 @@ sprop:observableProperty_1
   skos:note "Additional annotation" ;
   skos:prefLabel "Label for observable-property #1" ;
 .
+sprop:observableProperty_2
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/observableProperty_2" ;
+  skos:definition "full definition of observable-property #2" ;
+  skos:note "Additional annotation" ;
+  skos:prefLabel "Label for observable-property #2" ;
+.
 sprop:observation-depth
   a skos:Concept ;
   a sosa:ObservableProperty ;
@@ -1063,6 +1071,16 @@ sprop:top-property_1
   skos:member sprop:observableProperty_1 ;
   skos:note "Full definition of top observable property #1" ;
   skos:prefLabel "Top observable-property #1" ;
+.
+sprop:top-property_2
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/top-property_2" ;
+  skos:definition "additional annotation" ;
+  skos:member sprop:observableProperty_1 ;
+  skos:member sprop:observableProperty_2 ;
+  skos:note "Full definition of top observable property #2" ;
+  skos:prefLabel "Top observable-property #2" ;
 .
 sprop:voids-cracks
   a skos:Concept ;
