@@ -913,6 +913,14 @@ Relief is the definitive characteristic for the terms mountains, hills, low hill
 Table 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics."""@en ;
   skos:prefLabel "Relief"@en ;
 .
+sprop:repellance
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/repellence"^^xsd:anyURI ;
+  skos:definition "Repellance"@en ;
+  skos:narrower sprop:water-repellence ;
+  skos:prefLabel "Repellance"@en ;
+.
 sprop:rock-outcrop-abundance
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
