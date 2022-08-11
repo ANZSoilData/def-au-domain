@@ -305,6 +305,16 @@ sprop:disturbance-of-site
   skos:definition "These are broad categories of disturbance. Users may subdivide where considered necessary."@en ;
   skos:prefLabel "Disturbance of site"@en ;
 .
+sprop:drainage
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/mottle-abundance"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, 3rd edn., 9780643093959" ;
+  skos:definition "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape"@en ;
+  skos:narrower sprop:soil-water-drainage ;
+  skos:prefLabel "Drainage"@en ;
+  skos:related sprop:drainage-height ;
+.
 sprop:drainage-height
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
