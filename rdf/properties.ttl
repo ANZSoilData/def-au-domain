@@ -516,17 +516,6 @@ sprop:field-texture-organic
   skos:definition "Organic soils do not have textural grades, as soil texture is determined by the size of mineral particles finer than 2 mm (NCST). In a sense, organic soils do have a texture related to the plant materials from which they formed and the degree of decomposition, exposure and drying. These field texture names may be used to characterise materials that on field examination are considered to be clearly dominated by organic matter. Peats may be assessed by examining the degree of decomposition and distinctness of plant remains. This work is adapted from Soil Survey Staff (1975) and Avery (1980)."@en ;
   skos:prefLabel "Organic soils field texture"@en ;
 .
-sprop:field-texture-qualifier
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/field-texture-qualifier"^^xsd:anyURI ;
-  skos:definition """The non-clay field texture grades (clay loams and coarser) may be qualified according to whether they are at, or near, the light (lower clay content) or heavy (higher clay content) end of the range for that 
-particular field texture grade. Note that clay field texture grades provide for light and heavy qualifiers in the clays and hence – and + are not required. 
-If the soils are appreciably organic, they are qualified as Sapric or Fibric.
-These codes are given after the field texture. For example, light sandy clay loam is coded SCL–, heavy sandy clay loam is coded SCL+, and fibric sandy loam is coded SLI.
-It is strongly recommended that qualifiers only be used where considered essential. If too freely used, it can lead to excessive, unnecessary detail of doubtful usefulness."""@en ;
-  skos:prefLabel "Field texture qualifier"@en ;
-.
 sprop:geomorphological-agent
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -846,7 +835,6 @@ sprop:qualification
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/qualification"^^xsd:anyURI ;
   skos:definition "Qualification"@en ;
-  skos:narrower sprop:field-texture-qualifier ;
   skos:prefLabel "Qualification"@en ;
 .
 sprop:relative-inclination-of-slope-elements
