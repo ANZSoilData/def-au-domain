@@ -491,6 +491,14 @@ pH may be measured either:
 •	where horizons are thick (greater than 0.5 m) and horizon boundaries are diffuse, at selected intervals down the profile. This system gives useful data in some soils when important pH changes may occur independently of visible horizon changes, for instance the change from alkaline to strongly acid conditions in some cracking clays."""@en ;
   skos:prefLabel "Field pH"@en ;
 .
+sprop:field-texture
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/field-texture"^^xsd:anyURI ;
+  skos:narrower sprop:field-texture-mineral ;
+  skos:narrower sprop:field-texture-organic ;
+  skos:prefLabel "Field Texture" ;
+.
 sprop:field-texture-mineral
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -1145,6 +1153,7 @@ sprop:texture
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/texture"^^xsd:anyURI ;
+  skos:narrower sprop:field-texture ;
   skos:prefLabel "Texture" ;
 .
 sprop:top-property_1
