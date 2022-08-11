@@ -94,14 +94,6 @@ sprop:aspect
   skos:definition "Give as compass bearing to nearest 10 degrees. On level lands (less than 1% slope), aspect need not be recorded."@en ;
   skos:prefLabel "Aspect"@en ;
 .
-sprop:aspect_1
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/aspect"^^xsd:anyURI ;
-  skos:definition "Give as compass bearing to nearest 10 degrees. On level lands (less than 1% slope), aspect need not be recorded."@en ;
-  skos:narrower sprop:soil-water-status ;
-  skos:prefLabel "Aspect"@en ;
-.
 sprop:biotic-microrelief-agents
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -115,6 +107,15 @@ sprop:biotic-microrelief-components
   dcterms:identifier "https://anzsoil.org/def/au/property/biotic-microrelief-components"^^xsd:anyURI ;
   skos:definition "The component of the biotic relief."@en ;
   skos:prefLabel "Component of biotic relief"@en ;
+.
+sprop:cementation
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/cementation"^^xsd:anyURI ;
+  skos:definition "Cementation"@en ;
+  skos:narrower sprop:pans-cementation ;
+  skos:narrower sprop:soil-water-status ;
+  skos:prefLabel "Cementation"@en ;
 .
 sprop:coarse-fragments-abundance
   rdf:type skos:Concept ;
