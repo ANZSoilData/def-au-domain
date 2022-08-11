@@ -769,13 +769,6 @@ sprop:mottle-size
   skos:definition "Measure mottle size (mm) along the greatest dimension, except in streaks or linear forms where width is measured."@en ;
   skos:prefLabel "Mottle size"@en ;
 .
-sprop:mottle-type
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/mottle-type"^^xsd:anyURI ;
-  skos:definition "The type of mottle can suggest the origin of the mottles."@en ;
-  skos:prefLabel "Mottle type"@en ;
-.
 sprop:observableProperty_1
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -1177,7 +1170,6 @@ sprop:type
   skos:narrower sprop:gilgai-microrelief-type ;
   skos:narrower sprop:hummocky-microrelief-type ;
   skos:narrower sprop:morphological-type ;
-  skos:narrower sprop:mottle-type ;
   skos:narrower sprop:other-microrelief-type ;
   skos:narrower sprop:structure-pedality-type ;
   skos:prefLabel "Type"@en ;
