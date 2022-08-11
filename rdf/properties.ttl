@@ -1087,6 +1087,15 @@ Moist is the wetter half of the available moisture range.
 Wet is at, or exceeding, field capacity. Will wet and/or stick to fingers when moulded."""@en ;
   skos:prefLabel "Soil water status"@en ;
 .
+sprop:status
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/status"^^xsd:anyURI ;
+  skos:definition "Status"@en ;
+  skos:narrower sprop:colour-stat ;
+  skos:narrower sprop:soil-water-status ;
+  skos:prefLabel "Status"@en ;
+.
 sprop:stream-channel-development
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
