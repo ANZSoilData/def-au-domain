@@ -1008,6 +1008,18 @@ sprop:slope-value
   skos:definition "Express slope tangent as a percentage using up to three significant figures (e.g. 1%, 2.45%, 9%, 12.5%, 115%). Evaluate the slope over an interval of 20 m, straddling the point of soil observation. Always observe and record the slope as precisely as the chosen survey method permits. The observation should span no less than 20 m so as not to be influenced too much by features of the microrelief that occurs within the landform element."@en ;
   skos:prefLabel "Slope %"@en ;
 .
+sprop:soil-structure
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/soil-structure"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol 3., ISBN 4273240" ;
+  skos:definition """Soil structure refers to the distinctness, size and shape of peds. A ped is an individual natural soil aggregate consisting of a cluster of primary particles. Peds are separated from adjoining peds by surfaces of weakness that are recognisable as natural voids or by the occurrence of cutans (Brewer 1960).
+Soil structure can only be described reliably in a relatively fresh vertical exposure or relatively undisturbed soil core, not from an auger boring. Vertical exposures that have been exposed for a long time (road cuttings, gullies) are unsuitable for the determination of structure that may alter due to daily or seasonal changes in moisture and temperature."""@en ;
+  skos:narrower sprop:structure-pedality-grade ;
+  skos:narrower sprop:structure-pedality-size ;
+  skos:narrower sprop:structure-pedality-type ;
+  skos:prefLabel "Soil-structure"@en ;
+.
 sprop:soil-water-drainage
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -1111,10 +1123,8 @@ sprop:structure
   skos:definition "Structure"@en ;
   skos:narrower sprop:material-structure ;
   skos:narrower sprop:pans-structure ;
+  skos:narrower sprop:soil-structure ;
   skos:narrower sprop:structure-artificial-aggregates ;
-  skos:narrower sprop:structure-pedality-grade ;
-  skos:narrower sprop:structure-pedality-size ;
-  skos:narrower sprop:structure-pedality-type ;
   skos:prefLabel "Structure"@en ;
 .
 sprop:structure-artificial-aggregates
