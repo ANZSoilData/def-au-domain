@@ -190,6 +190,18 @@ sprop:confidence
   skos:definition "The observer should state the degree of confidence that the observed substrate material is in fact the parent material of the observed soil profile or the major part of that profile, that is, of the B horizon." ;
   skos:prefLabel "Confidence that substrate is parent material" ;
 .
+sprop:consistence
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/consistence"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol 3, ISBN 9780643093959" ;
+  skos:definition "Consistence refers to the strength of cohesion and adhesion in soil. Strength will vary according to soil water status. Note that soil water status must be recorded with strength {en}" ;
+  skos:narrower sprop:consistence-plasticity-degree ;
+  skos:narrower sprop:consistence-plasticity-type ;
+  skos:narrower sprop:consistence-stickiness ;
+  skos:narrower sprop:consistence-strength ;
+  skos:prefLabel "consistence {en}" ;
+.
 sprop:consistence-plasticity-degree
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
