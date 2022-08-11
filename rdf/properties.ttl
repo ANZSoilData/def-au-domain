@@ -577,6 +577,13 @@ sprop:horizon-boundary-shape
   skos:definition "Shape of boundary between horizons {@en}" ;
   skos:prefLabel "Boundary shape"@en ;
 .
+sprop:horizon-classification
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/horizon-classification"^^xsd:anyURI ;
+  skos:definition "Horizon classification"@en ;
+  skos:prefLabel "Horizon classification"@en ;
+.
 sprop:hummocky-microrelief-type
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
