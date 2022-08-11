@@ -176,6 +176,14 @@ The soil colour is measured on the surface of a freshly broken aggregate of mois
 Dry colours may also be recorded."""@en ;
   skos:prefLabel "Colour value"@en ;
 .
+sprop:condition
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/condition"^^xsd:anyURI ;
+  skos:definition "Condition {en}" ;
+  skos:narrower sprop:condition-of-surface-soil-when-dry ;
+  skos:prefLabel "Condition {en}" ;
+.
 sprop:condition-of-surface-soil-when-dry
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
