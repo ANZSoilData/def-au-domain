@@ -283,6 +283,7 @@ sprop:depth-to-r-horizon
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-to-r-horizon"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
   skos:definition """Give depth to R horizon or strongly cemented pan in metres.
 The purpose of recording this depth is to include in the soil description those materials that may be relatively easily moved by earth-moving equipment or may be relatively easily penetrated by roots. Strong or very strong rock or pan that may require ripping or blasting to move, and/or has little or no root penetration, is excluded"""@en ;
   skos:prefLabel "Depth to R horizon or strongly cemented pan"@en ;
@@ -303,6 +304,14 @@ sprop:distinctness
   skos:narrower sprop:horizon-boundary-distinctness ;
   skos:narrower sprop:mottle-boundary-distinctness ;
   skos:prefLabel "Distinctness"@en ;
+.
+sprop:distribution
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/distribution"^^xsd:anyURI ;
+  skos:definition "Distribution"@en ;
+  skos:narrower sprop:coarse-fragments-distribution ;
+  skos:prefLabel "Distribution"@en ;
 .
 sprop:disturbance-of-site
   rdf:type skos:Concept ;
@@ -510,6 +519,7 @@ sprop:field-texture
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-texture"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
   skos:narrower sprop:field-texture-mineral ;
   skos:narrower sprop:field-texture-organic ;
   skos:prefLabel "Field Texture" ;
@@ -518,6 +528,7 @@ sprop:field-texture-mineral
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-texture-mineral"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
   skos:definition """The following description of determination of field texture is adapted from Northcote (1979).
 Field texture is a measure of the behaviour of a small handful of soil when moistened and kneaded into a ball and then pressed out between thumb and forefinger.
 Take a sample of soil sufficient to fit comfortably into the palm of the hand. Moisten the soil with water, a little at a time, and knead until the ball of soil, so formed, just fails to stick to the fingers. Add more soil or water to attain this condition, known as the sticky point, which approximates field capacity for that soil. Continue kneading and moistening until there is no apparent change in the soil ball, usually a working time of 1–2 minutes. The soil ball, or bolus, is now ready for shearing manipulation, but the behaviour of the soil during bolus formation is also indicative of its field texture. The behaviour of the bolus and of the ribbon produced by shearing (pressing out) between thumb and forefinger characterises the field texture. Do not assess field texture grade solely on the length of ribbon.
@@ -528,6 +539,7 @@ sprop:field-texture-organic
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-texture-organic"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
   skos:definition "Organic soils do not have textural grades, as soil texture is determined by the size of mineral particles finer than 2 mm (NCST). In a sense, organic soils do have a texture related to the plant materials from which they formed and the degree of decomposition, exposure and drying. These field texture names may be used to characterise materials that on field examination are considered to be clearly dominated by organic matter. Peats may be assessed by examining the degree of decomposition and distinctness of plant remains. This work is adapted from Soil Survey Staff (1975) and Avery (1980)."@en ;
   skos:prefLabel "Organic soils field texture"@en ;
 .
