@@ -1015,6 +1015,8 @@ sprop:soil-structure
   dcterms:source "Australian soil and land survey field handbook, vol 3., ISBN 4273240" ;
   skos:definition """Soil structure refers to the distinctness, size and shape of peds. A ped is an individual natural soil aggregate consisting of a cluster of primary particles. Peds are separated from adjoining peds by surfaces of weakness that are recognisable as natural voids or by the occurrence of cutans (Brewer 1960).
 Soil structure can only be described reliably in a relatively fresh vertical exposure or relatively undisturbed soil core, not from an auger boring. Vertical exposures that have been exposed for a long time (road cuttings, gullies) are unsuitable for the determination of structure that may alter due to daily or seasonal changes in moisture and temperature."""@en ;
+  skos:narrower sprop:structure-artificial-aggregates ;
+  skos:narrower sprop:structure-pedality-compound ;
   skos:narrower sprop:structure-pedality-grade ;
   skos:narrower sprop:structure-pedality-size ;
   skos:narrower sprop:structure-pedality-type ;
@@ -1133,6 +1135,17 @@ sprop:structure-artificial-aggregates
   dcterms:identifier "https://anzsoil.org/def/au/property/structure-artificial-aggregates"^^xsd:anyURI ;
   skos:definition "Cultivated horizons (Ap horizons) often consist of artificial aggregates formed by cultivation or work being done on the soil. The distinction between artificial aggregates and peds can be difficult. In cultivated horizons, where the pedologist is confident the aggregates are natural peds they should be recorded as such. If the pedologist is doubtful, or the aggregates are obviously artificial, they should be recorded as clods or fragments."@en ;
   skos:prefLabel "Structure of artificial aggregates"@en ;
+.
+sprop:structure-pedality-compound
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/biotic-microrelief-components"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, 3rd edn, ISBN 	9780643093959" ;
+  skos:definition """Compound pedality occurs where large peds part along natural planes of weakness to form smaller peds, which may again part to smaller peds, and so on to the smallest or primary peds.
+Primary peds are the simplest peds occurring in soil material; they cannot be divided into smaller peds, but may be packed together to form compound peds of a higher level of organisation (Brewer 1964).
+The order of peds and relationship of one to the other is important and may be described as the larger peds parting to the smaller and further where necessary. For example, ‘strong 50–100 mm columnar, parting to moderate 20–50 mm prismatic, parting to moderate 
+10–20 mm angular blocky’. The word ‘parting’ and not ‘breaking’ is used. The term ‘breaking’ is used when soil is fractured along planes other than natural planes of weakness."""@en ;
+  skos:prefLabel "structure-pedality-compound"@en ;
 .
 sprop:structure-pedality-grade
   rdf:type skos:Concept ;
