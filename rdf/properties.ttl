@@ -94,6 +94,14 @@ sprop:aspect
   skos:definition "Give as compass bearing to nearest 10 degrees. On level lands (less than 1% slope), aspect need not be recorded."@en ;
   skos:prefLabel "Aspect"@en ;
 .
+sprop:aspect_1
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/aspect"^^xsd:anyURI ;
+  skos:definition "Give as compass bearing to nearest 10 degrees. On level lands (less than 1% slope), aspect need not be recorded."@en ;
+  skos:narrower sprop:soil-water-status ;
+  skos:prefLabel "Aspect"@en ;
+.
 sprop:biotic-microrelief-agents
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
