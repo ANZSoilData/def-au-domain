@@ -827,6 +827,14 @@ sprop:pans-type
   skos:definition "Type of pan"@en ;
   skos:prefLabel "Type of pan"@en ;
 .
+sprop:permeability
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/permeability" ;
+  skos:definition "Permeability" ;
+  skos:narrower sprop:soil-water-permeability ;
+  skos:prefLabel "Permeability" ;
+.
 sprop:qualification
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
