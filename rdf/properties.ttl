@@ -265,12 +265,18 @@ sprop:depth-of-horizon-lower
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon-lower"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  skos:definition """The upper and lower depths, in metres, of each horizon are measured from the soil surface, excluding O horizons. O horizon depths are measured above the mineral soil surface, for example O1 0.12–0.10 m, O2 0.1–0.0 m.
+A scaled horizon diagram may be useful where horizons are irregular.""" ;
   skos:prefLabel "Lower depth of soil horizon in metres" ;
 .
 sprop:depth-of-horizon-upper
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon-upper"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  skos:definition """The upper and lower depths, in metres, of each horizon are measured from the soil surface, excluding O horizons. O horizon depths are measured above the mineral soil surface, for example O1 0.12–0.10 m, O2 0.1–0.0 m.
+A scaled horizon diagram may be useful where horizons are irregular.""" ;
   skos:prefLabel "Upper depth of soil horizon in metres" ;
 .
 sprop:depth-to-r-horizon
@@ -309,8 +315,7 @@ sprop:drainage
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottle-abundance"^^xsd:anyURI ;
-  dcterms:source "Australian soil and land survey field handbook, 3rd edn., 9780643093959" ;
-  skos:definition "Drainage is a useful term to summarise local soil wetness conditions, that is, it provides a statement about soil and site drainage likely to occur in most years. It is affected by a number of attributes, both internal and external, that may act separately or together. Internal attributes include soil structure, texture, porosity, hydraulic conductivity, and water-holding capacity, while external attributes are source and quality of water, evapotranspiration, gradient and length of slope, and position in the landscape"@en ;
+  skos:definition "Drainage"@en ;
   skos:narrower sprop:soil-water-drainage ;
   skos:prefLabel "Drainage"@en ;
   skos:related sprop:drainage-height ;
