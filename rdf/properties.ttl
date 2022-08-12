@@ -330,6 +330,13 @@ sprop:depth-to-r-horizon
 The purpose of recording this depth is to include in the soil description those materials that may be relatively easily moved by earth-moving equipment or may be relatively easily penetrated by roots. Strong or very strong rock or pan that may require ripping or blasting to move, and/or has little or no root penetration, is excluded"""@en ;
   skos:prefLabel "Depth to R horizon or strongly cemented pan"@en ;
 .
+sprop:diameter
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/diameter"^^xsd:anyURI ;
+  skos:definition "Diameter"@en ;
+  skos:prefLabel "Diameter"@en ;
+.
 sprop:discontinuity-spacing
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -511,6 +518,7 @@ sprop:erosion-wind
 sprop:extent-horizontal
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
+  skos:narrower sprop:diameter ;
   skos:narrower sprop:extent-horizontal-east ;
   skos:narrower sprop:extent-horizontal-north ;
   skos:narrower sprop:length ;
