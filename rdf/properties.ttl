@@ -890,13 +890,6 @@ sprop:permeability
   skos:narrower sprop:soil-water-permeability ;
   skos:prefLabel "Permeability" ;
 .
-sprop:qualification
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/qualification"^^xsd:anyURI ;
-  skos:definition "Qualification"@en ;
-  skos:prefLabel "Qualification"@en ;
-.
 sprop:relative-inclination-of-slope-elements
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
