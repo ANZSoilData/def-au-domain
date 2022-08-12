@@ -117,6 +117,14 @@ sprop:cementation
   skos:narrower sprop:soil-water-status ;
   skos:prefLabel "Cementation"@en ;
 .
+sprop:cementation_1
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/cementation"^^xsd:anyURI ;
+  skos:definition "Cementation"@en ;
+  skos:narrower sprop:soil-colour ;
+  skos:prefLabel "Cementation"@en ;
+.
 sprop:coarse-fragments-abundance
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -165,17 +173,6 @@ sprop:colour-stat
   dcterms:identifier "https://anzsoil.org/def/au/property/colour-stat"^^xsd:anyURI ;
   skos:definition "Moisture status for colour description"@en ;
   skos:prefLabel "Moisture status for colour description"@en ;
-.
-sprop:colour-value
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/colour-value"^^xsd:anyURI ;
-  skos:definition """Record colours by comparing soils with colour charts using the Munsell Color system, for example the Munsell Soil Color Charts or the Revised Standard Soil Color Charts (Oyama and Takehara 1970).
-Hue, value and chroma of the matrix colour are recorded, for example 10YR4/2.
-Soil colours rarely match the chart colour chips perfectly. They should be matched to the chip closest in colour, or the nearest whole number in chroma where chips are not provided, for example chromas 5 and 7.
-The soil colour is measured on the surface of a freshly broken aggregate of moist soil. Moisten the soil if it is dry. Record the colour when the visible moisture film disappears from the surface of the moistened broken aggregate. The aggregate should be held as close as possible to the colour chips. Take care not to smear the broken surface, as this can give an incorrect recording of the colour of the soil matrix.
-Dry colours may also be recorded."""@en ;
-  skos:prefLabel "Colour value"@en ;
 .
 sprop:condition
   rdf:type skos:Concept ;
@@ -1044,6 +1041,17 @@ sprop:slope-value
   dcterms:identifier "https://anzsoil.org/def/au/property/slope-value"^^xsd:anyURI ;
   skos:definition "Express slope tangent as a percentage using up to three significant figures (e.g. 1%, 2.45%, 9%, 12.5%, 115%). Evaluate the slope over an interval of 20 m, straddling the point of soil observation. Always observe and record the slope as precisely as the chosen survey method permits. The observation should span no less than 20 m so as not to be influenced too much by features of the microrelief that occurs within the landform element."@en ;
   skos:prefLabel "Slope %"@en ;
+.
+sprop:soil-colour
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/soil-colour"^^xsd:anyURI ;
+  skos:definition """Record colours by comparing soils with colour charts using the Munsell Color system, for example the Munsell Soil Color Charts or the Revised Standard Soil Color Charts (Oyama and Takehara 1970).
+Hue, value and chroma of the matrix colour are recorded, for example 10YR4/2.
+Soil colours rarely match the chart colour chips perfectly. They should be matched to the chip closest in colour, or the nearest whole number in chroma where chips are not provided, for example chromas 5 and 7.
+The soil colour is measured on the surface of a freshly broken aggregate of moist soil. Moisten the soil if it is dry. Record the colour when the visible moisture film disappears from the surface of the moistened broken aggregate. The aggregate should be held as close as possible to the colour chips. Take care not to smear the broken surface, as this can give an incorrect recording of the colour of the soil matrix.
+Dry colours may also be recorded."""@en ;
+  skos:prefLabel "Soil colour"@en ;
 .
 sprop:soil-structure
   rdf:type skos:Concept ;
