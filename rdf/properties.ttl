@@ -593,6 +593,14 @@ sprop:field-texture-organic
   skos:definition "Organic soils do not have textural grades, as soil texture is determined by the size of mineral particles finer than 2 mm (NCST). In a sense, organic soils do have a texture related to the plant materials from which they formed and the degree of decomposition, exposure and drying. These field texture names may be used to characterise materials that on field examination are considered to be clearly dominated by organic matter. Peats may be assessed by examining the degree of decomposition and distinctness of plant remains. This work is adapted from Soil Survey Staff (1975) and Avery (1980)."@en ;
   skos:prefLabel "Organic soils field texture"@en ;
 .
+sprop:form
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/form"^^xsd:anyURI ;
+  skos:definition "Form"@en ;
+  skos:narrower sprop:segregations-form ;
+  skos:prefLabel "Form"@en ;
+.
 sprop:geomorphological-agent
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
