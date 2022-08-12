@@ -238,6 +238,14 @@ sprop:consistence-strength
   skos:definition "Strength of soil is the resistance to breaking or deformation. Strength is determined by the force just sufficient to break or deform a 20 mm diameter piece of soil when a compressive shearing force is applied between thumb and forefinger. The 20 mm piece of soil may be a ped, part of a ped, a compound ped or a fragment."@en ;
   skos:prefLabel "Strength"@en ;
 .
+sprop:contrast
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/contrast"^^xsd:anyURI ;
+  skos:definition "Contrast"@en ;
+  skos:narrower sprop:mottles-and-colour-pattern-contrast ;
+  skos:prefLabel "Contrast"@en ;
+.
 sprop:cutans-abundance
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
