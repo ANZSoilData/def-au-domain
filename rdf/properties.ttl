@@ -722,6 +722,13 @@ Any site can be located by its vertical and horizontal distances from the define
 The toposequence concept leads to definition of the attributes specific catchment area and specific dispersal area (Speight 1974, 1980) that predict hillslope hydrology and erosion (see, for example, Moore et al. 1988)."""@en ;
   skos:prefLabel "Location within toposequence"@en ;
 .
+sprop:magnetic-attribute
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/magnetic-attribute"^^xsd:anyURI ;
+  skos:narrower sprop:segregations-magnetic ;
+  skos:prefLabel "Magnetic attribute" ;
+.
 sprop:map-scale
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
