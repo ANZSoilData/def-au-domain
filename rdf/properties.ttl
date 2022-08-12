@@ -852,6 +852,14 @@ sprop:mottles-and-colour-pattern-size
   skos:note "Measure size (mm) along the greatest dimension, except in streaks or linear forms where width is measured."@en ;
   skos:prefLabel "Mottle size"@en ;
 .
+sprop:nature
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/nature"^^xsd:anyURI ;
+  skos:definition "Nature"@en ;
+  skos:narrower sprop:segregations-nature ;
+  skos:prefLabel "Nature"@en ;
+.
 sprop:observableProperty_1
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
