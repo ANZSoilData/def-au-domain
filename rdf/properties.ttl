@@ -372,6 +372,14 @@ sprop:drainage-height
   skos:definition "This is the height of the point of soil observation above the flat, depression or stream channel that forms the effective bottom of the toposequence. Give drainage height in metres."@en ;
   skos:prefLabel "Drainage height"@en ;
 .
+sprop:effervescence
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/effervescence"^^xsd:anyURI ;
+  skos:narrower sprop:effervescence-of-carbonate-in-fine-earth ;
+  skos:narrower sprop:segregations-magnetic ;
+  skos:prefLabel "Effervescence" ;
+.
 sprop:effervescence-of-carbonate-in-fine-earth
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -721,13 +729,6 @@ sprop:location-within-toposequence
 Any site can be located by its vertical and horizontal distances from the defined top and bottom of the toposequence. Drainage height (page 88) is one of these measures.
 The toposequence concept leads to definition of the attributes specific catchment area and specific dispersal area (Speight 1974, 1980) that predict hillslope hydrology and erosion (see, for example, Moore et al. 1988)."""@en ;
   skos:prefLabel "Location within toposequence"@en ;
-.
-sprop:magnetic-attribute
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/magnetic-attribute"^^xsd:anyURI ;
-  skos:narrower sprop:segregations-magnetic ;
-  skos:prefLabel "Magnetic attribute" ;
 .
 sprop:map-scale
   rdf:type skos:Concept ;
