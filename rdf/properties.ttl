@@ -117,14 +117,6 @@ sprop:cementation
   skos:narrower sprop:soil-water-status ;
   skos:prefLabel "Cementation"@en ;
 .
-sprop:cementation_1
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/cementation"^^xsd:anyURI ;
-  skos:definition "Cementation"@en ;
-  skos:narrower sprop:soil-colour ;
-  skos:prefLabel "Cementation"@en ;
-.
 sprop:coarse-fragments-abundance
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
@@ -166,6 +158,16 @@ sprop:coarse-fragments-strength
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-strength"^^xsd:anyURI ;
   skos:definition "Strength of coarse fragments is the same as for 'Strength of material. The strength of a specimen of soil substrate material may be crudely estimated in the field by striking it with the head-end or the pick-end of a geological hammer or by trying to cut it with a knife, and then referring to Table 32 (ASLS Field Handbook). These estimates refer to the unconfined (or uniaxial) compressive strength. The strength is that of the intact material rather than that of the mass, the strength of which has generally been reduced by the development of fractures and other phenomena."@en ;
   skos:prefLabel "Strength of coarse fragments"@en ;
+.
+sprop:colour
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/colour"^^xsd:anyURI ;
+  skos:definition "Colour"@en ;
+  skos:narrower sprop:mottle-colour ;
+  skos:narrower sprop:soil-colour ;
+  skos:prefLabel "Colour"@en ;
+  skos:related sprop:colour-stat ;
 .
 sprop:colour-stat
   rdf:type skos:Concept ;
