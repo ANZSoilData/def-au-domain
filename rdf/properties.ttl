@@ -62,7 +62,7 @@ sprop:abundance
   skos:definition "Abundance"@en ;
   skos:narrower sprop:coarse-fragments-abundance ;
   skos:narrower sprop:cutans-abundance ;
-  skos:narrower sprop:mottle-abundance ;
+  skos:narrower sprop:mottles-and-colour-pattern-abundance ;
   skos:narrower sprop:rock-outcrop-abundance ;
   skos:narrower sprop:roots-abundance ;
   skos:narrower sprop:segregations-abundance ;
@@ -164,7 +164,7 @@ sprop:colour
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/colour"^^xsd:anyURI ;
   skos:definition "Colour"@en ;
-  skos:narrower sprop:mottle-colour ;
+  skos:narrower sprop:mottles-and-colour-pattern-colour ;
   skos:narrower sprop:soil-colour ;
   skos:prefLabel "Colour"@en ;
   skos:related sprop:colour-stat ;
@@ -330,7 +330,7 @@ sprop:distinctness
   skos:definition "Distinctness"@en ;
   skos:narrower sprop:cutans-distinctness ;
   skos:narrower sprop:horizon-boundary-distinctness ;
-  skos:narrower sprop:mottle-boundary-distinctness ;
+  skos:narrower sprop:mottles-and-colour-pattern-distinctness ;
   skos:prefLabel "Distinctness"@en ;
 .
 sprop:distribution
@@ -789,39 +789,45 @@ sprop:morphological-type
   skos:definition "Landform elements fall into morphological types as sketched in Figure 1. Ten types are distinguished."@en ;
   skos:prefLabel "Morphological type"@en ;
 .
-sprop:mottle-abundance
+sprop:mottles-and-colour-pattern-abundance
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/mottle-abundance"^^xsd:anyURI ;
-  skos:definition "The percentage of mottles is estimated by eye using the chart in Figure 11 (ASLSFH3Ed) for comparison. "@en ;
-  skos:prefLabel "Mottle abundance"@en ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-abundance"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol 3., ISBN 	9780643093959" ;
+  skos:note "The percentage is estimated by eye using the chart in Figure 11 (ASLSFH3Ed) for comparison."@en ;
+  skos:prefLabel "Mottles and colour pattern abundance"@en ;
 .
-sprop:mottle-boundary-distinctness
+sprop:mottles-and-colour-pattern-colour
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/mottle-boundary-distinctness"^^xsd:anyURI ;
-  skos:definition "Mottle distinctness of boundaries"@en ;
-  skos:prefLabel "Mottle distinctness of boundaries"@en ;
-.
-sprop:mottle-colour
-  rdf:type skos:Concept ;
-  rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/mottle-colour"^^xsd:anyURI ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-colour"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
   skos:definition "This should be described in terms of Munsell or Revised Standard Soil colours, but abbreviated forms can be used"@en ;
-  skos:prefLabel "Mottle colour"@en ;
+  skos:note "This should be described in terms of Munsell or Revised Standard Soil colours, but abbreviated forms can be used"@en ;
+  skos:prefLabel "Mottles and colour pattern colour"@en ;
 .
-sprop:mottle-contrast
+sprop:mottles-and-colour-pattern-contrast
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/mottle-contrast"^^xsd:anyURI ;
-  skos:definition "Mottle contrast"@en ;
-  skos:prefLabel "Mottle contrast"@en ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-contrast"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol 3., 	9780643093959" ;
+  skos:definition "Mottles and colour pattern contrast"@en ;
+  skos:prefLabel "Mottles and colour pattern contrast"@en ;
 .
-sprop:mottle-size
+sprop:mottles-and-colour-pattern-distinctness
+  rdf:type skos:Concept ;
+  rdf:type sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-distinctness"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 	9780643093959" ;
+  skos:definition "Mottles and colour pattern distinctness of boundaries"@en ;
+  skos:prefLabel "Mottles and colour pattern distinctness of boundaries"@en ;
+.
+sprop:mottles-and-colour-pattern-size
   rdf:type skos:Concept ;
   rdf:type sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottle-size"^^xsd:anyURI ;
-  skos:definition "Measure mottle size (mm) along the greatest dimension, except in streaks or linear forms where width is measured."@en ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  skos:note "Measure size (mm) along the greatest dimension, except in streaks or linear forms where width is measured."@en ;
   skos:prefLabel "Mottle size"@en ;
 .
 sprop:observableProperty_1
@@ -1015,7 +1021,7 @@ sprop:size
   skos:definition "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. [database_cross_reference: WordNet:WordNet]"@en ;
   skos:narrower sprop:coarse-fragments-size ;
   skos:narrower sprop:grain-size ;
-  skos:narrower sprop:mottle-size ;
+  skos:narrower sprop:mottles-and-colour-pattern-size ;
   skos:narrower sprop:segregations-size ;
   skos:narrower sprop:structure-pedality-size ;
   skos:prefLabel "Size"@en ;
