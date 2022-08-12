@@ -114,7 +114,6 @@ sprop:cementation
   dcterms:identifier "https://anzsoil.org/def/au/property/cementation"^^xsd:anyURI ;
   skos:definition "Cementation"@en ;
   skos:narrower sprop:pans-cementation ;
-  skos:narrower sprop:soil-water-status ;
   skos:prefLabel "Cementation"@en ;
 .
 sprop:coarse-fragments-abundance
