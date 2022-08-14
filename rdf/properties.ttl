@@ -307,6 +307,23 @@ sprop:cutans-type
   skos:definition "Types of cutans"@en ;
   skos:prefLabel "Types of cutans"@en ;
 .
+sprop:density
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/density"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L-3I0M1H0T0D0> ;
+  skos:narrower sprop:density-bulk ;
+  skos:prefLabel "Mass density" ;
+.
+sprop:density-bulk
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/density-bulk"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L-3I0M1H0T0D0> ;
+  skos:prefLabel "Bulk density" ;
+.
 sprop:depth
   a qudt:QuantityKind ;
   a skos:Concept ;
