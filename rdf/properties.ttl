@@ -1,5 +1,6 @@
 # baseURI: https://anzsoil.org/def/au/property
 # imports: http://purl.org/dc/elements/1.1/
+# imports: http://qudt.org/2.1/schema/qudt
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
 # imports: http://www.w3.org/ns/sosa/prov
@@ -9,6 +10,7 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -32,6 +34,7 @@ Observable properties taken from ASLS (Yellow Book) as interpreted for the ANSIS
   dcterms:modified "2022-07-29" ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://qudt.org/2.1/schema/qudt> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
   owl:imports sosa:prov ;
@@ -56,10 +59,12 @@ sprop:Inundation
   skos:prefLabel "Inundation" ;
 .
 sprop:abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/cutans-type"^^xsd:anyURI ;
-  skos:definition "Abundance"@en ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
+  skos:definition "Fraction of context entity that is composed of the specified secondary entity"@en ;
   skos:narrower sprop:coarse-fragments-abundance ;
   skos:narrower sprop:cutans-abundance ;
   skos:narrower sprop:mottles-and-colour-pattern-abundance ;
@@ -70,6 +75,7 @@ sprop:abundance
   skos:prefLabel "Abdundance"@en ;
 .
 sprop:aggradation
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/aggradation"^^xsd:anyURI ;
@@ -77,6 +83,7 @@ sprop:aggradation
   skos:prefLabel "Aggradation detected"@en ;
 .
 sprop:alteration
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/alteration"^^xsd:anyURI ;
@@ -84,10 +91,12 @@ sprop:alteration
   skos:prefLabel "Alteration style" ;
 .
 sprop:annualRainfall
+  a qudt:QuantityKind ;
   a sosa:ObservableProperty ;
   skos:prefLabel "annual rainfall" ;
 .
 sprop:aspect
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/aspect"^^xsd:anyURI ;
@@ -95,6 +104,7 @@ sprop:aspect
   skos:prefLabel "Aspect"@en ;
 .
 sprop:biotic-microrelief-agents
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/biotic-microrelief-agents"^^xsd:anyURI ;
@@ -102,6 +112,7 @@ sprop:biotic-microrelief-agents
   skos:prefLabel "Biotic microrelief agents"@en ;
 .
 sprop:biotic-microrelief-components
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/biotic-microrelief-components"^^xsd:anyURI ;
@@ -109,6 +120,7 @@ sprop:biotic-microrelief-components
   skos:prefLabel "Component of biotic relief"@en ;
 .
 sprop:cementation
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/cementation"^^xsd:anyURI ;
@@ -117,6 +129,7 @@ sprop:cementation
   skos:prefLabel "Cementation"@en ;
 .
 sprop:coarse-fragments-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-abundance"^^xsd:anyURI ;
@@ -124,6 +137,7 @@ sprop:coarse-fragments-abundance
   skos:prefLabel "Abundance of coarse fragments"@en ;
 .
 sprop:coarse-fragments-distribution
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-distribution"^^xsd:anyURI ;
@@ -131,6 +145,7 @@ sprop:coarse-fragments-distribution
   skos:prefLabel "Distribution of coarse fragments"@en ;
 .
 sprop:coarse-fragments-lithology
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-lithology"^^xsd:anyURI ;
@@ -138,6 +153,7 @@ sprop:coarse-fragments-lithology
   skos:prefLabel "Lithology of coarse fragments"@en ;
 .
 sprop:coarse-fragments-shape
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-shape"^^xsd:anyURI ;
@@ -145,6 +161,7 @@ sprop:coarse-fragments-shape
   skos:prefLabel "Shape of coarse fragments"@en ;
 .
 sprop:coarse-fragments-size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-size"^^xsd:anyURI ;
@@ -152,6 +169,7 @@ sprop:coarse-fragments-size
   skos:prefLabel "Size of coarse fragments"@en ;
 .
 sprop:coarse-fragments-strength
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-strength"^^xsd:anyURI ;
@@ -159,6 +177,7 @@ sprop:coarse-fragments-strength
   skos:prefLabel "Strength of coarse fragments"@en ;
 .
 sprop:colour
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/colour"^^xsd:anyURI ;
@@ -169,6 +188,7 @@ sprop:colour
   skos:related sprop:colour-stat ;
 .
 sprop:colour-stat
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/colour-stat"^^xsd:anyURI ;
@@ -176,6 +196,7 @@ sprop:colour-stat
   skos:prefLabel "Moisture status for colour description"@en ;
 .
 sprop:condition
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/condition"^^xsd:anyURI ;
@@ -184,6 +205,7 @@ sprop:condition
   skos:prefLabel "Condition {en}" ;
 .
 sprop:condition-of-surface-soil-when-dry
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/condition-of-surface-soil-when-dry"^^xsd:anyURI ;
@@ -191,6 +213,7 @@ sprop:condition-of-surface-soil-when-dry
   skos:prefLabel "Condition of surface soil when dry"@en ;
 .
 sprop:confidence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/confidence"^^xsd:anyURI ;
@@ -198,6 +221,7 @@ sprop:confidence
   skos:prefLabel "Confidence that substrate is parent material" ;
 .
 sprop:consistence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/consistence"^^xsd:anyURI ;
@@ -210,6 +234,7 @@ sprop:consistence
   skos:prefLabel "consistence {en}" ;
 .
 sprop:consistence-plasticity-degree
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/consistence-plasticity-degree"^^xsd:anyURI ;
@@ -217,6 +242,7 @@ sprop:consistence-plasticity-degree
   skos:prefLabel "Plasticity Degree"@en ;
 .
 sprop:consistence-plasticity-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/consistence-plasticity-type"^^xsd:anyURI ;
@@ -224,6 +250,7 @@ sprop:consistence-plasticity-type
   skos:prefLabel "Plasticity Type"@en ;
 .
 sprop:consistence-stickiness
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/consistence-stickiness"^^xsd:anyURI ;
@@ -231,6 +258,7 @@ sprop:consistence-stickiness
   skos:prefLabel "Stickiness"@en ;
 .
 sprop:consistence-strength
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/consistence-strength"^^xsd:anyURI ;
@@ -238,6 +266,7 @@ sprop:consistence-strength
   skos:prefLabel "Strength"@en ;
 .
 sprop:continuity
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/continuity"^^xsd:anyURI ;
@@ -245,6 +274,7 @@ sprop:continuity
   skos:prefLabel "Continuity {en}" ;
 .
 sprop:contrast
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/contrast"^^xsd:anyURI ;
@@ -253,13 +283,16 @@ sprop:contrast
   skos:prefLabel "Contrast"@en ;
 .
 sprop:cutans-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/cutans-abundance"^^xsd:anyURI ;
+  qudt:hasDimension <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Abundance of cutans"@en ;
   skos:prefLabel "Abundance of cutans"@en ;
 .
 sprop:cutans-distinctness
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/cutans-distinctness"^^xsd:anyURI ;
@@ -267,6 +300,7 @@ sprop:cutans-distinctness
   skos:prefLabel "Distinctness of cutans"@en ;
 .
 sprop:cutans-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/cutans-type"^^xsd:anyURI ;
@@ -274,6 +308,7 @@ sprop:cutans-type
   skos:prefLabel "Types of cutans"@en ;
 .
 sprop:depth
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth"^^xsd:anyURI ;
@@ -289,6 +324,7 @@ sprop:depth
   skos:prefLabel "Depth below surface to entity of interest"@en ;
 .
 sprop:depth-free-water
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-free-water"^^xsd:anyURI ;
@@ -296,6 +332,7 @@ sprop:depth-free-water
   skos:prefLabel "Depth to free water"@en ;
 .
 sprop:depth-of-horizon
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon"^^xsd:anyURI ;
@@ -304,6 +341,7 @@ A scaled horizon diagram may be useful where horizons are irregular."""@en ;
   skos:prefLabel "Depth of Horizons"@en ;
 .
 sprop:depth-of-horizon-lower
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon-lower"^^xsd:anyURI ;
@@ -313,6 +351,7 @@ A scaled horizon diagram may be useful where horizons are irregular.""" ;
   skos:prefLabel "Lower depth of soil horizon in metres" ;
 .
 sprop:depth-of-horizon-upper
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon-upper"^^xsd:anyURI ;
@@ -322,6 +361,7 @@ A scaled horizon diagram may be useful where horizons are irregular.""" ;
   skos:prefLabel "Upper depth of soil horizon in metres" ;
 .
 sprop:depth-to-r-horizon
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-to-r-horizon"^^xsd:anyURI ;
@@ -331,6 +371,7 @@ The purpose of recording this depth is to include in the soil description those 
   skos:prefLabel "Depth to R horizon or strongly cemented pan"@en ;
 .
 sprop:diameter
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/diameter"^^xsd:anyURI ;
@@ -338,6 +379,7 @@ sprop:diameter
   skos:prefLabel "Diameter"@en ;
 .
 sprop:discontinuity-spacing
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/discontinuity-spacing"^^xsd:anyURI ;
@@ -345,6 +387,7 @@ sprop:discontinuity-spacing
   skos:prefLabel "Spacing of discontinuities" ;
 .
 sprop:distinctness
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/distinctness"^^xsd:anyURI ;
@@ -355,6 +398,7 @@ sprop:distinctness
   skos:prefLabel "Distinctness"@en ;
 .
 sprop:distribution
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/distribution"^^xsd:anyURI ;
@@ -363,6 +407,7 @@ sprop:distribution
   skos:prefLabel "Distribution"@en ;
 .
 sprop:disturbance-of-site
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/disturbance-of-site"^^xsd:anyURI ;
@@ -370,6 +415,7 @@ sprop:disturbance-of-site
   skos:prefLabel "Disturbance of site"@en ;
 .
 sprop:drainage
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottle-abundance"^^xsd:anyURI ;
@@ -379,6 +425,7 @@ sprop:drainage
   skos:related sprop:drainage-height ;
 .
 sprop:drainage-height
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/drainage-height"^^xsd:anyURI ;
@@ -386,6 +433,7 @@ sprop:drainage-height
   skos:prefLabel "Drainage height"@en ;
 .
 sprop:effervescence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/effervescence"^^xsd:anyURI ;
@@ -394,6 +442,7 @@ sprop:effervescence
   skos:prefLabel "Effervescence" ;
 .
 sprop:effervescence-of-carbonate-in-fine-earth
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/effervescence-of-carbonate-in-fine-earth"^^xsd:anyURI ;
@@ -401,6 +450,7 @@ sprop:effervescence-of-carbonate-in-fine-earth
   skos:prefLabel "Effervescence of carbonate in fine earth"@en ;
 .
 sprop:element-dimension-height
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/element-dimension-height"^^xsd:anyURI ;
@@ -408,6 +458,7 @@ sprop:element-dimension-height
   skos:prefLabel "Height of landform element"@en ;
 .
 sprop:element-dimension-length
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/element-dimension-length"^^xsd:anyURI ;
@@ -415,6 +466,7 @@ sprop:element-dimension-length
   skos:prefLabel "Length of landform element"@en ;
 .
 sprop:element-dimension-width
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/element-dimension-width"^^xsd:anyURI ;
@@ -422,6 +474,7 @@ sprop:element-dimension-width
   skos:prefLabel "Width of landform element"@en ;
 .
 sprop:elevation
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/elevation"^^xsd:anyURI ;
@@ -429,9 +482,11 @@ sprop:elevation
   skos:prefLabel "Elevation in metres above sea-level"@en ;
 .
 sprop:elevation-relative
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/elevation-relative"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Vertical separation relative to a specified datum, such as the soil surface, the site, etc."@en ;
   skos:narrower sprop:depth ;
   skos:narrower sprop:drainage-height ;
@@ -439,6 +494,7 @@ sprop:elevation-relative
   skos:prefLabel "Relative elevation"@en ;
 .
 sprop:erosion-gully
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-gully"^^xsd:anyURI ;
@@ -446,6 +502,7 @@ sprop:erosion-gully
   skos:prefLabel "Gully erosion"@en ;
 .
 sprop:erosion-gully-depth
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-gully-depth"^^xsd:anyURI ;
@@ -453,6 +510,7 @@ sprop:erosion-gully-depth
   skos:prefLabel "Gully depth"@en ;
 .
 sprop:erosion-mass-movement
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-mass-movement"^^xsd:anyURI ;
@@ -460,6 +518,7 @@ sprop:erosion-mass-movement
   skos:prefLabel "Mass movement"@en ;
 .
 sprop:erosion-rill
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-rill"^^xsd:anyURI ;
@@ -467,6 +526,7 @@ sprop:erosion-rill
   skos:prefLabel "Rill erosion"@en ;
 .
 sprop:erosion-scald
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-scald"^^xsd:anyURI ;
@@ -474,6 +534,7 @@ sprop:erosion-scald
   skos:prefLabel "Scald erosion"@en ;
 .
 sprop:erosion-sheet
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-sheet"^^xsd:anyURI ;
@@ -481,6 +542,7 @@ sprop:erosion-sheet
   skos:prefLabel "Sheet erosion"@en ;
 .
 sprop:erosion-state
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-state"^^xsd:anyURI ;
@@ -488,6 +550,7 @@ sprop:erosion-state
   skos:prefLabel "State of erosion"@en ;
 .
 sprop:erosion-stream-bank
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-stream-bank"^^xsd:anyURI ;
@@ -495,6 +558,7 @@ sprop:erosion-stream-bank
   skos:prefLabel "Stream bank erosion"@en ;
 .
 sprop:erosion-tunnel
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-tunnel"^^xsd:anyURI ;
@@ -502,6 +566,7 @@ sprop:erosion-tunnel
   skos:prefLabel "Tunnel erosion"@en ;
 .
 sprop:erosion-wave
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-wave"^^xsd:anyURI ;
@@ -509,6 +574,7 @@ sprop:erosion-wave
   skos:prefLabel "Wave erosion"@en ;
 .
 sprop:erosion-wind
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-wind"^^xsd:anyURI ;
@@ -516,6 +582,7 @@ sprop:erosion-wind
   skos:prefLabel "Wind erosion"@en ;
 .
 sprop:extent-horizontal
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:narrower sprop:diameter ;
@@ -526,24 +593,29 @@ sprop:extent-horizontal
   skos:prefLabel "Horizontal extent" ;
 .
 sprop:extent-horizontal-east
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:prefLabel "Horizontal extent in east-west direction" ;
 .
 sprop:extent-horizontal-north
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:prefLabel "Horizontal extent in north-south direction" ;
 .
 sprop:extent-linear
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:narrower sprop:extent-horizontal ;
   skos:narrower sprop:extent-vertical ;
   skos:narrower sprop:size ;
   skos:prefLabel "Linear extent" ;
 .
 sprop:extent-vertical
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/extent-vertical"^^xsd:anyURI ;
@@ -557,6 +629,7 @@ sprop:extent-vertical
   skos:prefLabel "height" ;
 .
 sprop:fabric
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/fabric"^^xsd:anyURI ;
@@ -565,6 +638,7 @@ Fabric describes the appearance of the soil material (under ×10 hand lens). Dif
   skos:prefLabel "Fabric"@en ;
 .
 sprop:field-ph
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-ph"^^xsd:anyURI ;
@@ -578,6 +652,7 @@ pH may be measured either:
   skos:prefLabel "Field pH"@en ;
 .
 sprop:field-texture
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-texture"^^xsd:anyURI ;
@@ -587,6 +662,7 @@ sprop:field-texture
   skos:prefLabel "Field Texture" ;
 .
 sprop:field-texture-mineral
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-texture-mineral"^^xsd:anyURI ;
@@ -598,6 +674,7 @@ The recommended field texture grades as characterised by the behaviour of the mo
   skos:prefLabel "Mineral soils field texture grade"@en ;
 .
 sprop:field-texture-organic
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/field-texture-organic"^^xsd:anyURI ;
@@ -606,6 +683,7 @@ sprop:field-texture-organic
   skos:prefLabel "Organic soils field texture"@en ;
 .
 sprop:form
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/form"^^xsd:anyURI ;
@@ -614,6 +692,7 @@ sprop:form
   skos:prefLabel "Form"@en ;
 .
 sprop:geomorphological-agent
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/geomorphological-agents"^^xsd:anyURI ;
@@ -621,6 +700,7 @@ sprop:geomorphological-agent
   skos:prefLabel "Geomorphological agent"@en ;
 .
 sprop:gilgai-microrelief-proportions
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/gilgai-microrelief-proportions"^^xsd:anyURI ;
@@ -628,6 +708,7 @@ sprop:gilgai-microrelief-proportions
   skos:prefLabel "Proportions of gilgai components"@en ;
 .
 sprop:gilgai-microrelief-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/gilgai-microrelief-type"^^xsd:anyURI ;
@@ -635,6 +716,7 @@ sprop:gilgai-microrelief-type
   skos:prefLabel "Type of gilgai microrelief"@en ;
 .
 sprop:gps-accuracy
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/gps-accuracy"^^xsd:anyURI ;
@@ -642,6 +724,7 @@ sprop:gps-accuracy
   skos:prefLabel "GPS accuracy estimate"@en ;
 .
 sprop:grade
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/grade"^^xsd:anyURI ;
@@ -651,6 +734,7 @@ sprop:grade
   skos:prefLabel "Grade"@en ;
 .
 sprop:grain-size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/grain-size"^^xsd:anyURI ;
@@ -658,6 +742,7 @@ sprop:grain-size
   skos:prefLabel "Grain size" ;
 .
 sprop:horizon-boundary-distinctness
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/horizon-boundary-distinctness"^^xsd:anyURI ;
@@ -665,6 +750,7 @@ sprop:horizon-boundary-distinctness
   skos:prefLabel "Boundary distinctness"@en ;
 .
 sprop:horizon-boundary-shape
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/horizon-boundary-shape"^^xsd:anyURI ;
@@ -672,6 +758,7 @@ sprop:horizon-boundary-shape
   skos:prefLabel "Boundary shape"@en ;
 .
 sprop:horizon-classification
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/horizon-classification"^^xsd:anyURI ;
@@ -683,6 +770,7 @@ Source - Australian soil and land survey field handbook, volume 3, ISBN 97806430
   skos:prefLabel "Horizon classification"@en ;
 .
 sprop:hummocky-microrelief-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/hummocky-microrelief-type"^^xsd:anyURI ;
@@ -690,6 +778,7 @@ sprop:hummocky-microrelief-type
   skos:prefLabel "Type of hummocky microrelief"@en ;
 .
 sprop:inundation-depth
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/inundation-depth"^^xsd:anyURI ;
@@ -697,6 +786,7 @@ sprop:inundation-depth
   skos:prefLabel "Depth of inundation (annual)"@en ;
 .
 sprop:inundation-duration
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/inundation-duration"^^xsd:anyURI ;
@@ -704,6 +794,7 @@ sprop:inundation-duration
   skos:prefLabel "Duration (annual) of inundation"@en ;
 .
 sprop:inundation-frequency
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/inundation-frequency"^^xsd:anyURI ;
@@ -711,6 +802,7 @@ sprop:inundation-frequency
   skos:prefLabel "Frequency of inundation"@en ;
 .
 sprop:inundation-runon-velocity
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/inundation-runon-velocity"^^xsd:anyURI ;
@@ -718,12 +810,14 @@ sprop:inundation-runon-velocity
   skos:prefLabel "Runon velocity of inundation"@en ;
 .
 sprop:length
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:altLabel "length" ;
   skos:prefLabel "larger horizontal extent" ;
 .
 sprop:lithology
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/lithology"^^xsd:anyURI ;
@@ -734,6 +828,7 @@ sprop:lithology
   skos:prefLabel "Lithology"@en ;
 .
 sprop:location
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:narrower sprop:location-within-the-landform-element ;
@@ -741,6 +836,7 @@ sprop:location
   skos:prefLabel "spatial location" ;
 .
 sprop:location-within-the-landform-element
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/location-within-the-landform-element"^^xsd:anyURI ;
@@ -748,6 +844,7 @@ sprop:location-within-the-landform-element
   skos:prefLabel "Location within the landform element"@en ;
 .
 sprop:location-within-toposequence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/location-within-toposequence"^^xsd:anyURI ;
@@ -757,6 +854,7 @@ The toposequence concept leads to definition of the attributes specific catchmen
   skos:prefLabel "Location within toposequence"@en ;
 .
 sprop:map-scale
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/map-scale"^^xsd:anyURI ;
@@ -764,6 +862,7 @@ sprop:map-scale
   skos:prefLabel "Map scale"@en ;
 .
 sprop:material-strength
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/material-strength"^^xsd:anyURI ;
@@ -774,12 +873,14 @@ sprop:material-strength
   skos:prefLabel "Strength of material"@en ;
 .
 sprop:material-structure
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/material-structure"^^xsd:anyURI ;
   skos:prefLabel "Structure" ;
 .
 sprop:microrelief-component-sampled
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/microrelief-component-sampled"^^xsd:anyURI ;
@@ -787,6 +888,7 @@ sprop:microrelief-component-sampled
   skos:prefLabel "Component of microrelief sampled"@en ;
 .
 sprop:microrelief-horizontal-interval
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/microrelief-horizontal-interval"^^xsd:anyURI ;
@@ -794,6 +896,7 @@ sprop:microrelief-horizontal-interval
   skos:prefLabel "Horizontal interval"@en ;
 .
 sprop:microrelief-vertical-interval
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/microrelief-vertical-interval"^^xsd:anyURI ;
@@ -801,6 +904,7 @@ sprop:microrelief-vertical-interval
   skos:prefLabel "Vertical interval"@en ;
 .
 sprop:mineral-composition
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mineral-composition"^^xsd:anyURI ;
@@ -808,6 +912,7 @@ sprop:mineral-composition
   skos:prefLabel "Mineral composition" ;
 .
 sprop:modal-slope
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/modal-slope"^^xsd:anyURI ;
@@ -818,6 +923,7 @@ Table 7 lists types of landform pattern in order of their typical class of modal
   skos:prefLabel "Modal slope"@en ;
 .
 sprop:mode-of-geomorphological-activity
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mode-of-geomorphological-activity"^^xsd:anyURI ;
@@ -825,6 +931,7 @@ sprop:mode-of-geomorphological-activity
   skos:prefLabel "Mode of geomorphological activity"@en ;
 .
 sprop:morphological-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/morphological-type"^^xsd:anyURI ;
@@ -832,6 +939,7 @@ sprop:morphological-type
   skos:prefLabel "Morphological type"@en ;
 .
 sprop:mottles-and-colour-pattern-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-abundance"^^xsd:anyURI ;
@@ -840,6 +948,7 @@ sprop:mottles-and-colour-pattern-abundance
   skos:prefLabel "Mottles and colour pattern abundance"@en ;
 .
 sprop:mottles-and-colour-pattern-colour
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-colour"^^xsd:anyURI ;
@@ -849,6 +958,7 @@ sprop:mottles-and-colour-pattern-colour
   skos:prefLabel "Mottles and colour pattern colour"@en ;
 .
 sprop:mottles-and-colour-pattern-contrast
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-contrast"^^xsd:anyURI ;
@@ -857,6 +967,7 @@ sprop:mottles-and-colour-pattern-contrast
   skos:prefLabel "Mottles and colour pattern contrast"@en ;
 .
 sprop:mottles-and-colour-pattern-distinctness
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-distinctness"^^xsd:anyURI ;
@@ -865,6 +976,7 @@ sprop:mottles-and-colour-pattern-distinctness
   skos:prefLabel "Mottles and colour pattern distinctness of boundaries"@en ;
 .
 sprop:mottles-and-colour-pattern-size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottle-size"^^xsd:anyURI ;
@@ -873,6 +985,7 @@ sprop:mottles-and-colour-pattern-size
   skos:prefLabel "Mottle size"@en ;
 .
 sprop:observableProperty_1
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/observableProperty_1" ;
@@ -881,6 +994,7 @@ sprop:observableProperty_1
   skos:prefLabel "Label for observable-property #1" ;
 .
 sprop:observableProperty_2
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/observableProperty_2" ;
@@ -889,6 +1003,7 @@ sprop:observableProperty_2
   skos:prefLabel "Label for observable-property #2" ;
 .
 sprop:observation-depth
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/observation-depth"^^xsd:anyURI ;
@@ -896,6 +1011,7 @@ sprop:observation-depth
   skos:prefLabel "Observation depth" ;
 .
 sprop:other-microrelief-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/other-microrelief-type"^^xsd:anyURI ;
@@ -903,6 +1019,7 @@ sprop:other-microrelief-type
   skos:prefLabel "Type of other microrelief"@en ;
 .
 sprop:pans-cementation
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/pans-cementation"^^xsd:anyURI ;
@@ -910,6 +1027,7 @@ sprop:pans-cementation
   skos:prefLabel "Cementation of pan"@en ;
 .
 sprop:pans-continuity
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/pans-continuity"^^xsd:anyURI ;
@@ -917,6 +1035,7 @@ sprop:pans-continuity
   skos:prefLabel "Continuity of pan"@en ;
 .
 sprop:pans-structure
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/pans-structure"^^xsd:anyURI ;
@@ -924,6 +1043,7 @@ sprop:pans-structure
   skos:prefLabel "Structure of pan"@en ;
 .
 sprop:pans-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/pans-type"^^xsd:anyURI ;
@@ -931,14 +1051,17 @@ sprop:pans-type
   skos:prefLabel "Type of pan"@en ;
 .
 sprop:permeability
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/permeability" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T-1D0> ;
   skos:definition "Permeability" ;
   skos:narrower sprop:soil-water-permeability ;
   skos:prefLabel "Permeability" ;
 .
 sprop:relative-inclination-of-slope-elements
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/relative-inclination-of-slope-elements"^^xsd:anyURI ;
@@ -946,6 +1069,7 @@ sprop:relative-inclination-of-slope-elements
   skos:prefLabel "Relative inclination of slope elements"@en ;
 .
 sprop:relief
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/relief"^^xsd:anyURI ;
@@ -954,15 +1078,17 @@ Relief is the definitive characteristic for the terms mountains, hills, low hill
 Table 6 lists types of landform pattern defined in the glossary according to their typical relief class. Those types for which the relief class is definitive are in italics."""@en ;
   skos:prefLabel "Relief"@en ;
 .
-sprop:repellance
+sprop:repellence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/repellence"^^xsd:anyURI ;
-  skos:definition "Repellance"@en ;
+  skos:definition "Repellence"@en ;
   skos:narrower sprop:water-repellence ;
-  skos:prefLabel "Repellance"@en ;
+  skos:prefLabel "Repellence"@en ;
 .
 sprop:rock-outcrop-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/rock-outcrop-abundance"^^xsd:anyURI ;
@@ -970,6 +1096,7 @@ sprop:rock-outcrop-abundance
   skos:prefLabel "Abundance of rock outcrop"@en ;
 .
 sprop:rock-outcrop-lithology
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/rock-outcrop-lithology"^^xsd:anyURI ;
@@ -977,6 +1104,7 @@ sprop:rock-outcrop-lithology
   skos:prefLabel "Lithology of rock outcrop"@en ;
 .
 sprop:roots-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/roots-abundance"^^xsd:anyURI ;
@@ -984,6 +1112,7 @@ sprop:roots-abundance
   skos:prefLabel "Root abundance"@en ;
 .
 sprop:roots-size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/roots-size"^^xsd:anyURI ;
@@ -991,6 +1120,7 @@ sprop:roots-size
   skos:prefLabel "Root size"@en ;
 .
 sprop:runoff
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/runoff"^^xsd:anyURI ;
@@ -998,6 +1128,7 @@ sprop:runoff
   skos:prefLabel "Runoff"@en ;
 .
 sprop:sample-distance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/sample-distance"^^xsd:anyURI ;
@@ -1005,6 +1136,7 @@ sprop:sample-distance
   skos:prefLabel "Substrate-soil distance" ;
 .
 sprop:segregations-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-abundance"^^xsd:anyURI ;
@@ -1012,6 +1144,7 @@ sprop:segregations-abundance
   skos:prefLabel "Abundance of segregations"@en ;
 .
 sprop:segregations-form
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-form"^^xsd:anyURI ;
@@ -1019,6 +1152,7 @@ sprop:segregations-form
   skos:prefLabel "Form of segregations"@en ;
 .
 sprop:segregations-magnetic
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-magnetic"^^xsd:anyURI ;
@@ -1026,6 +1160,7 @@ sprop:segregations-magnetic
   skos:prefLabel "Magnetic attributes of segregations"@en ;
 .
 sprop:segregations-nature
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-nature"^^xsd:anyURI ;
@@ -1033,6 +1168,7 @@ sprop:segregations-nature
   skos:prefLabel "Nature of segregations"@en ;
 .
 sprop:segregations-size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-size"^^xsd:anyURI ;
@@ -1040,6 +1176,7 @@ sprop:segregations-size
   skos:prefLabel "Size of segregations"@en ;
 .
 sprop:segregations-strength
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-strength"^^xsd:anyURI ;
@@ -1047,6 +1184,7 @@ sprop:segregations-strength
   skos:prefLabel "Strength of segregations"@en ;
 .
 sprop:shape
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/shape"^^xsd:anyURI ;
@@ -1056,6 +1194,7 @@ sprop:shape
   skos:prefLabel "Shape"@en ;
 .
 sprop:size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "http://purl.obolibrary.org/obo/PATO_0000117"^^xsd:anyURI ;
@@ -1069,6 +1208,7 @@ sprop:size
   skos:prefLabel "Size"@en ;
 .
 sprop:slope-class
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/slope-class"^^xsd:anyURI ;
@@ -1079,6 +1219,7 @@ There may also be compelling reasons for using other schemes of slope classes. H
   skos:prefLabel "Class of slope"@en ;
 .
 sprop:slope-value
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/slope-value"^^xsd:anyURI ;
@@ -1086,6 +1227,7 @@ sprop:slope-value
   skos:prefLabel "Slope %"@en ;
 .
 sprop:soil-colour
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/soil-colour"^^xsd:anyURI ;
@@ -1097,6 +1239,7 @@ Dry colours may also be recorded."""@en ;
   skos:prefLabel "Soil colour"@en ;
 .
 sprop:soil-structure
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/soil-structure"^^xsd:anyURI ;
@@ -1111,6 +1254,7 @@ Soil structure can only be described reliably in a relatively fresh vertical exp
   skos:prefLabel "Soil-structure"@en ;
 .
 sprop:soil-water-drainage
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/soil-water-drainage"^^xsd:anyURI ;
@@ -1118,6 +1262,7 @@ sprop:soil-water-drainage
   skos:prefLabel "Drainage"@en ;
 .
 sprop:soil-water-permeability
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/soil-water-permeability"^^xsd:anyURI ;
@@ -1125,6 +1270,7 @@ sprop:soil-water-permeability
   skos:prefLabel "Permeability"@en ;
 .
 sprop:soil-water-status
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/soil-water-status"^^xsd:anyURI ;
@@ -1139,6 +1285,7 @@ Wet is at, or exceeding, field capacity. Will wet and/or stick to fingers when m
   skos:prefLabel "Soil water status"@en ;
 .
 sprop:status
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/status"^^xsd:anyURI ;
@@ -1148,6 +1295,7 @@ sprop:status
   skos:prefLabel "Status"@en ;
 .
 sprop:stream-channel-development
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-development"^^xsd:anyURI ;
@@ -1155,6 +1303,7 @@ sprop:stream-channel-development
   skos:prefLabel "Stream channel development"@en ;
 .
 sprop:stream-channel-migration
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-migration"^^xsd:anyURI ;
@@ -1162,6 +1311,7 @@ sprop:stream-channel-migration
   skos:prefLabel "Stream channel migration"@en ;
 .
 sprop:stream-channel-network-directionality
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-network-directionality"^^xsd:anyURI ;
@@ -1169,6 +1319,7 @@ sprop:stream-channel-network-directionality
   skos:prefLabel "Stream channel network directionality"@en ;
 .
 sprop:stream-channel-network-integration
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-network-integration"^^xsd:anyURI ;
@@ -1176,6 +1327,7 @@ sprop:stream-channel-network-integration
   skos:prefLabel "Stream channel network integration"@en ;
 .
 sprop:stream-channel-occurence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-occurence"^^xsd:anyURI ;
@@ -1184,6 +1336,7 @@ When assessing attributes of stream channel occurrence, it is easy to make error
   skos:prefLabel "Stream channel occurence"@en ;
 .
 sprop:stream-channel-relative-depth-width
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-relative-depth-width"^^xsd:anyURI ;
@@ -1194,6 +1347,7 @@ For detailed studies, keep records of width and depth measurements. In other sur
   skos:prefLabel "Stream channel depth relative to width"@en ;
 .
 sprop:stream-channel-spacing
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-spacing"^^xsd:anyURI ;
@@ -1202,6 +1356,7 @@ A convenient tool for estimating channel spacing is a circle, with a circumferen
   skos:prefLabel "Stream channel spacing"@en ;
 .
 sprop:streamwise-channel-pattern
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/streamwise-channel-pattern"^^xsd:anyURI ;
@@ -1209,6 +1364,7 @@ sprop:streamwise-channel-pattern
   skos:prefLabel "Stream-wise channel pattern"@en ;
 .
 sprop:strength
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:narrower sprop:consistence-strength ;
@@ -1216,6 +1372,7 @@ sprop:strength
   skos:prefLabel "Strength of material" ;
 .
 sprop:structure
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/structure"^^xsd:anyURI ;
@@ -1227,6 +1384,7 @@ sprop:structure
   skos:prefLabel "Structure"@en ;
 .
 sprop:structure-artificial-aggregates
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/structure-artificial-aggregates"^^xsd:anyURI ;
@@ -1234,6 +1392,7 @@ sprop:structure-artificial-aggregates
   skos:prefLabel "Structure of artificial aggregates"@en ;
 .
 sprop:structure-pedality-compound
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/biotic-microrelief-components"^^xsd:anyURI ;
@@ -1245,6 +1404,7 @@ The order of peds and relationship of one to the other is important and may be d
   skos:prefLabel "structure-pedality-compound"@en ;
 .
 sprop:structure-pedality-grade
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/structure-pedality-grade"^^xsd:anyURI ;
@@ -1252,6 +1412,7 @@ sprop:structure-pedality-grade
   skos:prefLabel "Grade of pedality"@en ;
 .
 sprop:structure-pedality-size
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/structure-pedality-size"^^xsd:anyURI ;
@@ -1259,6 +1420,7 @@ sprop:structure-pedality-size
   skos:prefLabel "Size of peds"@en ;
 .
 sprop:structure-pedality-type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/structure-pedality-type"^^xsd:anyURI ;
@@ -1266,6 +1428,7 @@ sprop:structure-pedality-type
   skos:prefLabel "Type of pedality"@en ;
 .
 sprop:substrate-genesis
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/substrate-genesis"^^xsd:anyURI ;
@@ -1277,12 +1440,14 @@ Named classes in this table are defined in the following glossary. Since this is
   skos:prefLabel "Genetic type of substrate masses" ;
 .
 sprop:substrate-lithology
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/substrate-lithology"^^xsd:anyURI ;
   skos:prefLabel "Lithology of substrate rock and unconsolidated material" ;
 .
 sprop:substrate-material-strength
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/substrate-material-strength"^^xsd:anyURI ;
@@ -1290,6 +1455,7 @@ sprop:substrate-material-strength
   skos:prefLabel "Strength of substrate material"@en ;
 .
 sprop:texture
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/texture"^^xsd:anyURI ;
@@ -1297,6 +1463,7 @@ sprop:texture
   skos:prefLabel "Texture" ;
 .
 sprop:top-property_1
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/top-property_1" ;
@@ -1306,6 +1473,7 @@ sprop:top-property_1
   skos:prefLabel "Top observable-property #1" ;
 .
 sprop:top-property_2
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/top-property_2" ;
@@ -1316,6 +1484,7 @@ sprop:top-property_2
   skos:prefLabel "Top observable-property #2" ;
 .
 sprop:type
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/type"^^xsd:anyURI ;
@@ -1332,6 +1501,7 @@ sprop:type
   skos:prefLabel "Type or nature"@en ;
 .
 sprop:voids-cracks
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-cracks"^^xsd:anyURI ;
@@ -1339,6 +1509,7 @@ sprop:voids-cracks
   skos:prefLabel "Width of cracks"@en ;
 .
 sprop:voids-macropores-abundance
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-abundance"^^xsd:anyURI ;
@@ -1348,6 +1519,7 @@ sprop:voids-macropores-abundance
   skos:prefLabel "Abundance of macropores"@en ;
 .
 sprop:voids-macropores-abundance-coarse
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-abundance-coarse"^^xsd:anyURI ;
@@ -1355,6 +1527,7 @@ sprop:voids-macropores-abundance-coarse
   skos:prefLabel "Abundance of medium and coarse macropores" ;
 .
 sprop:voids-macropores-abundance-fine
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-abundance-fine"^^xsd:anyURI ;
@@ -1362,6 +1535,7 @@ sprop:voids-macropores-abundance-fine
   skos:prefLabel "Abundance of very fine and fine macropores" ;
 .
 sprop:voids-macropores-diameter
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-diameter"^^xsd:anyURI ;
@@ -1369,6 +1543,7 @@ sprop:voids-macropores-diameter
   skos:prefLabel "Diameter of macropores"@en ;
 .
 sprop:voids-micropores
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-micropores"^^xsd:anyURI ;
@@ -1376,6 +1551,7 @@ sprop:voids-micropores
   skos:prefLabel "Micropores (presence)"@en ;
 .
 sprop:water-repellence
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/water-repellence"^^xsd:anyURI ;
@@ -1383,6 +1559,7 @@ sprop:water-repellence
   skos:prefLabel "Water repellence"@en ;
 .
 sprop:width
+  a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:altLabel "width" ;
