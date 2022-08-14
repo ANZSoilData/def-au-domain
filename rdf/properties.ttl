@@ -553,6 +553,7 @@ sprop:extent-vertical
   skos:definition "difference in elevation between the upper and lower margins of the element" ;
   skos:narrower sprop:element-dimension-height ;
   skos:narrower sprop:erosion-gully-depth ;
+  skos:narrower sprop:inundation-depth ;
   skos:prefLabel "height" ;
 .
 sprop:fabric
