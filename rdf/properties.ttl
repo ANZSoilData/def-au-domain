@@ -65,7 +65,6 @@ sprop:abundance
   dcterms:identifier "https://anzsoil.org/def/au/property/cutans-type"^^xsd:anyURI ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Fraction of context entity that is composed of the specified secondary entity"@en ;
-  skos:narrower sprop:chemical-concentration ;
   skos:narrower sprop:coarse-fragments-abundance ;
   skos:narrower sprop:cutans-abundance ;
   skos:narrower sprop:mottles-and-colour-pattern-abundance ;
@@ -136,6 +135,8 @@ sprop:chemical-concentration
   dcterms:identifier "https://anzsoil.org/def/au/property/chemical-concentration"^^xsd:anyURI ;
   skos:closeMatch <https://qudt.org/vocab/quantitykind/Concentration> ;
   skos:note "How are chemical concentrations reported for soils? mass-per-volume, mass-per-mass, amount-of-substance-per-volume, amount-of-substance-per-mass? " ;
+  skos:note """If dimensionless (e.g. mass-per-mass), then nest below sprop:abundance
+If mass-per-volume then is related to sprop:density somehow""" ;
   skos:prefLabel "Chemical concentration" ;
 .
 sprop:coarse-fragments-abundance
