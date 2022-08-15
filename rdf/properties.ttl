@@ -1,10 +1,7 @@
 # baseURI: https://anzsoil.org/def/au/property
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://qudt.org/2.1/schema/qudt
-# imports: http://www.opengis.net/ont/geosparql
-# imports: http://www.opengis.net/ont/sf
-# imports: http://www.w3.org/ns/sosa/prov
-# imports: http://www.w3.org/ns/ssn/ext
+# imports: http://www.w3.org/ns/sosa/
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -23,23 +20,22 @@
 
 <https://anzsoil.org/def/au/property>
   a owl:Ontology ;
-  dcterms:contributor <https://orcid.org/0000-0002-2991-2308> ;
+  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
   dcterms:created "2022-07-14" ;
+  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:creator <mailto:peter.wilson@csiro.au> ;
   dcterms:description """A domain-model for Australian soil data - properties
 
-Observable properties taken from ASLS (Yellow Book) as interpreted for the ANSIS project. """ ;
+Observable properties taken initially from ASLS (Yellow Book) as interpreted for the ANSIS project. """ ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-07-29" ;
+  dcterms:modified "2022-08-15" ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://qudt.org/2.1/schema/qudt> ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports <http://www.opengis.net/ont/sf> ;
-  owl:imports sosa:prov ;
-  owl:imports ssn:ext ;
+  owl:imports sosa: ;
   skos:changeNote "2022-07-29 - ObservableProperty resources automatically populated from ASLS vocabularies" ;
+  skos:changeNote "2022-08-12 - sorted into a hierarchy" ;
+  skos:changeNote "2022-08-15 - linked to QUDT dimensions where possible" ;
 .
 sprop:CoarseFragments
   a owl:Class ;
