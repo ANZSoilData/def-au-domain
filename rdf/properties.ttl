@@ -838,7 +838,7 @@ sprop:length
   a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:altLabel "length" ;
-  skos:prefLabel "larger horizontal extent" ;
+  skos:prefLabel "greater horizontal extent" ;
 .
 sprop:lithology
   a qudt:QuantityKind ;
@@ -1485,27 +1485,6 @@ sprop:texture
   dcterms:identifier "https://anzsoil.org/def/au/property/texture"^^xsd:anyURI ;
   skos:narrower sprop:field-texture ;
   skos:prefLabel "Texture" ;
-.
-sprop:top-property_1
-  a qudt:QuantityKind ;
-  a skos:Concept ;
-  a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/top-property_1" ;
-  skos:definition "additional annotation" ;
-  skos:member sprop:observableProperty_1 ;
-  skos:note "Full definition of top observable property #1" ;
-  skos:prefLabel "Top observable-property #1" ;
-.
-sprop:top-property_2
-  a qudt:QuantityKind ;
-  a skos:Concept ;
-  a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/top-property_2" ;
-  skos:definition "additional annotation" ;
-  skos:member sprop:observableProperty_1 ;
-  skos:member sprop:observableProperty_2 ;
-  skos:note "Full definition of top observable property #2" ;
-  skos:prefLabel "Top observable-property #2" ;
 .
 sprop:type
   a qudt:QuantityKind ;
