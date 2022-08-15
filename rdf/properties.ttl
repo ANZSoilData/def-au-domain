@@ -140,6 +140,7 @@ sprop:coarse-fragments-abundance
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-abundance"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "The percentage of coarse fragments."@en ;
   skos:prefLabel "Abundance of coarse fragments"@en ;
 .
@@ -172,6 +173,7 @@ sprop:coarse-fragments-size
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/coarse-fragments-size"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "The scale adopted employs class boundaries at (2 × 10n/2) mm, where n is an integer. This system is an extension of that used for particles smaller than 2 mm both in the scheme of the British Standards Institution and the Massachusetts Institute of Technology and the original Atterberg (1905) scheme on which the International Scheme was based. It is thus compatible with both the International Scheme referred to in the field texture section and the grain size criteria for substrate materials."@en ;
   skos:prefLabel "Size of coarse fragments"@en ;
 .
@@ -295,6 +297,7 @@ sprop:cutans-abundance
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/cutans-abundance"^^xsd:anyURI ;
   qudt:hasDimension <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Abundance of cutans"@en ;
   skos:prefLabel "Abundance of cutans"@en ;
 .
@@ -336,6 +339,7 @@ sprop:depth
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Give depth to the entity at the site of soil observation, in metres, either above or below the soil surface, excluding litter and living vegetation."@en ;
   skos:narrower sprop:depth-free-water ;
   skos:narrower sprop:depth-of-horizon ;
@@ -352,6 +356,7 @@ sprop:depth-free-water
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-free-water"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Give depth to free water at the site of soil observation, in metres, either above or below the soil surface, excluding litter and living vegetation. "@en ;
   skos:prefLabel "Depth to free water"@en ;
 .
@@ -360,6 +365,7 @@ sprop:depth-of-horizon
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition """The upper and lower depths, in metres, of each horizon are measured from the soil surface, excluding O horizons. O horizon depths are measured above the mineral soil surface, for example O1 0.120.10 m, O2 0.10.0 m.
 A scaled horizon diagram may be useful where horizons are irregular."""@en ;
   skos:prefLabel "Depth of Horizons"@en ;
@@ -370,6 +376,7 @@ sprop:depth-of-horizon-lower
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon-lower"^^xsd:anyURI ;
   dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition """The upper and lower depths, in metres, of each horizon are measured from the soil surface, excluding O horizons. O horizon depths are measured above the mineral soil surface, for example O1 0.12–0.10 m, O2 0.1–0.0 m.
 A scaled horizon diagram may be useful where horizons are irregular.""" ;
   skos:prefLabel "Lower depth of soil horizon in metres" ;
@@ -380,6 +387,7 @@ sprop:depth-of-horizon-upper
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-of-horizon-upper"^^xsd:anyURI ;
   dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition """The upper and lower depths, in metres, of each horizon are measured from the soil surface, excluding O horizons. O horizon depths are measured above the mineral soil surface, for example O1 0.12–0.10 m, O2 0.1–0.0 m.
 A scaled horizon diagram may be useful where horizons are irregular.""" ;
   skos:prefLabel "Upper depth of soil horizon in metres" ;
@@ -390,6 +398,7 @@ sprop:depth-to-r-horizon
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/depth-to-r-horizon"^^xsd:anyURI ;
   dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition """Give depth to R horizon or strongly cemented pan in metres.
 The purpose of recording this depth is to include in the soil description those materials that may be relatively easily moved by earth-moving equipment or may be relatively easily penetrated by roots. Strong or very strong rock or pan that may require ripping or blasting to move, and/or has little or no root penetration, is excluded"""@en ;
   skos:prefLabel "Depth to R horizon or strongly cemented pan"@en ;
@@ -399,6 +408,7 @@ sprop:diameter
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/diameter"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Diameter"@en ;
   skos:prefLabel "Diameter"@en ;
 .
@@ -453,6 +463,7 @@ sprop:drainage-height
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/drainage-height"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "This is the height of the point of soil observation above the flat, depression or stream channel that forms the effective bottom of the toposequence. Give drainage height in metres."@en ;
   skos:prefLabel "Drainage height"@en ;
 .
@@ -478,6 +489,7 @@ sprop:element-dimension-height
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/element-dimension-height"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "difference in elevation between the upper and lower margins of the element, measured along any slope line. Height can mean quite different things and must be carefully defined. For crests, ridges and hillocks, define the upper margin as the point where the selected slope line coalesces with others to form the ridge line. For depressions, define the lower margin as the point where the selected slope line coalesces with others to form the course line."@en ;
   skos:prefLabel "Height of landform element"@en ;
 .
@@ -502,6 +514,7 @@ sprop:elevation
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/elevation"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Give in metres above sea-level."@en ;
   skos:prefLabel "Elevation in metres above sea-level"@en ;
 .
@@ -530,6 +543,7 @@ sprop:erosion-gully-depth
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/erosion-gully-depth"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "This gives the maximum depth within the site."@en ;
   skos:prefLabel "Gully depth"@en ;
 .
@@ -609,6 +623,7 @@ sprop:extent-horizontal
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:narrower sprop:diameter ;
   skos:narrower sprop:extent-horizontal-east ;
   skos:narrower sprop:extent-horizontal-north ;
@@ -620,12 +635,14 @@ sprop:extent-horizontal-east
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:prefLabel "Horizontal extent in east-west direction" ;
 .
 sprop:extent-horizontal-north
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:prefLabel "Horizontal extent in north-south direction" ;
 .
 sprop:extent-linear
@@ -643,6 +660,7 @@ sprop:extent-vertical
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/extent-vertical"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:altLabel "depth" ;
   skos:altLabel "vertical extent" ;
   skos:altLabel "vertical thickness" ;
@@ -762,6 +780,7 @@ sprop:grain-size
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/grain-size"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin." ;
   skos:prefLabel "Grain size" ;
 .
@@ -806,6 +825,7 @@ sprop:inundation-depth
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/inundation-depth"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Give likely maximum depth of water in an inundation event (mm). "@en ;
   skos:prefLabel "Depth of inundation (annual)"@en ;
 .
@@ -837,6 +857,7 @@ sprop:length
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:altLabel "length" ;
   skos:prefLabel "greater horizontal extent" ;
 .
@@ -968,6 +989,7 @@ sprop:mottles-and-colour-pattern-abundance
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottles-and-colour-pattern-abundance"^^xsd:anyURI ;
   dcterms:source "Australian soil and land survey field handbook, vol 3., ISBN 	9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:note "The percentage is estimated by eye using the chart in Figure 11 (ASLSFH3Ed) for comparison."@en ;
   skos:prefLabel "Mottles and colour pattern abundance"@en ;
 .
@@ -1005,6 +1027,7 @@ sprop:mottles-and-colour-pattern-size
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/mottle-size"^^xsd:anyURI ;
   dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:note "Measure size (mm) along the greatest dimension, except in streaks or linear forms where width is measured."@en ;
   skos:prefLabel "Mottle size"@en ;
 .
@@ -1031,6 +1054,7 @@ sprop:observation-depth
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/observation-depth"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Measure or estimate, in metres, the depth of the point of observation of substrate material below the land surface." ;
   skos:prefLabel "Observation depth" ;
 .
@@ -1116,6 +1140,7 @@ sprop:rock-outcrop-abundance
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/rock-outcrop-abundance"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Abundance of rock outcrop."@en ;
   skos:prefLabel "Abundance of rock outcrop"@en ;
 .
@@ -1132,6 +1157,7 @@ sprop:roots-abundance
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/roots-abundance"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Number of roots per 0.01 m2 (100 mm × 100 mm)"@en ;
   skos:prefLabel "Root abundance"@en ;
 .
@@ -1164,6 +1190,7 @@ sprop:segregations-abundance
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-abundance"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Abundance of segregations. Use figure 11 as a guide."@en ;
   skos:prefLabel "Abundance of segregations"@en ;
 .
@@ -1196,6 +1223,7 @@ sprop:segregations-size
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/segregations-size"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Approximately equidimensional segregations (concretions, nodules) are measured in the greatest dimension. Segregations where one dimension is much greater than the other two (tubules, root linings, veins, laminae) are measured in the least dimension"@en ;
   skos:prefLabel "Size of segregations"@en ;
 .
@@ -1223,6 +1251,7 @@ sprop:size
   a sosa:ObservableProperty ;
   dcterms:identifier "http://purl.obolibrary.org/obo/PATO_0000117"^^xsd:anyURI ;
   dcterms:source "http://purl.obolibrary.org/obo/PATO_0000117" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. [database_cross_reference: WordNet:WordNet]"@en ;
   skos:narrower sprop:coarse-fragments-size ;
   skos:narrower sprop:grain-size ;
@@ -1290,6 +1319,7 @@ sprop:soil-water-permeability
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/soil-water-permeability"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T-1D0> ;
   skos:definition "Permeability is independent of climate and drainage, and – as applied to a soil – is controlled by the potential to transmit water (saturated hydraulic conductivity, Ks) of the least permeable layer in the soil. Therefore it is inferred from attributes of the soil such as structure, texture, porosity, cracks and shrink–swell properties. The rate of transmission of water in the profile is based on the assumption that loss by evapotranspiration is minimal. The Ks ranges are compatible with those of Nowland in Canada, as reported by McKeague et al. (1982)."@en ;
   skos:prefLabel "Permeability"@en ;
 .
@@ -1440,6 +1470,7 @@ sprop:structure-pedality-size
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/structure-pedality-size"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "The average least dimension of peds is used to determine the class interval. Use figure 17. The least dimension is the vertical dimension for platy structure; the horizontal dimension for prismatic, columnar, blocky and polyhedral peds; the maximum separation of convex faces for lenticular peds; and the diameter for granular peds."@en ;
   skos:prefLabel "Size of peds"@en ;
 .
@@ -1516,6 +1547,7 @@ sprop:voids-macropores-abundance
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-abundance"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "abundance of macropores based relevant to the diameter of the macropores"@en ;
   skos:narrower sprop:voids-macropores-abundance-coarse ;
   skos:narrower sprop:voids-macropores-abundance-fine ;
@@ -1526,6 +1558,7 @@ sprop:voids-macropores-abundance-coarse
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-abundance-coarse"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Abundance of medium and coarse macropores (greater than 2 mm diameter)" ;
   skos:prefLabel "Abundance of medium and coarse macropores" ;
 .
@@ -1534,6 +1567,7 @@ sprop:voids-macropores-abundance-fine
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-macropores-abundance-fine"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Abundance of very fine and fine macropores (less than 2mm diameter)" ;
   skos:prefLabel "Abundance of very fine and fine macropores" ;
 .
@@ -1565,6 +1599,7 @@ sprop:width
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:altLabel "width" ;
   skos:prefLabel "lesser horizontal extent" ;
 .
