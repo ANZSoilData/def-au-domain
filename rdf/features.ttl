@@ -402,6 +402,9 @@ soil:Sample
           owl:unionOf (
               soil:Body
               soil:Layer
+              soil:Site
+              soil:Substrate
+              soil:Outcrop
             ) ;
         ] ;
     ] ;
