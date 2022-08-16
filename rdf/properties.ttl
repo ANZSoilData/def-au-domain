@@ -58,17 +58,18 @@ sprop:abundance
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/cutans-type"^^xsd:anyURI ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/abundance"^^xsd:anyURI ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition "Fraction of context entity that is composed of the specified secondary entity"@en ;
   skos:narrower sprop:coarse-fragments-abundance ;
   skos:narrower sprop:cutans-abundance ;
+  skos:narrower sprop:gilgai-microrelief-proportions ;
   skos:narrower sprop:mottles-and-colour-pattern-abundance ;
   skos:narrower sprop:rock-outcrop-abundance ;
   skos:narrower sprop:roots-abundance ;
   skos:narrower sprop:segregations-abundance ;
   skos:narrower sprop:voids-macropores-abundance ;
-  skos:prefLabel "Abdundance"@en ;
+  skos:prefLabel "Abundance"@en ;
 .
 sprop:aggradation
   a qudt:QuantityKind ;
@@ -130,6 +131,7 @@ sprop:chemical-concentration
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/chemical-concentration"^^xsd:anyURI ;
   skos:closeMatch <https://qudt.org/vocab/quantitykind/Concentration> ;
+  skos:narrower sprop:field-ph ;
   skos:note "How are chemical concentrations reported for soils? mass-per-volume, mass-per-mass, amount-of-substance-per-volume, amount-of-substance-per-mass? " ;
   skos:note """If dimensionless (e.g. mass-per-mass), then nest below sprop:abundance
 If mass-per-volume then is related to sprop:density somehow""" ;
@@ -203,6 +205,17 @@ sprop:colour-stat
   dcterms:identifier "https://anzsoil.org/def/au/property/colour-stat"^^xsd:anyURI ;
   skos:definition "Moisture status for colour description"@en ;
   skos:prefLabel "Moisture status for colour description"@en ;
+.
+sprop:composition
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/composition"^^xsd:anyURI ;
+  skos:definition "Material or substance from which the context entity is made {en}" ;
+  skos:narrower sprop:chemical-concentration ;
+  skos:narrower sprop:lithology ;
+  skos:narrower sprop:mineral-composition ;
+  skos:prefLabel "Composition {en}" ;
 .
 sprop:condition
   a qudt:QuantityKind ;
@@ -410,6 +423,7 @@ sprop:diameter
   dcterms:identifier "https://anzsoil.org/def/au/property/diameter"^^xsd:anyURI ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "Diameter"@en ;
+  skos:narrower sprop:voids-macropores-diameter ;
   skos:prefLabel "Diameter"@en ;
 .
 sprop:discontinuity-spacing
@@ -466,6 +480,16 @@ sprop:drainage-height
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "This is the height of the point of soil observation above the flat, depression or stream channel that forms the effective bottom of the toposequence. Give drainage height in metres."@en ;
   skos:prefLabel "Drainage height"@en ;
+.
+sprop:duration
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/duration"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T1D0> ;
+  skos:definition "Temporal extent"@en ;
+  skos:narrower sprop:inundation-duration ;
+  skos:prefLabel "Duration"@en ;
 .
 sprop:effervescence
   a qudt:QuantityKind ;
@@ -625,11 +649,16 @@ sprop:extent-horizontal
   a sosa:ObservableProperty ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:narrower sprop:diameter ;
+  skos:narrower sprop:discontinuity-spacing ;
   skos:narrower sprop:extent-horizontal-east ;
   skos:narrower sprop:extent-horizontal-north ;
+  skos:narrower sprop:gps-accuracy ;
   skos:narrower sprop:length ;
+  skos:narrower sprop:microrelief-horizontal-interval ;
+  skos:narrower sprop:sample-distance ;
+  skos:narrower sprop:stream-channel-spacing ;
   skos:narrower sprop:width ;
-  skos:prefLabel "Horizontal extent" ;
+  skos:prefLabel "horizontal extent" ;
 .
 sprop:extent-horizontal-east
   a qudt:QuantityKind ;
@@ -662,13 +691,15 @@ sprop:extent-vertical
   dcterms:identifier "https://anzsoil.org/def/au/property/extent-vertical"^^xsd:anyURI ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:altLabel "depth" ;
-  skos:altLabel "vertical extent" ;
+  skos:altLabel "height" ;
   skos:altLabel "vertical thickness" ;
   skos:definition "difference in elevation between the upper and lower margins of the element" ;
   skos:narrower sprop:element-dimension-height ;
   skos:narrower sprop:erosion-gully-depth ;
   skos:narrower sprop:inundation-depth ;
-  skos:prefLabel "height" ;
+  skos:narrower sprop:microrelief-vertical-interval ;
+  skos:narrower sprop:relief ;
+  skos:prefLabel "vertical extent" ;
 .
 sprop:fabric
   a qudt:QuantityKind ;
@@ -732,6 +763,16 @@ sprop:form
   skos:definition "Form"@en ;
   skos:narrower sprop:segregations-form ;
   skos:prefLabel "Form"@en ;
+.
+sprop:frequency
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/frequency"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T-1D0> ;
+  skos:definition "Temporal frequency"@en ;
+  skos:narrower sprop:inundation-frequency ;
+  skos:prefLabel "Frequency"@en ;
 .
 sprop:geomorphological-agent
   a qudt:QuantityKind ;
@@ -859,6 +900,7 @@ sprop:length
   a sosa:ObservableProperty ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:altLabel "length" ;
+  skos:narrower sprop:element-dimension-length ;
   skos:prefLabel "greater horizontal extent" ;
 .
 sprop:lithology
@@ -1030,24 +1072,6 @@ sprop:mottles-and-colour-pattern-size
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:note "Measure size (mm) along the greatest dimension, except in streaks or linear forms where width is measured."@en ;
   skos:prefLabel "Mottle size"@en ;
-.
-sprop:observableProperty_1
-  a qudt:QuantityKind ;
-  a skos:Concept ;
-  a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/observableProperty_1" ;
-  skos:definition "full definition of observable-property #1" ;
-  skos:note "Additional annotation" ;
-  skos:prefLabel "Label for observable-property #1" ;
-.
-sprop:observableProperty_2
-  a qudt:QuantityKind ;
-  a skos:Concept ;
-  a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/observableProperty_2" ;
-  skos:definition "full definition of observable-property #2" ;
-  skos:note "Additional annotation" ;
-  skos:prefLabel "Label for observable-property #2" ;
 .
 sprop:observation-depth
   a qudt:QuantityKind ;
@@ -1241,7 +1265,7 @@ sprop:shape
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/shape"^^xsd:anyURI ;
   skos:definition "Shape"@en ;
-  skos:narrower sprop:coarse-fragments-size ;
+  skos:narrower sprop:coarse-fragments-shape ;
   skos:narrower sprop:horizon-boundary-shape ;
   skos:prefLabel "Shape"@en ;
 .
@@ -1254,11 +1278,25 @@ sprop:size
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:definition "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. [database_cross_reference: WordNet:WordNet]"@en ;
   skos:narrower sprop:coarse-fragments-size ;
+  skos:narrower sprop:diameter ;
   skos:narrower sprop:grain-size ;
   skos:narrower sprop:mottles-and-colour-pattern-size ;
+  skos:narrower sprop:roots-size ;
   skos:narrower sprop:segregations-size ;
   skos:narrower sprop:structure-pedality-size ;
   skos:prefLabel "Size"@en ;
+.
+sprop:slope
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/slope"^^xsd:anyURI ;
+  skos:definition "Slope"@en ;
+  skos:narrower sprop:modal-slope ;
+  skos:narrower sprop:relative-inclination-of-slope-elements ;
+  skos:narrower sprop:slope-class ;
+  skos:narrower sprop:slope-value ;
+  skos:prefLabel "Slope"@en ;
 .
 sprop:slope-class
   a qudt:QuantityKind ;
@@ -1394,6 +1432,7 @@ sprop:stream-channel-relative-depth-width
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/stream-channel-relative-depth-width"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
   skos:definition """Channel depth and width refer to the dimensions of a landform that is dominated by channelled stream flow. The limit of channelled stream flow dominance must be identified before width or depth can be estimated. Depth is taken from the top of the stream bank down to the average height of the line following the deepest part of the channel.
 The distinction between stream bank and hillslope or scarp according to dominant process requires particular care where streams are incised, especially if they are cut into terraces that could be mistaken for flood plains.
  
@@ -1527,18 +1566,33 @@ sprop:type
   skos:narrower sprop:cutans-type ;
   skos:narrower sprop:gilgai-microrelief-type ;
   skos:narrower sprop:grade ;
+  skos:narrower sprop:horizon-classification ;
   skos:narrower sprop:hummocky-microrelief-type ;
   skos:narrower sprop:morphological-type ;
   skos:narrower sprop:other-microrelief-type ;
+  skos:narrower sprop:pans-type ;
   skos:narrower sprop:segregations-nature ;
+  skos:narrower sprop:streamwise-channel-pattern ;
   skos:narrower sprop:structure-pedality-type ;
+  skos:narrower sprop:substrate-genesis ;
   skos:prefLabel "Type or nature"@en ;
 .
-sprop:voids-cracks
+sprop:velocity
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/voids-cracks"^^xsd:anyURI ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/velocity"^^xsd:anyURI ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T-1D0> ;
+  skos:altLabel "Rate of change of position" ;
+  skos:narrower sprop:inundation-runon-velocity ;
+  skos:narrower sprop:stream-channel-migration ;
+  skos:prefLabel "Velocity" ;
+.
+sprop:voids-cracks-width
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/voids-cracks-width"^^xsd:anyURI ;
   skos:definition "Width of planar voids"@en ;
   skos:prefLabel "Width of cracks"@en ;
 .
@@ -1601,5 +1655,7 @@ sprop:width
   a sosa:ObservableProperty ;
   qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
   skos:altLabel "width" ;
+  skos:narrower sprop:element-dimension-width ;
+  skos:narrower sprop:voids-cracks-width ;
   skos:prefLabel "lesser horizontal extent" ;
 .
