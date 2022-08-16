@@ -1548,12 +1548,20 @@ sprop:substrate-material-strength
   skos:definition "The strength of a specimen of soil substrate material may be crudely estimated in the field by striking it with the head-end or the pick-end of a geological hammer or by trying to cut it with a knife, and then referring to Table 32 (ASLS Field Handbook). These estimates refer to the unconfined (or uniaxial) compressive strength. The strength is that of the intact material rather than that of the mass, the strength of which has generally been reduced by the development of fractures and other phenomena."@en ;
   skos:prefLabel "Strength of substrate material"@en ;
 .
+sprop:substrate-texture
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/substrate-texture"^^xsd:anyURI ;
+  skos:prefLabel "substrate texture" ;
+.
 sprop:texture
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/texture"^^xsd:anyURI ;
   skos:narrower sprop:field-texture ;
+  skos:narrower sprop:substrate-texture ;
   skos:prefLabel "Texture" ;
 .
 sprop:type
