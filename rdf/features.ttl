@@ -29,12 +29,12 @@ geo:Feature
 <https://anzsoil.org/def/au/domain>
   a owl:Ontology ;
   dcterms:contributor <mailto:peter.wilson@csiro.au> ;
-  dcterms:created "2022-07-21" ;
+  dcterms:created "2022-07-21"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:description "A domain-model for Australian soil data - features" ;
+  dcterms:description "A domain-model for Australian soil data - entities" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-08-18" ;
+  dcterms:modified "2022-08-23"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
@@ -662,7 +662,7 @@ soil:relatedActivity
 .
 soil:relatedSample
   a owl:ObjectProperty ;
-  rdfs:range soil:Sample ;
+  rdfs:range sosa:Sample ;
   skos:prefLabel "related sample" ;
 .
 soil:relatedSite
