@@ -21,14 +21,14 @@
 <https://anzsoil.org/def/au/property>
   a owl:Ontology ;
   dcterms:contributor <mailto:peter.wilson@csiro.au> ;
-  dcterms:created "2022-07-14" ;
+  dcterms:created "2022-07-14"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:description """A domain-model for Australian soil data - properties
 
 Observable properties taken initially from ASLS (Yellow Book) as interpreted for the ANSIS project. """ ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-08-15" ;
+  dcterms:modified "2022-08-23"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://qudt.org/2.1/schema/qudt> ;
@@ -89,6 +89,7 @@ sprop:alteration
 .
 sprop:annualRainfall
   a qudt:QuantityKind ;
+  a skos:Concept ;
   a sosa:ObservableProperty ;
   skos:prefLabel "annual rainfall" ;
 .
@@ -132,6 +133,10 @@ sprop:chemical-concentration
   dcterms:identifier "https://anzsoil.org/def/au/property/chemical-concentration"^^xsd:anyURI ;
   skos:closeMatch <https://qudt.org/vocab/quantitykind/Concentration> ;
   skos:narrower sprop:field-ph ;
+  skos:narrower sprop:mass-fraction ;
+  skos:narrower sprop:molar-concentration ;
+  skos:narrower sprop:molar-content ;
+  skos:narrower sprop:volume-fraction ;
   skos:note "How are chemical concentrations reported for soils? mass-per-volume, mass-per-mass, amount-of-substance-per-volume, amount-of-substance-per-mass? " ;
   skos:note """If dimensionless (e.g. mass-per-mass), then nest below sprop:abundance
 If mass-per-volume then is related to sprop:density somehow""" ;
@@ -948,6 +953,13 @@ sprop:map-scale
   skos:definition "Map scale"@en ;
   skos:prefLabel "Map scale"@en ;
 .
+sprop:mass-fraction
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
+  skos:prefLabel "Chemical concentration - mass/mass" ;
+.
 sprop:material-strength
   a qudt:QuantityKind ;
   a skos:Concept ;
@@ -1016,6 +1028,20 @@ sprop:mode-of-geomorphological-activity
   dcterms:identifier "https://anzsoil.org/def/au/property/mode-of-geomorphological-activity"^^xsd:anyURI ;
   skos:definition "Various modes of geomorphological activity may be distinguished (Figure 3)."@en ;
   skos:prefLabel "Mode of geomorphological activity"@en ;
+.
+sprop:molar-concentration
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A1E0L-3I0M0H0T0D0> ;
+  skos:prefLabel "Chemical concentration - mol/vol" ;
+.
+sprop:molar-content
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A1E0L0I0M-1H0T0D0> ;
+  skos:prefLabel "Chemical concentration - mol/mass" ;
 .
 sprop:morphological-type
   a qudt:QuantityKind ;
@@ -1648,6 +1674,13 @@ sprop:voids-micropores
   dcterms:identifier "https://anzsoil.org/def/au/property/voids-micropores"^^xsd:anyURI ;
   skos:definition "voids that are approximately circular in cross-section and less than 0.075 mm diameter"@en ;
   skos:prefLabel "Micropores (presence)"@en ;
+.
+sprop:volume-fraction
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L0I0M0H0T0D1> ;
+  skos:prefLabel "Chemical concentration - vol/vol" ;
 .
 sprop:water-repellence
   a qudt:QuantityKind ;
