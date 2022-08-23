@@ -47,7 +47,7 @@ soil:Body
   a owl:Class ;
   rdfs:subClassOf geo:Feature ;
   skos:definition "generic type which encompasses all arrangements of soil in situ" ;
-  skos:prefLabel "Soil Body" ;
+  skos:prefLabel "Soil body" ;
 .
 soil:Contact
   a owl:Class ;
@@ -176,45 +176,8 @@ soil:LandformElement
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:extent-vertical ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:geomorphologyAgent ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:length ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:slopeValue ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:width ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
       owl:onClass skos:Concept ;
       owl:onProperty soil:landformElementName ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass skos:Concept ;
-      owl:onProperty sprop:morphologicalType ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass skos:Concept ;
-      owl:onProperty sprop:slopeClass ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Landform Element (~40m)" ;
@@ -231,61 +194,6 @@ soil:LandformPattern
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:geomorphologyStatus ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:geomorphologyAgent ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:modalSlope ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:relief ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelDepthWidth ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelDevelopment ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelDirectionality ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelMigration ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelNetwork ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelPattern ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:streamChannelSpacing ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:componentLandformElement ;
     ] ;
   skos:prefLabel "Landform Pattern (>600m)" ;
 .
@@ -305,7 +213,7 @@ soil:Layer
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:upperBound ;
     ] ;
   skos:definition "General soil layer - this covers both depth-defined and compositionally-defined cases. " ;
@@ -343,7 +251,7 @@ soil:Profile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sprop:horizonRDepth ;
+      owl:onProperty soil:substrateDepth ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -363,7 +271,8 @@ soil:Profile
 soil:Profile-type
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Type of soil observation profile" ;
+  skos:definition "Type of soil observation profile - e.g. pit, auger bore, core, exposure" ;
+  skos:prefLabel "Type of profile" ;
 .
 soil:Sample
   a owl:Class ;
@@ -518,7 +427,7 @@ soil:Substrate
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:texture ;
     ] ;
-  skos:prefLabel "Soil substrate" ;
+  skos:prefLabel "Substrate" ;
 .
 soil:Treatment
   a owl:Class ;
@@ -682,6 +591,12 @@ soil:siteType
 soil:strength
   a owl:ObjectProperty ;
   skos:prefLabel "strength of material" ;
+.
+soil:substrateDepth
+  a owl:DatatypeProperty ;
+  rdfs:range xsd:decimal ;
+  skos:definition "Depth to substrate or R horizon" ;
+  skos:prefLabel "depth to substrate (m)" ;
 .
 soil:texture
   a owl:ObjectProperty ;
