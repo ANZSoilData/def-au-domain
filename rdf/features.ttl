@@ -308,9 +308,9 @@ soil:Layer
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:upperBound ;
     ] ;
-  skos:definition """General soil layer - covers both depth-defined and pedogenic-defined cases
-Upper bound may be the land surface
-Lower bound may be the substrate below the soil column""" ;
+  skos:definition "General soil layer - this covers both depth-defined and compositionally-defined cases. " ;
+  skos:note """A purely depth-defined layer is merely a sample of a soil-body (do we need a specific sub-class for that case?). 
+However, the soil-horizon sub-class is not a sample, so the general Soil Layer class is not defined as a sub-class of Sample. """ ;
   skos:prefLabel "Soil layer" ;
 .
 soil:Microrelief
