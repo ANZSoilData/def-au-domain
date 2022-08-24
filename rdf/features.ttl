@@ -18,7 +18,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix soil: <https://anzsoil.org/def/au/domain#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
-@prefix sprop: <https://anzsoil.org/def/au/property/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -616,12 +615,4 @@ soil:visitor
   rdfs:subPropertyOf prov:wasAssociatedWith ;
   skos:prefLabel "visitor" ;
 .
-sprop:abundance
-  a owl:ObjectProperty ;
-  skos:prefLabel "abundance" ;
-.
-sprop:colour
-  a owl:ObjectProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/colour"^^xsd:anyURI ;
-  skos:prefLabel "Munsell colour" ;
-.
+
