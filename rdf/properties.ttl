@@ -378,6 +378,16 @@ sprop:depth-free-water
   skos:definition "Give depth to free water at the site of soil observation, in metres, either above or below the soil surface, excluding litter and living vegetation. "@en ;
   skos:prefLabel "Depth to free water"@en ;
 .
+sprop:depth-lower
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/depth-lower"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
+  skos:definition "The lower depth of the entity" ;
+  skos:prefLabel "Lower depth" ;
+.
 sprop:depth-of-horizon
   a qudt:QuantityKind ;
   a skos:Concept ;
@@ -420,6 +430,16 @@ sprop:depth-to-r-horizon
   skos:definition """Give depth to R horizon or strongly cemented pan in metres.
 The purpose of recording this depth is to include in the soil description those materials that may be relatively easily moved by earth-moving equipment or may be relatively easily penetrated by roots. Strong or very strong rock or pan that may require ripping or blasting to move, and/or has little or no root penetration, is excluded"""@en ;
   skos:prefLabel "Depth to R horizon or strongly cemented pan"@en ;
+.
+sprop:depth-upper
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/depth-upper"^^xsd:anyURI ;
+  dcterms:source "Australian soil and land survey field handbook, vol. 3, ISBN 9780643093959" ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
+  skos:definition "The upper depth of the entity" ;
+  skos:prefLabel "Upper depth" ;
 .
 sprop:diameter
   a qudt:QuantityKind ;
