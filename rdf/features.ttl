@@ -1,4 +1,5 @@
 # baseURI: https://anzsoil.org/def/au/domain
+# imports: http://anzsoil.org/def/au/asls/soil-profile
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
@@ -7,6 +8,7 @@
 # imports: http://www.w3.org/ns/ssn/
 # prefix: soil
 
+@prefix : <https://my.example.org/soil/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix my: <https://my.example.org/soil/> .
@@ -22,10 +24,557 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix soil: <https://anzsoil.org/def/au/domain#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sp: <http://anzsoil.org/def/au/asls/soil-profile/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+sp:field-texture-AP
+  a soil:TextureGrade ;
+.
+sp:field-texture-C
+  a soil:TextureGrade ;
+.
+sp:field-texture-CFS
+  a soil:TextureGrade ;
+.
+sp:field-texture-CFS-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CFS-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-CKS
+  a soil:TextureGrade ;
+.
+sp:field-texture-CKS-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CKS-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-CL
+  a soil:TextureGrade ;
+.
+sp:field-texture-CL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-CL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-CL-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CL-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLFS
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLFS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLFS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLFS-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLFS-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLKS
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLKS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLKS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLKS-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLKS-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLS
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLS-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CLS-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-CP
+  a soil:TextureGrade ;
+.
+sp:field-texture-CS
+  a soil:TextureGrade ;
+.
+sp:field-texture-CS-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-CS-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-FS
+  a soil:TextureGrade ;
+.
+sp:field-texture-FS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSCL
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSCL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSCL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSCL-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSCL-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSL
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSLC
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSLC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSLC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSLMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSLMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSLMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSMHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSMHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-FSMHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-GP
+  a soil:TextureGrade ;
+.
+sp:field-texture-HC
+  a soil:TextureGrade ;
+.
+sp:field-texture-HC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-HC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-HP
+  a soil:TextureGrade ;
+.
+sp:field-texture-IP
+  a soil:TextureGrade ;
+.
+sp:field-texture-KS
+  a soil:TextureGrade ;
+.
+sp:field-texture-KS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSCL
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSCL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSCL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSCL-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSCL-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSL
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSLC
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSLC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSLC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSLMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSLMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSLMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSMHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSMHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-KSMHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-L
+  a soil:TextureGrade ;
+.
+sp:field-texture-L-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-L-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-LC
+  a soil:TextureGrade ;
+.
+sp:field-texture-LC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-LC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-LFS
+  a soil:TextureGrade ;
+.
+sp:field-texture-LFS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-LFS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-LKS
+  a soil:TextureGrade ;
+.
+sp:field-texture-LKS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-LKS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-LMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-LMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-LMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-LP
+  a soil:TextureGrade ;
+.
+sp:field-texture-LS
+  a soil:TextureGrade ;
+.
+sp:field-texture-LS-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-LS-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-MC
+  a soil:TextureGrade ;
+.
+sp:field-texture-MC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-MC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-MHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-MHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-MHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-S
+  a soil:TextureGrade ;
+.
+sp:field-texture-S-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-S-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SCL
+  a soil:TextureGrade ;
+.
+sp:field-texture-SCL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SCL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SCL-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-SCL-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-SHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-SHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SL
+  a soil:TextureGrade ;
+.
+sp:field-texture-SL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SLC
+  a soil:TextureGrade ;
+.
+sp:field-texture-SLC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SLC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SLMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-SLMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SLMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-SMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SMHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-SMHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-SMHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-SP
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZCL
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZCL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZCL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZCL-heavy
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZCL-light
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZHC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZL
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZL-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZL-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZLC
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZLC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZLC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZLMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZLMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZLMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZMC
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZMC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZMC-I
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZMHC
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZMHC-A
+  a soil:TextureGrade ;
+.
+sp:field-texture-ZMHC-I
+  a soil:TextureGrade ;
+.
+sp:horizon-A1
+  a soil:Designation ;
+.
+sp:horizon-A2
+  a soil:Designation ;
+.
+sp:horizon-A3
+  a soil:Designation ;
+.
+sp:horizon-B1
+  a soil:Designation ;
+.
+sp:horizon-B2
+  a soil:Designation ;
+.
+sp:horizon-B3
+  a soil:Designation ;
+.
+sp:horizon-O1
+  a soil:Designation ;
+.
+sp:horizon-O2
+  a soil:Designation ;
+.
+sp:horizon-P1
+  a soil:Designation ;
+.
+sp:horizon-P2
+  a soil:Designation ;
+.
+sp:horizons-A
+  a soil:Designation ;
+.
+sp:horizons-B
+  a soil:Designation ;
+.
+sp:horizons-C
+  a soil:Designation ;
+.
+sp:horizons-D
+  a soil:Designation ;
+.
+sp:horizons-O
+  a soil:Designation ;
+.
+sp:horizons-P
+  a soil:Designation ;
+.
+sp:horizons-R
+  a soil:Designation ;
+.
 geo:Feature
   rdfs:subClassOf prov:Entity ;
 .
@@ -39,6 +588,7 @@ geo:Feature
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-08-23"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://anzsoil.org/def/au/asls/soil-profile> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
@@ -52,12 +602,12 @@ soil:Body
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasSubstrate ;
+      owl:onProperty soil:relatedSubstrate ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasLayer ;
+      owl:onProperty soil:relatedLayer ;
     ] ;
   skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
 """ ;
@@ -75,42 +625,82 @@ soil:Boundary
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasSubstrate ;
+      owl:onProperty soil:distinctness ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedSubstrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:shape ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasHorizon ;
+      owl:onProperty soil:relatedHorizon ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasHorizon ;
+      owl:onProperty soil:relatedHorizon ;
     ] ;
   skos:definition "Interface between two soil horizons" ;
   skos:prefLabel "Soil boundary" ;
 .
 soil:BoundaryInProfile
   a owl:Class ;
-  rdfs:subClassOf sosa:FeatureOfInterest ;
+  rdfs:subClassOf sosa:Sample ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasBoundary ;
+      owl:allValuesFrom soil:Boundary ;
+      owl:onProperty sosa:isSampleOf ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:relatedProfile ;
     ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:distinctness ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedSubstrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:shape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedHorizon ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedHorizon ;
+    ] ;
   skos:definition "Soil boundary observed in a specific profile" ;
   skos:prefLabel "Boundary in profile" ;
 .
-soil:Class
+soil:Designation
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
-  skos:definition "Classifier (order, sub-order, etc) from some soil classification scheme" ;
-  skos:prefLabel "Soil class" ;
+  skos:definition "Designator for a horizon-type within a sequence" ;
+  skos:prefLabel "Horizon designation" ;
 .
 soil:Horizon
   a owl:Class ;
@@ -129,14 +719,10 @@ soil:Horizon
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:fieldTexture ;
+      owl:onProperty soil:designation ;
     ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:horizonClass ;
-    ] ;
-  skos:note "one classification per classification scheme" ;
+  skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
+  skos:note "Soil horizons are designated A1, B2, R etc. " ;
   skos:prefLabel "Soil horizon" ;
 .
 soil:LandCover
@@ -162,12 +748,12 @@ soil:LandSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:elevationMethod ;
+      owl:onProperty soil:method-elevation ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasMicrorelief ;
+      owl:onProperty soil:relatedMicrorelief ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -197,12 +783,12 @@ soil:Landform
   rdfs:subClassOf soil:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onProperty soil:hasLandformElement ;
+      owl:onProperty soil:relatedLandformElement ;
       owl:someValuesFrom soil:LandformElement ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onProperty soil:hasLandformPattern ;
+      owl:onProperty soil:relatedLandformPattern ;
       owl:someValuesFrom soil:LandformPattern ;
     ] ;
   skos:prefLabel "Landform" ;
@@ -262,6 +848,11 @@ soil:Layer
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:depth-upper ;
     ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:fieldTexture ;
+    ] ;
   skos:definition "General soil layer - this covers both depth-defined and compositionally-defined cases. " ;
   skos:note """A soil body may be described as a single layer. 
 
@@ -272,16 +863,31 @@ So the general Soil Layer class is not defined as a sub-class of Sample. """ ;
 .
 soil:LayerInProfile
   a owl:Class ;
-  rdfs:subClassOf sosa:FeatureOfInterest ;
+  rdfs:subClassOf sosa:Sample ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soil:Layer ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasLayer ;
+      owl:onProperty soil:depth-lower ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:depth-upper ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:relatedProfile ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:fieldTexture ;
     ] ;
   skos:definition "Soil layer observed in a specific profile" ;
   skos:prefLabel "Layer in profile" ;
@@ -327,22 +933,22 @@ soil:Profile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasSubstrate ;
+      owl:onProperty soil:relatedSubstrate ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasBoundary ;
+      owl:onProperty soil:relatedBoundary ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasLayer ;
+      owl:onProperty soil:relatedLayer ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:onClass soil:Profile-type ;
-      owl:onProperty soil:profileType ;
+      owl:onProperty soil:type-profile ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
@@ -405,12 +1011,12 @@ soil:Site
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasLandManagement ;
+      owl:onProperty soil:relatedLandManagement ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasLandUse ;
+      owl:onProperty soil:relatedLandUse ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -497,13 +1103,28 @@ soil:SubstrateInProfile
   rdfs:subClassOf sosa:FeatureOfInterest ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:allValuesFrom soil:Substrate ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:hasSubstrate ;
+      owl:onProperty soil:lithology ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:relatedProfile ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:texture ;
     ] ;
   skos:definition "Soil substrate observed in a specific profile" ;
   skos:prefLabel "Substrate in profile" ;
@@ -515,6 +1136,11 @@ soil:Surface
   skos:definition "the layer with upper-depth = 0 and zero thickness" ;
   skos:prefLabel "Soil surface" ;
 .
+soil:TextureGrade
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "FIeld texture grade" ;
+.
 soil:Treatment
   a owl:Class ;
   rdfs:subClassOf sosa:Actuation ;
@@ -523,173 +1149,107 @@ soil:Treatment
 .
 soil:abundance-outcrop
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "abundance of rock outcrop" ;
 .
 soil:boundary-lower
   a owl:ObjectProperty ;
-  rdfs:subPropertyOf soil:hasBoundary ;
+  a sosa:ObservableProperty ;
+  rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "lower boundary" ;
 .
 soil:boundary-upper
   a owl:ObjectProperty ;
-  rdfs:subPropertyOf soil:hasBoundary ;
+  a sosa:ObservableProperty ;
+  rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "upper boundary" ;
 .
 soil:component-landform-element
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/component-landform-element"^^xsd:anyURI ;
   rdfs:range soil:LandformElement ;
   skos:prefLabel "component landform element" ;
 .
 soil:conditionWhenDry
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   rdfs:domain soil:Surface ;
   skos:prefLabel "condition when dry" ;
 .
+soil:density
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  owl:sameAs prop:density ;
+  skos:prefLabel "density" ;
+.
+soil:density-bulk
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  owl:sameAs prop:density-bulk ;
+  skos:prefLabel "bulk density" ;
+.
 soil:depth
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:definition "depth of entity" ;
   skos:prefLabel "depth" ;
 .
 soil:depth-RHorizon
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "depth to R-horizon" ;
 .
 soil:depth-Substrate
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "depth to substrate" ;
 .
 soil:depth-lower
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "lower depth" ;
 .
 soil:depth-upper
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  owl:sameAs prop:depth-upper ;
   skos:prefLabel "upper depth" ;
 .
-soil:distinctness-boundary
+soil:designation
   a owl:ObjectProperty ;
-  rdfs:domain soil:Boundary ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:Designation ;
+  rdfs:subPropertyOf dcterms:type ;
+  skos:definition "soil horizon designation" ;
+  skos:prefLabel "horizon designation" ;
+.
+soil:distinctness
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "boundary distinctness" ;
-.
-soil:drainageHeightMethod
-  a owl:ObjectProperty ;
-  skos:definition "Means of evaluation of drainage height" ;
-  skos:prefLabel "drainage height method" ;
-.
-soil:elevationMethod
-  a owl:ObjectProperty ;
-  skos:definition "Means of evaluation of elevation" ;
-  skos:prefLabel "elevation method" ;
 .
 soil:erosion
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "erosion" ;
 .
 soil:fieldTexture
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:TextureGrade ;
   skos:prefLabel "field texture" ;
 .
 soil:geomorphologyMode
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:definition "mode of geomorphological activity" ;
   skos:prefLabel "geomorphology mode" ;
 .
 soil:geomorphologyStatus
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "status of geomorphological activity" ;
-.
-soil:hasBoundary
-  a owl:ObjectProperty ;
-  rdfs:range soil:Boundary ;
-  skos:definition "related boundary within a soil body or sample" ;
-  skos:prefLabel "related boundary" ;
-.
-soil:hasHorizon
-  a owl:ObjectProperty ;
-  rdfs:range soil:Horizon ;
-  rdfs:subPropertyOf soil:hasLayer ;
-  skos:definition "related soil horizon within a soil body or sample, or associated with a contact" ;
-  skos:prefLabel "related soil horizon" ;
-.
-soil:hasLandCover
-  a owl:ObjectProperty ;
-  rdfs:range soil:LandCover ;
-  skos:definition "land cover around this entity" ;
-  skos:prefLabel "related land cover" ;
-.
-soil:hasLandManagement
-  a owl:ObjectProperty ;
-  rdfs:range soil:LandManagement ;
-  skos:definition "land management around this entity" ;
-  skos:prefLabel "related land management" ;
-.
-soil:hasLandSurface
-  a owl:ObjectProperty ;
-  rdfs:range soil:LandSurface ;
-  skos:definition "land surface at this entity" ;
-  skos:prefLabel "related land surface" ;
-.
-soil:hasLandUse
-  a owl:ObjectProperty ;
-  rdfs:range soil:LandUse ;
-  skos:definition "land use around this entity" ;
-  skos:prefLabel "related land use" ;
-.
-soil:hasLandform
-  a owl:ObjectProperty ;
-  rdfs:range soil:Landform ;
-  skos:definition "landform around this entity" ;
-  skos:prefLabel "related landform" ;
-.
-soil:hasLandformElement
-  a owl:ObjectProperty ;
-  rdfs:range soil:LandformElement ;
-  skos:definition "landform element in the vicinity of this entity (~40m)" ;
-  skos:prefLabel "related landform element" ;
-.
-soil:hasLandformPattern
-  a owl:ObjectProperty ;
-  rdfs:range soil:LandformPattern ;
-  skos:definition "landform pattern around this entity (>600m)" ;
-  skos:prefLabel "related landform pattern" ;
-.
-soil:hasLayer
-  a owl:ObjectProperty ;
-  rdfs:range soil:Layer ;
-  rdfs:subPropertyOf sosa:hasSample ;
-  skos:definition "related soil layer within a soil body or sample" ;
-  skos:prefLabel "related soil layer" ;
-.
-soil:hasMicrorelief
-  a owl:ObjectProperty ;
-  rdfs:range soil:Microrelief ;
-  skos:definition "microrelief at the site" ;
-  skos:prefLabel "related microrelief" ;
-.
-soil:hasOutcrop
-  a owl:ObjectProperty ;
-  rdfs:range soil:Outcrop ;
-  skos:definition "outcrop at this entity" ;
-  skos:prefLabel "related outcrop" ;
-.
-soil:hasSoilSurface
-  a owl:ObjectProperty ;
-  rdfs:range soil:Surface ;
-  skos:definition "soil surface of this entity" ;
-  skos:prefLabel "related soil surface" ;
-.
-soil:hasSubstrate
-  a owl:ObjectProperty ;
-  rdfs:range soil:Substrate ;
-  skos:definition "substrate at this entity" ;
-  skos:prefLabel "related substrate" ;
-.
-soil:horizonClass
-  a owl:ObjectProperty ;
-  rdfs:range soil:Class ;
-  skos:definition "soil classification - order, sub-order, etc (name or notation)" ;
-  skos:prefLabel "soil classification" ;
 .
 soil:landformElementName
   a owl:ObjectProperty ;
@@ -697,11 +1257,13 @@ soil:landformElementName
 .
 soil:lithology
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:definition "lithological type of material" ;
   skos:prefLabel "lithological type" ;
 .
 soil:lithology-outcrop
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:definition "lithological type of rock outcrop" ;
   skos:prefLabel "lithology of outcrop" ;
 .
@@ -709,15 +1271,93 @@ soil:mapSheet
   a owl:ObjectProperty ;
   skos:prefLabel "on map-sheet" ;
 .
-soil:profileType
+soil:method-drainageHeight
   a owl:ObjectProperty ;
-  skos:note "sampling method" ;
-  skos:prefLabel "type of soil profile observation" ;
+  skos:definition "Means of evaluation of drainage height" ;
+  skos:prefLabel "drainage height method" ;
+.
+soil:method-elevation
+  a owl:ObjectProperty ;
+  skos:definition "Means of evaluation of elevation" ;
+  skos:prefLabel "elevation method" ;
 .
 soil:relatedActivity
   a owl:ObjectProperty ;
   rdfs:range prov:Activity ;
   skos:prefLabel "related activity" ;
+.
+soil:relatedBoundary
+  a owl:ObjectProperty ;
+  rdfs:range soil:Boundary ;
+  skos:definition "related boundary within a soil body or sample" ;
+  skos:prefLabel "related boundary" ;
+.
+soil:relatedHorizon
+  a owl:ObjectProperty ;
+  rdfs:range soil:Horizon ;
+  rdfs:subPropertyOf soil:relatedLayer ;
+  skos:definition "related soil horizon within a soil body or sample, or associated with a contact" ;
+  skos:prefLabel "related soil horizon" ;
+.
+soil:relatedLandCover
+  a owl:ObjectProperty ;
+  rdfs:range soil:LandCover ;
+  skos:definition "land cover around this entity" ;
+  skos:prefLabel "related land cover" ;
+.
+soil:relatedLandManagement
+  a owl:ObjectProperty ;
+  rdfs:range soil:LandManagement ;
+  skos:definition "land management around this entity" ;
+  skos:prefLabel "related land management" ;
+.
+soil:relatedLandSurface
+  a owl:ObjectProperty ;
+  rdfs:range soil:LandSurface ;
+  skos:definition "land surface at this entity" ;
+  skos:prefLabel "related land surface" ;
+.
+soil:relatedLandUse
+  a owl:ObjectProperty ;
+  rdfs:range soil:LandUse ;
+  skos:definition "land use around this entity" ;
+  skos:prefLabel "related land use" ;
+.
+soil:relatedLandform
+  a owl:ObjectProperty ;
+  rdfs:range soil:Landform ;
+  skos:definition "landform around this entity" ;
+  skos:prefLabel "related landform" ;
+.
+soil:relatedLandformElement
+  a owl:ObjectProperty ;
+  rdfs:range soil:LandformElement ;
+  skos:definition "landform element in the vicinity of this entity (~40m)" ;
+  skos:prefLabel "related landform element" ;
+.
+soil:relatedLandformPattern
+  a owl:ObjectProperty ;
+  rdfs:range soil:LandformPattern ;
+  skos:definition "landform pattern around this entity (>600m)" ;
+  skos:prefLabel "related landform pattern" ;
+.
+soil:relatedLayer
+  a owl:ObjectProperty ;
+  rdfs:range soil:Layer ;
+  skos:definition "related soil layer within a soil body or sample" ;
+  skos:prefLabel "related soil layer" ;
+.
+soil:relatedMicrorelief
+  a owl:ObjectProperty ;
+  rdfs:range soil:Microrelief ;
+  skos:definition "microrelief at the site" ;
+  skos:prefLabel "related microrelief" ;
+.
+soil:relatedOutcrop
+  a owl:ObjectProperty ;
+  rdfs:range soil:Outcrop ;
+  skos:definition "outcrop at this entity" ;
+  skos:prefLabel "related outcrop" ;
 .
 soil:relatedProfile
   a owl:ObjectProperty ;
@@ -734,13 +1374,27 @@ soil:relatedSite
   rdfs:range soil:Site ;
   skos:prefLabel "related site" ;
 .
-soil:shape-boundary
+soil:relatedSoilSurface
   a owl:ObjectProperty ;
+  rdfs:range soil:Surface ;
+  skos:definition "soil surface of this entity" ;
+  skos:prefLabel "related soil surface" ;
+.
+soil:relatedSubstrate
+  a owl:ObjectProperty ;
+  rdfs:range soil:Substrate ;
+  skos:definition "substrate at this entity" ;
+  skos:prefLabel "related substrate" ;
+.
+soil:shape
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   rdfs:domain soil:Boundary ;
   skos:prefLabel "boundary shape" ;
 .
 soil:siteDisturbance
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "disturbance of site" ;
 .
 soil:siteType
@@ -750,14 +1404,23 @@ soil:siteType
 .
 soil:strength
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "strength of material" ;
 .
 soil:texture
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "material texture" ;
+.
+soil:type-profile
+  a owl:ObjectProperty ;
+  skos:definition "type of soil profile observation" ;
+  skos:note "sampling method" ;
+  skos:prefLabel "profile type" ;
 .
 soil:underlyingMaterial
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "underlying material" ;
 .
 soil:visitor
@@ -768,86 +1431,45 @@ soil:visitor
 .
 soil:waterRepellence
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   rdfs:domain soil:Surface ;
   skos:prefLabel "water repellence" ;
-.
-<https://my.example.org/soil/01-horizon>
-  a soil:Horizon ;
-  skos:prefLabel "O1 horizon" ;
-.
-<https://my.example.org/soil/02-horizon>
-  a soil:Horizon ;
-  skos:prefLabel "O2 horizon" ;
-.
-my:A1-horizon
-  a soil:Horizon ;
-  skos:prefLabel "A1 horizon" ;
-.
-my:A2-horizon
-  a soil:Horizon ;
-  skos:prefLabel "A2 horizon" ;
-.
-my:A3-horizon
-  a soil:Horizon ;
-  skos:prefLabel "A3 horizon" ;
-.
-my:B1-horizon
-  a soil:Horizon ;
-  skos:prefLabel "B1 horizon" ;
-.
-my:B2-horizon
-  a soil:Horizon ;
-  skos:prefLabel "B2 horizon" ;
-.
-my:B2-in-p998
-  a soil:LayerInProfile ;
-  skos:prefLabel "B2 horizon in Profile 998" ;
-  soil:hasLayer my:B2-horizon ;
-  soil:relatedProfile my:profile-998 ;
-.
-my:B3-horizon
-  a soil:Horizon ;
-  skos:prefLabel "B3 horizon" ;
-.
-my:C-horizon
-  a soil:Horizon ;
-  skos:prefLabel "C horizon" ;
-.
-my:D-horizon
-  a soil:Horizon ;
-  skos:prefLabel "D horizon" ;
 .
 my:DensityProcedure
   a sosa:Procedure ;
   skos:prefLabel "bulk density procedure" ;
 .
-my:P1-horizon
-  a soil:Horizon ;
-  skos:prefLabel "P1 horizon" ;
-.
-my:P2-horizon
-  a soil:Horizon ;
-  skos:prefLabel "P2 horizon" ;
-.
-my:R-horizon
-  a soil:Horizon ;
-  skos:prefLabel "R horizon" ;
-.
-my:Site9
-  a soil:Site ;
-  skos:prefLabel "Site 9" ;
+<https://my.example.org/soil/L-0.5-0.7>
+  a soil:Layer ;
+  skos:prefLabel "Layer between 0.5-0.7m depth" ;
+  soil:depth-lower "0.7 m" ;
+  soil:depth-upper "0.5 m" ;
 .
 my:Tapemeasure
   a sosa:Procedure ;
   skos:prefLabel "tape measure from surface" ;
 .
-<https://my.example.org/soil/layer-0.5-0.7>
+my:X2
+  a soil:Horizon ;
   a soil:Layer ;
-  skos:prefLabel "Layer between 0.5-0.7m depth" ;
+  skos:prefLabel "Layer potentially classifiable as a horizon" ;
+  soil:boundary-lower my:X2l ;
+  soil:boundary-upper my:X2u ;
+.
+my:X2-in-p998
+  a soil:LayerInProfile ;
+  skos:prefLabel "X2 layer in Profile 998" ;
+  sosa:isSampleOf my:X2 ;
+  soil:density-bulk "1.5  t.m-3" ;
+  soil:depth-lower "0.62 m" ;
+  soil:depth-upper "0.34 m" ;
+  soil:designation sp:horizon-B2 ;
+  soil:fieldTexture sp:field-texture-CL-heavy ;
+  soil:relatedProfile my:profile-998 ;
 .
 <https://my.example.org/soil/layer-0.5-0.7-in-998>
   a soil:LayerInProfile ;
-  soil:hasLayer <https://my.example.org/soil/layer-0.5-0.7> ;
+  sosa:isSampleOf <https://my.example.org/soil/L-0.5-0.7> ;
   soil:relatedProfile my:profile-998 ;
 .
 my:observation-1
@@ -855,9 +1477,9 @@ my:observation-1
   dcterms:isPartOf my:visit-99 ;
   skos:prefLabel "Example observation 1" ;
   prov:wasAttributedTo <https://orcid.org/0000-0002-0693-1899> ;
-  sosa:hasFeatureOfInterest my:B2-in-p998 ;
+  sosa:hasFeatureOfInterest my:X2-in-p998 ;
   sosa:hasSimpleResult "0.34 m" ;
-  sosa:observedProperty prop:depth-upper ;
+  sosa:observedProperty soil:depth-upper ;
   sosa:resultTime "2022-09-07T11:04:00+10:00"^^xsd:dateTime ;
   sosa:usedProcedure my:Tapemeasure ;
 .
@@ -868,16 +1490,23 @@ my:observation-2
   prov:wasAttributedTo <https://orcid.org/0000-0002-0693-1899> ;
   sosa:hasFeatureOfInterest my:sample-998-5 ;
   sosa:hasSimpleResult "1.5  t.m-3" ;
-  sosa:observedProperty prop:density-bulk ;
+  sosa:observedProperty soil:density-bulk ;
   sosa:resultTime "2022-09-10T11:00:00+10:00"^^xsd:dateTime ;
   sosa:usedProcedure my:DensityProcedure ;
 .
+my:point-998
+  a sf:Point ;
+  geo:asWKT "POINT (-37.069332, 144.027094)"^^geo:wktLiteral ;
+  skos:prefLabel "Location of profile 998" ;
+.
 my:poly-99
   a sf:Polygon ;
+  geo:asWKT "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.02, -37.06 144.02))  "^^geo:wktLiteral ;
   skos:prefLabel "Polygon 99" ;
 .
 my:profile-998
   a soil:Profile ;
+  geo:hasGeometry my:point-998 ;
   skos:prefLabel "Profile 998" ;
   soil:relatedSite my:site-99 ;
 .
