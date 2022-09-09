@@ -5,7 +5,6 @@
 # imports: http://www.opengis.net/ont/sf
 # imports: http://www.w3.org/ns/prov-o#
 # imports: http://www.w3.org/ns/sosa/
-# imports: http://www.w3.org/ns/ssn/
 # prefix: soil
 
 @prefix : <https://my.example.org/soil/> .
@@ -525,55 +524,55 @@ sp:field-texture-ZMHC-I
   a soil:TextureGrade ;
 .
 sp:horizon-A1
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-A2
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-A3
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-B1
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-B2
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-B3
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-O1
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-O2
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-P1
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizon-P2
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-A
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-B
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-C
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-D
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-O
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-P
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 sp:horizons-R
-  a soil:Designation ;
+  a soil:PrimaryNotation ;
 .
 geo:Feature
   rdfs:subClassOf prov:Entity ;
@@ -594,7 +593,6 @@ geo:Feature
   owl:imports <http://www.opengis.net/ont/sf> ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;
   owl:imports sosa: ;
-  owl:imports ssn: ;
 .
 soil:Body
   a owl:Class ;
@@ -696,12 +694,6 @@ soil:BoundaryInProfile
   skos:definition "Soil boundary observed in a specific profile" ;
   skos:prefLabel "Boundary in profile" ;
 .
-soil:Designation
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:definition "Designator for a horizon-type within a sequence" ;
-  skos:prefLabel "Horizon designation" ;
-.
 soil:Horizon
   a owl:Class ;
   rdfs:subClassOf geo:Feature ;
@@ -759,11 +751,6 @@ soil:LandSurface
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:lithology-outcrop ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:siteDisturbance ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -898,8 +885,40 @@ soil:Microrelief
 .
 soil:Outcrop
   a owl:Class ;
+  rdfs:subClassOf sosa:Sample ;
   rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soil:Site ;
+      owl:onProperty soil:relatedSite ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soil:Substrate ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:lithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:texture ;
+    ] ;
   skos:prefLabel "Outcrop" ;
+.
+soil:PrimaryNotation
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Primary notation for a horizon-type within a sequence" ;
+  skos:prefLabel "Horizon notation" ;
 .
 soil:Profile
   a owl:Class ;
@@ -1217,10 +1236,10 @@ soil:depth-upper
   skos:prefLabel "upper depth" ;
 .
 soil:designation
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:Designation ;
   rdfs:subPropertyOf dcterms:type ;
+  rdfs:subPropertyOf skos:notation ;
   skos:definition "soil horizon designation" ;
   skos:prefLabel "horizon designation" ;
 .
@@ -1463,7 +1482,7 @@ my:X2-in-p998
   soil:density-bulk "1.5  t.m-3" ;
   soil:depth-lower "0.62 m" ;
   soil:depth-upper "0.34 m" ;
-  soil:designation sp:horizon-B2 ;
+  soil:designation "B2b" ;
   soil:fieldTexture sp:field-texture-CL-heavy ;
   soil:relatedProfile my:profile-998 ;
 .
@@ -1501,7 +1520,7 @@ my:point-998
 .
 my:poly-99
   a sf:Polygon ;
-  geo:asWKT "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.02, -37.06 144.02))  "^^geo:wktLiteral ;
+  geo:asWKT "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.03, -37.06 144.02))"^^geo:wktLiteral ;
   skos:prefLabel "Polygon 99" ;
 .
 my:profile-998
