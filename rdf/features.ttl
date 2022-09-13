@@ -553,6 +553,21 @@ sp:horizon-P1
 sp:horizon-P2
   a soil:PrimaryNotation ;
 .
+sp:horizon-boundary-distinctness-A
+  a soil:Boundary-distinctness ;
+.
+sp:horizon-boundary-distinctness-C
+  a soil:Boundary-distinctness ;
+.
+sp:horizon-boundary-distinctness-D
+  a soil:Boundary-distinctness ;
+.
+sp:horizon-boundary-distinctness-G
+  a soil:Boundary-distinctness ;
+.
+sp:horizon-boundary-distinctness-S
+  a soil:Boundary-distinctness ;
+.
 sp:horizons-A
   a soil:PrimaryNotation ;
 .
@@ -573,6 +588,18 @@ sp:horizons-P
 .
 sp:horizons-R
   a soil:PrimaryNotation ;
+.
+sp:observation-type-A
+  a soil:Profile-type ;
+.
+sp:observation-type-C
+  a soil:Profile-type ;
+.
+sp:observation-type-E
+  a soil:Profile-type ;
+.
+sp:observation-type-P
+  a soil:Profile-type ;
 .
 geo:Feature
   rdfs:subClassOf prov:Entity ;
@@ -647,6 +674,11 @@ soil:Boundary
     ] ;
   skos:definition "Interface between two soil horizons" ;
   skos:prefLabel "Soil boundary" ;
+.
+soil:Boundary-distinctness
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Boundary distinctness" ;
 .
 soil:BoundaryInProfile
   a owl:Class ;
@@ -839,6 +871,11 @@ soil:Layer
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:fieldTexture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty soil:relatedBody ;
+      owl:someValuesFrom soil:Body ;
     ] ;
   skos:definition "General soil layer - this covers both depth-defined and compositionally-defined cases. " ;
   skos:note """A soil body may be described as a single layer. 
@@ -1115,6 +1152,11 @@ soil:Substrate
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:texture ;
     ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedHorizon ;
+    ] ;
   skos:prefLabel "Substrate" ;
 .
 soil:SubstrateInProfile
@@ -1197,40 +1239,40 @@ soil:conditionWhenDry
   skos:prefLabel "condition when dry" ;
 .
 soil:density
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   owl:sameAs prop:density ;
   skos:prefLabel "density" ;
 .
 soil:density-bulk
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   owl:sameAs prop:density-bulk ;
   skos:prefLabel "bulk density" ;
 .
 soil:depth
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   skos:definition "depth of entity" ;
   skos:prefLabel "depth" ;
 .
 soil:depth-RHorizon
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "depth to R-horizon" ;
 .
 soil:depth-Substrate
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "depth to substrate" ;
 .
 soil:depth-lower
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "lower depth" ;
 .
 soil:depth-upper
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   owl:sameAs prop:depth-upper ;
   skos:prefLabel "upper depth" ;
@@ -1238,7 +1280,6 @@ soil:depth-upper
 soil:designation
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf dcterms:type ;
   rdfs:subPropertyOf skos:notation ;
   skos:definition "soil horizon designation" ;
   skos:prefLabel "horizon designation" ;
@@ -1246,6 +1287,7 @@ soil:designation
 soil:distinctness
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  rdfs:range soil:Boundary-distinctness ;
   skos:prefLabel "boundary distinctness" ;
 .
 soil:erosion
@@ -1304,6 +1346,12 @@ soil:relatedActivity
   a owl:ObjectProperty ;
   rdfs:range prov:Activity ;
   skos:prefLabel "related activity" ;
+.
+soil:relatedBody
+  a owl:ObjectProperty ;
+  rdfs:range soil:Body ;
+  skos:definition "related mappable soil body containing a set of layers and horizons" ;
+  skos:prefLabel "related soil body" ;
 .
 soil:relatedBoundary
   a owl:ObjectProperty ;
@@ -1433,6 +1481,7 @@ soil:texture
 .
 soil:type-profile
   a owl:ObjectProperty ;
+  rdfs:range soil:Profile-type ;
   skos:definition "type of soil profile observation" ;
   skos:note "sampling method" ;
   skos:prefLabel "profile type" ;
@@ -1454,15 +1503,128 @@ soil:waterRepellence
   rdfs:domain soil:Surface ;
   skos:prefLabel "water repellence" ;
 .
+my:A11-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer A11 in Profile 1" ;
+  soil:depth-lower "17 cm" ;
+  soil:depth-upper "0 cm" ;
+  soil:relatedHorizon my:Horizon_A11 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:A12-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer A12 in Profile 1" ;
+  soil:depth-lower "35 cm" ;
+  soil:depth-upper "17 cm" ;
+  soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B-A11-A12-P1
+  a soil:BoundaryInProfile ;
+  skos:prefLabel "Boundary A11-A12 in Profile 1" ;
+  soil:depth "17 cm" ;
+  soil:distinctness sp:horizon-boundary-distinctness-D ;
+  soil:relatedBoundary my:Boundary-A11-A12 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:Body-88
+  a soil:Body ;
+  skos:prefLabel "Megan's paddock" ;
+.
+my:Boundary-A11-A12
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A11-A12" ;
+  soil:relatedHorizon my:Horizon_A11 ;
+  soil:relatedHorizon my:Horizon_A12 ;
+.
+my:Boundary-A12-A2
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A12-A2" ;
+  soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedHorizon my:Horizon_A2 ;
+.
+my:Boundary-A2-B21s
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A2-B21s" ;
+  soil:relatedHorizon my:Horizon_A2 ;
+  soil:relatedHorizon my:Horizon_B21s ;
+.
 my:DensityProcedure
   a sosa:Procedure ;
   skos:prefLabel "bulk density procedure" ;
+.
+my:Horizon_A11
+  a soil:Horizon ;
+  skos:prefLabel "Horizon A11" ;
+  soil:designation "A11" ;
+.
+my:Horizon_A12
+  a soil:Horizon ;
+  skos:prefLabel "Horizon A12" ;
+  soil:designation "A12" ;
+.
+my:Horizon_A2
+  a soil:Horizon ;
+  skos:prefLabel "Horizon A2" ;
+  soil:designation "A2" ;
+.
+my:Horizon_B21s
+  a soil:Horizon ;
+  skos:prefLabel "Horizon B21s" ;
+  soil:designation "B21s" ;
+.
+my:Horizon_B22s
+  a soil:Horizon ;
+  skos:prefLabel "Horizon B22s" ;
+  soil:designation "B22s" ;
 .
 <https://my.example.org/soil/L-0.5-0.7>
   a soil:Layer ;
   skos:prefLabel "Layer between 0.5-0.7m depth" ;
   soil:depth-lower "0.7 m" ;
   soil:depth-upper "0.5 m" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Odepth-B-A11-A12-P1_1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of depth of boundary A11-A12 in P1" ;
+  prov:wasAssociatedWith <mailto:nathan.robinson@federation.edu.au> ;
+  sosa:hasFeatureOfInterest my:B-A11-A12-P1 ;
+  sosa:hasSimpleResult "17 cm" ;
+  sosa:observedProperty soil:depth ;
+  sosa:resultTime "2022-09-13T00:00:00"^^xsd:dateTime ;
+.
+my:Odist-B-A11-A12-P1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of distinctness of boundary A11-A12 in P1" ;
+  prov:wasAssociatedWith <mailto:nathan.robinson@federation.edu.au> ;
+  sosa:hasFeatureOfInterest my:B-A11-A12-P1 ;
+  sosa:hasResult sp:horizon-boundary-distinctness-D ;
+  sosa:observedProperty soil:distinctness ;
+  sosa:resultTime "2022-09-13T00:00:00"^^xsd:dateTime ;
+.
+my:Point_1
+  a sf:Point ;
+  skos:prefLabel "point 1" ;
+.
+my:Polygon_1
+  a sf:Polygon ;
+  skos:prefLabel "polygon 1" ;
+.
+my:Profile_1
+  a soil:Profile ;
+  geo:hasGeometry my:Point_1 ;
+  skos:prefLabel "profile 1" ;
+  soil:relatedBoundary my:Boundary-A11-A12 ;
+  soil:relatedHorizon my:Horizon_A11 ;
+  soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedSite my:Site_1 ;
+  soil:type-profile sp:observation-type-C ;
+.
+my:Site_1
+  a soil:Site ;
+  geo:hasGeometry my:Polygon_1 ;
+  skos:prefLabel "site 1" ;
 .
 my:Tapemeasure
   a sosa:Procedure ;
@@ -1474,6 +1636,7 @@ my:X2
   skos:prefLabel "Layer potentially classifiable as a horizon" ;
   soil:boundary-lower my:X2l ;
   soil:boundary-upper my:X2u ;
+  soil:relatedBody my:Body-88 ;
 .
 my:X2-in-p998
   a soil:LayerInProfile ;
@@ -1528,6 +1691,7 @@ my:profile-998
   geo:hasGeometry my:point-998 ;
   skos:prefLabel "Profile 998" ;
   soil:relatedSite my:site-99 ;
+  soil:type-profile sp:observation-type-C ;
 .
 my:sample-998-5
   a soil:Sample ;
