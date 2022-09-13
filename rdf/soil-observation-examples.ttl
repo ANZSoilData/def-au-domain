@@ -1,0 +1,173 @@
+# baseURI: https://my.example.org/soil/
+# imports: https://anzsoil.org/def/au/domain
+# imports: https://anzsoil.org/def/au/property
+# prefix: my
+
+@prefix asls: <http://anzsoil.org/def/au/asls/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ls: <http://anzsoil.org/def/au/asls/land-surface/> .
+@prefix my: <https://my.example.org/soil/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <https://anzsoil.org/def/au/property/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix sfeat: <https://anzsoil.org/def/au/feature/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix soil: <https://anzsoil.org/def/au/domain#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+my:
+  a owl:Ontology ;
+  dcterms:created "2022-09-13"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  owl:imports <https://anzsoil.org/def/au/domain> ;
+  owl:imports <https://anzsoil.org/def/au/property> ;
+.
+my:A11-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer A11 in Profile 1" ;
+  soil:depth-lower "17 cm" ;
+  soil:depth-upper "0 cm" ;
+  soil:relatedHorizon my:Horizon_A11 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:A12-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer A12 in Profile 1" ;
+  soil:depth-lower "35 cm" ;
+  soil:depth-upper "17 cm" ;
+  soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B-A11-A12-P1
+  a soil:BoundaryInProfile ;
+  skos:prefLabel "Boundary A11-A12 in Profile 1" ;
+  soil:depth "17 cm" ;
+  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-D> ;
+  soil:relatedBoundary my:Boundary-A11-A12 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B-A12-A2-P1
+  a soil:BoundaryInProfile ;
+  skos:prefLabel "Boundary A12-A2 in Profile 1" ;
+  soil:depth "35 cm" ;
+  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-C> ;
+  soil:relatedBoundary my:Boundary-A12-A2 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:Body-88
+  a soil:Body ;
+  skos:prefLabel "Megan's paddock" ;
+.
+my:Boundary-A11-A12
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A11-A12" ;
+  soil:relatedHorizon my:Horizon_A11 ;
+  soil:relatedHorizon my:Horizon_A12 ;
+.
+my:Boundary-A12-A2
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A12-A2" ;
+  soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedHorizon my:Horizon_A2 ;
+.
+my:Boundary-A2-B21s
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A2-B21s" ;
+  soil:relatedHorizon my:Horizon_A2 ;
+  soil:relatedHorizon my:Horizon_B21s ;
+.
+my:Boundary-B21s-B22s
+  a soil:Boundary ;
+  skos:prefLabel "Boundary A2-B21s" ;
+  soil:relatedHorizon my:Horizon_B21s ;
+  soil:relatedHorizon my:Horizon_B22s ;
+.
+my:Horizon_A11
+  a soil:Horizon ;
+  skos:prefLabel "Horizon A11" ;
+  soil:designation "A11" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Horizon_A12
+  a soil:Horizon ;
+  skos:prefLabel "Horizon A12" ;
+  soil:designation "A12" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Horizon_A2
+  a soil:Horizon ;
+  skos:prefLabel "Horizon A2" ;
+  soil:designation "A2" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Horizon_B21s
+  a soil:Horizon ;
+  skos:prefLabel "Horizon B21s" ;
+  soil:designation "B21s" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Horizon_B22s
+  a soil:Horizon ;
+  skos:prefLabel "Horizon B22s" ;
+  soil:designation "B22s" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Point_1
+  a sf:Point ;
+.
+my:Polygon_1
+  a sf:Polygon ;
+.
+my:Profile_1
+  a soil:Profile ;
+  geo:hasGeometry my:Point_1 ;
+  skos:prefLabel "profile 1" ;
+  soil:depth-Substrate "106 cm" ;
+  soil:depth-lower "106 cm" ;
+  soil:depth-upper "0 cm" ;
+  soil:relatedBoundary my:Boundary-A11-A12 ;
+  soil:relatedBoundary my:Boundary-A12-A2 ;
+  soil:relatedBoundary my:Boundary-A2-B21s ;
+  soil:relatedBoundary my:Boundary-B21s-B22s ;
+  soil:relatedHorizon my:Horizon_A11 ;
+  soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedHorizon my:Horizon_A2 ;
+  soil:relatedHorizon my:Horizon_B21s ;
+  soil:relatedHorizon my:Horizon_B22s ;
+  soil:relatedSite my:Site_1 ;
+  soil:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
+.
+my:Site_1
+  a soil:Site ;
+  geo:hasGeometry my:Polygon_1 ;
+  skos:prefLabel "site 1" ;
+.
+my:Surface-P1
+  a soil:SurfaceInProfile ;
+  skos:prefLabel "Soil surface in Profile 1" ;
+  soil:condition-when-dry <http://anzsoil.org/def/au/asls/soil-profile/surfacecondition-H> ;
+  soil:relatedProfile my:Profile_1 ;
+  soil:waterRepellence <http://anzsoil.org/def/au/asls/soil-profile/water-repellence-R> ;
+.
+my:sample-998-5
+  a soil:Sample ;
+  skos:definition "sample of layer between 0.5-0.7m depth in profile 998" ;
+  skos:prefLabel "sample 998-5" ;
+  soil:depth-lower "0.6 m" ;
+  soil:depth-upper "0.55 m" ;
+.
+my:visit-S1-1
+  a soil:SiteVisit ;
+  prov:endedAtTime "2022-09-07T13:00:00+10:00"^^xsd:dateTime ;
+  prov:startedAtTime "2022-09-07T09:00:00+10:00"^^xsd:dateTime ;
+  prov:wasAssociatedWith <https://orcid.org/0000-0002-0693-1899> ;
+  soil:relatedSite my:Site_1 ;
+  soil:visitor <https://orcid.org/0000-0002-1805-2517> ;
+.
