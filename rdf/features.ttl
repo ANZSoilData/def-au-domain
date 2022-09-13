@@ -1,4 +1,5 @@
 # baseURI: https://anzsoil.org/def/au/domain
+# imports: http://anzsoil.org/def/au/asls/landform
 # imports: http://anzsoil.org/def/au/asls/soil-profile
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.opengis.net/ont/geosparql
@@ -29,6 +30,84 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-0>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-1>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-2>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-3>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-4>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-5>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-6>
+  a soil:FragmentAbundance ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-A>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-AP>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-AT>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-R>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-RP>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-RT>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-S>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-SP>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-ST>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-U>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-UP>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-UT>
+  a soil:FragmentShape ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-1>
+  a soil:FragmentSize ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-2>
+  a soil:FragmentSize ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-3>
+  a soil:FragmentSize ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-4>
+  a soil:FragmentSize ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-5>
+  a soil:FragmentSize ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-6>
+  a soil:FragmentSize ;
+.
+<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-7>
+  a soil:FragmentSize ;
+.
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-0>
   a soil:Disturbance ;
 .
@@ -73,6 +152,444 @@
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-SS>
   a soil:Lithology ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-ALC>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BAN>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BAR>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BEA>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BEN>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BER>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BKP>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BOU>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BRI>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-BRK>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CBE>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CFS>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CIR>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CLI>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CON>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-COS>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CRA>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-CUT>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DAM>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DBA>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DDE>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DOC>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DOL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUB>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUC>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUH>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUN>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUP>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-DUS>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-EMB>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-EST>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-FAN>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-FIL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-FLD>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-FOO>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-FOR>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-GUL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-HCR>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-HSL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-ITF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-LAG>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-LAK>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-LDS>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-LEV>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-LUN>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-MAA>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-MOU>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-OXB>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-PED>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-PIT>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-PLA>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-PLY>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-PST>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-REC>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-REF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-RER>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-RES>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-RFL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-RPL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SCA>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SCD>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SCR>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SFS>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SRP>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-STB>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-STC>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-STF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SUS>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SWL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-SWP>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TAL>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TDC>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TDF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TEF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TEP>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TOR>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TRE>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-TUM>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-element-VLF>
+  a soil:LandformElement ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-ALF>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-ALP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-ANA>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-BAD>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-BAR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-BEA>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-CAL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-CHE>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-COR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-COV>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-DEL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-DUN>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-ESC>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-FLO>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-HIL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-KAR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-LAC>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-LAV>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-LON>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-LOW>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-MAD>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-MAR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-MEA>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-MET>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-MOU>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PAR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PED>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PEP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PLA>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PLT>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PLY>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-PNP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-RIS>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-SAN>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-SHF>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-STA>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-TEL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-TER>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-TID>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/landform-pattern-VOL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-B>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-LP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PH>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PM>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RH>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RM>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SH>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SM>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UH>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UR>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VH>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VL>
+  a soil:LandformPattern ;
+.
+<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VM>
+  a soil:LandformPattern ;
+.
+sp:coarse-fragments-distribution-D
+  a soil:FragmentDistribution ;
+.
+sp:coarse-fragments-distribution-R
+  a soil:FragmentDistribution ;
+.
+sp:coarse-fragments-distribution-S
+  a soil:FragmentDistribution ;
+.
+sp:coarse-fragments-distribution-U
+  a soil:FragmentDistribution ;
 .
 sp:field-texture-AP
   a soil:TextureGrade ;
@@ -728,6 +1245,132 @@ sp:water-repellence-R
 sp:water-repellence-S
   a soil:WaterRepellence ;
 .
+<http://anzsoil.org/def/au/asls/substrate/genesis-AC>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-AL>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-AT>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-BE>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-CD>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-CN>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-CO>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-DR>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-ED>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-ES>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-ET>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-EV>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-FC>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-FI>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-GY>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-HA>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-IG>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-IN>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-KC>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-LA>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-LC>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-LD>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-LO>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-MA>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-MD>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-ME>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-PA>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-PC>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-PL>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-PW>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-RB>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SA>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SC>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SD>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SE>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SH>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SP>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-SR>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-ST>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-TI>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-VA>
+  a soil:MassGenesis ;
+.
+<http://anzsoil.org/def/au/asls/substrate/genesis-VO>
+  a soil:MassGenesis ;
+.
 <http://anzsoil.org/def/au/asls/substrate/lithology-AC>
   a soil:Lithology ;
 .
@@ -1011,6 +1654,7 @@ sp:water-repellence-S
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-08-23"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://anzsoil.org/def/au/asls/landform> ;
   owl:imports <http://anzsoil.org/def/au/asls/soil-profile> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
@@ -1133,6 +1777,26 @@ soil:DryCondition
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Condition of surface soil when dry" ;
 .
+soil:FragmentAbundance
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Coarse fragment abundance classifiers" ;
+.
+soil:FragmentDistribution
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Coarse fragment distribution classifiers" ;
+.
+soil:FragmentShape
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Coarse fragment shape classifiers" ;
+.
+soil:FragmentSize
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Coarse fragment size classifiers" ;
+.
 soil:Horizon
   a owl:Class ;
   rdfs:subClassOf soil:Layer ;
@@ -1215,6 +1879,7 @@ soil:Landform
 .
 soil:LandformElement
   a owl:Class ;
+  a skos:Concept ;
   rdfs:subClassOf soil:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1236,6 +1901,7 @@ soil:LandformElement
 .
 soil:LandformPattern
   a owl:Class ;
+  a skos:Concept ;
   rdfs:subClassOf soil:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1321,9 +1987,19 @@ soil:Lithology
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Lithology type" ;
 .
+soil:MassGenesis
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Mass genesis classification" ;
+.
 soil:Microrelief
   a owl:Class ;
   skos:prefLabel "Microrelief" ;
+.
+soil:Order
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Soil order" ;
 .
 soil:Outcrop
   a owl:Class ;
@@ -1366,6 +2042,60 @@ soil:PrimaryNotation
   rdfs:subClassOf skos:Concept ;
   skos:definition "Primary notation for a horizon-type within a sequence" ;
   skos:prefLabel "Horizon notation" ;
+.
+soil:Profile
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf sosa:Sample ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sf:Point ;
+      owl:onProperty geo:hasGeometry ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soil:Body ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedSite ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:depth-RHorizon ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:depth-Substrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedSubstrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedBoundary ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedLayer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass soil:Profile-type ;
+      owl:onProperty soil:type-profile ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
+  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
+  skos:prefLabel "Soil profile" ;
 .
 soil:Profile-type
   a owl:Class ;
@@ -1497,13 +2227,28 @@ soil:Strength
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Strength of material" ;
 .
+soil:Suborder
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Soil sub-order" ;
+.
 soil:Substrate
   a owl:Class ;
   rdfs:subClassOf soil:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:depth-upper-pos ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:lithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedBody ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1529,6 +2274,11 @@ soil:SubstrateInProfile
       a owl:Restriction ;
       owl:allValuesFrom soil:Substrate ;
       owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:depth-upper ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1611,6 +2361,11 @@ soil:WaterRepellence
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Water repellence" ;
 .
+soil:abundance-cover
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "abundance of cover of x plant species" ;
+.
 soil:abundance-outcrop
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -1628,6 +2383,45 @@ soil:boundary-upper
   a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "upper boundary" ;
+.
+soil:classification
+  a owl:ObjectProperty ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          soil:Order
+          soil:Suborder
+        ) ;
+    ] ;
+  skos:prefLabel "soil classification" ;
+.
+soil:coarse-fragment-abundance
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:FragmentAbundance ;
+  skos:exactMatch prop:coarse-fragments-abundance ;
+  skos:prefLabel "coarse fragment abundance" ;
+.
+soil:coarse-fragment-distribution
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:FragmentDistribution ;
+  skos:exactMatch prop:coarse-fragments-distribution ;
+  skos:prefLabel "coarse fragment distribution" ;
+.
+soil:coarse-fragment-shape
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:FragmentShape ;
+  skos:exactMatch prop:coarse-fragments-shape ;
+  skos:prefLabel "coarse fragment shape" ;
+.
+soil:coarse-fragment-size
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:FragmentSize ;
+  skos:exactMatch prop:coarse-fragments-size ;
+  skos:prefLabel "coarse fragment size" ;
 .
 soil:component-landform-element
   a owl:ObjectProperty ;
@@ -1751,6 +2545,23 @@ soil:geomorphologyStatus
   a sosa:ObservableProperty ;
   skos:prefLabel "status of geomorphological activity" ;
 .
+soil:has-land-use
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "has land-use" ;
+.
+soil:has-landform-element
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:LandformElement ;
+  skos:prefLabel "has landform element" ;
+.
+soil:has-landform-pattern
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:LandformPattern ;
+  skos:prefLabel "has landform pattern" ;
+.
 soil:landformElementName
   a owl:ObjectProperty ;
   skos:prefLabel "landform element name" ;
@@ -1774,6 +2585,12 @@ soil:lithology-outcrop
 soil:mapSheet
   a owl:ObjectProperty ;
   skos:prefLabel "on map-sheet" ;
+.
+soil:mass-genesis
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:MassGenesis ;
+  skos:prefLabel "mass genesis" ;
 .
 soil:method-drainageHeight
   a owl:ObjectProperty ;
@@ -1971,58 +2788,3 @@ soil:waterRepellence
 prop:distinctness
   skos:narrower prop:horizon-boundary-distinctness ;
 .
-
-soil:Profile
-  a owl:Class ;
-  rdfs:subClassOf geo:Feature ;
-  rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom sf:Point ;
-      owl:onProperty geo:hasGeometry ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom soil:Body ;
-      owl:onProperty sosa:isSampleOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSite ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-RHorizon ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-Substrate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSubstrate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedBoundary ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLayer ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass soil:Profile-type ;
-      owl:onProperty soil:type-profile ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
-  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
-  skos:prefLabel "Soil profile" ;
-  .
