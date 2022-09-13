@@ -2386,6 +2386,7 @@ soil:boundary-upper
 .
 soil:classification
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
@@ -2594,11 +2595,13 @@ soil:mass-genesis
 .
 soil:method-drainageHeight
   a owl:ObjectProperty ;
+  rdfs:subPropertyOf sosa:usedProcedure ;
   skos:definition "Means of evaluation of drainage height" ;
   skos:prefLabel "drainage height method" ;
 .
 soil:method-elevation
   a owl:ObjectProperty ;
+  rdfs:subPropertyOf sosa:usedProcedure ;
   skos:definition "Means of evaluation of elevation" ;
   skos:prefLabel "elevation method" ;
 .
