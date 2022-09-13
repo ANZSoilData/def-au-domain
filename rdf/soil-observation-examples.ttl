@@ -4,6 +4,7 @@
 # prefix: my
 
 @prefix asls: <http://anzsoil.org/def/au/asls/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix ls: <http://anzsoil.org/def/au/asls/land-surface/> .
@@ -32,17 +33,40 @@ my:
 my:A11-in-P1
   a soil:LayerInProfile ;
   skos:prefLabel "Layer A11 in Profile 1" ;
+  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-3 ;
+  soil:coarse-fragment-abundance "10 %" ;
+  soil:density-bulk "1.2 g/cm3" ;
   soil:depth-lower "17 cm" ;
   soil:depth-upper "0 cm" ;
+  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
+  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
   soil:relatedHorizon my:Horizon_A11 ;
   soil:relatedProfile my:Profile_1 ;
 .
 my:A12-in-P1
   a soil:LayerInProfile ;
   skos:prefLabel "Layer A12 in Profile 1" ;
+  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+  soil:coarse-fragment-abundance "5 %" ;
+  soil:density-bulk "1.4 g/cm3" ;
   soil:depth-lower "35 cm" ;
   soil:depth-upper "17 cm" ;
+  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
+  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
   soil:relatedHorizon my:Horizon_A12 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:A2-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer A2 in Profile 1" ;
+  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
+  soil:coarse-fragment-abundance "0 %" ;
+  soil:density-bulk "1.5 g/cm3" ;
+  soil:depth-lower "58 cm" ;
+  soil:depth-upper "35 cm" ;
+  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
+  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-v> ;
+  soil:relatedHorizon my:Horizon_A2 ;
   soil:relatedProfile my:Profile_1 ;
 .
 my:B-A11-A12-P1
@@ -59,6 +83,48 @@ my:B-A12-A2-P1
   soil:depth "35 cm" ;
   soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-C> ;
   soil:relatedBoundary my:Boundary-A12-A2 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B-A2-B21s-P1
+  a soil:BoundaryInProfile ;
+  skos:prefLabel "Boundary A2-B21s in Profile 1" ;
+  soil:depth "58 cm" ;
+  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-A> ;
+  soil:relatedBoundary my:Boundary-A2-B21s ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B-B21s-B22s-P1
+  a soil:BoundaryInProfile ;
+  skos:prefLabel "Boundary B21s-B22s in Profile 1" ;
+  soil:depth "80 cm" ;
+  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-G> ;
+  soil:relatedBoundary my:Boundary-B21s-B22s ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B21s-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer B21s in Profile 1" ;
+  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
+  soil:coarse-fragment-abundance "0 %" ;
+  soil:density-bulk "1.3 g/cm3" ;
+  soil:depth-lower "80 cm" ;
+  soil:depth-upper "58 cm" ;
+  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-MC> ;
+  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+  soil:relatedHorizon my:Horizon_B21s ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:B22s-in-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer B22s in Profile 1" ;
+  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
+  soil:coarse-fragment-abundance "0 %" ;
+  soil:density-bulk "1.3 g/cm3" ;
+  soil:depth-lower "106 cm" ;
+  soil:depth-upper "80 cm" ;
+  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-LMC> ;
+  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+  soil:relatedHorizon my:Horizon_B22s ;
   soil:relatedProfile my:Profile_1 ;
 .
 my:Body-88
@@ -119,6 +185,29 @@ my:Horizon_B22s
   soil:designation "B22s" ;
   soil:relatedBody my:Body-88 ;
 .
+my:L-0-15-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer 0-15 cm in Profile 1" ;
+  soil:density-bulk "1.35 g/cm3" ;
+  soil:relatedLayer my:Layer_0-15 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:L-0-20-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer 0-20 cm in Profile 1" ;
+  soil:relatedLayer my:Layer_0-20 ;
+  soil:relatedProfile my:Profile_1 ;
+.
+my:Layer_0-15
+  a soil:Layer ;
+  skos:prefLabel "layer 0-15 cm" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Layer_0-20
+  a soil:Layer ;
+  skos:prefLabel "layer 0-20 cm" ;
+  soil:relatedBody my:Body-88 ;
+.
 my:Point_1
   a sf:Point ;
 .
@@ -127,8 +216,12 @@ my:Polygon_1
 .
 my:Profile_1
   a soil:Profile ;
+  dc:type "Monivae gravelly loam" ;
   geo:hasGeometry my:Point_1 ;
   skos:prefLabel "profile 1" ;
+  soil:classification <http://anzsoil.org/def/au/asc/CH> ;
+  soil:classification <http://anzsoil.org/def/au/asc/CH-AB> ;
+  soil:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
   soil:depth-Substrate "106 cm" ;
   soil:depth-lower "106 cm" ;
   soil:depth-upper "0 cm" ;
@@ -148,6 +241,24 @@ my:Site_1
   a soil:Site ;
   geo:hasGeometry my:Polygon_1 ;
   skos:prefLabel "site 1" ;
+  soil:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
+  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+  soil:erosion ls:erosion-wind ;
+  soil:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
+  soil:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
+  soil:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
+.
+my:Substrate_1
+  a soil:Substrate ;
+  skos:prefLabel "Substrate of soil body" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Substrate_1-P1
+  a soil:SubstrateInProfile ;
+  skos:prefLabel "Substrate in Profile 1" ;
+  soil:depth-upper "106 cm" ;
+  soil:lithology subst:lithology-BA ;
+  soil:relatedSubstrate my:Substrate_1 ;
 .
 my:Surface-P1
   a soil:SurfaceInProfile ;
