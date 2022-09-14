@@ -263,7 +263,7 @@ my:Profile_1
 .
 my:S1-A12-in-P1
   a soil:Sample ;
-  skos:prefLabel "Sample 1 fromdepth range 25-30 cm in horizon A12 in profile P1" ;
+  skos:prefLabel "Sample 1 from depth range 25-30 cm in horizon A12 in profile P1" ;
   sosa:isSampleOf my:A12-in-P1 ;
   soil:depth-lower "30 cm" ;
   soil:depth-upper "25 cm" ;
