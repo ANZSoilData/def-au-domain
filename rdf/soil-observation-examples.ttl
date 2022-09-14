@@ -1,6 +1,5 @@
 # baseURI: https://my.example.org/soil/
 # imports: https://anzsoil.org/def/au/domain
-# imports: https://anzsoil.org/def/au/property
 # prefix: my
 
 @prefix asls: <http://anzsoil.org/def/au/asls/> .
@@ -27,8 +26,8 @@ my:
   dcterms:created "2022-09-13"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2022-09-14"^^xsd:date ;
   owl:imports <https://anzsoil.org/def/au/domain> ;
-  owl:imports <https://anzsoil.org/def/au/property> ;
 .
 my:A11-in-P1
   a soil:LayerInProfile ;
@@ -208,6 +207,30 @@ my:Layer_0-20
   skos:prefLabel "layer 0-20 cm" ;
   soil:relatedBody my:Body-88 ;
 .
+my:O1-dens-A12-in-P1
+  a sosa:Observation ;
+  skos:prefLabel "Measurement of bulk density of a layer A12 in profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1 ;
+  sosa:hasSimpleResult "1.4 g/cm3" ;
+  sosa:observedProperty soil:density-bulk ;
+  sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
+.
+my:O1-upperdepth-A12-in-P1
+  a sosa:Observation ;
+  skos:prefLabel "Measurement of upper depth of horizon A12 in profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1 ;
+  sosa:hasSimpleResult "17 cm" ;
+  sosa:observedProperty soil:depth-upper ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
+.
+my:O2-dens-S1-A12-in-P1
+  a sosa:Observation ;
+  skos:prefLabel "Measurement of bulk density of sample 1 from horizon A12 in profile 1" ;
+  sosa:hasFeatureOfInterest my:S1-A12-in-P1 ;
+  sosa:hasSimpleResult "1.4 g/cm3" ;
+  sosa:observedProperty soil:density-bulk ;
+  sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
+.
 my:Point_1
   a sf:Point ;
 .
@@ -238,13 +261,20 @@ my:Profile_1
   soil:relatedSite my:Site_1 ;
   soil:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
 .
+my:S1-A12-in-P1
+  a soil:Sample ;
+  skos:prefLabel "Sample 1 fromdepth range 25-30 cm in horizon A12 in profile P1" ;
+  sosa:isSampleOf my:A12-in-P1 ;
+  soil:depth-lower "30 cm" ;
+  soil:depth-upper "25 cm" ;
+.
 my:Site_1
   a soil:Site ;
   geo:hasGeometry my:Polygon_1 ;
   skos:prefLabel "site 1" ;
   soil:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
   soil:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-  soil:erosion ls:erosion-wind ;
+  soil:has-erosion ls:erosion-wind ;
   soil:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
   soil:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
   soil:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
