@@ -1652,7 +1652,7 @@ sp:water-repellence-S
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:description "A domain-model for Australian soil data - entities" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-08-23"^^xsd:date ;
+  dcterms:modified "2022-09-14"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://anzsoil.org/def/au/asls/landform> ;
   owl:imports <http://anzsoil.org/def/au/asls/soil-profile> ;
@@ -1854,7 +1854,7 @@ soil:LandSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:erosion ;
+      owl:onProperty soil:has-erosion ;
     ] ;
   skos:prefLabel "Land surface" ;
 .
@@ -2523,11 +2523,6 @@ soil:distinctness-pos
   skos:narrowMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "distinctness(position)" ;
 .
-soil:erosion
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  skos:prefLabel "erosion" ;
-.
 soil:fieldTexture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -2545,6 +2540,11 @@ soil:geomorphologyStatus
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "status of geomorphological activity" ;
+.
+soil:has-erosion
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "has erosion " ;
 .
 soil:has-land-use
   a owl:ObjectProperty ;
