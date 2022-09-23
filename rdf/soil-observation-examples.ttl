@@ -197,14 +197,32 @@ my:L-0-20-P1
   sosa:isSampleOf my:Layer_0-20 ;
   soil:relatedProfile my:Profile_1 ;
 .
+my:L-20-80-P1
+  a soil:LayerInProfile ;
+  skos:prefLabel "Layer 20-80 cm in Profile 1" ;
+  sosa:isSampleOf my:Layer_20-80 ;
+  soil:density-bulk "1.45 g/cm3" ;
+  soil:relatedProfile my:Profile_1 ;
+.
 my:Layer_0-15
   a soil:Layer ;
   skos:prefLabel "layer 0-15 cm" ;
+  soil:depth-lower "15 cm" ;
+  soil:depth-upper "0 cm" ;
   soil:relatedBody my:Body-88 ;
 .
 my:Layer_0-20
   a soil:Layer ;
   skos:prefLabel "layer 0-20 cm" ;
+  soil:depth-lower "20 cm" ;
+  soil:depth-upper "0 cm" ;
+  soil:relatedBody my:Body-88 ;
+.
+my:Layer_20-80
+  a soil:Layer ;
+  skos:prefLabel "layer 20-80 cm" ;
+  soil:depth-lower "80 cm" ;
+  soil:depth-upper "20 cm" ;
   soil:relatedBody my:Body-88 ;
 .
 my:O1-dens-A12-in-P1
@@ -215,14 +233,6 @@ my:O1-dens-A12-in-P1
   sosa:observedProperty soil:density-bulk ;
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
 .
-my:O1-upperdepth-A12-in-P1
-  a sosa:Observation ;
-  skos:prefLabel "Measurement of upper depth of horizon A12 in profile P1" ;
-  sosa:hasFeatureOfInterest my:A12-in-P1 ;
-  sosa:hasSimpleResult "17 cm" ;
-  sosa:observedProperty soil:depth-upper ;
-  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
-.
 my:O2-dens-S1-A12-in-P1
   a sosa:Observation ;
   skos:prefLabel "Measurement of bulk density of sample 1 from horizon A12 in profile 1" ;
@@ -230,6 +240,30 @@ my:O2-dens-S1-A12-in-P1
   sosa:hasSimpleResult "1.4 g/cm3" ;
   sosa:observedProperty soil:density-bulk ;
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
+.
+my:O3-dens-S2-L20-80-in-P1
+  a sosa:Observation ;
+  skos:prefLabel "Measurement of bulk density of sample 2 from layer 20-80 in profile 1" ;
+  sosa:hasFeatureOfInterest my:S2-L20-80-in-P1 ;
+  sosa:hasSimpleResult "1.4 g/cm3" ;
+  sosa:observedProperty soil:density-bulk ;
+  sosa:resultTime "2022-09-19T11:35:00"^^xsd:dateTime ;
+.
+my:O4-dens-S3-20-40-in-P1
+  a sosa:Observation ;
+  skos:prefLabel "Measurement of bulk density of sample 3 from depth 20-40 in profile 1" ;
+  sosa:hasFeatureOfInterest my:S3-20-40-in-P1 ;
+  sosa:hasSimpleResult "1.42 g/cm3" ;
+  sosa:observedProperty soil:density-bulk ;
+  sosa:resultTime "2022-09-19T11:35:00"^^xsd:dateTime ;
+.
+my:O5-upperdepth-A12-in-P1
+  a sosa:Observation ;
+  skos:prefLabel "Measurement of upper depth of horizon A12 in profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1 ;
+  sosa:hasSimpleResult "17 cm" ;
+  sosa:observedProperty soil:depth-upper ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
 .
 my:Point_1
   a sf:Point ;
@@ -267,6 +301,20 @@ my:S1-A12-in-P1
   sosa:isSampleOf my:A12-in-P1 ;
   soil:depth-lower "30 cm" ;
   soil:depth-upper "25 cm" ;
+.
+my:S2-L20-80-in-P1
+  a soil:Sample ;
+  skos:prefLabel "Sample 2 from layer 20-80 in profile 1" ;
+  sosa:isSampleOf my:L-20-80-P1 ;
+  soil:depth-lower "60 cm" ;
+  soil:depth-upper "40 cm" ;
+.
+my:S3-20-40-in-P1
+  a soil:Sample ;
+  skos:prefLabel "Sample 3 from depth 20-40 in profile 1" ;
+  sosa:isSampleOf my:Profile_1 ;
+  soil:depth-lower "40 cm" ;
+  soil:depth-upper "20 cm" ;
 .
 my:Site_1
   a soil:Site ;
