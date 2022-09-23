@@ -1,6 +1,4 @@
 # baseURI: https://anzsoil.org/def/au/domain
-# imports: http://anzsoil.org/def/au/asls/landform
-# imports: http://anzsoil.org/def/au/asls/soil-profile
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
@@ -1654,8 +1652,6 @@ sp:water-repellence-S
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-09-14"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
-  owl:imports <http://anzsoil.org/def/au/asls/landform> ;
-  owl:imports <http://anzsoil.org/def/au/asls/soil-profile> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
@@ -2012,7 +2008,13 @@ soil:Outcrop
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom soil:Substrate ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              soil:Substrate
+              geo:Feature
+            ) ;
+        ] ;
       owl:onProperty sosa:isSampleOf ;
     ] ;
   rdfs:subClassOf [
