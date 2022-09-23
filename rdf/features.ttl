@@ -1,5 +1,6 @@
 # baseURI: https://anzsoil.org/def/au/domain
 # imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.anzsoil.org/def/asc
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
 # imports: http://www.w3.org/ns/prov-o#
@@ -1653,6 +1654,7 @@ sp:water-repellence-S
   dcterms:modified "2022-09-14"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://www.anzsoil.org/def/asc> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;
@@ -2386,7 +2388,19 @@ soil:boundary-upper
   rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "upper boundary" ;
 .
-soil:classification
+soil:classification-familycriteria
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range <http://www.anzsoil.org/schema/soil-classification#Family> ;
+  skos:prefLabel "soil classification family criteria" ;
+.
+soil:classification-greatgroup
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range <http://www.anzsoil.org/schema/soil-classification#Class> ;
+  skos:prefLabel "soil classification - great group" ;
+.
+soil:classification-order
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   rdfs:range [
@@ -2396,7 +2410,13 @@ soil:classification
           soil:Suborder
         ) ;
     ] ;
-  skos:prefLabel "soil classification" ;
+  skos:prefLabel "soil classification - sub-order or order" ;
+.
+soil:classification-subgroup
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range <http://www.anzsoil.org/schema/soil-classification#Class> ;
+  skos:prefLabel "soil classification - subgroup" ;
 .
 soil:coarse-fragment-abundance
   a owl:ObjectProperty ;
