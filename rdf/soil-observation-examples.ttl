@@ -277,8 +277,8 @@ my:Profile_1
   geo:hasGeometry my:Point_1 ;
   skos:prefLabel "profile 1" ;
   sosa:isSampleOf my:Body-88 ;
-  soil:classification <http://anzsoil.org/def/au/asc/CH> ;
-  soil:classification <http://anzsoil.org/def/au/asc/CH-AB> ;
+  soil:classification-order <http://anzsoil.org/def/au/asc/CH> ;
+  soil:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
   soil:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
   soil:depth-Substrate "106 cm" ;
   soil:depth-lower "106 cm" ;
