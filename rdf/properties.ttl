@@ -866,17 +866,13 @@ sprop:horizon-boundary-shape
   skos:definition "Shape of boundary between horizons {@en}" ;
   skos:prefLabel "Boundary shape"@en ;
 .
-sprop:horizon-classification
+sprop:soil-classification
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/horizon-classification"^^xsd:anyURI ;
-  skos:definition "Horizon classification"@en ;
-  skos:note """A soil horizon is a layer of soil, approximately parallel to the land surface, with morphological properties different from layers below and/or above it. Tongues of material from one horizon may penetrate into adjacent horizons. Give horizon notation as described below.
-As horizon notation is deduced from the profile description data (Northcote 1979) and in some instances laboratory data, record it after the profile is described. Horizons may be difficult to name, but should be named in the field. Opinions formed at the time of description are useful for later reference.
-With regard to horizon notation, the long-established usage in horizon designation is adopted. Emphasis is on factual objective notation rather than assumed genesis, as genetic implications are often uncertain and difficult to establish. Thus the notation E indicating eluvial horizon (International Society of Soil Science 1967) has not been used, even though this has been adopted by a number of overseas organisations, for example Hodgson (1974), Soil Survey Staff (1990).
-Source - Australian soil and land survey field handbook, volume 3, ISBN 9780643093959""" ;
-  skos:prefLabel "Horizon classification"@en ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/soil-classification"^^xsd:anyURI ;
+  skos:definition "Classification of soil body"@en ;
+  skos:prefLabel "Soil classification"@en ;
 .
 sprop:hummocky-microrelief-type
   a qudt:QuantityKind ;
@@ -1620,7 +1616,7 @@ sprop:type
   skos:narrower sprop:cutans-type ;
   skos:narrower sprop:gilgai-microrelief-type ;
   skos:narrower sprop:grade ;
-  skos:narrower sprop:horizon-classification ;
+  skos:narrower sprop:soil-classification ;
   skos:narrower sprop:hummocky-microrelief-type ;
   skos:narrower sprop:morphological-type ;
   skos:narrower sprop:other-microrelief-type ;

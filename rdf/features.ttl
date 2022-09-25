@@ -2378,11 +2378,13 @@ soil:abundance-outcrop
 .
 soil:acid-sulfate
   a rdf:Property ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "acid sulfate soils" ;
 .
 soil:alk-earth-carbonates
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil alkaline earth carbonates" ;
 .
@@ -2400,20 +2402,25 @@ soil:boundary-upper
 .
 soil:c_n_ratio
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil carbon/nitrogen ratio" ;
 .
 soil:carbon
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil carbon" ;
 .
 soil:chemistry
   a rdf:Property ;
+  rdfs:domain soil:Sample ;
+  skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "Soil chemistry" ;
 .
 soil:chloride
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soluble chloride" ;
 .
@@ -2421,12 +2428,14 @@ soil:classification-familycriteria
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <http://www.anzsoil.org/schema/soil-classification#Family> ;
+  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification family criteria" ;
 .
 soil:classification-greatgroup
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <http://www.anzsoil.org/schema/soil-classification#Class> ;
+  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
 .
 soil:classification-order
@@ -2439,12 +2448,14 @@ soil:classification-order
           soil:Suborder
         ) ;
     ] ;
+  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - sub-order or order" ;
 .
 soil:classification-subgroup
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <http://www.anzsoil.org/schema/soil-classification#Class> ;
+  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
 .
 soil:coarse-fragment-abundance
@@ -2576,6 +2587,7 @@ soil:distinctness-pos
 .
 soil:fe_al_si
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil extractable iron, aluminium and silicon" ;
 .
@@ -2599,12 +2611,14 @@ soil:geomorphologyStatus
 .
 soil:gypsum
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil gypsum" ;
 .
 soil:has-erosion
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  skos:closeMatch prop:erosion-state ;
   skos:prefLabel "has erosion " ;
 .
 soil:has-land-use
@@ -2626,15 +2640,18 @@ soil:has-landform-pattern
 .
 soil:ion-exchange
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil ion-exchange properties" ;
 .
 soil:landformElementName
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
   skos:prefLabel "landform element name" ;
 .
 soil:lime-req
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil lime requirement" ;
 .
@@ -2662,6 +2679,7 @@ soil:mass-genesis
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   rdfs:range soil:MassGenesis ;
+  skos:exactMatch prop:substrate-genesis ;
   skos:prefLabel "mass genesis" ;
 .
 soil:method-drainageHeight
@@ -2678,26 +2696,31 @@ soil:method-elevation
 .
 soil:micronutrients
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil micronutrients" ;
 .
 soil:misc-elements
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil total miscellaneous elements" ;
 .
 soil:misc-extractable-elements
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil miscellaneous extractable elements" ;
 .
 soil:nitrogen
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil nitrogen" ;
 .
 soil:pH
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "Soil pH" ;
 .
@@ -2710,6 +2733,7 @@ soil:pedality-grade
 .
 soil:phosphorus
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil phosphorus" ;
 .
@@ -2826,6 +2850,7 @@ soil:relatedSubstrate
 .
 soil:sat-extracts
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil saturation extracts" ;
 .
@@ -2865,6 +2890,7 @@ soil:strength
 .
 soil:sulfur
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil sulfur" ;
 .

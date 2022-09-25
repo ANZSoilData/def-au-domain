@@ -21,6 +21,64 @@
 @prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+soil:acid-sulfate
+  a sosa:ObservableProperty ;
+.
+soil:alk-earth-carbonates
+  a sosa:ObservableProperty ;
+.
+soil:c_n_ratio
+  a sosa:ObservableProperty ;
+.
+soil:carbon
+  a sosa:ObservableProperty ;
+.
+soil:chemistry
+  rdfs:domain soil:Sample ;
+  skos:narrowMatch prop:chemical-concentration ;
+.
+soil:chloride
+  a sosa:ObservableProperty ;
+.
+soil:fe_al_si
+  a sosa:ObservableProperty ;
+.
+soil:gypsum
+  a sosa:ObservableProperty ;
+.
+soil:ion-exchange
+  a sosa:ObservableProperty ;
+.
+soil:landformElementName
+  a sosa:ObservableProperty ;
+.
+soil:lime-req
+  a sosa:ObservableProperty ;
+.
+soil:micronutrients
+  a sosa:ObservableProperty ;
+.
+soil:misc-elements
+  a sosa:ObservableProperty ;
+.
+soil:misc-extractable-elements
+  a sosa:ObservableProperty ;
+.
+soil:nitrogen
+  a sosa:ObservableProperty ;
+.
+soil:pH
+  a sosa:ObservableProperty ;
+.
+soil:phosphorus
+  a sosa:ObservableProperty ;
+.
+soil:sat-extracts
+  a sosa:ObservableProperty ;
+.
+soil:sulfur
+  a sosa:ObservableProperty ;
+.
 my:
   a owl:Ontology ;
   dcterms:created "2022-09-13"^^xsd:date ;
