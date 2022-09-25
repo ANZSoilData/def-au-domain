@@ -2376,6 +2376,16 @@ soil:abundance-outcrop
   skos:exactMatch prop:rock-outcrop-abundance ;
   skos:prefLabel "abundance of rock outcrop" ;
 .
+soil:acid-sulfate
+  a rdf:Property ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "acid sulfate soils" ;
+.
+soil:alk-earth-carbonates
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil alkaline earth carbonates" ;
+.
 soil:boundary-lower
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -2387,6 +2397,25 @@ soil:boundary-upper
   a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "upper boundary" ;
+.
+soil:c_n_ratio
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil carbon/nitrogen ratio" ;
+.
+soil:carbon
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil carbon" ;
+.
+soil:chemistry
+  a rdf:Property ;
+  skos:prefLabel "Soil chemistry" ;
+.
+soil:chloride
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soluble chloride" ;
 .
 soil:classification-familycriteria
   a owl:ObjectProperty ;
@@ -2545,6 +2574,11 @@ soil:distinctness-pos
   skos:narrowMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "distinctness(position)" ;
 .
+soil:fe_al_si
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil extractable iron, aluminium and silicon" ;
+.
 soil:fieldTexture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -2562,6 +2596,11 @@ soil:geomorphologyStatus
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "status of geomorphological activity" ;
+.
+soil:gypsum
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil gypsum" ;
 .
 soil:has-erosion
   a owl:ObjectProperty ;
@@ -2585,9 +2624,19 @@ soil:has-landform-pattern
   rdfs:range soil:LandformPattern ;
   skos:prefLabel "has landform pattern" ;
 .
+soil:ion-exchange
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil ion-exchange properties" ;
+.
 soil:landformElementName
   a owl:ObjectProperty ;
   skos:prefLabel "landform element name" ;
+.
+soil:lime-req
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil lime requirement" ;
 .
 soil:lithology
   a owl:ObjectProperty ;
@@ -2627,12 +2676,42 @@ soil:method-elevation
   skos:definition "Means of evaluation of elevation" ;
   skos:prefLabel "elevation method" ;
 .
+soil:micronutrients
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil micronutrients" ;
+.
+soil:misc-elements
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil total miscellaneous elements" ;
+.
+soil:misc-extractable-elements
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil miscellaneous extractable elements" ;
+.
+soil:nitrogen
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil nitrogen" ;
+.
+soil:pH
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "Soil pH" ;
+.
 soil:pedality-grade
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   rdfs:range soil:PedalityGrade ;
   skos:exactMatch prop:structure-pedality-grade ;
   skos:prefLabel "pedality grade" ;
+.
+soil:phosphorus
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil phosphorus" ;
 .
 soil:relatedActivity
   a owl:ObjectProperty ;
@@ -2745,6 +2824,11 @@ soil:relatedSubstrate
   skos:definition "substrate at this entity" ;
   skos:prefLabel "related substrate" ;
 .
+soil:sat-extracts
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil saturation extracts" ;
+.
 soil:shape
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -2778,6 +2862,11 @@ soil:strength
   rdfs:range soil:Strength ;
   skos:exactMatch prop:strength ;
   skos:prefLabel "strength of material" ;
+.
+soil:sulfur
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf soil:chemistry ;
+  skos:prefLabel "soil sulfur" ;
 .
 soil:texture
   a owl:ObjectProperty ;
