@@ -13,6 +13,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix sfeat: <https://anzsoil.org/def/au/feature/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -21,62 +22,12 @@
 @prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-soil:acid-sulfate
-  a sosa:ObservableProperty ;
 .
-soil:alk-earth-carbonates
-  a sosa:ObservableProperty ;
 .
-soil:c_n_ratio
-  a sosa:ObservableProperty ;
 .
-soil:carbon
-  a sosa:ObservableProperty ;
 .
-soil:chemistry
-  rdfs:domain soil:Sample ;
-  skos:narrowMatch prop:chemical-concentration ;
 .
-soil:chloride
-  a sosa:ObservableProperty ;
 .
-soil:fe_al_si
-  a sosa:ObservableProperty ;
-.
-soil:gypsum
-  a sosa:ObservableProperty ;
-.
-soil:ion-exchange
-  a sosa:ObservableProperty ;
-.
-soil:landformElementName
-  a sosa:ObservableProperty ;
-.
-soil:lime-req
-  a sosa:ObservableProperty ;
-.
-soil:micronutrients
-  a sosa:ObservableProperty ;
-.
-soil:misc-elements
-  a sosa:ObservableProperty ;
-.
-soil:misc-extractable-elements
-  a sosa:ObservableProperty ;
-.
-soil:nitrogen
-  a sosa:ObservableProperty ;
-.
-soil:pH
-  a sosa:ObservableProperty ;
-.
-soil:phosphorus
-  a sosa:ObservableProperty ;
-.
-soil:sat-extracts
-  a sosa:ObservableProperty ;
-.
-soil:sulfur
   a sosa:ObservableProperty ;
 .
 my:
@@ -186,7 +137,7 @@ my:B22s-in-P1
 .
 my:Body-88
   a soil:Body ;
-  skos:prefLabel "Megan's paddock" ;
+  skos:prefLabel "Monivae gravelly loam" ;
 .
 my:Boundary-A11-A12
   a soil:Boundary ;
@@ -310,10 +261,12 @@ my:O3-dens-S2-L20-80-in-P1
 my:O4-dens-S3-20-40-in-P1
   a sosa:Observation ;
   skos:prefLabel "Measurement of bulk density of sample 3 from depth 20-40 in profile 1" ;
+  prov:wasAssociatedWith <https://orcid.org/0000-0002-2991-2308> ;
   sosa:hasFeatureOfInterest my:S3-20-40-in-P1 ;
   sosa:hasSimpleResult "1.42 g/cm3" ;
   sosa:observedProperty soil:density-bulk ;
   sosa:resultTime "2022-09-19T11:35:00"^^xsd:dateTime ;
+  sosa:usedProcedure <http://anzsoil.org/def/au/spm/503.01> ;
 .
 my:O5-upperdepth-A12-in-P1
   a sosa:Observation ;
@@ -325,19 +278,21 @@ my:O5-upperdepth-A12-in-P1
 .
 my:Point_1
   a sf:Point ;
+  geo:asWKT "POINT (-37.069332, 144.027094)"^^geo:wktLiteral ;
+  skos:prefLabel "Location of profile 1" ;
 .
 my:Polygon_1
   a sf:Polygon ;
+  geo:asWKT "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.03, -37.06 144.02))"^^geo:wktLiteral ;
 .
 my:Profile_1
   a soil:Profile ;
-  dc:type "Monivae gravelly loam" ;
   geo:hasGeometry my:Point_1 ;
   skos:prefLabel "profile 1" ;
   sosa:isSampleOf my:Body-88 ;
-  soil:classification-order <http://anzsoil.org/def/au/asc/CH> ;
   soil:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
   soil:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
+  soil:depth-RHorizon "106 cm" ;
   soil:depth-Substrate "106 cm" ;
   soil:depth-lower "106 cm" ;
   soil:depth-upper "0 cm" ;

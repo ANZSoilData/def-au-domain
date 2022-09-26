@@ -1643,6 +1643,12 @@ sp:water-repellence-S
 <http://anzsoil.org/def/au/asls/substrate/material-strength-W>
   a soil:Strength ;
 .
+schema:domainIncludes
+  a owl:ObjectProperty ;
+.
+schema:rangeIncludes
+  a owl:ObjectProperty ;
+.
 <https://anzsoil.org/def/au/domain>
   a owl:Ontology ;
   dcterms:contributor <mailto:peter.wilson@csiro.au> ;
@@ -2368,11 +2374,13 @@ soil:WaterRepellence
 soil:abundance-cover
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Site ;
   skos:prefLabel "abundance of cover of x plant species" ;
 .
 soil:abundance-outcrop
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Site ;
   skos:exactMatch prop:rock-outcrop-abundance ;
   skos:prefLabel "abundance of rock outcrop" ;
 .
@@ -2391,12 +2399,14 @@ soil:alk-earth-carbonates
 soil:boundary-lower
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Horizon ;
   rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "lower boundary" ;
 .
 soil:boundary-upper
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Horizon ;
   rdfs:subPropertyOf soil:relatedBoundary ;
   skos:prefLabel "upper boundary" ;
 .
@@ -2414,6 +2424,7 @@ soil:carbon
 .
 soil:chemistry
   a rdf:Property ;
+  schema:domainIncludes soil:Sample ;
   rdfs:domain soil:Sample ;
   skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "Soil chemistry" ;
@@ -2427,6 +2438,8 @@ soil:chloride
 soil:classification-familycriteria
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Profile ;
   rdfs:range <http://www.anzsoil.org/schema/soil-classification#Family> ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification family criteria" ;
@@ -2434,6 +2447,8 @@ soil:classification-familycriteria
 soil:classification-greatgroup
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Profile ;
   rdfs:range <http://www.anzsoil.org/schema/soil-classification#Class> ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
@@ -2441,6 +2456,8 @@ soil:classification-greatgroup
 soil:classification-order
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Profile ;
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
@@ -2454,6 +2471,8 @@ soil:classification-order
 soil:classification-subgroup
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Profile ;
   rdfs:range <http://www.anzsoil.org/schema/soil-classification#Class> ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
@@ -2461,6 +2480,9 @@ soil:classification-subgroup
 soil:coarse-fragment-abundance
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Surface ;
   rdfs:range soil:FragmentAbundance ;
   skos:exactMatch prop:coarse-fragments-abundance ;
   skos:prefLabel "coarse fragment abundance" ;
@@ -2468,6 +2490,9 @@ soil:coarse-fragment-abundance
 soil:coarse-fragment-distribution
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Surface ;
   rdfs:range soil:FragmentDistribution ;
   skos:exactMatch prop:coarse-fragments-distribution ;
   skos:prefLabel "coarse fragment distribution" ;
@@ -2475,6 +2500,9 @@ soil:coarse-fragment-distribution
 soil:coarse-fragment-shape
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Surface ;
   rdfs:range soil:FragmentShape ;
   skos:exactMatch prop:coarse-fragments-shape ;
   skos:prefLabel "coarse fragment shape" ;
@@ -2482,6 +2510,9 @@ soil:coarse-fragment-shape
 soil:coarse-fragment-size
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Surface ;
   rdfs:range soil:FragmentSize ;
   skos:exactMatch prop:coarse-fragments-size ;
   skos:prefLabel "coarse fragment size" ;
@@ -2490,12 +2521,14 @@ soil:component-landform-element
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/component-landform-element"^^xsd:anyURI ;
+  schema:domainIncludes soil:Landform ;
   rdfs:range soil:LandformElement ;
   skos:prefLabel "component landform element" ;
 .
 soil:condition-when-dry
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Surface ;
   rdfs:range soil:DryCondition ;
   skos:exactMatch prop:condition-of-surface-soil-when-dry ;
   skos:prefLabel "condition when dry" ;
@@ -2515,6 +2548,10 @@ soil:density-bulk
 soil:depth
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes geo:Feature ;
+  schema:domainIncludes soil:LayerInProfile ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Sample ;
   skos:definition "depth of entity" ;
   skos:exactMatch prop:depth ;
   skos:prefLabel "depth" ;
@@ -2522,23 +2559,32 @@ soil:depth
 soil:depth-RHorizon
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Profile ;
   skos:exactMatch prop:depth-to-r-horizon ;
   skos:prefLabel "depth to R-horizon" ;
 .
 soil:depth-Substrate
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Profile ;
   skos:prefLabel "depth to substrate" ;
 .
 soil:depth-lower
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes geo:Feature ;
+  schema:domainIncludes soil:LayerInProfile ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Sample ;
   skos:exactMatch prop:depth-lower ;
   skos:prefLabel "lower depth" ;
 .
 soil:depth-lower-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes geo:Feature ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Layer ;
   skos:definition "lower depth of entity as a function of position" ;
   skos:narrowMatch prop:depth-lower ;
   skos:prefLabel "lower-depth(position)" ;
@@ -2546,6 +2592,9 @@ soil:depth-lower-pos
 soil:depth-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes geo:Feature ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Layer ;
   skos:definition "depth of entity as a function of position" ;
   skos:narrowMatch prop:depth ;
   skos:prefLabel "depth(position)" ;
@@ -2553,12 +2602,19 @@ soil:depth-pos
 soil:depth-upper
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes geo:Feature ;
+  schema:domainIncludes soil:LayerInProfile ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Sample ;
   skos:exactMatch prop:depth-upper ;
   skos:prefLabel "upper depth" ;
 .
 soil:depth-upper-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes geo:Feature ;
+  schema:domainIncludes soil:Body ;
+  schema:domainIncludes soil:Layer ;
   skos:definition "upper depth of entity as a function of position" ;
   skos:narrowMatch prop:depth-upper ;
   skos:prefLabel "upper-depth(position)" ;
@@ -2594,6 +2650,9 @@ soil:fe_al_si
 soil:fieldTexture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Horizon ;
+  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes soil:Sample ;
   rdfs:range soil:TextureGrade ;
   skos:exactMatch prop:field-texture ;
   skos:prefLabel "field texture" ;
@@ -2602,6 +2661,7 @@ soil:geomorphologyMode
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:definition "mode of geomorphological activity" ;
+  skos:exactMatch prop:mode-of-geomorphological-activity ;
   skos:prefLabel "geomorphology mode" ;
 .
 soil:geomorphologyStatus
@@ -2658,6 +2718,9 @@ soil:lime-req
 soil:lithology
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Outcrop ;
+  schema:domainIncludes soil:Substrate ;
+  schema:domainIncludes soil:SubstrateInProfile ;
   rdfs:range soil:Lithology ;
   skos:definition "lithological type of material" ;
   skos:exactMatch prop:lithology ;
@@ -2666,6 +2729,7 @@ soil:lithology
 soil:lithology-outcrop
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Outcrop ;
   rdfs:range soil:Lithology ;
   skos:broadMatch prop:lithology ;
   skos:definition "lithological type of rock outcrop" ;
@@ -2678,6 +2742,8 @@ soil:mapSheet
 soil:mass-genesis
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Substrate ;
+  schema:domainIncludes soil:SubstrateInProfile ;
   rdfs:range soil:MassGenesis ;
   skos:exactMatch prop:substrate-genesis ;
   skos:prefLabel "mass genesis" ;
@@ -2872,12 +2938,14 @@ soil:shape-pos
 soil:siteDisturbance
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Site ;
   rdfs:range soil:Disturbance ;
   skos:exactMatch prop:disturbance-of-site ;
   skos:prefLabel "disturbance of site" ;
 .
 soil:siteType
   a owl:ObjectProperty ;
+  schema:domainIncludes soil:Site ;
   rdfs:subPropertyOf dcterms:type ;
   skos:prefLabel "type of site" ;
 .
