@@ -22,14 +22,6 @@
 @prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-.
-.
-.
-.
-.
-.
-  a sosa:ObservableProperty ;
-.
 my:
   a owl:Ontology ;
   dcterms:created "2022-09-13"^^xsd:date ;
