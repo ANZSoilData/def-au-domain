@@ -1649,6 +1649,9 @@ schema:domainIncludes
 schema:rangeIncludes
   a owl:ObjectProperty ;
 .
+sosa:ObservableProperty
+  rdfs:subClassOf rdf:Property ;
+.
 <https://anzsoil.org/def/au/domain>
   a owl:Ontology ;
   dcterms:contributor <mailto:peter.wilson@csiro.au> ;
@@ -1657,7 +1660,7 @@ schema:rangeIncludes
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:description "A domain-model for Australian soil data - entities" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-09-14"^^xsd:date ;
+  dcterms:modified "2022-09-27"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.anzsoil.org/def/asc> ;
@@ -1669,6 +1672,7 @@ schema:rangeIncludes
 .
 soil:Body
   a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf soil:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2123,18 +2127,19 @@ soil:Sample
           owl:unionOf (
               soil:Layer
               soil:LayerInProfile
+              soil:Body
             ) ;
         ] ;
       owl:onProperty sosa:isSampleOf ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:depth-lower ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:depth-upper ;
     ] ;
   rdfs:subClassOf [
@@ -2425,7 +2430,6 @@ soil:carbon
 soil:chemistry
   a rdf:Property ;
   schema:domainIncludes soil:Sample ;
-  rdfs:domain soil:Sample ;
   skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "Soil chemistry" ;
 .
@@ -2930,7 +2934,7 @@ soil:shape
 soil:shape-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:domain soil:Boundary ;
+  schema:domainIncludes soil:Boundary ;
   skos:definition "boundary shape as a function of position" ;
   skos:narrowMatch prop:shape ;
   skos:prefLabel "shape(position)" ;
