@@ -1946,13 +1946,13 @@ soil:Profile
   rdfs:subClassOf sosa:Sample ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom sf:Point ;
-      owl:onProperty geo:hasGeometry ;
+      owl:allValuesFrom soil:Body ;
+      owl:onProperty sosa:isSampleOf ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom soil:Body ;
-      owl:onProperty sosa:isSampleOf ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty geo:hasGeometry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1972,12 +1972,17 @@ soil:Profile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedSoilSurface ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:relatedSubstrate ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedBoundary ;
+      owl:onProperty soil:relatedLayer ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1987,6 +1992,7 @@ soil:Profile
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
   skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
+  skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
   skos:prefLabel "Soil profile" ;
 .
 soil:Profile-type
@@ -1996,37 +2002,6 @@ soil:Profile-type
   skos:prefLabel "Type of profile" ;
 .
 soil:Sample
-  a owl:Class ;
-  rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-lower ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-upper ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedProfile ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSite ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSample ;
-    ] ;
-  skos:note "A soil sample may be from a single profile, or may be a composite-sample from multiple profiles at a single site" ;
-  skos:prefLabel "Material sample of soil" ;
-.
-soil:SampleInProfile
   a owl:Class ;
   rdfs:subClassOf sosa:Sample ;
   rdfs:subClassOf [
@@ -2058,8 +2033,9 @@ soil:SampleInProfile
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:depth-upper ;
     ] ;
-  skos:definition "Sample of soil entity observed in a specific profile" ;
-  skos:prefLabel "Sample in profile" ;
+  skos:note """A soil sample must be from a single profile. 
+In the case of a composite-sample, the 'virtual profile' is an average of multiple individual profiles at a single site or on a face. """ ;
+  skos:prefLabel "Sample of soil" ;
 .
 soil:Shape
   a owl:Class ;
@@ -2091,14 +2067,20 @@ soil:Site
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass soil:LandscapeEntity ;
-      owl:onProperty sosa:isSampleOf ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedProfile ;
     ] ;
-  skos:prefLabel "Site" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sosa:isSampleOf ;
+      owl:someValuesFrom soil:Body ;
+    ] ;
+  skos:definition "Yellow-book site" ;
+  skos:prefLabel "Soil site" ;
   skos:scopeNote "'Site' acts as a kind of platform, where sensors may be deployed. " ;
-  skos:scopeNote "'Site' is a geospatial entity (feature) which has a geomtry (incl. location)" ;
+  skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
   skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
+  skos:scopeNote "Other types of site may include (i) TERN Monitoring Site (ii) Farmer site" ;
 .
 soil:SiteVisit
   a owl:Class ;
@@ -2439,7 +2421,6 @@ soil:depth-lower
   schema:domainIncludes geo:Feature ;
   schema:domainIncludes soil:Profile ;
   schema:domainIncludes soil:Sample ;
-  schema:domainIncludes soil:SampleInProfile ;
   skos:exactMatch prop:depth-lower ;
   skos:prefLabel "lower depth" ;
 .
@@ -2469,7 +2450,6 @@ soil:depth-upper
   schema:domainIncludes geo:Feature ;
   schema:domainIncludes soil:Profile ;
   schema:domainIncludes soil:Sample ;
-  schema:domainIncludes soil:SampleInProfile ;
   skos:exactMatch prop:depth-upper ;
   skos:prefLabel "upper depth" ;
 .
