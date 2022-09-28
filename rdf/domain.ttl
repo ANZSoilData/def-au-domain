@@ -1730,6 +1730,19 @@ soil:CoarseFragments
     ] ;
   skos:prefLabel "Coarse fragments" ;
 .
+soil:Consistence
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:strength ;
+    ] ;
+  skos:prefLabel "Consistence" ;
+.
+soil:Cutans
+  a owl:Class ;
+  skos:prefLabel "Cutans" ;
+.
 soil:Disturbance
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
@@ -1739,6 +1752,10 @@ soil:DryCondition
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Condition of surface soil when dry" ;
+.
+soil:Erosion
+  a owl:Class ;
+  skos:prefLabel "Erosion" ;
 .
 soil:FragmentAbundance
   a owl:Class ;
@@ -1808,7 +1825,7 @@ soil:LandSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:has-erosion ;
+      owl:onProperty soil:relatedErosion ;
     ] ;
   skos:prefLabel "Land surface" ;
 .
@@ -1915,6 +1932,10 @@ soil:Microrelief
   a owl:Class ;
   skos:prefLabel "Microrelief" ;
 .
+soil:Mottles
+  a owl:Class ;
+  skos:prefLabel "Mottles and other colour patterns" ;
+.
 soil:Order
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
@@ -1962,10 +1983,18 @@ soil:Outcrop
     ] ;
   skos:prefLabel "Outcrop" ;
 .
+soil:Pans
+  a owl:Class ;
+  skos:prefLabel "Pans" ;
+.
 soil:PedalityGrade
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Pedality grade" ;
+.
+soil:Peds
+  a owl:Class ;
+  skos:prefLabel "Peds" ;
 .
 soil:PrimaryNotation
   a owl:Class ;
@@ -2098,6 +2127,10 @@ soil:Sample
   skos:note """A soil sample must be from a single profile. 
 In the case of a composite-sample, the 'virtual profile' is an average of multiple individual profiles at a single site or on a face. """ ;
   skos:prefLabel "Sample of soil" ;
+.
+soil:Segregations
+  a owl:Class ;
+  skos:prefLabel "Segregations" ;
 .
 soil:Shape
   a owl:Class ;
@@ -2264,6 +2297,10 @@ soil:Treatment
   skos:definition "Intervention or treatment" ;
   skos:prefLabel "Treatment" ;
 .
+soil:Voids
+  a owl:Class ;
+  skos:prefLabel "Voids - pores and cracks" ;
+.
 soil:WaterRepellence
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
@@ -2272,6 +2309,7 @@ soil:WaterRepellence
 soil:abundance
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:prefLabel "abundance" ;
 .
 soil:acid-sulfate
@@ -2311,12 +2349,17 @@ soil:chloride
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soluble chloride" ;
 .
+soil:classification
+  a owl:ObjectProperty ;
+  skos:prefLabel "soil classification" ;
+.
 soil:classification-family-A1texture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Family ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon texture" ;
 .
@@ -2326,6 +2369,7 @@ soil:classification-family-A1thickness
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Family ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon thickness" ;
 .
@@ -2335,6 +2379,7 @@ soil:classification-family-Btexture
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Family ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - B horizon texture" ;
 .
@@ -2344,6 +2389,7 @@ soil:classification-family-depth
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Family ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Soil depth" ;
 .
@@ -2353,6 +2399,7 @@ soil:classification-family-gravel
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Family ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Gravel of the surface and A1 horizon" ;
 .
@@ -2362,6 +2409,7 @@ soil:classification-greatgroup
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Class ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
 .
@@ -2377,6 +2425,7 @@ soil:classification-order
           soil:Suborder
         ) ;
     ] ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - sub-order or order" ;
 .
@@ -2386,6 +2435,7 @@ soil:classification-subgroup
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
   rdfs:range asc:Class ;
+  rdfs:subPropertyOf soil:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
 .
@@ -2526,11 +2576,22 @@ soil:distribution
   skos:exactMatch prop:coarse-fragments-distribution ;
   skos:prefLabel "distribution" ;
 .
+soil:elevation
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:prefLabel "elevation above MSL" ;
+.
 soil:fe_al_si
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil extractable iron, aluminium and silicon" ;
+.
+soil:frequency
+  a owl:DatatypeProperty ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:prefLabel "frequency" ;
 .
 soil:geomorphologyMode
   a owl:ObjectProperty ;
@@ -2550,28 +2611,11 @@ soil:gypsum
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil gypsum" ;
 .
-soil:has-erosion
-  a owl:ObjectProperty ;
+soil:height
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  skos:closeMatch prop:erosion-state ;
-  skos:prefLabel "has erosion " ;
-.
-soil:has-land-use
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  skos:prefLabel "has land-use" ;
-.
-soil:has-landform-element
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:range soil:LandformElement ;
-  skos:prefLabel "has landform element" ;
-.
-soil:has-landform-pattern
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:range soil:LandformPattern ;
-  skos:prefLabel "has landform pattern" ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:prefLabel "height" ;
 .
 soil:ion-exchange
   a owl:DatatypeProperty ;
@@ -2583,6 +2627,12 @@ soil:landformElementName
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "landform element name" ;
+.
+soil:length
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:prefLabel "length" ;
 .
 soil:lime-req
   a owl:DatatypeProperty ;
@@ -2683,6 +2733,28 @@ soil:relatedBoundary
   skos:definition "related boundary within a soil body or sample" ;
   skos:prefLabel "related boundary" ;
 .
+soil:relatedCoarseFragments
+  a owl:ObjectProperty ;
+  rdfs:range soil:CoarseFragments ;
+  skos:prefLabel "related Coarse Fragments" ;
+.
+soil:relatedConsistence
+  a owl:ObjectProperty ;
+  rdfs:range soil:Consistence ;
+  skos:prefLabel "related Consistence" ;
+.
+soil:relatedCutans
+  a owl:ObjectProperty ;
+  rdfs:range soil:Cutans ;
+  skos:prefLabel "related Cutans" ;
+.
+soil:relatedErosion
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:Erosion ;
+  skos:closeMatch prop:erosion-state ;
+  skos:prefLabel "has erosion " ;
+.
 soil:relatedHorizon
   a owl:ObjectProperty ;
   rdfs:subPropertyOf soil:relatedLayer ;
@@ -2743,11 +2815,21 @@ soil:relatedMicrorelief
   skos:definition "microrelief at the site" ;
   skos:prefLabel "related microrelief" ;
 .
+soil:relatedMottles
+  a owl:ObjectProperty ;
+  rdfs:range soil:Mottles ;
+  skos:prefLabel "related Mottles and other colour patterns" ;
+.
 soil:relatedOutcrop
   a owl:ObjectProperty ;
   rdfs:range soil:Outcrop ;
   skos:definition "outcrop at this entity" ;
   skos:prefLabel "related outcrop" ;
+.
+soil:relatedPans
+  a owl:ObjectProperty ;
+  rdfs:range soil:Pans ;
+  skos:prefLabel "related Pans" ;
 .
 soil:relatedProfile
   a owl:ObjectProperty ;
@@ -2762,10 +2844,20 @@ soil:relatedProject
   skos:definition "Project that supported this activity" ;
   skos:prefLabel "related project" ;
 .
+soil:relatedRoots
+  a owl:ObjectProperty ;
+  rdfs:range soil:Roots ;
+  skos:prefLabel "related Roots" ;
+.
 soil:relatedSample
   a owl:ObjectProperty ;
   rdfs:range sosa:Sample ;
   skos:prefLabel "related sample" ;
+.
+soil:relatedSegregations
+  a owl:ObjectProperty ;
+  rdfs:range soil:Segregations ;
+  skos:prefLabel "related Segregations" ;
 .
 soil:relatedSite
   a owl:ObjectProperty ;
@@ -2783,6 +2875,11 @@ soil:relatedSubstrate
   rdfs:range soil:Substrate ;
   skos:definition "substrate at this entity" ;
   skos:prefLabel "related substrate" ;
+.
+soil:relatedVoids
+  a owl:ObjectProperty ;
+  rdfs:range soil:Voids ;
+  skos:prefLabel "related Voids - pores and cracks" ;
 .
 soil:sat-extracts
   a owl:DatatypeProperty ;
@@ -2874,6 +2971,18 @@ soil:waterRepellence
   skos:exactMatch prop:water-repellence ;
   skos:prefLabel "water repellence" ;
 .
+soil:width
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:prefLabel "width" ;
+.
 prop:distinctness
   skos:narrower prop:horizon-boundary-distinctness ;
+.
+prop:pedality
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range soil:Peds ;
+  skos:prefLabel "pedality" ;
 .
