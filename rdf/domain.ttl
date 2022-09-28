@@ -1,15 +1,14 @@
 # baseURI: https://anzsoil.org/def/au/domain
+# imports: http://anzsoil.org/def/au/asc/
 # imports: http://purl.org/dc/elements/1.1/
-# imports: http://www.anzsoil.org/def/asc
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
 # imports: http://www.w3.org/ns/prov-o#
-# imports: http://www.w3.org/ns/sosa/
+# imports: http://www.w3.org/ns/ssn/
 # imports: https://anzsoil.org/def/au/property
 # prefix: soil
 
-@prefix : <https://my.example.org/soil/> .
-@prefix asc-s: <http://www.anzsoil.org/schema/soil-classification#> .
+@prefix asc: <http://anzsoil.org/def/au/asc/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix my: <https://my.example.org/soil/> .
@@ -1666,16 +1665,16 @@ sosa:ObservableProperty
   dcterms:created "2022-07-21"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:description "A domain-model for Australian soil data - entities" ;
+  dcterms:description "A domain-model for Australian soil data" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-09-27"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports asc: ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <http://www.anzsoil.org/def/asc> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
   owl:imports <http://www.w3.org/ns/prov-o#> ;
-  owl:imports sosa: ;
+  owl:imports ssn: ;
   owl:imports <https://anzsoil.org/def/au/property> ;
 .
 soil:Body
@@ -1706,6 +1705,30 @@ soil:Boundary-distinctness
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Boundary distinctness" ;
+.
+soil:CoarseFragments
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:abundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:distribution ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:shape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:size ;
+    ] ;
+  skos:prefLabel "Coarse fragments" ;
 .
 soil:Disturbance
   a owl:Class ;
@@ -1742,6 +1765,11 @@ soil:Horizon
   rdfs:subClassOf soil:Layer ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:allValuesFrom soil:Shape ;
+      owl:onProperty soil:shape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:designation ;
     ] ;
@@ -1765,11 +1793,6 @@ soil:LandSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:abundance-outcrop ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:method-elevation ;
     ] ;
   rdfs:subClassOf [
@@ -1779,8 +1802,8 @@ soil:LandSurface
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:lithology-outcrop ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedOutcrop ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1856,6 +1879,11 @@ soil:Layer
   rdfs:subClassOf soil:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:allValuesFrom soil:TextureGrade ;
+      owl:onProperty soil:texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:depth-lower-pos ;
     ] ;
@@ -1926,6 +1954,11 @@ soil:Outcrop
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:abundance ;
     ] ;
   skos:prefLabel "Outcrop" ;
 .
@@ -2001,9 +2034,38 @@ soil:Profile-type
   skos:definition "Type of soil observation profile - e.g. pit, auger bore, core, exposure" ;
   skos:prefLabel "Type of profile" ;
 .
+soil:Roots
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:abundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:distribution ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:shape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:size ;
+    ] ;
+  skos:prefLabel "Coarse fragments" ;
+.
 soil:Sample
   a owl:Class ;
   rdfs:subClassOf sosa:Sample ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom soil:TextureGrade ;
+      owl:onProperty soil:texture ;
+    ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom [
@@ -2048,7 +2110,17 @@ soil:Site
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedLandCover ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty soil:relatedLandManagement ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty soil:relatedLandSurface ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2197,18 +2269,10 @@ soil:WaterRepellence
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Water repellence" ;
 .
-soil:abundance-cover
-  a owl:ObjectProperty ;
+soil:abundance
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Site ;
-  skos:prefLabel "abundance of cover of x plant species" ;
-.
-soil:abundance-outcrop
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Site ;
-  skos:exactMatch prop:rock-outcrop-abundance ;
-  skos:prefLabel "abundance of rock outcrop" ;
+  skos:prefLabel "abundance" ;
 .
 soil:acid-sulfate
   a rdf:Property ;
@@ -2236,6 +2300,7 @@ soil:carbon
 .
 soil:chemistry
   a rdf:Property ;
+  a sosa:ObservableProperty ;
   schema:domainIncludes soil:Sample ;
   skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "Soil chemistry" ;
@@ -2251,7 +2316,7 @@ soil:classification-family-A1texture
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Family ;
+  rdfs:range asc:Family ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon texture" ;
 .
@@ -2260,7 +2325,7 @@ soil:classification-family-A1thickness
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Family ;
+  rdfs:range asc:Family ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon thickness" ;
 .
@@ -2269,7 +2334,7 @@ soil:classification-family-Btexture
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Family ;
+  rdfs:range asc:Family ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - B horizon texture" ;
 .
@@ -2278,7 +2343,7 @@ soil:classification-family-depth
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Family ;
+  rdfs:range asc:Family ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Soil depth" ;
 .
@@ -2287,7 +2352,7 @@ soil:classification-family-gravel
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Family ;
+  rdfs:range asc:Family ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Gravel of the surface and A1 horizon" ;
 .
@@ -2296,7 +2361,7 @@ soil:classification-greatgroup
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Class ;
+  rdfs:range asc:Class ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
 .
@@ -2320,49 +2385,14 @@ soil:classification-subgroup
   a sosa:ObservableProperty ;
   schema:domainIncludes soil:Body ;
   schema:domainIncludes soil:Profile ;
-  rdfs:range asc-s:Class ;
+  rdfs:range asc:Class ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
 .
-soil:coarse-fragment-abundance
+soil:colour
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Layer ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Surface ;
-  rdfs:range soil:FragmentAbundance ;
-  skos:exactMatch prop:coarse-fragments-abundance ;
-  skos:prefLabel "coarse fragment abundance" ;
-.
-soil:coarse-fragment-distribution
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Layer ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Surface ;
-  rdfs:range soil:FragmentDistribution ;
-  skos:exactMatch prop:coarse-fragments-distribution ;
-  skos:prefLabel "coarse fragment distribution" ;
-.
-soil:coarse-fragment-shape
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Layer ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Surface ;
-  rdfs:range soil:FragmentShape ;
-  skos:exactMatch prop:coarse-fragments-shape ;
-  skos:prefLabel "coarse fragment shape" ;
-.
-soil:coarse-fragment-size
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Layer ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Surface ;
-  rdfs:range soil:FragmentSize ;
-  skos:exactMatch prop:coarse-fragments-size ;
-  skos:prefLabel "coarse fragment size" ;
+  skos:prefLabel "colour" ;
 .
 soil:component-landform-element
   a owl:ObjectProperty ;
@@ -2486,20 +2516,21 @@ soil:distinctness-pos
   skos:narrowMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "distinctness(position)" ;
 .
+soil:distribution
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes soil:Surface ;
+  rdfs:range soil:FragmentDistribution ;
+  skos:exactMatch prop:coarse-fragments-distribution ;
+  skos:prefLabel "distribution" ;
+.
 soil:fe_al_si
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:subPropertyOf soil:chemistry ;
   skos:prefLabel "soil extractable iron, aluminium and silicon" ;
-.
-soil:fieldTexture
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Layer ;
-  schema:domainIncludes soil:Sample ;
-  rdfs:range soil:TextureGrade ;
-  skos:exactMatch prop:field-texture ;
-  skos:prefLabel "field texture" ;
 .
 soil:geomorphologyMode
   a owl:ObjectProperty ;
@@ -2568,15 +2599,6 @@ soil:lithology
   skos:definition "lithological type of material" ;
   skos:exactMatch prop:lithology ;
   skos:prefLabel "lithological type" ;
-.
-soil:lithology-outcrop
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Outcrop ;
-  rdfs:range soil:Lithology ;
-  skos:broadMatch prop:lithology ;
-  skos:definition "lithological type of rock outcrop" ;
-  skos:prefLabel "lithology of outcrop" ;
 .
 soil:mapSheet
   a owl:ObjectProperty ;
@@ -2771,10 +2793,11 @@ soil:sat-extracts
 soil:shape
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:Shape ;
-  skos:definition "shape of lower boundary of horizon" ;
+  schema:domainIncludes soil:CoarseFragments ;
+  schema:domainIncludes soil:Horizon ;
+  skos:definition "shape of entity or entity boundary" ;
   skos:exactMatch prop:shape ;
-  skos:prefLabel "boundary shape" ;
+  skos:prefLabel "entity shape" ;
 .
 soil:shape-pos
   a owl:ObjectProperty ;
@@ -2791,11 +2814,10 @@ soil:siteDisturbance
   skos:exactMatch prop:disturbance-of-site ;
   skos:prefLabel "disturbance of site" ;
 .
-soil:siteType
+soil:size
   a owl:ObjectProperty ;
-  schema:domainIncludes soil:Site ;
-  rdfs:subPropertyOf dcterms:type ;
-  skos:prefLabel "type of site" ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "size" ;
 .
 soil:strength
   a owl:ObjectProperty ;
@@ -2803,6 +2825,11 @@ soil:strength
   rdfs:range soil:Strength ;
   skos:exactMatch prop:strength ;
   skos:prefLabel "strength of material" ;
+.
+soil:structure
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "structure in entity" ;
 .
 soil:sulfur
   a owl:DatatypeProperty ;
@@ -2819,9 +2846,15 @@ soil:texture
 soil:type-profile
   a owl:ObjectProperty ;
   rdfs:range soil:Profile-type ;
-  skos:definition "type of soil profile observation" ;
+  rdfs:subPropertyOf sosa:usedProcedure ;
+  skos:definition "type of soil profile construction" ;
   skos:note "sampling method" ;
   skos:prefLabel "profile type" ;
+.
+soil:type-site
+  a owl:ObjectProperty ;
+  schema:domainIncludes soil:Site ;
+  skos:prefLabel "type of site" ;
 .
 soil:underlyingMaterial
   a owl:ObjectProperty ;
