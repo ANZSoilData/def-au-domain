@@ -6,23 +6,27 @@
 # imports: http://www.w3.org/ns/prov-o#
 # imports: http://www.w3.org/ns/ssn/
 # imports: https://anzsoil.org/def/au/property
-# prefix: soil
+# imports: https://linked.data.gov.au/def/project
+# prefix: ansis
 
+@prefix ansis: <https://anzsoil.org/def/au/domain#> .
 @prefix asc: <http://anzsoil.org/def/au/asc/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix my: <https://my.example.org/soil/> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix proj: <https://linked.data.gov.au/def/project#> .
 @prefix prop: <https://anzsoil.org/def/au/property/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix sfeat: <https://anzsoil.org/def/au/feature/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix soil: <https://anzsoil.org/def/au/domain#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix sp: <http://anzsoil.org/def/au/asls/soil-profile/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
@@ -30,1618 +34,1618 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-0>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-1>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-2>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-3>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-4>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-5>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-6>
-  a soil:FragmentAbundance ;
+  a ansis:FragmentAbundance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-A>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-AP>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-AT>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-R>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-RP>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-RT>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-S>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-SP>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-ST>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-U>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-UP>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-UT>
-  a soil:FragmentShape ;
+  a ansis:FragmentShape ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-1>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-2>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-3>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-4>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-5>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-6>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-7>
-  a soil:FragmentSize ;
+  a ansis:FragmentSize ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-0>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-1>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-2>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-3>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-4>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-5>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-6>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-7>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-8>
-  a soil:Disturbance ;
+  a ansis:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-CC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-IS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-OT>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-OW>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-PU>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/land-surface/lithology-SS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-ALC>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BAN>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BAR>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BEA>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BEN>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BER>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BKP>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BOU>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BRI>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BRK>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CBE>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CFS>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CIR>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CLI>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CON>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-COS>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CRA>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CUT>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DAM>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DBA>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DDE>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DOC>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DOL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUB>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUC>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUH>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUN>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUP>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUS>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-EMB>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-EST>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FAN>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FIL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FLD>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FOO>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FOR>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-GUL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-HCR>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-HSL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-ITF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LAG>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LAK>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LDS>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LEV>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LUN>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-MAA>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-MOU>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-OXB>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PED>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PIT>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PLA>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PLY>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PST>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-REC>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-REF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RER>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RES>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RFL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RPL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SCA>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SCD>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SCR>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SFS>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SRP>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-STB>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-STC>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-STF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SUS>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SWL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SWP>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TAL>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TDC>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TDF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TEF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TEP>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TOR>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TRE>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TUM>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-VLF>
-  a soil:LandformElement ;
+  a ansis:LandformElement ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ALF>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ALP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ANA>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-BAD>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-BAR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-BEA>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-CAL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-CHE>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-COR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-COV>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-DEL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-DUN>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ESC>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-FLO>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-HIL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-KAR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LAC>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LAV>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LON>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LOW>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MAD>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MAR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MEA>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MET>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MOU>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PAR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PED>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PEP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PLA>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PLT>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PLY>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PNP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-RIS>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-SAN>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-SHF>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-STA>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-TEL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-TER>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-TID>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-VOL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-B>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-LP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PH>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PM>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RH>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RM>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SH>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SM>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UH>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UR>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VH>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VL>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VM>
-  a soil:LandformPattern ;
+  a ansis:LandformPattern ;
 .
 sp:coarse-fragments-distribution-D
-  a soil:FragmentDistribution ;
+  a ansis:FragmentDistribution ;
 .
 sp:coarse-fragments-distribution-R
-  a soil:FragmentDistribution ;
+  a ansis:FragmentDistribution ;
 .
 sp:coarse-fragments-distribution-S
-  a soil:FragmentDistribution ;
+  a ansis:FragmentDistribution ;
 .
 sp:coarse-fragments-distribution-U
-  a soil:FragmentDistribution ;
+  a ansis:FragmentDistribution ;
 .
 sp:field-texture-AP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-C
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CFS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CFS-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CFS-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CKS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CKS-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CKS-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CL-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CL-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLFS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLFS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLFS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLFS-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLFS-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLKS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLKS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLKS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLKS-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLKS-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLS-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CLS-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CS-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-CS-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSCL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSCL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSCL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSCL-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSCL-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSLC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSLC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSLC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSLMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSLMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSLMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSMHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSMHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-FSMHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-GP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-HC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-HC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-HC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-HP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-IP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSCL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSCL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSCL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSCL-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSCL-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSLC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSLC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSLC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSLMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSLMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSLMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSMHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSMHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-KSMHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-L
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-L-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-L-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LFS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LFS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LFS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LKS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LKS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LKS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LS
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LS-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-LS-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-MC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-MC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-MC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-MHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-MHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-MHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-S
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-S-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-S-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SCL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SCL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SCL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SCL-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SCL-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SLC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SLC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SLC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SLMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SLMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SLMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SMHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SMHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SMHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-SP
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZCL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZCL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZCL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZCL-heavy
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZCL-light
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZL
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZL-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZL-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZLC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZLC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZLC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZLMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZLMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZLMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZMC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZMC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZMC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZMHC
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZMHC-A
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:field-texture-ZMHC-I
-  a soil:TextureGrade ;
+  a ansis:TextureGrade ;
 .
 sp:horizon-A1
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-A2
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-A3
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-B1
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-B2
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-B3
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-O1
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-O2
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-P1
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-P2
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizon-boundary-distinctness-A
-  a soil:Boundary-distinctness ;
+  a ansis:Boundary-distinctness ;
 .
 sp:horizon-boundary-distinctness-C
-  a soil:Boundary-distinctness ;
+  a ansis:Boundary-distinctness ;
 .
 sp:horizon-boundary-distinctness-D
-  a soil:Boundary-distinctness ;
+  a ansis:Boundary-distinctness ;
 .
 sp:horizon-boundary-distinctness-G
-  a soil:Boundary-distinctness ;
+  a ansis:Boundary-distinctness ;
 .
 sp:horizon-boundary-distinctness-S
-  a soil:Boundary-distinctness ;
+  a ansis:Boundary-distinctness ;
 .
 sp:horizon-boundary-shape-B
-  a soil:Shape ;
+  a ansis:Shape ;
 .
 sp:horizon-boundary-shape-I
-  a soil:Shape ;
+  a ansis:Shape ;
 .
 sp:horizon-boundary-shape-S
-  a soil:Shape ;
+  a ansis:Shape ;
 .
 sp:horizon-boundary-shape-T
-  a soil:Shape ;
+  a ansis:Shape ;
 .
 sp:horizon-boundary-shape-W
-  a soil:Shape ;
+  a ansis:Shape ;
 .
 sp:horizons-A
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizons-B
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizons-C
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizons-D
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizons-O
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizons-P
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:horizons-R
-  a soil:PrimaryNotation ;
+  a ansis:PrimaryNotation ;
 .
 sp:observation-type-A
-  a soil:Profile-type ;
+  a ansis:Profile-type ;
 .
 sp:observation-type-C
-  a soil:Profile-type ;
+  a ansis:Profile-type ;
 .
 sp:observation-type-E
-  a soil:Profile-type ;
+  a ansis:Profile-type ;
 .
 sp:observation-type-P
-  a soil:Profile-type ;
+  a ansis:Profile-type ;
 .
 sp:structure-pedality-grade-G
-  a soil:PedalityGrade ;
+  a ansis:PedalityGrade ;
 .
 sp:structure-pedality-grade-M
-  a soil:PedalityGrade ;
+  a ansis:PedalityGrade ;
 .
 sp:structure-pedality-grade-S
-  a soil:PedalityGrade ;
+  a ansis:PedalityGrade ;
 .
 sp:structure-pedality-grade-V
-  a soil:PedalityGrade ;
+  a ansis:PedalityGrade ;
 .
 sp:structure-pedality-grade-W
-  a soil:PedalityGrade ;
+  a ansis:PedalityGrade ;
 .
 sp:surfacecondition-C
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-F
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-G
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-H
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-L
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-M
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-O
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-P
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-R
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-S
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-T
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-X
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-Y
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:surfacecondition-Z
-  a soil:DryCondition ;
+  a ansis:DryCondition ;
 .
 sp:water-repellence-N
-  a soil:WaterRepellence ;
+  a ansis:WaterRepellence ;
 .
 sp:water-repellence-R
-  a soil:WaterRepellence ;
+  a ansis:WaterRepellence ;
 .
 sp:water-repellence-S
-  a soil:WaterRepellence ;
+  a ansis:WaterRepellence ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-AC>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-AL>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-AT>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-BE>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-CD>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-CN>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-CO>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-DR>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-ED>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-ES>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-ET>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-EV>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-FC>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-FI>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-GY>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-HA>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-IG>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-IN>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-KC>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-LA>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-LC>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-LD>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-LO>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-MA>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-MD>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-ME>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-PA>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-PC>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-PL>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-PW>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-RB>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SA>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SC>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SD>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SE>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SH>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SP>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-SR>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-ST>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-TI>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-VA>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/genesis-VO>
-  a soil:MassGenesis ;
+  a ansis:MassGenesis ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AD>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AF>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AG>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AH>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AM>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AN>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AP>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-AS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-BA>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-BB>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-BO>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-BR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-C>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-CB>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-CG>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-CH>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-CO>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-CU>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-DI>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-DM>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-DR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-FC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GA>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GD>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GE>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GN>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GV>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GW>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-GY>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-HA>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-HO>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-IG>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-JA>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-KA>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-KC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-KL>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-KM>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-KR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-KS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-LC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-LI>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-M>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MB>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MD>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-ME>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MG>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MI>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-ML>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MU>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-MY>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PE>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PG>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PH>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PL>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PO>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-PY>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-QP>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-QS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-QU>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-QZ>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-R>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-RB>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-RH>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-S>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SA>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SD>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SH>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SK>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SL>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SN>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-ST>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-SY>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-TR>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-TU>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-UC>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-VB>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-VG>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-Z>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/lithology-ZS>
-  a soil:Lithology ;
+  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/substrate/material-strength-M>
-  a soil:Strength ;
+  a ansis:Strength ;
 .
 <http://anzsoil.org/def/au/asls/substrate/material-strength-S>
-  a soil:Strength ;
+  a ansis:Strength ;
 .
 <http://anzsoil.org/def/au/asls/substrate/material-strength-VS>
-  a soil:Strength ;
+  a ansis:Strength ;
 .
 <http://anzsoil.org/def/au/asls/substrate/material-strength-VW>
-  a soil:Strength ;
+  a ansis:Strength ;
 .
 <http://anzsoil.org/def/au/asls/substrate/material-strength-W>
-  a soil:Strength ;
+  a ansis:Strength ;
 .
 schema:domainIncludes
   a owl:ObjectProperty ;
@@ -1653,7 +1657,7 @@ prov:Activity
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedProject ;
+      owl:onProperty ansis:relatedProject ;
     ] ;
 .
 sosa:ObservableProperty
@@ -1676,286 +1680,196 @@ sosa:ObservableProperty
   owl:imports <http://www.w3.org/ns/prov-o#> ;
   owl:imports ssn: ;
   owl:imports <https://anzsoil.org/def/au/property> ;
+  owl:imports <https://linked.data.gov.au/def/project> ;
 .
-soil:Body
-  a owl:Class ;
-  rdfs:subClassOf geo:Feature ;
-  rdfs:subClassOf soil:LandscapeEntity ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSoilSurface ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSubstrate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLayer ;
-    ] ;
-  skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
-""" ;
-  skos:note "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
-  skos:prefLabel "Soil body" ;
-.
-soil:Boundary-distinctness
+ansis:Boundary-distinctness
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Boundary distinctness" ;
 .
-soil:CoarseFragments
+ansis:CoarseFragments
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:abundance ;
+      owl:onProperty ansis:abundance ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:distribution ;
+      owl:onProperty ansis:distribution ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:shape ;
+      owl:onProperty ansis:shape ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:size ;
+      owl:onProperty ansis:size ;
     ] ;
   skos:prefLabel "Coarse fragments" ;
 .
-soil:Consistence
-  a owl:Class ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:strength ;
-    ] ;
-  skos:prefLabel "Consistence" ;
-.
-soil:Cutans
-  a owl:Class ;
-  skos:prefLabel "Cutans" ;
-.
-soil:Disturbance
+ansis:Disturbance
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Disturbance" ;
 .
-soil:DryCondition
+ansis:DryCondition
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Condition of surface soil when dry" ;
 .
-soil:Erosion
+ansis:Erosion
   a owl:Class ;
   skos:prefLabel "Erosion" ;
 .
-soil:FragmentAbundance
+ansis:FragmentAbundance
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Coarse fragment abundance classifiers" ;
 .
-soil:FragmentDistribution
+ansis:FragmentDistribution
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Coarse fragment distribution classifiers" ;
 .
-soil:FragmentShape
+ansis:FragmentShape
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Coarse fragment shape classifiers" ;
 .
-soil:FragmentSize
+ansis:FragmentSize
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Coarse fragment size classifiers" ;
 .
-soil:Horizon
+ansis:LandCover
   a owl:Class ;
-  rdfs:subClassOf soil:Layer ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom soil:Shape ;
-      owl:onProperty soil:shape ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:designation ;
-    ] ;
-  skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
-  skos:note "Soil horizons are designated A1, B2, R etc. " ;
-  skos:prefLabel "Soil Horizon" ;
-  skos:prefLabel "Soil horizon" ;
-.
-soil:LandCover
-  a owl:Class ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   skos:prefLabel "Land cover, including vegetation" ;
 .
-soil:LandManagement
+ansis:LandManagement
   a owl:Class ;
   skos:prefLabel "Land management" ;
 .
-soil:LandSurface
+ansis:LandSurface
   a owl:Class ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:method-elevation ;
+      owl:onProperty ansis:method-elevation ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedMicrorelief ;
+      owl:onProperty ansis:relatedMicrorelief ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedOutcrop ;
+      owl:onProperty ansis:relatedOutcrop ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedErosion ;
+      owl:onProperty ansis:relatedErosion ;
     ] ;
   skos:prefLabel "Land surface" ;
 .
-soil:LandUse
+ansis:LandUse
   a owl:Class ;
   skos:prefLabel "Land use" ;
 .
-soil:Landform
+ansis:Landform
   a owl:Class ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onProperty soil:relatedLandformElement ;
-      owl:someValuesFrom soil:LandformElement ;
+      owl:onProperty ansis:relatedLandformElement ;
+      owl:someValuesFrom ansis:LandformElement ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onProperty soil:relatedLandformPattern ;
-      owl:someValuesFrom soil:LandformPattern ;
+      owl:onProperty ansis:relatedLandformPattern ;
+      owl:someValuesFrom ansis:LandformPattern ;
     ] ;
   skos:prefLabel "Landform" ;
 .
-soil:LandformElement
+ansis:LandformElement
   a owl:Class ;
   a skos:Concept ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:geomorphologyMode ;
+      owl:onProperty ansis:geomorphologyMode ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:underlyingMaterial ;
+      owl:onProperty ansis:underlyingMaterial ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:onClass skos:Concept ;
-      owl:onProperty soil:landformElementName ;
+      owl:onProperty ansis:landformElementName ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Landform element (~40m)" ;
 .
-soil:LandformPattern
+ansis:LandformPattern
   a owl:Class ;
   a skos:Concept ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:geomorphologyMode ;
+      owl:onProperty ansis:geomorphologyMode ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:geomorphologyStatus ;
+      owl:onProperty ansis:geomorphologyStatus ;
     ] ;
   skos:prefLabel "Landform pattern (>600m)" ;
 .
-soil:LandscapeEntity
+ansis:LandscapeEntity
   a owl:Class ;
   rdfs:subClassOf prov:Entity ;
   skos:prefLabel "Landscape entity" ;
 .
-soil:Layer
-  a owl:Class ;
-  rdfs:subClassOf soil:LandscapeEntity ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom soil:TextureGrade ;
-      owl:onProperty soil:texture ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-lower-pos ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-upper-pos ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedBody ;
-    ] ;
-  skos:definition "Layer within a soil body" ;
-  skos:note "A depth-defined layer could be considered to sample a soil-body. " ;
-  skos:prefLabel "Soil layer" ;
-.
-soil:Lithology
+ansis:Lithology
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Lithology type" ;
 .
-soil:MassGenesis
+ansis:MassGenesis
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Mass genesis classification" ;
 .
-soil:Microrelief
+ansis:Microrelief
   a owl:Class ;
   skos:prefLabel "Microrelief" ;
 .
-soil:Mottles
-  a owl:Class ;
-  skos:prefLabel "Mottles and other colour patterns" ;
-.
-soil:Order
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Soil order" ;
-.
-soil:Outcrop
+ansis:Outcrop
   a owl:Class ;
   rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom soil:Site ;
-      owl:onProperty soil:relatedSite ;
+      owl:allValuesFrom ansis:SoilSite ;
+      owl:onProperty ansis:relatedSite ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom [
           a owl:Class ;
           owl:unionOf (
-              soil:Substrate
+              ansis:Substrate
               geo:Feature
             ) ;
         ] ;
@@ -1964,236 +1878,78 @@ soil:Outcrop
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:lithology ;
+      owl:onProperty ansis:lithology ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:strength ;
+      owl:onProperty ansis:strength ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:texture ;
+      owl:onProperty ansis:texture ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:abundance ;
+      owl:onProperty ansis:abundance ;
     ] ;
   skos:prefLabel "Outcrop" ;
 .
-soil:Pans
-  a owl:Class ;
-  skos:prefLabel "Pans" ;
-.
-soil:PedalityGrade
+ansis:PedalityGrade
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Pedality grade" ;
 .
-soil:Peds
-  a owl:Class ;
-  skos:prefLabel "Peds" ;
-.
-soil:PrimaryNotation
+ansis:PrimaryNotation
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:definition "Primary notation for a horizon-type within a sequence" ;
   skos:prefLabel "Horizon notation" ;
 .
-soil:Profile
-  a owl:Class ;
-  rdfs:subClassOf geo:Feature ;
-  rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom soil:Body ;
-      owl:onProperty sosa:isSampleOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty geo:hasGeometry ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSite ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-RHorizon ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-Substrate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSoilSurface ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSubstrate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLayer ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onClass soil:Profile-type ;
-      owl:onProperty soil:type-profile ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
-  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
-  skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
-  skos:prefLabel "Soil profile" ;
-.
-soil:Profile-type
+ansis:Profile-type
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:definition "Type of soil observation profile - e.g. pit, auger bore, core, exposure" ;
   skos:prefLabel "Type of profile" ;
 .
-soil:Roots
+ansis:Roots
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:abundance ;
+      owl:onProperty ansis:abundance ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:distribution ;
+      owl:onProperty ansis:distribution ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:shape ;
+      owl:onProperty ansis:shape ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:size ;
+      owl:onProperty ansis:size ;
     ] ;
   skos:prefLabel "Coarse fragments" ;
 .
-soil:Sample
-  a owl:Class ;
-  rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom soil:TextureGrade ;
-      owl:onProperty soil:texture ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom [
-          a owl:Class ;
-          owl:unionOf (
-              soil:Body
-              soil:Layer
-              soil:Horizon
-              soil:Substrate
-              soil:Surface
-            ) ;
-        ] ;
-      owl:onProperty sosa:isSampleOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedProfile ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-lower ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-upper ;
-    ] ;
-  skos:note """A soil sample must be from a single profile. 
-In the case of a composite-sample, the 'virtual profile' is an average of multiple individual profiles at a single site or on a face. """ ;
-  skos:prefLabel "Sample of soil" ;
-.
-soil:Segregations
-  a owl:Class ;
-  skos:prefLabel "Segregations" ;
-.
-soil:Shape
+ansis:Shape
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Boundary shape" ;
 .
-soil:Site
-  a owl:Class ;
-  rdfs:subClassOf sosa:Platform ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLandCover ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLandManagement ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLandSurface ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedLandUse ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:siteDisturbance ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty geo:hasGeometry ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedProfile ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onProperty sosa:isSampleOf ;
-      owl:someValuesFrom soil:Body ;
-    ] ;
-  skos:definition "Yellow-book site" ;
-  skos:prefLabel "Soil site" ;
-  skos:scopeNote "'Site' acts as a kind of platform, where sensors may be deployed. " ;
-  skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
-  skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
-  skos:scopeNote "Other types of site may include (i) TERN Monitoring Site (ii) Farmer site" ;
-.
-soil:SiteVisit
+ansis:SiteVisit
   a owl:Class ;
   rdfs:subClassOf prov:Activity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom prov:Person ;
-      owl:onProperty soil:visitor ;
+      owl:onProperty ansis:visitor ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2208,12 +1964,12 @@ soil:SiteVisit
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedProject ;
+      owl:onProperty ansis:relatedProject ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedSite ;
+      owl:onProperty ansis:relatedSite ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2223,327 +1979,656 @@ soil:SiteVisit
           owl:unionOf (
               sosa:Observation
               sosa:Sampling
-              soil:Treatment
+              ansis:Treatment
             ) ;
         ] ;
-      owl:onProperty soil:relatedActivity ;
+      owl:onProperty ansis:relatedActivity ;
     ] ;
   skos:prefLabel "Site visit" ;
 .
-soil:Strength
+ansis:SoilBody
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSoilSurface ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSubstrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLayer ;
+    ] ;
+  skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
+""" ;
+  skos:note "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
+  skos:prefLabel "Soil body" ;
+.
+ansis:SoilConsistence
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  skos:prefLabel "Consistence" ;
+.
+ansis:SoilCutans
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:abundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:type ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:distinctness ;
+    ] ;
+  skos:prefLabel "Cutans" ;
+.
+ansis:SoilHorizon
+  a owl:Class ;
+  rdfs:subClassOf ansis:SoilLayer ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom ansis:Shape ;
+      owl:onProperty ansis:shape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:designation ;
+    ] ;
+  skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
+  skos:note "Soil horizons are designated A1, B2, R etc. " ;
+  skos:prefLabel "Soil Horizon" ;
+  skos:prefLabel "Soil horizon" ;
+.
+ansis:SoilLayer
+  a owl:Class ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom ansis:TextureGrade ;
+      owl:onProperty ansis:texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-lower-pos ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-upper-pos ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedBody ;
+    ] ;
+  skos:definition "Layer within a soil body" ;
+  skos:note "A depth-defined layer could be considered to sample a soil-body. " ;
+  skos:prefLabel "Soil layer" ;
+.
+ansis:SoilMottles
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:abundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:type ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:colour ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:distinctness ;
+    ] ;
+  skos:prefLabel "Mottles and other colour patterns" ;
+.
+ansis:SoilOrder
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Strength of material" ;
+  skos:prefLabel "Soil order" ;
 .
-soil:Suborder
+ansis:SoilPans
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:type ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:structure ;
+    ] ;
+  skos:prefLabel "Pans" ;
+.
+ansis:SoilPeds
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:type ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:size ;
+    ] ;
+  skos:prefLabel "Peds" ;
+.
+ansis:SoilProfile
+  a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
+  rdfs:subClassOf sosa:Sample ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom ansis:SoilBody ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty geo:hasGeometry ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSite ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-RHorizon ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-Substrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSoilSurface ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSubstrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLayer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass ansis:Profile-type ;
+      owl:onProperty ansis:type-profile ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
+  skos:note "A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present in the sample (i.e. at this location). Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. " ;
+  skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
+  skos:prefLabel "Soil profile" ;
+.
+ansis:SoilSample
+  a owl:Class ;
+  rdfs:subClassOf sosa:Sample ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom ansis:TextureGrade ;
+      owl:onProperty ansis:texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              ansis:SoilBody
+              ansis:SoilLayer
+              ansis:SoilHorizon
+              ansis:Substrate
+              ansis:SoilSurface
+            ) ;
+        ] ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedProfile ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-lower ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-upper ;
+    ] ;
+  skos:note """A soil sample must be from a single profile. 
+In the case of a composite-sample, the 'virtual profile' is an average of multiple individual profiles at a single site or on a face. """ ;
+  skos:prefLabel "Sample of soil" ;
+.
+ansis:SoilSegregations
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:abundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:size ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  skos:prefLabel "Segregations" ;
+.
+ansis:SoilSite
+  a owl:Class ;
+  rdfs:subClassOf sosa:Platform ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLandCover ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLandManagement ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLandSurface ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLandUse ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:siteDisturbance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty geo:hasGeometry ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedProfile ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty sosa:isSampleOf ;
+      owl:someValuesFrom ansis:SoilBody ;
+    ] ;
+  skos:definition "Yellow-book site" ;
+  skos:prefLabel "Soil site" ;
+  skos:scopeNote "'Site' acts as a kind of platform, where sensors may be deployed. " ;
+  skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
+  skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
+  skos:scopeNote "Other types of site may include (i) TERN Monitoring Site (ii) Farmer site" ;
+.
+ansis:SoilSuborder
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Soil sub-order" ;
 .
-soil:Substrate
+ansis:SoilSurface
   a owl:Class ;
-  rdfs:subClassOf soil:LandscapeEntity ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:depth-upper-pos ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:lithology ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:relatedBody ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:strength ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:texture ;
-    ] ;
-  skos:prefLabel "Substrate" ;
-.
-soil:Surface
-  a owl:Class ;
-  rdfs:subClassOf soil:LandscapeEntity ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:condition-when-dry ;
+      owl:onProperty ansis:condition-when-dry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty soil:waterRepellence ;
+      owl:onProperty ansis:waterRepellence ;
     ] ;
   skos:definition "the surface of the soil body" ;
   skos:prefLabel "Soil surface" ;
 .
-soil:TextureGrade
+ansis:SoilVoids
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:abundance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:width ;
+    ] ;
+  skos:prefLabel "Voids in soil - pores and cracks" ;
+.
+ansis:Strength
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Strength of material" ;
+.
+ansis:Substrate
+  a owl:Class ;
+  rdfs:subClassOf ansis:LandscapeEntity ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth-upper-pos ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:lithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedBody ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:texture ;
+    ] ;
+  skos:prefLabel "Substrate" ;
+.
+ansis:TextureGrade
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "FIeld texture grade" ;
 .
-soil:Treatment
+ansis:Treatment
   a owl:Class ;
   rdfs:subClassOf sosa:Actuation ;
   skos:definition "Intervention or treatment" ;
   skos:prefLabel "Treatment" ;
 .
-soil:Voids
-  a owl:Class ;
-  skos:prefLabel "Voids - pores and cracks" ;
-.
-soil:WaterRepellence
+ansis:WaterRepellence
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Water repellence" ;
 .
-soil:abundance
+ansis:abundance
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:prefLabel "abundance" ;
 .
-soil:acid-sulfate
+ansis:acid-sulfate
   a rdf:Property ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "acid sulfate soils" ;
 .
-soil:alk-earth-carbonates
+ansis:alk-earth-carbonates
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil alkaline earth carbonates" ;
 .
-soil:c_n_ratio
+ansis:c_n_ratio
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil carbon/nitrogen ratio" ;
 .
-soil:carbon
+ansis:carbon
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil carbon" ;
 .
-soil:chemistry
+ansis:chemistry
   a rdf:Property ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Sample ;
+  schema:domainIncludes ansis:SoilSample ;
   skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "Soil chemistry" ;
 .
-soil:chloride
+ansis:chloride
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soluble chloride" ;
 .
-soil:classification
+ansis:classification
   a owl:ObjectProperty ;
   skos:prefLabel "soil classification" ;
 .
-soil:classification-family-A1texture
+ansis:classification-family-A1texture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Family ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon texture" ;
 .
-soil:classification-family-A1thickness
+ansis:classification-family-A1thickness
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Family ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon thickness" ;
 .
-soil:classification-family-Btexture
+ansis:classification-family-Btexture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Family ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - B horizon texture" ;
 .
-soil:classification-family-depth
+ansis:classification-family-depth
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Family ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Soil depth" ;
 .
-soil:classification-family-gravel
+ansis:classification-family-gravel
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Family ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Gravel of the surface and A1 horizon" ;
 .
-soil:classification-greatgroup
+ansis:classification-greatgroup
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Class ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
 .
-soil:classification-order
+ansis:classification-order
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range [
       a owl:Class ;
       owl:unionOf (
-          soil:Order
-          soil:Suborder
+          ansis:SoilOrder
+          ansis:SoilSuborder
         ) ;
     ] ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - sub-order or order" ;
 .
-soil:classification-subgroup
+ansis:classification-subgroup
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range asc:Class ;
-  rdfs:subPropertyOf soil:classification ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
 .
-soil:colour
+ansis:colour
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "colour" ;
 .
-soil:component-landform-element
+ansis:component-landform-element
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/component-landform-element"^^xsd:anyURI ;
-  schema:domainIncludes soil:Landform ;
-  rdfs:range soil:LandformElement ;
+  schema:domainIncludes ansis:Landform ;
+  rdfs:range ansis:LandformElement ;
   skos:prefLabel "component landform element" ;
 .
-soil:condition-when-dry
+ansis:condition-when-dry
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Surface ;
-  rdfs:range soil:DryCondition ;
+  schema:domainIncludes ansis:SoilSurface ;
+  rdfs:range ansis:DryCondition ;
   skos:exactMatch prop:condition-of-surface-soil-when-dry ;
   skos:prefLabel "condition when dry" ;
 .
-soil:density
+ansis:density
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   skos:exactMatch prop:density ;
   skos:prefLabel "density" ;
 .
-soil:density-bulk
+ansis:density-bulk
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   skos:exactMatch prop:density-bulk ;
   skos:prefLabel "bulk density" ;
 .
-soil:depth
+ansis:depth
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Sample ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   skos:definition "depth of entity" ;
   skos:exactMatch prop:depth ;
   skos:prefLabel "depth" ;
 .
-soil:depth-RHorizon
+ansis:depth-RHorizon
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilProfile ;
   skos:exactMatch prop:depth-to-r-horizon ;
   skos:prefLabel "depth to R-horizon" ;
 .
-soil:depth-Substrate
+ansis:depth-Substrate
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Profile ;
+  schema:domainIncludes ansis:SoilProfile ;
   skos:prefLabel "depth to substrate" ;
 .
-soil:depth-lower
+ansis:depth-lower
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Sample ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   skos:exactMatch prop:depth-lower ;
   skos:prefLabel "lower depth" ;
 .
-soil:depth-lower-pos
+ansis:depth-lower-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilLayer ;
   skos:definition "lower depth of entity as a function of position" ;
   skos:narrowMatch prop:depth-lower ;
   skos:prefLabel "lower-depth(position)" ;
 .
-soil:depth-pos
+ansis:depth-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilLayer ;
   skos:definition "depth of entity as a function of position" ;
   skos:narrowMatch prop:depth ;
   skos:prefLabel "depth(position)" ;
 .
-soil:depth-upper
+ansis:depth-upper
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Sample ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   skos:exactMatch prop:depth-upper ;
   skos:prefLabel "upper depth" ;
 .
-soil:depth-upper-pos
+ansis:depth-upper-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
-  schema:domainIncludes soil:Body ;
-  schema:domainIncludes soil:Layer ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilLayer ;
   skos:definition "upper depth of entity as a function of position" ;
   skos:narrowMatch prop:depth-upper ;
   skos:prefLabel "upper-depth(position)" ;
 .
-soil:designation
+ansis:designation
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:subPropertyOf skos:notation ;
@@ -2551,427 +2636,428 @@ soil:designation
   skos:exactMatch prop:horizon-classification ;
   skos:prefLabel "horizon designation" ;
 .
-soil:distinctness
+ansis:distinctness
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:Boundary-distinctness ;
+  rdfs:range ansis:Boundary-distinctness ;
   skos:definition "distinctness of lower boundary" ;
   skos:exactMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "boundary distinctness" ;
 .
-soil:distinctness-pos
+ansis:distinctness-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:definition "distinctness of lower boundary as a function of position" ;
   skos:narrowMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "distinctness(position)" ;
 .
-soil:distribution
+ansis:distribution
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Layer ;
-  schema:domainIncludes soil:Profile ;
-  schema:domainIncludes soil:Surface ;
-  rdfs:range soil:FragmentDistribution ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSurface ;
+  rdfs:range ansis:FragmentDistribution ;
   skos:exactMatch prop:coarse-fragments-distribution ;
   skos:prefLabel "distribution" ;
 .
-soil:elevation
+ansis:elevation
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:prefLabel "elevation above MSL" ;
 .
-soil:fe_al_si
+ansis:fe_al_si
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil extractable iron, aluminium and silicon" ;
 .
-soil:frequency
+ansis:frequency
   a owl:DatatypeProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:prefLabel "frequency" ;
 .
-soil:geomorphologyMode
+ansis:geomorphologyMode
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:definition "mode of geomorphological activity" ;
   skos:exactMatch prop:mode-of-geomorphological-activity ;
   skos:prefLabel "geomorphology mode" ;
 .
-soil:geomorphologyStatus
+ansis:geomorphologyStatus
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "status of geomorphological activity" ;
 .
-soil:gypsum
+ansis:gypsum
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil gypsum" ;
 .
-soil:height
+ansis:height
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:prefLabel "height" ;
 .
-soil:ion-exchange
+ansis:ion-exchange
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil ion-exchange properties" ;
 .
-soil:landformElementName
+ansis:landformElementName
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "landform element name" ;
 .
-soil:length
+ansis:length
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:prefLabel "length" ;
 .
-soil:lime-req
+ansis:lime-req
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil lime requirement" ;
 .
-soil:lithology
+ansis:lithology
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Outcrop ;
-  schema:domainIncludes soil:Substrate ;
-  rdfs:range soil:Lithology ;
+  schema:domainIncludes ansis:Outcrop ;
+  schema:domainIncludes ansis:Substrate ;
+  rdfs:range ansis:Lithology ;
   skos:definition "lithological type of material" ;
   skos:exactMatch prop:lithology ;
   skos:prefLabel "lithological type" ;
 .
-soil:mapSheet
+ansis:mapSheet
   a owl:ObjectProperty ;
   skos:prefLabel "on map-sheet" ;
 .
-soil:mass-genesis
+ansis:mass-genesis
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Substrate ;
-  rdfs:range soil:MassGenesis ;
+  schema:domainIncludes ansis:Substrate ;
+  rdfs:range ansis:MassGenesis ;
   skos:exactMatch prop:substrate-genesis ;
   skos:prefLabel "mass genesis" ;
 .
-soil:method-drainageHeight
+ansis:method-drainageHeight
   a owl:ObjectProperty ;
   rdfs:subPropertyOf sosa:usedProcedure ;
   skos:definition "Means of evaluation of drainage height" ;
   skos:prefLabel "drainage height method" ;
 .
-soil:method-elevation
+ansis:method-elevation
   a owl:ObjectProperty ;
   rdfs:subPropertyOf sosa:usedProcedure ;
   skos:definition "Means of evaluation of elevation" ;
   skos:prefLabel "elevation method" ;
 .
-soil:micronutrients
+ansis:micronutrients
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil micronutrients" ;
 .
-soil:misc-elements
+ansis:misc-elements
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil total miscellaneous elements" ;
 .
-soil:misc-extractable-elements
+ansis:misc-extractable-elements
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil miscellaneous extractable elements" ;
 .
-soil:nitrogen
+ansis:nitrogen
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil nitrogen" ;
 .
-soil:pH
+ansis:pH
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "Soil pH" ;
 .
-soil:pedality-grade
+ansis:pedality-grade
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:PedalityGrade ;
+  rdfs:range ansis:PedalityGrade ;
   skos:exactMatch prop:structure-pedality-grade ;
   skos:prefLabel "pedality grade" ;
 .
-soil:phosphorus
+ansis:phosphorus
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil phosphorus" ;
 .
-soil:relatedActivity
+ansis:relatedActivity
   a owl:ObjectProperty ;
   rdfs:range prov:Activity ;
   skos:prefLabel "related activity" ;
 .
-soil:relatedBody
+ansis:relatedBody
   a owl:ObjectProperty ;
-  rdfs:range soil:Body ;
+  rdfs:range ansis:SoilBody ;
   skos:definition "related mappable soil body containing a set of layers and horizons" ;
   skos:prefLabel "related soil body" ;
 .
-soil:relatedBoundary
+ansis:relatedBoundary
   a owl:ObjectProperty ;
   skos:definition "related boundary within a soil body or sample" ;
   skos:prefLabel "related boundary" ;
 .
-soil:relatedCoarseFragments
+ansis:relatedCoarseFragments
   a owl:ObjectProperty ;
-  rdfs:range soil:CoarseFragments ;
+  rdfs:range ansis:CoarseFragments ;
   skos:prefLabel "related Coarse Fragments" ;
 .
-soil:relatedConsistence
+ansis:relatedConsistence
   a owl:ObjectProperty ;
-  rdfs:range soil:Consistence ;
+  rdfs:range ansis:SoilConsistence ;
   skos:prefLabel "related Consistence" ;
 .
-soil:relatedCutans
+ansis:relatedCutans
   a owl:ObjectProperty ;
-  rdfs:range soil:Cutans ;
+  rdfs:range ansis:SoilCutans ;
   skos:prefLabel "related Cutans" ;
 .
-soil:relatedErosion
+ansis:relatedErosion
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:Erosion ;
+  rdfs:range ansis:Erosion ;
   skos:closeMatch prop:erosion-state ;
   skos:prefLabel "has erosion " ;
 .
-soil:relatedHorizon
+ansis:relatedHorizon
   a owl:ObjectProperty ;
-  rdfs:subPropertyOf soil:relatedLayer ;
+  rdfs:subPropertyOf ansis:relatedLayer ;
   skos:definition "related soil horizon within a soil body or sample, or associated with a contact" ;
   skos:prefLabel "related soil horizon" ;
 .
-soil:relatedLandCover
+ansis:relatedLandCover
   a owl:ObjectProperty ;
-  rdfs:range soil:LandCover ;
+  rdfs:range ansis:LandCover ;
   skos:definition "land cover around this entity" ;
   skos:prefLabel "related land cover" ;
 .
-soil:relatedLandManagement
+ansis:relatedLandManagement
   a owl:ObjectProperty ;
-  rdfs:range soil:LandManagement ;
+  rdfs:range ansis:LandManagement ;
   skos:definition "land management around this entity" ;
   skos:prefLabel "related land management" ;
 .
-soil:relatedLandSurface
+ansis:relatedLandSurface
   a owl:ObjectProperty ;
-  rdfs:range soil:LandSurface ;
+  rdfs:range ansis:LandSurface ;
   skos:definition "land surface at this entity" ;
   skos:prefLabel "related land surface" ;
 .
-soil:relatedLandUse
+ansis:relatedLandUse
   a owl:ObjectProperty ;
-  rdfs:range soil:LandUse ;
+  rdfs:range ansis:LandUse ;
   skos:definition "land use around this entity" ;
   skos:prefLabel "related land use" ;
 .
-soil:relatedLandform
+ansis:relatedLandform
   a owl:ObjectProperty ;
-  rdfs:range soil:Landform ;
+  rdfs:range ansis:Landform ;
   skos:definition "landform around this entity" ;
   skos:prefLabel "related landform" ;
 .
-soil:relatedLandformElement
+ansis:relatedLandformElement
   a owl:ObjectProperty ;
-  rdfs:range soil:LandformElement ;
+  rdfs:range ansis:LandformElement ;
   skos:definition "landform element in the vicinity of this entity (~40m)" ;
   skos:prefLabel "related landform element" ;
 .
-soil:relatedLandformPattern
+ansis:relatedLandformPattern
   a owl:ObjectProperty ;
-  rdfs:range soil:LandformPattern ;
+  rdfs:range ansis:LandformPattern ;
   skos:definition "landform pattern around this entity (>600m)" ;
   skos:prefLabel "related landform pattern" ;
 .
-soil:relatedLayer
+ansis:relatedLayer
   a owl:ObjectProperty ;
-  rdfs:range soil:Layer ;
+  rdfs:range ansis:SoilLayer ;
   skos:definition "related soil layer within a soil body or sample" ;
   skos:prefLabel "related soil layer" ;
 .
-soil:relatedMicrorelief
+ansis:relatedMicrorelief
   a owl:ObjectProperty ;
-  rdfs:range soil:Microrelief ;
+  rdfs:range ansis:Microrelief ;
   skos:definition "microrelief at the site" ;
   skos:prefLabel "related microrelief" ;
 .
-soil:relatedMottles
+ansis:relatedMottles
   a owl:ObjectProperty ;
-  rdfs:range soil:Mottles ;
+  rdfs:range ansis:SoilMottles ;
   skos:prefLabel "related Mottles and other colour patterns" ;
 .
-soil:relatedOutcrop
+ansis:relatedOutcrop
   a owl:ObjectProperty ;
-  rdfs:range soil:Outcrop ;
+  rdfs:range ansis:Outcrop ;
   skos:definition "outcrop at this entity" ;
   skos:prefLabel "related outcrop" ;
 .
-soil:relatedPans
+ansis:relatedPans
   a owl:ObjectProperty ;
-  rdfs:range soil:Pans ;
+  rdfs:range ansis:SoilPans ;
   skos:prefLabel "related Pans" ;
 .
-soil:relatedProfile
+ansis:relatedProfile
   a owl:ObjectProperty ;
-  rdfs:range soil:Profile ;
+  rdfs:range ansis:SoilProfile ;
   skos:prefLabel "related soil profile" ;
 .
-soil:relatedProject
+ansis:relatedProject
   a owl:ObjectProperty ;
   schema:domainIncludes sosa:Observation ;
   schema:domainIncludes sosa:Sampling ;
-  schema:domainIncludes soil:SiteVisit ;
+  schema:domainIncludes ansis:SiteVisit ;
+  rdfs:range proj:Project ;
   skos:definition "Project that supported this activity" ;
   skos:prefLabel "related project" ;
 .
-soil:relatedRoots
+ansis:relatedRoots
   a owl:ObjectProperty ;
-  rdfs:range soil:Roots ;
+  rdfs:range ansis:Roots ;
   skos:prefLabel "related Roots" ;
 .
-soil:relatedSample
+ansis:relatedSample
   a owl:ObjectProperty ;
   rdfs:range sosa:Sample ;
   skos:prefLabel "related sample" ;
 .
-soil:relatedSegregations
+ansis:relatedSegregations
   a owl:ObjectProperty ;
-  rdfs:range soil:Segregations ;
+  rdfs:range ansis:SoilSegregations ;
   skos:prefLabel "related Segregations" ;
 .
-soil:relatedSite
+ansis:relatedSite
   a owl:ObjectProperty ;
-  rdfs:range soil:Site ;
+  rdfs:range ansis:SoilSite ;
   skos:prefLabel "related site" ;
 .
-soil:relatedSoilSurface
+ansis:relatedSoilSurface
   a owl:ObjectProperty ;
-  rdfs:range soil:Surface ;
+  rdfs:range ansis:SoilSurface ;
   skos:definition "soil surface of this entity" ;
   skos:prefLabel "related soil surface" ;
 .
-soil:relatedSubstrate
+ansis:relatedSubstrate
   a owl:ObjectProperty ;
-  rdfs:range soil:Substrate ;
+  rdfs:range ansis:Substrate ;
   skos:definition "substrate at this entity" ;
   skos:prefLabel "related substrate" ;
 .
-soil:relatedVoids
+ansis:relatedVoids
   a owl:ObjectProperty ;
-  rdfs:range soil:Voids ;
+  rdfs:range ansis:SoilVoids ;
   skos:prefLabel "related Voids - pores and cracks" ;
 .
-soil:sat-extracts
+ansis:sat-extracts
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil saturation extracts" ;
 .
-soil:shape
+ansis:shape
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:CoarseFragments ;
-  schema:domainIncludes soil:Horizon ;
+  schema:domainIncludes ansis:CoarseFragments ;
+  schema:domainIncludes ansis:SoilHorizon ;
   skos:definition "shape of entity or entity boundary" ;
   skos:exactMatch prop:shape ;
   skos:prefLabel "entity shape" ;
 .
-soil:shape-pos
+ansis:shape-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:definition "shape of lower boundary of horizon as a function of position" ;
   skos:narrowMatch prop:shape ;
   skos:prefLabel "shape(position)" ;
 .
-soil:siteDisturbance
+ansis:siteDisturbance
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes soil:Site ;
-  rdfs:range soil:Disturbance ;
+  schema:domainIncludes ansis:SoilSite ;
+  rdfs:range ansis:Disturbance ;
   skos:exactMatch prop:disturbance-of-site ;
   skos:prefLabel "disturbance of site" ;
 .
-soil:size
+ansis:size
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "size" ;
 .
-soil:strength
+ansis:strength
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:Strength ;
+  rdfs:range ansis:Strength ;
   skos:exactMatch prop:strength ;
   skos:prefLabel "strength of material" ;
 .
-soil:structure
+ansis:structure
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "structure in entity" ;
 .
-soil:sulfur
+ansis:sulfur
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  rdfs:subPropertyOf soil:chemistry ;
+  rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil sulfur" ;
 .
-soil:texture
+ansis:texture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:exactMatch prop:texture ;
   skos:prefLabel "material texture" ;
 .
-soil:type-profile
+ansis:type-profile
   a owl:ObjectProperty ;
-  rdfs:range soil:Profile-type ;
+  rdfs:range ansis:Profile-type ;
   rdfs:subPropertyOf sosa:usedProcedure ;
   skos:definition "type of soil profile construction" ;
   skos:note "sampling method" ;
   skos:prefLabel "profile type" ;
 .
-soil:type-site
+ansis:type-site
   a owl:ObjectProperty ;
-  schema:domainIncludes soil:Site ;
+  schema:domainIncludes ansis:SoilSite ;
   skos:prefLabel "type of site" ;
 .
-soil:underlyingMaterial
+ansis:underlyingMaterial
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   skos:prefLabel "underlying material" ;
 .
-soil:visitor
+ansis:visitor
   a owl:ObjectProperty ;
   rdfs:range prov:Activity ;
   rdfs:subPropertyOf prov:wasAssociatedWith ;
   skos:prefLabel "visitor" ;
 .
-soil:waterRepellence
+ansis:waterRepellence
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:WaterRepellence ;
+  rdfs:range ansis:WaterRepellence ;
   skos:exactMatch prop:water-repellence ;
   skos:prefLabel "water repellence" ;
 .
-soil:width
+ansis:width
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
@@ -2983,6 +3069,6 @@ prop:distinctness
 prop:pedality
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range soil:Peds ;
+  rdfs:range ansis:SoilPeds ;
   skos:prefLabel "pedality" ;
 .
