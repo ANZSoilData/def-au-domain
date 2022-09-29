@@ -1,15 +1,6 @@
 # baseURI: https://anzsoil.org/def/au/domain
-# imports: http://anzsoil.org/def/au/asc/
-# imports: http://purl.org/dc/elements/1.1/
-# imports: http://www.opengis.net/ont/geosparql
-# imports: http://www.opengis.net/ont/sf
-# imports: http://www.w3.org/ns/prov-o#
-# imports: http://www.w3.org/ns/ssn/
-# imports: https://anzsoil.org/def/au/property
-# imports: https://linked.data.gov.au/def/project
-# prefix: ansis
 
-@prefix ansis: <https://anzsoil.org/def/au/domain#> .
+@prefix ansis: <https://anzsoil.org/def/au/domain/> .
 @prefix asc: <http://anzsoil.org/def/au/asc/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -25,7 +16,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
-@prefix sfeat: <https://anzsoil.org/def/au/feature/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix sp: <http://anzsoil.org/def/au/asls/soil-profile/> .
@@ -1673,14 +1663,6 @@ sosa:ObservableProperty
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-09-27"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
-  owl:imports asc: ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports <http://www.opengis.net/ont/sf> ;
-  owl:imports <http://www.w3.org/ns/prov-o#> ;
-  owl:imports ssn: ;
-  owl:imports <https://anzsoil.org/def/au/property> ;
-  owl:imports <https://linked.data.gov.au/def/project> ;
 .
 ansis:Boundary-distinctness
   a owl:Class ;
@@ -1691,7 +1673,7 @@ ansis:CoarseFragments
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:abundance ;
     ] ;
   rdfs:subClassOf [
@@ -2048,13 +2030,27 @@ ansis:SoilHorizon
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:designation ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:shape ;
     ] ;
   skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
   skos:note "Soil horizons are designated A1, B2, R etc. " ;
   skos:prefLabel "Soil Horizon" ;
-  skos:prefLabel "Soil horizon" ;
+.
+ansis:SoilHorizonR
+  a owl:Class ;
+  rdfs:subClassOf ansis:SoilHorizon ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:hasValue "R" ;
+      owl:onProperty ansis:designation ;
+    ] ;
+  skos:prefLabel "R Horizon" ;
 .
 ansis:SoilLayer
   a owl:Class ;
@@ -2098,6 +2094,11 @@ ansis:SoilLayer
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedPans ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedPeds ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2207,6 +2208,11 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedCoarseFragments ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedSoilSurface ;
     ] ;
   rdfs:subClassOf [
@@ -2222,7 +2228,7 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:onClass ansis:Profile-type ;
-      owl:onProperty ansis:type-profile ;
+      owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
@@ -2302,9 +2308,21 @@ ansis:SoilSample
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedVoids ;
     ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ansis:SoilSampleType ;
+      owl:onProperty ansis:type ;
+    ] ;
   skos:note """A soil sample must be from a single profile. 
 In the case of a composite-sample, the 'virtual profile' is an average of multiple individual profiles at a single site or on a face. """ ;
   skos:prefLabel "Sample of soil" ;
+.
+ansis:SoilSampleType
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:note "in-profile vs material-sample" ;
+  skos:prefLabel "Type of soil sample" ;
 .
 ansis:SoilSegregations
   a owl:Class ;
@@ -2351,7 +2369,22 @@ ansis:SoilSite
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedLandform ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:siteDisturbance ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSite ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2464,36 +2497,61 @@ ansis:WaterRepellence
 ansis:abundance
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:CoarseFragments ;
+  schema:domainIncludes ansis:Outcrop ;
+  schema:domainIncludes ansis:Roots ;
+  schema:domainIncludes ansis:SoilCutans ;
+  schema:domainIncludes ansis:SoilMottles ;
+  schema:domainIncludes ansis:SoilSegregations ;
+  schema:domainIncludes ansis:SoilVoids ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:abundance ;
+  skos:narrowMatch prop:coarse-fragments-abundance ;
+  skos:narrowMatch prop:cutans-abundance ;
+  skos:narrowMatch prop:gilgai-microrelief-proportions ;
+  skos:narrowMatch prop:mottles-and-colour-pattern-abundance ;
+  skos:narrowMatch prop:rock-outcrop-abundance ;
+  skos:narrowMatch prop:roots-abundance ;
+  skos:narrowMatch prop:segregations-abundance ;
+  skos:narrowMatch prop:voids-macropores-abundance ;
   skos:prefLabel "abundance" ;
 .
 ansis:acid-sulfate
   a rdf:Property ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "acid sulfate soils" ;
 .
 ansis:alk-earth-carbonates
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil alkaline earth carbonates" ;
 .
 ansis:c_n_ratio
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil carbon/nitrogen ratio" ;
 .
 ansis:carbon
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil carbon" ;
 .
 ansis:chemistry
   a rdf:Property ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilSample ;
   skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "Soil chemistry" ;
@@ -2501,11 +2559,17 @@ ansis:chemistry
 ansis:chloride
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soluble chloride" ;
 .
 ansis:classification
   a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
+  skos:exactMatch prop:soil-classification ;
   skos:prefLabel "soil classification" ;
 .
 ansis:classification-family-A1texture
@@ -2597,6 +2661,10 @@ ansis:classification-subgroup
 ansis:colour
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilMottles ;
+  schema:domainIncludes ansis:SoilSample ;
+  skos:exactMatch prop:colour ;
   skos:prefLabel "colour" ;
 .
 ansis:component-landform-element
@@ -2618,12 +2686,17 @@ ansis:condition-when-dry
 ansis:density
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   skos:exactMatch prop:density ;
+  skos:narrowMatch prop:density-bulk ;
   skos:prefLabel "density" ;
 .
 ansis:density-bulk
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   skos:exactMatch prop:density-bulk ;
   skos:prefLabel "bulk density" ;
 .
@@ -2631,15 +2704,26 @@ ansis:depth
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
+  schema:domainIncludes ansis:SoilHorizonR ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:Substrate ;
   skos:definition "depth of entity" ;
   skos:exactMatch prop:depth ;
+  skos:narrowMatch prop:depth-free-water ;
+  skos:narrowMatch prop:depth-of-horizon ;
+  skos:narrowMatch prop:depth-of-horizon-lower ;
+  skos:narrowMatch prop:depth-of-horizon-upper ;
+  skos:narrowMatch prop:depth-to-r-horizon ;
+  skos:narrowMatch prop:erosion-gully-depth ;
+  skos:narrowMatch prop:inundation-depth ;
+  skos:narrowMatch prop:observation-depth ;
   skos:prefLabel "depth" ;
 .
 ansis:depth-RHorizon
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
   skos:exactMatch prop:depth-to-r-horizon ;
   skos:prefLabel "depth to R-horizon" ;
@@ -2647,6 +2731,7 @@ ansis:depth-RHorizon
 ansis:depth-Substrate
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
   skos:prefLabel "depth to substrate" ;
 .
@@ -2654,6 +2739,7 @@ ansis:depth-lower
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
+  schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   skos:exactMatch prop:depth-lower ;
@@ -2683,6 +2769,7 @@ ansis:depth-upper
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
+  schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   skos:exactMatch prop:depth-upper ;
@@ -2701,6 +2788,7 @@ ansis:depth-upper-pos
 ansis:designation
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilHorizon ;
   rdfs:subPropertyOf skos:notation ;
   skos:definition "soil horizon designation" ;
   skos:exactMatch prop:horizon-classification ;
@@ -2709,6 +2797,8 @@ ansis:designation
 ansis:distinctness
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilHorizon ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:Boundary-distinctness ;
   skos:definition "distinctness of lower boundary" ;
   skos:exactMatch prop:horizon-boundary-distinctness ;
@@ -2724,9 +2814,7 @@ ansis:distinctness-pos
 ansis:distribution
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
-  schema:domainIncludes ansis:SoilSurface ;
+  schema:domainIncludes ansis:CoarseFragments ;
   rdfs:range ansis:FragmentDistribution ;
   skos:exactMatch prop:coarse-fragments-distribution ;
   skos:prefLabel "distribution" ;
@@ -2735,22 +2823,27 @@ ansis:elevation
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:elevation ;
   skos:prefLabel "elevation above MSL" ;
 .
 ansis:fe_al_si
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil extractable iron, aluminium and silicon" ;
 .
 ansis:frequency
   a owl:DatatypeProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:frequency ;
   skos:prefLabel "frequency" ;
 .
 ansis:geomorphologyMode
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
   skos:definition "mode of geomorphological activity" ;
   skos:exactMatch prop:mode-of-geomorphological-activity ;
   skos:prefLabel "geomorphology mode" ;
@@ -2758,51 +2851,89 @@ ansis:geomorphologyMode
 ansis:geomorphologyStatus
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
   skos:prefLabel "status of geomorphological activity" ;
+.
+ansis:grain-size
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  qudt:hasDimensionVector <http://qudt.org/vocab/dimensionvector/A0E0L1I0M0H0T0D0> ;
+  schema:domainIncludes ansis:Outcrop ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:Substrate ;
+  rdfs:subPropertyOf ansis:size ;
+  skos:definition "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin." ;
+  skos:exactMatch prop:grain-size ;
+  skos:prefLabel "Grain size" ;
 .
 ansis:gypsum
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil gypsum" ;
 .
 ansis:height
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Erosion ;
+  schema:domainIncludes ansis:LandSurface ;
+  schema:domainIncludes ansis:LandformElement ;
+  schema:domainIncludes ansis:Microrelief ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:extent-vertical ;
+  skos:narrowMatch prop:element-dimension-height ;
+  skos:narrowMatch prop:erosion-gully-depth ;
+  skos:narrowMatch prop:inundation-depth ;
+  skos:narrowMatch prop:microrelief-vertical-interval ;
+  skos:narrowMatch prop:relief ;
   skos:prefLabel "height" ;
 .
 ansis:ion-exchange
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil ion-exchange properties" ;
 .
 ansis:landformElementName
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
   skos:prefLabel "landform element name" ;
 .
 ansis:length
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:length ;
+  skos:narrowMatch prop:element-dimension-length ;
   skos:prefLabel "length" ;
 .
 ansis:lime-req
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil lime requirement" ;
 .
 ansis:lithology
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:CoarseFragments ;
   schema:domainIncludes ansis:Outcrop ;
   schema:domainIncludes ansis:Substrate ;
   rdfs:range ansis:Lithology ;
   skos:definition "lithological type of material" ;
   skos:exactMatch prop:lithology ;
+  skos:narrowMatch prop:coarse-fragments-lithology ;
+  skos:narrowMatch prop:rock-outcrop-lithology ;
+  skos:narrowMatch prop:substrate-lithology ;
   skos:prefLabel "lithological type" ;
 .
 ansis:mapSheet
@@ -2832,36 +2963,54 @@ ansis:method-elevation
 ansis:micronutrients
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil micronutrients" ;
 .
 ansis:misc-elements
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil total miscellaneous elements" ;
 .
 ansis:misc-extractable-elements
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil miscellaneous extractable elements" ;
 .
 ansis:nitrogen
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil nitrogen" ;
 .
 ansis:pH
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "Soil pH" ;
+.
+ansis:pedality
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range ansis:SoilPeds ;
+  skos:prefLabel "pedality" ;
 .
 ansis:pedality-grade
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilPeds ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:PedalityGrade ;
   skos:exactMatch prop:structure-pedality-grade ;
   skos:prefLabel "pedality grade" ;
@@ -2869,6 +3018,8 @@ ansis:pedality-grade
 ansis:phosphorus
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil phosphorus" ;
 .
@@ -2890,6 +3041,7 @@ ansis:relatedBoundary
 .
 ansis:relatedCoarseFragments
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
@@ -2899,7 +3051,6 @@ ansis:relatedCoarseFragments
 ansis:relatedConsistence
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilConsistence ;
   skos:prefLabel "related Consistence" ;
@@ -2907,7 +3058,6 @@ ansis:relatedConsistence
 ansis:relatedCutans
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilCutans ;
   skos:prefLabel "related Cutans" ;
@@ -2915,6 +3065,7 @@ ansis:relatedCutans
 ansis:relatedErosion
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandSurface ;
   rdfs:range ansis:Erosion ;
   skos:closeMatch prop:erosion-state ;
   skos:prefLabel "has erosion " ;
@@ -2957,12 +3108,14 @@ ansis:relatedLandform
 .
 ansis:relatedLandformElement
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Landform ;
   rdfs:range ansis:LandformElement ;
   skos:definition "landform element in the vicinity of this entity (~40m)" ;
   skos:prefLabel "related landform element" ;
 .
 ansis:relatedLandformPattern
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Landform ;
   rdfs:range ansis:LandformPattern ;
   skos:definition "landform pattern around this entity (>600m)" ;
   skos:prefLabel "related landform pattern" ;
@@ -2982,7 +3135,6 @@ ansis:relatedMicrorelief
 ansis:relatedMottles
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilMottles ;
   skos:prefLabel "related Mottles and other colour patterns" ;
@@ -2996,10 +3148,16 @@ ansis:relatedOutcrop
 ansis:relatedPans
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilPans ;
   skos:prefLabel "related Pans" ;
+.
+ansis:relatedPeds
+  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
+  rdfs:range ansis:SoilPeds ;
+  skos:prefLabel "related Peds" ;
 .
 ansis:relatedProfile
   a owl:ObjectProperty ;
@@ -3025,30 +3183,39 @@ ansis:relatedRoots
 .
 ansis:relatedSample
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Outcrop ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:Substrate ;
   rdfs:range sosa:Sample ;
   skos:prefLabel "related sample" ;
 .
 ansis:relatedSegregations
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilSegregations ;
   skos:prefLabel "related Segregations" ;
 .
 ansis:relatedSite
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range ansis:SoilSite ;
   skos:prefLabel "related site" ;
 .
 ansis:relatedSoilSurface
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range ansis:SoilSurface ;
   skos:definition "soil surface of this entity" ;
   skos:prefLabel "related soil surface" ;
 .
 ansis:relatedSubstrate
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
   rdfs:range ansis:Substrate ;
   skos:definition "substrate at this entity" ;
   skos:prefLabel "related substrate" ;
@@ -3056,7 +3223,6 @@ ansis:relatedSubstrate
 ansis:relatedVoids
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilVoids ;
   skos:prefLabel "related Voids - pores and cracks" ;
@@ -3064,6 +3230,8 @@ ansis:relatedVoids
 ansis:sat-extracts
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil saturation extracts" ;
 .
@@ -3074,11 +3242,14 @@ ansis:shape
   schema:domainIncludes ansis:SoilHorizon ;
   skos:definition "shape of entity or entity boundary" ;
   skos:exactMatch prop:shape ;
+  skos:narrowMatch prop:coarse-fragments-shape ;
+  skos:narrowMatch prop:horizon-boundary-shape ;
   skos:prefLabel "entity shape" ;
 .
 ansis:shape-pos
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilHorizon ;
   skos:definition "shape of lower boundary of horizon as a function of position" ;
   skos:narrowMatch prop:shape ;
   skos:prefLabel "shape(position)" ;
@@ -3094,52 +3265,104 @@ ansis:siteDisturbance
 ansis:size
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:CoarseFragments ;
+  schema:domainIncludes ansis:Roots ;
+  schema:domainIncludes ansis:SoilMottles ;
+  schema:domainIncludes ansis:SoilPeds ;
+  schema:domainIncludes ansis:SoilSegregations ;
+  schema:domainIncludes ansis:SoilVoids ;
+  skos:exactMatch prop:size ;
+  skos:narrowMatch prop:coarse-fragments-size ;
+  skos:narrowMatch prop:diameter ;
+  skos:narrowMatch prop:grain-size ;
+  skos:narrowMatch prop:mottles-and-colour-pattern-size ;
+  skos:narrowMatch prop:roots-size ;
+  skos:narrowMatch prop:segregations-size ;
+  skos:narrowMatch prop:structure-pedality-size ;
+  skos:narrower ansis:grain-size ;
   skos:prefLabel "size" ;
 .
 ansis:strength
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:CoarseFragments ;
+  schema:domainIncludes ansis:SoilConsistence ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:SoilSegregations ;
+  schema:domainIncludes ansis:Substrate ;
   rdfs:range ansis:Strength ;
   skos:exactMatch prop:strength ;
+  skos:narrowMatch prop:consistence-strength ;
+  skos:narrowMatch prop:material-strength ;
   skos:prefLabel "strength of material" ;
 .
 ansis:structure
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilPans ;
+  schema:domainIncludes ansis:SoilSample ;
+  skos:exactMatch prop:structure ;
+  skos:narrowMatch prop:material-structure ;
+  skos:narrowMatch prop:pans-structure ;
+  skos:narrowMatch prop:soil-structure ;
+  skos:narrowMatch prop:structure-artificial-aggregates ;
   skos:prefLabel "structure in entity" ;
 .
 ansis:sulfur
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil sulfur" ;
 .
 ansis:texture
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:Substrate ;
   skos:exactMatch prop:texture ;
+  skos:narrowMatch prop:field-texture ;
+  skos:narrowMatch prop:substrate-texture ;
   skos:prefLabel "material texture" ;
 .
-ansis:type-profile
+ansis:type
   a owl:ObjectProperty ;
-  rdfs:range ansis:Profile-type ;
-  rdfs:subPropertyOf sosa:usedProcedure ;
-  skos:definition "type of soil profile construction" ;
-  skos:note "sampling method" ;
-  skos:prefLabel "profile type" ;
-.
-ansis:type-site
-  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilConsistence ;
+  schema:domainIncludes ansis:SoilCutans ;
+  schema:domainIncludes ansis:SoilPans ;
+  schema:domainIncludes ansis:SoilPeds ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:SoilSegregations ;
   schema:domainIncludes ansis:SoilSite ;
-  skos:prefLabel "type of site" ;
+  rdfs:subPropertyOf dcterms:type ;
+  skos:definition "type of ansis soil entity" ;
+  skos:exactMatch prop:type ;
+  skos:narrowMatch prop:consistence-plasticity-type ;
+  skos:narrowMatch prop:cutans-type ;
+  skos:narrowMatch prop:gilgai-microrelief-type ;
+  skos:narrowMatch prop:hummocky-microrelief-type ;
+  skos:narrowMatch prop:morphological-type ;
+  skos:narrowMatch prop:other-microrelief-type ;
+  skos:narrowMatch prop:pans-type ;
+  skos:narrowMatch prop:segregations-nature ;
+  skos:narrowMatch prop:streamwise-channel-pattern ;
+  skos:narrowMatch prop:structure-pedality-type ;
+  skos:prefLabel "type" ;
 .
 ansis:underlyingMaterial
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
   skos:prefLabel "underlying material" ;
 .
 ansis:visitor
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SiteVisit ;
   rdfs:range prov:Activity ;
   rdfs:subPropertyOf prov:wasAssociatedWith ;
   skos:prefLabel "visitor" ;
@@ -3147,6 +3370,7 @@ ansis:visitor
 ansis:waterRepellence
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilSurface ;
   rdfs:range ansis:WaterRepellence ;
   skos:exactMatch prop:water-repellence ;
   skos:prefLabel "water repellence" ;
@@ -3154,15 +3378,22 @@ ansis:waterRepellence
 ansis:width
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
+  schema:domainIncludes ansis:SoilVoids ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:width ;
+  skos:narrowMatch prop:element-dimension-width ;
+  skos:narrowMatch prop:voids-cracks-width ;
   skos:prefLabel "width" ;
+.
+prop:diameter
+  schema:domainIncludes ansis:SoilVoids ;
 .
 prop:distinctness
   skos:narrower prop:horizon-boundary-distinctness ;
 .
-prop:pedality
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:range ansis:SoilPeds ;
-  skos:prefLabel "pedality" ;
+prop:texture
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:Substrate ;
 .
