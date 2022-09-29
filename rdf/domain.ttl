@@ -2076,6 +2076,41 @@ ansis:SoilLayer
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedCoarseFragments ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedConsistence ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedCutans ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedMottles ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedPans ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSegregations ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedVoids ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedBody ;
     ] ;
@@ -2231,6 +2266,41 @@ ansis:SoilSample
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:depth-upper ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedCoarseFragments ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedConsistence ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedCutans ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedMottles ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedPans ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSegregations ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedVoids ;
     ] ;
   skos:note """A soil sample must be from a single profile. 
 In the case of a composite-sample, the 'virtual profile' is an average of multiple individual profiles at a single site or on a face. """ ;
@@ -2820,16 +2890,25 @@ ansis:relatedBoundary
 .
 ansis:relatedCoarseFragments
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:CoarseFragments ;
   skos:prefLabel "related Coarse Fragments" ;
 .
 ansis:relatedConsistence
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilConsistence ;
   skos:prefLabel "related Consistence" ;
 .
 ansis:relatedCutans
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilCutans ;
   skos:prefLabel "related Cutans" ;
 .
@@ -2902,6 +2981,9 @@ ansis:relatedMicrorelief
 .
 ansis:relatedMottles
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilMottles ;
   skos:prefLabel "related Mottles and other colour patterns" ;
 .
@@ -2913,6 +2995,9 @@ ansis:relatedOutcrop
 .
 ansis:relatedPans
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilPans ;
   skos:prefLabel "related Pans" ;
 .
@@ -2932,6 +3017,9 @@ ansis:relatedProject
 .
 ansis:relatedRoots
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:Roots ;
   skos:prefLabel "related Roots" ;
 .
@@ -2942,6 +3030,9 @@ ansis:relatedSample
 .
 ansis:relatedSegregations
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilSegregations ;
   skos:prefLabel "related Segregations" ;
 .
@@ -2964,6 +3055,9 @@ ansis:relatedSubstrate
 .
 ansis:relatedVoids
   a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   rdfs:range ansis:SoilVoids ;
   skos:prefLabel "related Voids - pores and cracks" ;
 .
