@@ -2418,7 +2418,8 @@ ansis:SoilSite
       owl:onProperty sosa:isSampleOf ;
       owl:someValuesFrom ansis:SoilBody ;
     ] ;
-  skos:definition "A site is a small area of land considered to be representative of the landform, vegetation, land surface and other land features associated with the soil observation (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
+  skos:definition "A Soil Site is a kind of Land Survey Site which focuses on soil. A Soil Site must have at least one Soil Profile. " ;
+  skos:note "A site is a small area of land considered to be representative of the landform, vegetation, land surface and other land features associated with the soil observation (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
   skos:note "The extent of a site is arbitrary but certain dimensions are appropriate for certain attributes (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
   skos:prefLabel "Soil site" ;
   skos:scopeNote " has a related soil profile and is a sample of a soil body" ;
