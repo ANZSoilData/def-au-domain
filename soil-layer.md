@@ -4,6 +4,8 @@ Laterally extensive region within a soil body, approximately parallel with the s
 
 A Soil Horizon is a soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries. Soil horizons are designated A1, B2, R etc. 
 
+Soil layers are characterised through [observations](sosa.md) made on [samples](sosa.md) obtained from [soil profiles](soil-profile.md) in [visits](site-visit.md) to [soil sites](site.md). 
+
 ![Soil layers and horizons](image/Soil-layer.png)
 
 (text from [ASLS](https://catalogue.nla.gov.au/Record/4273240))

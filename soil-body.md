@@ -7,6 +7,8 @@ A Soil Body is bounded above by the surface and below by the [R-Horizon](soil-la
 
 'Soil mapping units' are usually intended to portray a soil body at a particular scale and for a particular purpose. 
 
+Soil bodies are characterised through [observations](sosa.md) made on [soil profiles](soil-profile.md) at [soil sites](site.md). 
+
 ![Soil body](image/Soil-body.png)
 
 Note: [Soil Horizon](soil-layer.md) is a special kind of layer, defined on pedological grounds. 
