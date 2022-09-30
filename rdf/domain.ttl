@@ -2804,6 +2804,7 @@ ansis:designation
   rdfs:subPropertyOf skos:notation ;
   skos:definition "soil horizon designation" ;
   skos:exactMatch prop:horizon-classification ;
+  skos:note "As horizon notation is deduced from the profile description data (Northcote 1979) and in some instances laboratory data, record it after the profile is described. Horizons may be difficult to name, but should be named in the field. Opinioskos:noskos:notetens formed at the time of description are useful for later reference. With regard to horizon notation, the long-established usage in horizon designation is adopted. Emphasis is on factual objective notation rather than assumed genesis, as genetic implications are often uncertain and difficult to establish. Thus the notation E indicating eluvial horizon (International Society of Soil Science 1967) has not been used, even though this has been adopted by a number of overseas organisations, for example Hodgson (1974), Soil Survey Staff (1990). (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
   skos:prefLabel "horizon designation" ;
 .
 ansis:distinctness
