@@ -2,6 +2,7 @@
 # imports: https://anzsoil.org/def/au/domain
 # prefix: my
 
+@prefix ansis: <https://anzsoil.org/def/au/domain/> .
 @prefix asls: <http://anzsoil.org/def/au/asls/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -17,7 +18,6 @@
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix sfeat: <https://anzsoil.org/def/au/feature/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix soil: <https://anzsoil.org/def/au/domain#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -31,207 +31,189 @@ my:
   owl:imports <https://anzsoil.org/def/au/domain> ;
 .
 my:A11-in-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer A11 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A11 ;
-  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-3 ;
-  soil:coarse-fragment-abundance "10 %" ;
-  soil:density-bulk "1.2 g/cm3" ;
-  soil:depth-lower "17 cm" ;
-  soil:depth-upper "0 cm" ;
-  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
-  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-3 ;
+  ansis:coarse-fragment-abundance "10 %" ;
+  ansis:density-bulk "1.2 g/cm3" ;
+  ansis:depth-lower "17 cm" ;
+  ansis:depth-upper "0 cm" ;
+  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
+  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:A12-in-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer A12 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A12 ;
-  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-  soil:coarse-fragment-abundance "5 %" ;
-  soil:density-bulk "1.4 g/cm3" ;
-  soil:depth-lower "35 cm" ;
-  soil:depth-upper "17 cm" ;
-  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
-  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+  ansis:coarse-fragment-abundance "5 %" ;
+  ansis:density-bulk "1.4 g/cm3" ;
+  ansis:depth-lower "35 cm" ;
+  ansis:depth-upper "17 cm" ;
+  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
+  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:A2-in-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer A2 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A2 ;
-  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
-  soil:coarse-fragment-abundance "0 %" ;
-  soil:density-bulk "1.5 g/cm3" ;
-  soil:depth-lower "58 cm" ;
-  soil:depth-upper "35 cm" ;
-  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
-  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-v> ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
+  ansis:coarse-fragment-abundance "0 %" ;
+  ansis:density-bulk "1.5 g/cm3" ;
+  ansis:depth-lower "58 cm" ;
+  ansis:depth-upper "35 cm" ;
+  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
+  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-v> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
-my:B-A11-A12-P1
-  a soil:BoundaryInProfile ;
-  skos:prefLabel "Boundary A11-A12 in Profile 1" ;
-  soil:depth "17 cm" ;
-  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-D> ;
-  soil:relatedBoundary my:Boundary-A11-A12 ;
-  soil:relatedProfile my:Profile_1 ;
+my:B-A11-P1
+  a ansis:SoilSample ;
+  skos:prefLabel "Lower Boundary A11 in Profile 1" ;
+  sosa:isSampleOf my:Horizon_A11 ;
+  ansis:depth "17 cm" ;
+  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-D> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
-my:B-A12-A2-P1
-  a soil:BoundaryInProfile ;
-  skos:prefLabel "Boundary A12-A2 in Profile 1" ;
-  soil:depth "35 cm" ;
-  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-C> ;
-  soil:relatedBoundary my:Boundary-A12-A2 ;
-  soil:relatedProfile my:Profile_1 ;
+my:B-A12-P1
+  a ansis:SoilSample ;
+  skos:prefLabel "Lower Boundary A12 in Profile 1" ;
+  sosa:isSampleOf my:Horizon_A12 ;
+  ansis:depth "35 cm" ;
+  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-C> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
-my:B-A2-B21s-P1
-  a soil:BoundaryInProfile ;
-  skos:prefLabel "Boundary A2-B21s in Profile 1" ;
-  soil:depth "58 cm" ;
-  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-A> ;
-  soil:relatedBoundary my:Boundary-A2-B21s ;
-  soil:relatedProfile my:Profile_1 ;
+my:B-A2-P1
+  a ansis:SoilSample ;
+  skos:prefLabel "Lower Boundary A2 in Profile 1" ;
+  sosa:isSampleOf my:Horizon_A2 ;
+  ansis:depth "58 cm" ;
+  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-A> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
-my:B-B21s-B22s-P1
-  a soil:BoundaryInProfile ;
-  skos:prefLabel "Boundary B21s-B22s in Profile 1" ;
-  soil:depth "80 cm" ;
-  soil:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-G> ;
-  soil:relatedBoundary my:Boundary-B21s-B22s ;
-  soil:relatedProfile my:Profile_1 ;
+my:B-B21s-P1
+  a ansis:SoilSample ;
+  skos:prefLabel "Lower Boundary B21s in Profile 1" ;
+  sosa:isSampleOf my:Horizon_B21s ;
+  ansis:depth "80 cm" ;
+  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-G> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:B21s-in-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer B21s in Profile 1" ;
   sosa:isSampleOf my:Horizon_B21s ;
-  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
-  soil:coarse-fragment-abundance "0 %" ;
-  soil:density-bulk "1.3 g/cm3" ;
-  soil:depth-lower "80 cm" ;
-  soil:depth-upper "58 cm" ;
-  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-MC> ;
-  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
+  ansis:coarse-fragment-abundance "0 %" ;
+  ansis:density-bulk "1.3 g/cm3" ;
+  ansis:depth-lower "80 cm" ;
+  ansis:depth-upper "58 cm" ;
+  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-MC> ;
+  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:B22s-in-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer B22s in Profile 1" ;
   sosa:isSampleOf my:Horizon_B22s ;
-  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
-  soil:coarse-fragment-abundance "0 %" ;
-  soil:density-bulk "1.3 g/cm3" ;
-  soil:depth-lower "106 cm" ;
-  soil:depth-upper "80 cm" ;
-  soil:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-LMC> ;
-  soil:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
+  ansis:coarse-fragment-abundance "0 %" ;
+  ansis:density-bulk "1.3 g/cm3" ;
+  ansis:depth-lower "106 cm" ;
+  ansis:depth-upper "80 cm" ;
+  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-LMC> ;
+  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:Body-88
-  a soil:Body ;
+  a ansis:SoilBody ;
   skos:prefLabel "Monivae gravelly loam" ;
 .
-my:Boundary-A11-A12
-  a soil:Boundary ;
-  skos:prefLabel "Boundary A11-A12" ;
-  soil:relatedHorizon my:Horizon_A11 ;
-  soil:relatedHorizon my:Horizon_A12 ;
-.
-my:Boundary-A12-A2
-  a soil:Boundary ;
-  skos:prefLabel "Boundary A12-A2" ;
-  soil:relatedHorizon my:Horizon_A12 ;
-  soil:relatedHorizon my:Horizon_A2 ;
-.
-my:Boundary-A2-B21s
-  a soil:Boundary ;
-  skos:prefLabel "Boundary A2-B21s" ;
-  soil:relatedHorizon my:Horizon_A2 ;
-  soil:relatedHorizon my:Horizon_B21s ;
-.
-my:Boundary-B21s-B22s
-  a soil:Boundary ;
-  skos:prefLabel "Boundary A2-B21s" ;
-  soil:relatedHorizon my:Horizon_B21s ;
-  soil:relatedHorizon my:Horizon_B22s ;
+my:Create_Site-1
+  a sosa:Sampling ;
+  skos:prefLabel "Establish soil Site 1" ;
+  sosa:hasResult my:Site_1 ;
+  sosa:madeBySampler <https://orcid.org/0000-0002-1805-2517> ;
 .
 my:Horizon_A11
-  a soil:Horizon ;
+  a ansis:SoilHorizon ;
   skos:prefLabel "Horizon A11" ;
-  soil:designation "A11" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:designation "A11" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_A12
-  a soil:Horizon ;
+  a ansis:SoilHorizon ;
   skos:prefLabel "Horizon A12" ;
-  soil:designation "A12" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:designation "A12" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_A2
-  a soil:Horizon ;
+  a ansis:SoilHorizon ;
   skos:prefLabel "Horizon A2" ;
-  soil:designation "A2" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:designation "A2" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_B21s
-  a soil:Horizon ;
+  a ansis:SoilHorizon ;
   skos:prefLabel "Horizon B21s" ;
-  soil:designation "B21s" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:designation "B21s" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_B22s
-  a soil:Horizon ;
+  a ansis:SoilHorizon ;
   skos:prefLabel "Horizon B22s" ;
-  soil:designation "B22s" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:designation "B22s" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:L-0-15-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer 0-15 cm in Profile 1" ;
   sosa:isSampleOf my:Layer_0-15 ;
-  soil:density-bulk "1.35 g/cm3" ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:density-bulk "1.35 g/cm3" ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:L-0-20-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer 0-20 cm in Profile 1" ;
   sosa:isSampleOf my:Layer_0-20 ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:L-20-80-P1
-  a soil:LayerInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Layer 20-80 cm in Profile 1" ;
   sosa:isSampleOf my:Layer_20-80 ;
-  soil:density-bulk "1.45 g/cm3" ;
-  soil:relatedProfile my:Profile_1 ;
+  ansis:density-bulk "1.45 g/cm3" ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:Layer_0-15
-  a soil:Layer ;
+  a ansis:SoilLayer ;
   skos:prefLabel "layer 0-15 cm" ;
-  soil:depth-lower "15 cm" ;
-  soil:depth-upper "0 cm" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:depth-lower "15 cm" ;
+  ansis:depth-upper "0 cm" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Layer_0-20
-  a soil:Layer ;
+  a ansis:SoilLayer ;
   skos:prefLabel "layer 0-20 cm" ;
-  soil:depth-lower "20 cm" ;
-  soil:depth-upper "0 cm" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:depth-lower "20 cm" ;
+  ansis:depth-upper "0 cm" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Layer_20-80
-  a soil:Layer ;
+  a ansis:SoilLayer ;
   skos:prefLabel "layer 20-80 cm" ;
-  soil:depth-lower "80 cm" ;
-  soil:depth-upper "20 cm" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:depth-lower "80 cm" ;
+  ansis:depth-upper "20 cm" ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:O1-dens-A12-in-P1
   a sosa:Observation ;
   skos:prefLabel "Measurement of bulk density of a layer A12 in profile P1" ;
   sosa:hasFeatureOfInterest my:A12-in-P1 ;
   sosa:hasSimpleResult "1.4 g/cm3" ;
-  sosa:observedProperty soil:density-bulk ;
+  sosa:observedProperty ansis:density-bulk ;
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
 .
 my:O2-dens-S1-A12-in-P1
@@ -239,7 +221,7 @@ my:O2-dens-S1-A12-in-P1
   skos:prefLabel "Measurement of bulk density of sample 1 from horizon A12 in profile 1" ;
   sosa:hasFeatureOfInterest my:S1-A12-in-P1 ;
   sosa:hasSimpleResult "1.4 g/cm3" ;
-  sosa:observedProperty soil:density-bulk ;
+  sosa:observedProperty ansis:density-bulk ;
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
 .
 my:O3-dens-S2-L20-80-in-P1
@@ -247,7 +229,7 @@ my:O3-dens-S2-L20-80-in-P1
   skos:prefLabel "Measurement of bulk density of sample 2 from layer 20-80 in profile 1" ;
   sosa:hasFeatureOfInterest my:S2-L20-80-in-P1 ;
   sosa:hasSimpleResult "1.4 g/cm3" ;
-  sosa:observedProperty soil:density-bulk ;
+  sosa:observedProperty ansis:density-bulk ;
   sosa:resultTime "2022-09-19T11:35:00"^^xsd:dateTime ;
 .
 my:O4-dens-S3-20-40-in-P1
@@ -256,16 +238,18 @@ my:O4-dens-S3-20-40-in-P1
   prov:wasAssociatedWith <https://orcid.org/0000-0002-2991-2308> ;
   sosa:hasFeatureOfInterest my:S3-20-40-in-P1 ;
   sosa:hasSimpleResult "1.42 g/cm3" ;
-  sosa:observedProperty soil:density-bulk ;
+  sosa:observedProperty ansis:density-bulk ;
+  sosa:phenomenonTime "2002-09-19T13:35:00"^^xsd:dateTime ;
   sosa:resultTime "2022-09-19T11:35:00"^^xsd:dateTime ;
   sosa:usedProcedure <http://anzsoil.org/def/au/spm/503.01> ;
+  ansis:relatedProject <https://example.org/project-9765> ;
 .
 my:O5-upperdepth-A12-in-P1
   a sosa:Observation ;
   skos:prefLabel "Measurement of upper depth of horizon A12 in profile P1" ;
   sosa:hasFeatureOfInterest my:A12-in-P1 ;
   sosa:hasSimpleResult "17 cm" ;
-  sosa:observedProperty soil:depth-upper ;
+  sosa:observedProperty ansis:depth-upper ;
   sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
 .
 my:Point_1
@@ -278,91 +262,117 @@ my:Polygon_1
   geo:asWKT "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.03, -37.06 144.02))"^^geo:wktLiteral ;
 .
 my:Profile_1
-  a soil:Profile ;
+  a ansis:SoilProfile ;
   geo:hasGeometry my:Point_1 ;
   skos:prefLabel "profile 1" ;
   sosa:isSampleOf my:Body-88 ;
-  soil:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
-  soil:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
-  soil:depth-RHorizon "106 cm" ;
-  soil:depth-Substrate "106 cm" ;
-  soil:depth-lower "106 cm" ;
-  soil:depth-upper "0 cm" ;
-  soil:relatedBoundary my:Boundary-A11-A12 ;
-  soil:relatedBoundary my:Boundary-A12-A2 ;
-  soil:relatedBoundary my:Boundary-A2-B21s ;
-  soil:relatedBoundary my:Boundary-B21s-B22s ;
-  soil:relatedHorizon my:Horizon_A11 ;
-  soil:relatedHorizon my:Horizon_A12 ;
-  soil:relatedHorizon my:Horizon_A2 ;
-  soil:relatedHorizon my:Horizon_B21s ;
-  soil:relatedHorizon my:Horizon_B22s ;
-  soil:relatedSite my:Site_1 ;
-  soil:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
+  ansis:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
+  ansis:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
+  ansis:depth-RHorizon "106 cm" ;
+  ansis:depth-Substrate "106 cm" ;
+  ansis:depth-lower "106 cm" ;
+  ansis:depth-upper "0 cm" ;
+  ansis:relatedHorizon my:Horizon_A11 ;
+  ansis:relatedHorizon my:Horizon_A12 ;
+  ansis:relatedHorizon my:Horizon_A2 ;
+  ansis:relatedHorizon my:Horizon_B21s ;
+  ansis:relatedHorizon my:Horizon_B22s ;
+  ansis:relatedSite my:Site_1 ;
+  ansis:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
 .
 my:S1-A12-in-P1
-  a soil:Sample ;
+  a ansis:SoilSample ;
   skos:prefLabel "Sample 1 from depth range 25-30 cm in horizon A12 in profile P1" ;
-  sosa:isSampleOf my:A12-in-P1 ;
-  soil:depth-lower "30 cm" ;
-  soil:depth-upper "25 cm" ;
+  sosa:isSampleOf my:Horizon_A12 ;
+  ansis:depth-lower "30 cm" ;
+  ansis:depth-upper "25 cm" ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:S2-L20-80-in-P1
-  a soil:Sample ;
+  a ansis:SoilSample ;
   skos:prefLabel "Sample 2 from layer 20-80 in profile 1" ;
-  sosa:isSampleOf my:L-20-80-P1 ;
-  soil:depth-lower "60 cm" ;
-  soil:depth-upper "40 cm" ;
+  sosa:isSampleOf my:Layer_20-80 ;
+  ansis:depth-lower "60 cm" ;
+  ansis:depth-upper "40 cm" ;
+  ansis:relatedProfile my:Profile_1 ;
 .
 my:S3-20-40-in-P1
-  a soil:Sample ;
+  a ansis:SoilSample ;
   skos:prefLabel "Sample 3 from depth 20-40 in profile 1" ;
-  sosa:isSampleOf my:Profile_1 ;
-  soil:depth-lower "40 cm" ;
-  soil:depth-upper "20 cm" ;
+  sosa:isResultOf my:Sg-20-40-in-P1 ;
+  sosa:isSampleOf my:Body-88 ;
+  ansis:depth-lower "40 cm" ;
+  ansis:depth-upper "20 cm" ;
+  ansis:relatedProfile my:Profile_1 ;
+.
+my:Sg-20-40-in-P1
+  a sosa:Sampling ;
+  sosa:hasFeatureOfInterest my:Profile_1 ;
+  sosa:hasResult my:S3-20-40-in-P1 ;
+  sosa:madeBySampler <mailto:peter.wilson@csiro.au> ;
+  sosa:resultTime "2002-09-19T13:35:00"^^xsd:dateTime ;
+  sosa:usedProcedure <https://example.org/soil-sampling-procedure-AVH> ;
+  ansis:relatedProject <https://example.org/project-438> ;
 .
 my:Site_1
-  a soil:Site ;
+  a ansis:SoilSite ;
   geo:hasGeometry my:Polygon_1 ;
   skos:prefLabel "site 1" ;
-  soil:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
-  soil:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-  soil:has-erosion ls:erosion-wind ;
-  soil:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
-  soil:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
-  soil:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
+  ansis:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+  ansis:has-erosion ls:erosion-wind ;
+  ansis:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
+  ansis:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
+  ansis:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
 .
 my:Substrate_1
-  a soil:Substrate ;
+  a ansis:Substrate ;
   skos:prefLabel "Substrate of soil body" ;
-  soil:relatedBody my:Body-88 ;
+  ansis:relatedBody my:Body-88 ;
 .
 my:Substrate_1-P1
-  a soil:SubstrateInProfile ;
+  a ansis:SoilSample ;
   skos:prefLabel "Substrate in Profile 1" ;
-  soil:depth-upper "106 cm" ;
-  soil:lithology subst:lithology-BA ;
-  soil:relatedSubstrate my:Substrate_1 ;
+  sosa:isSampleOf my:Substrate_1 ;
+  ansis:depth-upper "106 cm" ;
+  ansis:lithology subst:lithology-BA ;
+  ansis:relatedProfile my:Profile_1 ;
 .
-my:Surface-P1
-  a soil:SurfaceInProfile ;
-  skos:prefLabel "Soil surface in Profile 1" ;
-  soil:condition-when-dry <http://anzsoil.org/def/au/asls/soil-profile/surfacecondition-H> ;
-  soil:relatedProfile my:Profile_1 ;
-  soil:waterRepellence <http://anzsoil.org/def/au/asls/soil-profile/water-repellence-R> ;
+my:Surface_3
+  a ansis:SoilSurface ;
+  skos:prefLabel "Soil surface 3" ;
+  ansis:relatedBody my:Body-88 ;
 .
-my:sample-998-5
-  a soil:Sample ;
-  skos:definition "sample of layer between 0.5-0.7m depth in profile 998" ;
-  skos:prefLabel "sample 998-5" ;
-  soil:depth-lower "0.6 m" ;
-  soil:depth-upper "0.55 m" ;
+my:Surface_3-P1
+  a ansis:SoilSample ;
+  skos:prefLabel "Soil surface 3 in Profile 1" ;
+  sosa:isSampleOf my:Surface_3 ;
+  ansis:condition-when-dry <http://anzsoil.org/def/au/asls/soil-profile/surfacecondition-H> ;
+  ansis:relatedProfile my:Profile_1 ;
+  ansis:waterRepellence <http://anzsoil.org/def/au/asls/soil-profile/water-repellence-R> ;
 .
 my:visit-S1-1
-  a soil:SiteVisit ;
+  a ansis:SiteVisit ;
+  prov:endedAtTime "2002-09-19T13:55:00"^^xsd:dateTime ;
+  prov:startedAtTime "2002-09-19T10:35:00"^^xsd:dateTime ;
+  ansis:relatedActivity my:Create_Site-1 ;
+  ansis:relatedActivity my:Sg-20-40-in-P1 ;
+  ansis:relatedProject <https://example.org/project-438> ;
+  ansis:relatedSite my:Site_1 ;
+  ansis:visitor <https://orcid.org/0000-0002-1805-2517> ;
+  ansis:visitor <mailto:peter.wilson@csiro.au> ;
+.
+my:visit-S1-2
+  a ansis:SiteVisit ;
   prov:endedAtTime "2022-09-07T13:00:00+10:00"^^xsd:dateTime ;
   prov:startedAtTime "2022-09-07T09:00:00+10:00"^^xsd:dateTime ;
-  prov:wasAssociatedWith <https://orcid.org/0000-0002-0693-1899> ;
-  soil:relatedSite my:Site_1 ;
-  soil:visitor <https://orcid.org/0000-0002-1805-2517> ;
+  ansis:relatedActivity my:O1-dens-A12-in-P1 ;
+  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
+  ansis:relatedActivity my:O3-dens-S2-L20-80-in-P1 ;
+  ansis:relatedActivity my:O4-dens-S3-20-40-in-P1 ;
+  ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
+  ansis:relatedProject <https://example.org/project-9765> ;
+  ansis:relatedSite my:Site_1 ;
+  ansis:visitor <https://orcid.org/0000-0002-0693-1899> ;
+  ansis:visitor <https://orcid.org/0000-0002-1805-2517> ;
 .
