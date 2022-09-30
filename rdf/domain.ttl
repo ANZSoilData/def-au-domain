@@ -2514,7 +2514,7 @@ ansis:TextureGrade
 ansis:Treatment
   rdf:type owl:Class ;
   rdfs:subClassOf sosa:Actuation ;
-  skos:definition "Intervention or treatment" ;
+  skos:definition "Intervention or treatment. application of a procedure to change the state of an entity or manipulate the value of one or more of its properties. " ;
   skos:prefLabel "Treatment" ;
 .
 ansis:WaterRepellence
