@@ -1981,6 +1981,7 @@ ansis:SiteVisit
         ] ;
       owl:onProperty ansis:relatedActivity ;
     ] ;
+  skos:definition "a visit to a site for the purpose(s) of one or more sub-activities, including making observations, selecting and taking samples, and applying treatments or making interventions" ;
   skos:prefLabel "Site visit" ;
 .
 ansis:SoilBody
