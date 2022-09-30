@@ -2439,7 +2439,7 @@ ansis:SoilSurface
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
-  skos:definition "the surface of the soil body" ;
+  skos:definition "the uppermost surficial layer of a soil body" ;
   skos:prefLabel "Soil surface" ;
 .
 ansis:SoilVoids
