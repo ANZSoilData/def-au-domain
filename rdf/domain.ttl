@@ -2416,12 +2416,15 @@ ansis:SoilSite
       owl:onProperty sosa:isSampleOf ;
       owl:someValuesFrom ansis:SoilBody ;
     ] ;
-  skos:definition "Yellow-book site" ;
+  skos:definition "A site is a small area of land considered to be representative of the landform, vegetation, land surface and other land features associated with the soil observation (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
+  skos:note "The extent of a site is arbitrary but certain dimensions are appropriate for certain attributes (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
   skos:prefLabel "Soil site" ;
-  skos:scopeNote "'Site' acts as a kind of platform, where sensors may be deployed. " ;
-  skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
-  skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
-  skos:scopeNote "Other types of site may include (i) TERN Monitoring Site (ii) Farmer site" ;
+  skos:scopeNote " acts as a kind of platform, where sensors may be deployed. " ;
+  skos:scopeNote "All kinds of projects can be carried out at a \"Soil Site\" including in ecology, agronomy and land capability" ;
+  skos:scopeNote "can be a general term for locations that may be called ‘plot’, ‘station’, ‘transect’, ‘quadrat’, 'farm site', 'paddock' etc. " ;
+  skos:scopeNote "is a geospatial entity (feature) which has a geometry (incl. location)" ;
+  skos:scopeNote "may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
+  skos:scopeNote "may be large or small and may have sub-sites or additional locations associated with it. " ;
 .
 ansis:SoilSuborder
   rdf:type owl:Class ;
