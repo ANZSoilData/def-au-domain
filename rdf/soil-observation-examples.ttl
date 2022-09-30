@@ -249,6 +249,7 @@ my:O5-upperdepth-A12-in-P1
   skos:prefLabel "Measurement of upper depth of horizon A12 in profile P1" ;
   sosa:hasFeatureOfInterest my:A12-in-P1 ;
   sosa:hasSimpleResult "17 cm" ;
+  sosa:madeBySensor <https://orcid.org/0000-0002-2991-2308> ;
   sosa:observedProperty ansis:depth-upper ;
   sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
 .

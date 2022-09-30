@@ -1,0 +1,563 @@
+{
+  "@graph" : [ {
+    "@id" : "https://my.example.org/soil/",
+    "@type" : "owl:Ontology",
+    "created" : "2022-09-13",
+    "creator" : "https://orcid.org/0000-0002-3884-3420",
+    "license" : "https://creativecommons.org/licenses/by/4.0/",
+    "modified" : "2022-09-14",
+    "imports" : "https://anzsoil.org/def/au/domain"
+  }, {
+    "@id" : "my:A11-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer A11 in Profile 1",
+    "isSampleOf" : "my:Horizon_A11",
+    "coarse-fragment-abundance" : "ls:coarse-fragments-abundance-3",
+    "ansis:coarse-fragment-abundance" : "10 %",
+    "density-bulk" : "1.2 g/cm3",
+    "depth-lower" : "17 cm",
+    "depth-upper" : "0 cm",
+    "fieldTexture" : "asls:soil-profile/field-texture-SL",
+    "pedality-grade" : "asls:soil-profile/structure-pedality-grade-W",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:A12-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer A12 in Profile 1",
+    "isSampleOf" : "my:Horizon_A12",
+    "ansis:coarse-fragment-abundance" : "5 %",
+    "coarse-fragment-abundance" : "ls:coarse-fragments-abundance-2",
+    "density-bulk" : "1.4 g/cm3",
+    "depth-lower" : "35 cm",
+    "depth-upper" : "17 cm",
+    "fieldTexture" : "asls:soil-profile/field-texture-SL",
+    "pedality-grade" : "asls:soil-profile/structure-pedality-grade-W",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:A2-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer A2 in Profile 1",
+    "isSampleOf" : "my:Horizon_A2",
+    "coarse-fragment-abundance" : "ls:coarse-fragments-abundance-0",
+    "ansis:coarse-fragment-abundance" : "0 %",
+    "density-bulk" : "1.5 g/cm3",
+    "depth-lower" : "58 cm",
+    "depth-upper" : "35 cm",
+    "fieldTexture" : "asls:soil-profile/field-texture-SL",
+    "pedality-grade" : "asls:soil-profile/structure-pedality-grade-v",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:B-A11-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Lower Boundary A11 in Profile 1",
+    "isSampleOf" : "my:Horizon_A11",
+    "depth" : "17 cm",
+    "distinctness" : "asls:soil-profile/horizon-boundary-distinctness-D",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:B-A12-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Lower Boundary A12 in Profile 1",
+    "isSampleOf" : "my:Horizon_A12",
+    "depth" : "35 cm",
+    "distinctness" : "asls:soil-profile/horizon-boundary-distinctness-C",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:B-A2-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Lower Boundary A2 in Profile 1",
+    "isSampleOf" : "my:Horizon_A2",
+    "depth" : "58 cm",
+    "distinctness" : "asls:soil-profile/horizon-boundary-distinctness-A",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:B-B21s-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Lower Boundary B21s in Profile 1",
+    "isSampleOf" : "my:Horizon_B21s",
+    "depth" : "80 cm",
+    "distinctness" : "asls:soil-profile/horizon-boundary-distinctness-G",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:B21s-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer B21s in Profile 1",
+    "isSampleOf" : "my:Horizon_B21s",
+    "ansis:coarse-fragment-abundance" : "0 %",
+    "coarse-fragment-abundance" : "ls:coarse-fragments-abundance-0",
+    "density-bulk" : "1.3 g/cm3",
+    "depth-lower" : "80 cm",
+    "depth-upper" : "58 cm",
+    "fieldTexture" : "asls:soil-profile/field-texture-MC",
+    "pedality-grade" : "asls:soil-profile/structure-pedality-grade-M",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:B22s-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer B22s in Profile 1",
+    "isSampleOf" : "my:Horizon_B22s",
+    "ansis:coarse-fragment-abundance" : "0 %",
+    "coarse-fragment-abundance" : "ls:coarse-fragments-abundance-0",
+    "density-bulk" : "1.3 g/cm3",
+    "depth-lower" : "106 cm",
+    "depth-upper" : "80 cm",
+    "fieldTexture" : "asls:soil-profile/field-texture-LMC",
+    "pedality-grade" : "asls:soil-profile/structure-pedality-grade-M",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:Body-88",
+    "@type" : "ansis:SoilBody",
+    "prefLabel" : "Monivae gravelly loam"
+  }, {
+    "@id" : "my:Create_Site-1",
+    "@type" : "sosa:Sampling",
+    "prefLabel" : "Establish soil Site 1",
+    "hasResult" : "my:Site_1",
+    "madeBySampler" : "https://orcid.org/0000-0002-1805-2517"
+  }, {
+    "@id" : "my:Horizon_A11",
+    "@type" : "ansis:SoilHorizon",
+    "prefLabel" : "Horizon A11",
+    "designation" : "A11",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Horizon_A12",
+    "@type" : "ansis:SoilHorizon",
+    "prefLabel" : "Horizon A12",
+    "designation" : "A12",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Horizon_A2",
+    "@type" : "ansis:SoilHorizon",
+    "prefLabel" : "Horizon A2",
+    "designation" : "A2",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Horizon_B21s",
+    "@type" : "ansis:SoilHorizon",
+    "prefLabel" : "Horizon B21s",
+    "designation" : "B21s",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Horizon_B22s",
+    "@type" : "ansis:SoilHorizon",
+    "prefLabel" : "Horizon B22s",
+    "designation" : "B22s",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:L-0-15-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer 0-15 cm in Profile 1",
+    "isSampleOf" : "my:Layer_0-15",
+    "density-bulk" : "1.35 g/cm3",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:L-0-20-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer 0-20 cm in Profile 1",
+    "isSampleOf" : "my:Layer_0-20",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:L-20-80-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Layer 20-80 cm in Profile 1",
+    "isSampleOf" : "my:Layer_20-80",
+    "density-bulk" : "1.45 g/cm3",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:Layer_0-15",
+    "@type" : "ansis:SoilLayer",
+    "prefLabel" : "layer 0-15 cm",
+    "depth-lower" : "15 cm",
+    "depth-upper" : "0 cm",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Layer_0-20",
+    "@type" : "ansis:SoilLayer",
+    "prefLabel" : "layer 0-20 cm",
+    "depth-lower" : "20 cm",
+    "depth-upper" : "0 cm",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Layer_20-80",
+    "@type" : "ansis:SoilLayer",
+    "prefLabel" : "layer 20-80 cm",
+    "depth-lower" : "80 cm",
+    "depth-upper" : "20 cm",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:O1-dens-A12-in-P1",
+    "@type" : "sosa:Observation",
+    "prefLabel" : "Measurement of bulk density of a layer A12 in profile P1",
+    "hasFeatureOfInterest" : "my:A12-in-P1",
+    "hasSimpleResult" : "1.4 g/cm3",
+    "observedProperty" : "ansis:density-bulk",
+    "resultTime" : "2022-09-14T11:35:00"
+  }, {
+    "@id" : "my:O2-dens-S1-A12-in-P1",
+    "@type" : "sosa:Observation",
+    "prefLabel" : "Measurement of bulk density of sample 1 from horizon A12 in profile 1",
+    "hasFeatureOfInterest" : "my:S1-A12-in-P1",
+    "hasSimpleResult" : "1.4 g/cm3",
+    "observedProperty" : "ansis:density-bulk",
+    "resultTime" : "2022-09-14T11:35:00"
+  }, {
+    "@id" : "my:O3-dens-S2-L20-80-in-P1",
+    "@type" : "sosa:Observation",
+    "prefLabel" : "Measurement of bulk density of sample 2 from layer 20-80 in profile 1",
+    "hasFeatureOfInterest" : "my:S2-L20-80-in-P1",
+    "hasSimpleResult" : "1.4 g/cm3",
+    "observedProperty" : "ansis:density-bulk",
+    "resultTime" : "2022-09-19T11:35:00"
+  }, {
+    "@id" : "my:O4-dens-S3-20-40-in-P1",
+    "@type" : "sosa:Observation",
+    "prefLabel" : "Measurement of bulk density of sample 3 from depth 20-40 in profile 1",
+    "wasAssociatedWith" : "https://orcid.org/0000-0002-2991-2308",
+    "hasFeatureOfInterest" : "my:S3-20-40-in-P1",
+    "hasSimpleResult" : "1.42 g/cm3",
+    "observedProperty" : "ansis:density-bulk",
+    "phenomenonTime" : "2002-09-19T13:35:00",
+    "resultTime" : "2022-09-19T11:35:00",
+    "usedProcedure" : "http://anzsoil.org/def/au/spm/503.01",
+    "relatedProject" : "https://example.org/project-9765"
+  }, {
+    "@id" : "my:O5-upperdepth-A12-in-P1",
+    "@type" : "sosa:Observation",
+    "prefLabel" : "Measurement of upper depth of horizon A12 in profile P1",
+    "hasFeatureOfInterest" : "my:A12-in-P1",
+    "hasSimpleResult" : "17 cm",
+    "madeBySensor" : "https://orcid.org/0000-0002-2991-2308",
+    "observedProperty" : "depth:-upper",
+    "resultTime" : "2022-09-13T15:35:00"
+  }, {
+    "@id" : "my:Point_1",
+    "@type" : "sf:Point",
+    "asWKT" : "POINT (-37.069332, 144.027094)",
+    "prefLabel" : "Location of profile 1"
+  }, {
+    "@id" : "my:Polygon_1",
+    "@type" : "sf:Polygon",
+    "asWKT" : "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.03, -37.06 144.02))"
+  }, {
+    "@id" : "my:Profile_1",
+    "@type" : "ansis:SoilProfile",
+    "hasGeometry" : "my:Point_1",
+    "prefLabel" : "profile 1",
+    "isSampleOf" : "my:Body-88",
+    "classification-order" : "http://anzsoil.org/def/au/asc/CH-AB",
+    "coarse-fragment-distribution" : "asls:soil-profile/coarse-fragments-distribution-R",
+    "depth-RHorizon" : "106 cm",
+    "depth-Substrate" : "106 cm",
+    "depth-lower" : "106 cm",
+    "depth-upper" : "0 cm",
+    "relatedHorizon" : [ "my:Horizon_B21s", "my:Horizon_A12", "my:Horizon_A11", "my:Horizon_B22s", "my:Horizon_A2" ],
+    "relatedSite" : "my:Site_1",
+    "type-profile" : "asls:soil-profile/observation-type-C"
+  }, {
+    "@id" : "my:S1-A12-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Sample 1 from depth range 25-30 cm in horizon A12 in profile P1",
+    "isSampleOf" : "my:Horizon_A12",
+    "depth-lower" : "30 cm",
+    "depth-upper" : "25 cm",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:S2-L20-80-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Sample 2 from layer 20-80 in profile 1",
+    "isSampleOf" : "my:Layer_20-80",
+    "depth-lower" : "60 cm",
+    "depth-upper" : "40 cm",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:S3-20-40-in-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Sample 3 from depth 20-40 in profile 1",
+    "isResultOf" : "my:Sg-20-40-in-P1",
+    "isSampleOf" : "my:Body-88",
+    "depth-lower" : "40 cm",
+    "depth-upper" : "20 cm",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:Sg-20-40-in-P1",
+    "@type" : "sosa:Sampling",
+    "hasFeatureOfInterest" : "my:Profile_1",
+    "hasResult" : "my:S3-20-40-in-P1",
+    "madeBySampler" : "mailto:peter.wilson@csiro.au",
+    "resultTime" : "2002-09-19T13:35:00",
+    "usedProcedure" : "https://example.org/soil-sampling-procedure-AVH",
+    "relatedProject" : "https://example.org/project-438"
+  }, {
+    "@id" : "my:Site_1",
+    "@type" : "ansis:SoilSite",
+    "hasGeometry" : "my:Polygon_1",
+    "prefLabel" : "site 1",
+    "abundance-cover" : "asls:vegetation/cover-abundance-2",
+    "coarse-fragment-abundance" : "ls:coarse-fragments-abundance-2",
+    "has-erosion" : "ls:erosion-wind",
+    "has-land-use" : "http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses",
+    "has-landform-element" : "asls:landform/landform-element-PLA",
+    "has-landform-pattern" : "asls:landform/simple-erosional-landform-pattern-UP"
+  }, {
+    "@id" : "my:Substrate_1",
+    "@type" : "ansis:Substrate",
+    "prefLabel" : "Substrate of soil body",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Substrate_1-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Substrate in Profile 1",
+    "isSampleOf" : "my:Substrate_1",
+    "depth-upper" : "106 cm",
+    "lithology" : "subst:lithology-BA",
+    "relatedProfile" : "my:Profile_1"
+  }, {
+    "@id" : "my:Surface_3",
+    "@type" : "ansis:SoilSurface",
+    "prefLabel" : "Soil surface 3",
+    "relatedBody" : "my:Body-88"
+  }, {
+    "@id" : "my:Surface_3-P1",
+    "@type" : "ansis:SoilSample",
+    "prefLabel" : "Soil surface 3 in Profile 1",
+    "isSampleOf" : "my:Surface_3",
+    "condition-when-dry" : "asls:soil-profile/surfacecondition-H",
+    "relatedProfile" : "my:Profile_1",
+    "waterRepellence" : "asls:soil-profile/water-repellence-R"
+  }, {
+    "@id" : "my:visit-S1-1",
+    "@type" : "ansis:SiteVisit",
+    "endedAtTime" : "2002-09-19T13:55:00",
+    "startedAtTime" : "2002-09-19T10:35:00",
+    "relatedActivity" : [ "my:Sg-20-40-in-P1", "my:Create_Site-1" ],
+    "relatedProject" : "https://example.org/project-438",
+    "relatedSite" : "my:Site_1",
+    "visitor" : [ "mailto:peter.wilson@csiro.au", "https://orcid.org/0000-0002-1805-2517" ]
+  }, {
+    "@id" : "my:visit-S1-2",
+    "@type" : "ansis:SiteVisit",
+    "endedAtTime" : "2022-09-07T13:00:00+10:00",
+    "startedAtTime" : "2022-09-07T09:00:00+10:00",
+    "relatedActivity" : [ "my:O5-upperdepth-A12-in-P1", "my:O2-dens-S1-A12-in-P1", "my:O4-dens-S3-20-40-in-P1", "my:O3-dens-S2-L20-80-in-P1", "my:O1-dens-A12-in-P1" ],
+    "relatedProject" : "https://example.org/project-9765",
+    "relatedSite" : "my:Site_1",
+    "visitor" : [ "https://orcid.org/0000-0002-1805-2517", "https://orcid.org/0000-0002-0693-1899" ]
+  } ],
+  "@context" : {
+    "relatedBody" : {
+      "@id" : "https://anzsoil.org/def/au/domain/relatedBody",
+      "@type" : "@id"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "depth-upper" : {
+      "@id" : "https://anzsoil.org/def/au/domain/depth-upper"
+    },
+    "depth-lower" : {
+      "@id" : "https://anzsoil.org/def/au/domain/depth-lower"
+    },
+    "relatedProfile" : {
+      "@id" : "https://anzsoil.org/def/au/domain/relatedProfile",
+      "@type" : "@id"
+    },
+    "isSampleOf" : {
+      "@id" : "http://www.w3.org/ns/sosa/isSampleOf",
+      "@type" : "@id"
+    },
+    "coarse-fragment-abundance" : {
+      "@id" : "https://anzsoil.org/def/au/domain/coarse-fragment-abundance",
+      "@type" : "@id"
+    },
+    "fieldTexture" : {
+      "@id" : "https://anzsoil.org/def/au/domain/fieldTexture",
+      "@type" : "@id"
+    },
+    "pedality-grade" : {
+      "@id" : "https://anzsoil.org/def/au/domain/pedality-grade",
+      "@type" : "@id"
+    },
+    "density-bulk" : {
+      "@id" : "https://anzsoil.org/def/au/domain/density-bulk"
+    },
+    "distinctness" : {
+      "@id" : "https://anzsoil.org/def/au/domain/distinctness",
+      "@type" : "@id"
+    },
+    "depth" : {
+      "@id" : "https://anzsoil.org/def/au/domain/depth"
+    },
+    "asWKT" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type" : "http://www.opengis.net/ont/geosparql#wktLiteral"
+    },
+    "observedProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+      "@type" : "@id"
+    },
+    "resultTime" : {
+      "@id" : "http://www.w3.org/ns/sosa/resultTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasSimpleResult" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "designation" : {
+      "@id" : "https://anzsoil.org/def/au/domain/designation"
+    },
+    "usedProcedure" : {
+      "@id" : "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type" : "@id"
+    },
+    "relatedProject" : {
+      "@id" : "https://anzsoil.org/def/au/domain/relatedProject",
+      "@type" : "@id"
+    },
+    "wasAssociatedWith" : {
+      "@id" : "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "@type" : "@id"
+    },
+    "phenomenonTime" : {
+      "@id" : "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "relatedSite" : {
+      "@id" : "https://anzsoil.org/def/au/domain/relatedSite",
+      "@type" : "@id"
+    },
+    "visitor" : {
+      "@id" : "https://anzsoil.org/def/au/domain/visitor",
+      "@type" : "@id"
+    },
+    "relatedActivity" : {
+      "@id" : "https://anzsoil.org/def/au/domain/relatedActivity",
+      "@type" : "@id"
+    },
+    "startedAtTime" : {
+      "@id" : "http://www.w3.org/ns/prov#startedAtTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "endedAtTime" : {
+      "@id" : "http://www.w3.org/ns/prov#endedAtTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "madeBySensor" : {
+      "@id" : "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type" : "@id"
+    },
+    "has-landform-element" : {
+      "@id" : "https://anzsoil.org/def/au/domain/has-landform-element",
+      "@type" : "@id"
+    },
+    "has-land-use" : {
+      "@id" : "https://anzsoil.org/def/au/domain/has-land-use",
+      "@type" : "@id"
+    },
+    "has-erosion" : {
+      "@id" : "https://anzsoil.org/def/au/domain/has-erosion",
+      "@type" : "@id"
+    },
+    "abundance-cover" : {
+      "@id" : "https://anzsoil.org/def/au/domain/abundance-cover",
+      "@type" : "@id"
+    },
+    "has-landform-pattern" : {
+      "@id" : "https://anzsoil.org/def/au/domain/has-landform-pattern",
+      "@type" : "@id"
+    },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
+    "hasResult" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasResult",
+      "@type" : "@id"
+    },
+    "madeBySampler" : {
+      "@id" : "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type" : "@id"
+    },
+    "lithology" : {
+      "@id" : "https://anzsoil.org/def/au/domain/lithology",
+      "@type" : "@id"
+    },
+    "isResultOf" : {
+      "@id" : "http://www.w3.org/ns/sosa/isResultOf",
+      "@type" : "@id"
+    },
+    "waterRepellence" : {
+      "@id" : "https://anzsoil.org/def/au/domain/waterRepellence",
+      "@type" : "@id"
+    },
+    "condition-when-dry" : {
+      "@id" : "https://anzsoil.org/def/au/domain/condition-when-dry",
+      "@type" : "@id"
+    },
+    "depth-RHorizon" : {
+      "@id" : "https://anzsoil.org/def/au/domain/depth-RHorizon"
+    },
+    "type-profile" : {
+      "@id" : "https://anzsoil.org/def/au/domain/type-profile",
+      "@type" : "@id"
+    },
+    "relatedHorizon" : {
+      "@id" : "https://anzsoil.org/def/au/domain/relatedHorizon",
+      "@type" : "@id"
+    },
+    "depth-Substrate" : {
+      "@id" : "https://anzsoil.org/def/au/domain/depth-Substrate"
+    },
+    "coarse-fragment-distribution" : {
+      "@id" : "https://anzsoil.org/def/au/domain/coarse-fragment-distribution",
+      "@type" : "@id"
+    },
+    "classification-order" : {
+      "@id" : "https://anzsoil.org/def/au/domain/classification-order",
+      "@type" : "@id"
+    },
+    "schema" : "http://schema.org/",
+    "sfeat" : "https://anzsoil.org/def/au/feature/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "ls" : "http://anzsoil.org/def/au/asls/land-surface/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "subst" : "http://anzsoil.org/def/au/asls/substrate/",
+    "my" : "https://my.example.org/soil/",
+    "geo" : "http://www.opengis.net/ont/geosparql#",
+    "sf" : "http://www.opengis.net/ont/sf#",
+    "asls" : "http://anzsoil.org/def/au/asls/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "prop" : "https://anzsoil.org/def/au/property/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "ansis" : "https://anzsoil.org/def/au/domain/",
+    "prov" : "http://www.w3.org/ns/prov#",
+    "dc" : "http://purl.org/dc/elements/1.1/",
+    "sosa" : "http://www.w3.org/ns/sosa/"
+  }
+}
