@@ -5,6 +5,14 @@ A Land Survey Site is established to make observations of landscape entitites.
 A Soil Site is a specialization focusing on soils. 
 In particular a Soil Site is intended to sample a [soil body](soil-body.md) through one or more [soil profiles](soil-profile.md). 
 
+# A Soil Site
+acts as a kind of platform, where sensors may be deployed
+is a geospatial entity (feature) which has a geometry (incl. location)
+may be considered as a kind of Sample, since it is selected to be representative of a landscape entity
+may be large or small and may have sub-sites or additional locations associated with it.
+can be a general term that encompasses locations that may be called ‘plot’, ‘station’, ‘transect’, ‘quadrat’, 'farm site', 'paddock' etc.
+many kinds of projects can be carried out at a "Soil Site" including in ecology, agronomy and land capability
+
 ![Soil and Land Survey Site](image/Site.png)
 
 (text from [ASLS](https://catalogue.nla.gov.au/Record/4273240))
@@ -19,11 +27,10 @@ In particular a Soil Site is intended to sample a [soil body](soil-body.md) thro
 >
 > In some instances a soil observation may be representative only of a soil body smaller than 10 m in radius. For example, in some gilgai the vegetation, land surface and soil all differ between the mound and depression. In such instances the extent of the site for those features is only that of the mound or the depression.
 
-> **A Soil Site** 
-> has a related soil profile and is a sample of a soil body
-> acts as a kind of platform, where sensors may be deployed
-> is a geospatial entity (feature) which has a geometry (incl. location)
-> may be considered as a kind of Sample, since it is selected to be representative of a landscape entity
-> may be large or small and may have sub-sites or additional locations associated with it.
-> can be a general term that encompasses locations that may be called ‘plot’, ‘station’, ‘transect’, ‘quadrat’, 'farm site', 'paddock' etc.
-> many kinds of projects can be carried out at a "Soil Site" including in ecology, agronomy and land capability
+# A Soil Site
+acts as a kind of platform, where sensors may be deployed
+is a geospatial entity (feature) which has a geometry (incl. location)
+may be considered as a kind of Sample, since it is selected to be representative of a landscape entity
+may be large or small and may have sub-sites or additional locations associated with it.
+can be a general term that encompasses locations that may be called ‘plot’, ‘station’, ‘transect’, ‘quadrat’, 'farm site', 'paddock' etc.
+many kinds of projects can be carried out at a "Soil Site" including in ecology, agronomy and land capability
