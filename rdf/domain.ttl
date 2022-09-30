@@ -1987,9 +1987,9 @@ ansis:SoilBody
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedLayer ;
     ] ;
-  skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
-""" ;
+  skos:definition "Part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to certain soil properties and/or spatial patterns" ;
   skos:note "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
+  skos:note "The terms soil individual and soil pedon [1] [2] are sometimes used for more specialised cases. [1] Soil Survey Staff, Soil Taxonomy: a basic system of soil classification for making and interpreting soil surveys. Washington DC: Government Printer, [2] N. McKenzie, K. Coughlan, and H. Cresswell, Soil Physical Measurement and Interpretation for Land Evaluation. CSIRO Publishing, 2002. Accessed: Nov. 30, 2021. [Online]. Available: https://www.publish.csiro.au/book/3147" ;
   skos:prefLabel "Soil body" ;
 .
 ansis:SoilConsistence
