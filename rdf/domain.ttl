@@ -2036,6 +2036,27 @@ ansis:SiteVisit
         ] ;
       owl:onProperty ansis:relatedActivity ;
     ] ;
+  skos:example """my:visit-S1-2
+  a ansis:SiteVisit ;
+  prov:endedAtTime \"2022-09-07T13:00:00+10:00\"^^xsd:dateTime ;
+  prov:startedAtTime \"2022-09-07T09:00:00+10:00\"^^xsd:dateTime ;
+  ansis:relatedActivity my:O1-dens-A12-in-P1 ;
+  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
+  ansis:relatedActivity my:O3-dens-S2-L20-80-in-P1 ;
+  ansis:relatedActivity my:O4-dens-S3-20-40-in-P1 ;
+  ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
+  ansis:relatedProject <https://example.org/project-9765> ;
+  ansis:relatedSite my:Site_1 ;
+  ansis:visitor <https://orcid.org/0000-0002-0693-1899> ;
+.
+my:O1-dens-A12-in-P1
+  a sosa:Observation ;
+  skos:prefLabel \"Measurement of bulk density of a layer A12 in profile P1\" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1 ;
+  sosa:hasSimpleResult \"1.4 g/cm3\" ;
+  sosa:observedProperty ansis:density-bulk ;
+  sosa:resultTime \"2022-09-14T11:35:00\"^^xsd:dateTime ;
+.""" ;
   skos:prefLabel "Site visit" ;
 .
 ansis:SoilBody
@@ -2059,6 +2080,10 @@ ansis:SoilBody
     ] ;
   skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
 """ ;
+  skos:example """my:Body-88
+  a ansis:SoilBody ;
+  skos:prefLabel \"Monivae gravelly loam\" ;
+.""" ;
   skos:note "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
   skos:prefLabel "Soil body" ;
 .
@@ -2109,6 +2134,12 @@ ansis:SoilHorizon
       owl:onProperty ansis:shape ;
     ] ;
   skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
+  skos:example """my:Horizon_A12
+  a ansis:SoilHorizon ;
+  skos:prefLabel \"Horizon A12\" ;
+  ansis:designation \"A12\" ;
+  ansis:relatedBody my:Body-88 ;
+.""" ;
   skos:note "Soil horizons are designated A1, B2, R etc. " ;
   skos:prefLabel "Soil horizon" ;
 .
@@ -2185,7 +2216,14 @@ ansis:SoilLayer
       owl:onProperty ansis:relatedBody ;
     ] ;
   skos:definition "Layer within a soil body" ;
-  skos:note "A depth-defined layer could be considered to sample a soil-body. " ;
+  skos:example """my:Layer_20-80
+  a ansis:SoilLayer ;
+  skos:prefLabel \"layer 20-80 cm\" ;
+  ansis:depth-lower \"80 cm\" ;
+  ansis:depth-upper \"20 cm\" ;
+  ansis:relatedBody my:Body-88 ;
+.""" ;
+  skos:note "A depth-defined layer could be considered to be a sample of a soil-body. " ;
   skos:prefLabel "Soil layer" ;
 .
 ansis:SoilMottles
@@ -2301,6 +2339,25 @@ ansis:SoilProfile
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
+  skos:example """my:Profile_1
+  a ansis:SoilProfile ;
+  geo:hasGeometry my:Point_1 ;
+  skos:prefLabel \"profile 1\" ;
+  sosa:isSampleOf my:Body-88 ;
+  ansis:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
+  ansis:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
+  ansis:depth-RHorizon \"106 cm\" ;
+  ansis:depth-Substrate \"106 cm\" ;
+  ansis:depth-lower \"106 cm\" ;
+  ansis:depth-upper \"0 cm\" ;
+  ansis:relatedHorizon my:Horizon_A11 ;
+  ansis:relatedHorizon my:Horizon_A12 ;
+  ansis:relatedHorizon my:Horizon_A2 ;
+  ansis:relatedHorizon my:Horizon_B21s ;
+  ansis:relatedHorizon my:Horizon_B22s ;
+  ansis:relatedSite my:Site_1 ;
+  ansis:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
+.""" ;
   skos:note """A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present at this location. 
 Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. """ ;
   skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
@@ -2343,6 +2400,11 @@ ansis:SoilSample
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:depth-lower ;
     ] ;
   rdfs:subClassOf [
@@ -2356,6 +2418,24 @@ ansis:SoilSample
       owl:onClass ansis:SoilSampleType ;
       owl:onProperty ansis:type ;
     ] ;
+  skos:example """my:S3-20-40-in-P1
+  a ansis:SoilSample ;
+  skos:prefLabel \"Sample 3 from depth 20-40 in profile 1\" ;
+  sosa:isResultOf my:Sg-20-40-in-P1 ;
+  sosa:isSampleOf my:Body-88 ;
+  ansis:depth-lower \"40 cm\" ;
+  ansis:depth-upper \"20 cm\" ;
+  ansis:relatedProfile my:Profile_1 ;
+.
+my:Sg-20-40-in-P1
+  a sosa:Sampling ;
+  sosa:hasFeatureOfInterest my:Profile_1 ;
+  sosa:hasResult my:S3-20-40-in-P1 ;
+  sosa:madeBySampler <mailto:peter.wilson@csiro.au> ;
+  sosa:resultTime \"2002-09-19T13:35:00\"^^xsd:dateTime ;
+  sosa:usedProcedure <https://example.org/soil-sampling-procedure-AVH> ;
+  ansis:relatedProject <https://example.org/project-438> ;
+.""" ;
   skos:note """A soil sample must be associated to a profile. 
 In the case of a composite-sample, the 'virtual profile' is composed of multiple individual profiles at a single site or on a face. """ ;
   skos:prefLabel "Sample of soil or soil entity" ;
@@ -2404,8 +2484,19 @@ ansis:SoilSite
       owl:onClass ansis:SoilBody ;
       owl:onProperty sosa:isSampleOf ;
     ] ;
-  skos:definition """A landsurvey site where samples, observations, and treatments of soil are carried out.  
+  skos:definition """A site where samples, observations, and treatments of soil are carried out.  
 Samples are taken from profiles, and observations made on those samples in order to characterize the soil-body in which the site is located. """ ;
+  skos:example """my:Site_1
+  a ansis:SoilSite ;
+  geo:hasGeometry my:Polygon_1 ;
+  skos:prefLabel \"site 1\" ;
+  ansis:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+  ansis:has-erosion ls:erosion-wind ;
+  ansis:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
+  ansis:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
+  ansis:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
+.""" ;
   skos:prefLabel "Soil site" ;
 .
 ansis:SoilSuborder
@@ -2426,6 +2517,11 @@ ansis:SoilSurface
       owl:onProperty ansis:waterRepellence ;
     ] ;
   skos:definition "the surface of the soil body" ;
+  skos:example """my:Surface_3
+  a ansis:SoilSurface ;
+  skos:prefLabel \"Soil surface 3\" ;
+  ansis:relatedBody my:Body-88 ;
+.""" ;
   skos:prefLabel "Soil surface" ;
 .
 ansis:SoilVoids
