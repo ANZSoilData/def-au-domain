@@ -10,7 +10,7 @@ Soil profile types can include, as examples, those listed in ([ASLS](https://cat
 
 [Soil samples](soil-sample.md) are taken in soil profiles. 
 Where samples are composited from several physical profiles, we associate these with a 'virtual composite profile' composed of a set of profiles at a site. 
-[Observations](sosa.md) are made on the samples, that allow the body to be characterised. 
+[Observations](sosa.md) are made on the samples, that allow the body to be characterised. The geometry of a composite soil-profile is a polygon or set of points.  
 
 ![Soil profile](image/Soil-profile.png)
 
