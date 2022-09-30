@@ -1164,6 +1164,7 @@ sp:horizons-R
 sp:observation-type-A
   rdf:type ansis:Profile-type ;
   skos:notation "A" ;
+  skos:prefLabel "Auger boring" ;
 .
 sp:observation-type-C
   rdf:type ansis:Profile-type ;
