@@ -5,7 +5,7 @@ A Soil Body is bounded above by the surface and below by the [R-Horizon](soil-la
 
 'Soil individual' and 'Pedon' are related terms used for Soil Bodies.
 
-'Soil mapping unit' can be a single soil (soil body) or not (an association/complex)
+'Soil mapping unit' can be a single soil (soil body) or not (an association/complex).
 
 Soil bodies are characterised through [observations](sosa.md) made on [soil profiles](soil-profile.md) at [soil sites](site.md). 
 
