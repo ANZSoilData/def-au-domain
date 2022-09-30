@@ -6,6 +6,8 @@ The intention of a soil profile is to sample a [soil body](soil-body.md).
 
 The _type_ of profile indicates the procedure through which the profile was created at a [Soil Site](site.md).
 
+Soil profile types can include, as examples, soil pit, existing vertical exposures, relatively undisturbed soil cores, and auger boring (text from [ASLS](https://catalogue.nla.gov.au/Record/4273240))
+
 [Soil samples](soil-sample.md) are taken in soil profiles. 
 Where samples are composited from several physical profiles, we associate these with a 'virtual composite profile' composed of a set of profiles at a site. 
 [Observations](sosa.md) are made on the samples, that allow the body to be characterised. 
