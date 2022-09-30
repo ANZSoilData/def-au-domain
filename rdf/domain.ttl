@@ -1,4 +1,5 @@
 # baseURI: https://anzsoil.org/def/au/domain
+# imports: http://www.w3.org/2004/02/skos/core
 
 @prefix ansis: <https://anzsoil.org/def/au/domain/> .
 @prefix asc: <http://anzsoil.org/def/au/asc/> .
@@ -1162,15 +1163,21 @@ sp:horizons-R
 .
 sp:observation-type-A
   rdf:type ansis:Profile-type ;
+  skos:notation "A" ;
 .
 sp:observation-type-C
   rdf:type ansis:Profile-type ;
+  skos:notation "C" ;
+  skos:prefLabel "Relatively undisturbed soil core" ;
 .
 sp:observation-type-E
   rdf:type ansis:Profile-type ;
+  skos:notation "E" ;
+  skos:prefLabel "Existing vertical exposure" ;
 .
 sp:observation-type-P
   rdf:type ansis:Profile-type ;
+  skos:notation "P" ;
 .
 sp:structure-pedality-grade-G
   rdf:type ansis:PedalityGrade ;
@@ -1663,6 +1670,7 @@ sosa:ObservableProperty
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-09-27"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
 .
 ansis:Boundary-distinctness
   rdf:type owl:Class ;
