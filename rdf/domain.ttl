@@ -1768,6 +1768,9 @@ ansis:LandSurface
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedErosion ;
     ] ;
+  skos:note """On the observation of land surface: \".....concerned mainly with surface phenomena affecting land use and soil development that have traditionally been noted at the point of soil observation. Most of the attributes for land surface that are described have implications regarding the use of land; some may also reflect significant processes occurring within the soil (for example microrelief). Some attributes (for example disturbance of site, erosion) may reflect the influence of present or past land use practice, but it is important that their status be recorded at a known point in time.
+It may be difficult to estimate accurately some other required attributes (for example likely inundation), but the field observer usually has the benefit of some local experience and is better placed to make such an estimate than a subsequent user of the data.\" Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959
+""" ;
   skos:prefLabel "Land surface" ;
 .
 ansis:LandUse
@@ -2127,7 +2130,6 @@ ansis:SoilLayer
     ] ;
   skos:definition "A thickness defined layer within a soil body" ;
   skos:note "A depth-defined layer could be considered to sample a soil-body" ;
-  skos:note "A layer is not necessarily homogenous in its properties - some properties of a layer will vary with location or position within the soil body" ;
   skos:prefLabel "Soil layer" ;
 .
 ansis:SoilMottles
@@ -2439,7 +2441,7 @@ ansis:SoilSurface
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
-  skos:definition "the uppermost surficial layer of a soil body" ;
+  skos:definition "the surface of the soil body" ;
   skos:prefLabel "Soil surface" ;
 .
 ansis:SoilVoids
