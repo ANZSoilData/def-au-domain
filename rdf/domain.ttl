@@ -2491,6 +2491,11 @@ ansis:Substrate
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:texture ;
     ] ;
+  skos:definition "observed or inferred materials and masses of earth or rock that do not show pedological development. " ;
+  skos:note """Notes on the observation, and process of observing, the substrate: \"The properties of the substrate should be described as objectively as possible. The first group of properties refers to the material or substance in an intact state, as would be seen in a hand-sized specimen without cracks. Such properties serve to identify the type of rock, such as sandstone, or unconsolidated material, such as clay. A second group of properties comprising spacing of discontinuities, alteration, and mass strength refers to substrate masses. These require observations of areas of greater dimensions. Types of substrate mass are classified mainly according to their inferred origin. Examples are alluvium, parna, ferricrete and saprolite.
+The substrate should be observed at the point of the soil profile observation or as close to it as may be practicable. Large vertical exposures of the substrate may reveal the spatial variation of substrate features........\"
+Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959""" ;
+  skos:note "\"....deals with materials and masses of earth (see page 163) or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development (page 106), but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.\" Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959" ;
   skos:prefLabel "Substrate" ;
 .
 ansis:TextureGrade
