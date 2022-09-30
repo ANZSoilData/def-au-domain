@@ -2125,8 +2125,9 @@ ansis:SoilLayer
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedBody ;
     ] ;
-  skos:definition "Layer within a soil body" ;
-  skos:note "A depth-defined layer could be considered to sample a soil-body. " ;
+  skos:definition "A thickness defined layer within a soil body" ;
+  skos:note "A depth-defined layer could be considered to sample a soil-body" ;
+  skos:note "A layer is not necessarily homogenous in its properties - some properties of a layer will vary with location or position within the soil body" ;
   skos:prefLabel "Soil layer" ;
 .
 ansis:SoilMottles
