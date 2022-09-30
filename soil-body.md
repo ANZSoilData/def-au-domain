@@ -7,7 +7,7 @@ A Soil Body is bounded above by the surface and below by the [R-Horizon](soil-la
 
 'Soil mapping unit' can be a single soil (soil body) or not (an association/complex).
 
-Soil bodies are characterised through [observations](sosa.md) made on [soil profiles](soil-profile.md) at [soil sites](site.md). 
+Soil bodies are characterised through [observations](sosa.md) made on one or more [soil profiles](soil-profile.md) at [soil sites](site.md). 
 
 ![Soil body](image/Soil-body.png)
 
