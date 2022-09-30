@@ -1903,6 +1903,7 @@ ansis:Profile-type
   rdf:type owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:definition "Type of soil observation profile - e.g. pit, auger bore, core, exposure" ;
+  skos:note "To characterise a soil profile fully, it should be examined to the depth of the parent material or other consolidated material. However, because soil depth varies between very wide limits and because soils are examined for a wide variety of purposes, the depth of examination in practice frequently may not exceed 1.5–2 m. (Australian Soil and Land Survey, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
   skos:prefLabel "Type of profile" ;
 .
 ansis:Roots
