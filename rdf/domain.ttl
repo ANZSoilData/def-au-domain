@@ -1792,7 +1792,7 @@ ansis:Landform
     ] ;
   skos:definition "landscape features within which the site is located" ;
   skos:prefLabel "Landform" ;
-  skos:scopeNote "in the ASLS technique for describing landforms \"the whole land surface is viewed as a mosaic of tiles of odd shapes and sizes. To impose order, the mosaic is treated as if the tiles are of two distinct sizes, the larger ones being themselves mosaics of the smaller ones. The larger tiles, more than 600 m across, are called landform patterns.\" (Australian Soil and Land Survey ASLS, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
+  skos:scopeNote "in the ASLS technique for describing landforms \"the whole land surface is viewed as a mosaic of tiles of odd shapes and sizes. To impose order, the mosaic is treated as if the tiles are of two distinct sizes, the larger ones being themselves mosaics of the smaller ones. The larger tiles, more than 600 m across, are called landform patterns. About 40 types of landform pattern are defined. They include, for example, flood plain, dunefield and hills. The smaller tiles, which form mosaics within landform patterns, are about 40 m or more across. These are called landform elements. Among more than 80 defined types of landform element we include, for example, cliff, footslope and valley flat.\" (Australian Soil and Land Survey ASLS, 3rd edition. National Committee of Soil and Terrain. ISBN: 9780643093959)" ;
 .
 ansis:LandformElement
   rdf:type owl:Class ;
