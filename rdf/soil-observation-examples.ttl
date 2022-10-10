@@ -273,11 +273,11 @@ my:Profile_1
   ansis:depth-Substrate "106 cm" ;
   ansis:depth-lower "106 cm" ;
   ansis:depth-upper "0 cm" ;
-  ansis:relatedHorizon my:Horizon_A11 ;
-  ansis:relatedHorizon my:Horizon_A12 ;
-  ansis:relatedHorizon my:Horizon_A2 ;
-  ansis:relatedHorizon my:Horizon_B21s ;
-  ansis:relatedHorizon my:Horizon_B22s ;
+  ansis:relatedLayer my:Horizon_A11 ;
+  ansis:relatedLayer my:Horizon_A12 ;
+  ansis:relatedLayer my:Horizon_A2 ;
+  ansis:relatedLayer my:Horizon_B21s ;
+  ansis:relatedLayer my:Horizon_B22s ;
   ansis:relatedSite my:Site_1 ;
   ansis:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
 .
