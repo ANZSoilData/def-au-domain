@@ -1164,16 +1164,16 @@ sp:horizons-R
   a ansis:PrimaryNotation ;
 .
 sp:observation-type-A
-  a ansis:Profile-type ;
+  a ansis:Profile-construction ;
 .
 sp:observation-type-C
-  a ansis:Profile-type ;
+  a ansis:Profile-construction ;
 .
 sp:observation-type-E
-  a ansis:Profile-type ;
+  a ansis:Profile-construction ;
 .
 sp:observation-type-P
-  a ansis:Profile-type ;
+  a ansis:Profile-construction ;
 .
 sp:structure-pedality-grade-G
   a ansis:PedalityGrade ;
@@ -1711,6 +1711,7 @@ ansis:CoarseFragments
 ansis:Disturbance
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
+  skos:definition "disturbance of a site" ;
   skos:prefLabel "Disturbance" ;
 .
 ansis:DryCondition
@@ -1774,6 +1775,7 @@ ansis:LandSurface
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedErosion ;
     ] ;
+  skos:definition "surface landscape features of a site" ;
   skos:prefLabel "Land surface" ;
 .
 ansis:LandUse
@@ -1793,6 +1795,8 @@ ansis:Landform
       owl:onProperty ansis:relatedLandformPattern ;
       owl:someValuesFrom ansis:LandformPattern ;
     ] ;
+  skos:definition "landscape features within which the site is located" ;
+  skos:note "The larger tiles, more than 600 m across, are called landform patterns….. The smaller tiles, which form mosaics within landform patterns, are about 40 m or more across. . These are called landform elements." ;
   skos:prefLabel "Landform" ;
 .
 ansis:LandformElement
@@ -1835,6 +1839,7 @@ ansis:LandformPattern
 .
 ansis:LandscapeEntity
   a owl:Class ;
+  rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf prov:Entity ;
   skos:prefLabel "Landscape entity" ;
 .
@@ -1891,12 +1896,12 @@ ansis:LandsurveySite
       owl:onProperty sosa:isSampleOf ;
       owl:someValuesFrom ansis:LandscapeEntity ;
     ] ;
-  skos:definition "Yellow-book site" ;
+  skos:definition "A Site established to make observations of landscape entities" ;
   skos:prefLabel "Land survey site" ;
   skos:scopeNote "'Site' acts as a kind of platform, where sensors may be deployed. " ;
   skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
   skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
-  skos:scopeNote "Other types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site" ;
+  skos:scopeNote "More specific types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site" ;
 .
 ansis:Lithology
   a owl:Class ;
@@ -1965,10 +1970,18 @@ ansis:PrimaryNotation
   skos:definition "Primary notation for a horizon-type within a sequence" ;
   skos:prefLabel "Horizon notation" ;
 .
+ansis:Profile-construction
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Construction of soil observation profile e.g. pit, auger bore, core, exposure" ;
+  skos:note "e.g. pit, auger bore, core, exposure" ;
+  skos:prefLabel "Construction of profile" ;
+.
 ansis:Profile-type
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
-  skos:definition "Type of soil observation profile - e.g. pit, auger bore, core, exposure" ;
+  skos:definition "Type of soil observation profile e.g. single, composite, derived, reference/characterisation" ;
+  skos:note "e.g. single, composite, derived, reference/characterisation" ;
   skos:prefLabel "Type of profile" ;
 .
 ansis:Roots
@@ -2025,6 +2038,11 @@ ansis:SiteVisit
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:purpose ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass [
           a owl:Class ;
@@ -2061,7 +2079,6 @@ my:O1-dens-A12-in-P1
 .
 ansis:SoilBody
   a owl:Class ;
-  rdfs:subClassOf geo:Feature ;
   rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2220,7 +2237,7 @@ ansis:SoilLayer
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedBody ;
     ] ;
-  skos:definition "Layer within a soil body" ;
+  skos:definition "Laterally extensive region within a soil body, approximately parallel with the surface." ;
   skos:example """my:Layer_20-80
   a ansis:SoilLayer ;
   skos:prefLabel \"layer 20-80 cm\" ;
@@ -2305,7 +2322,52 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedSoilSite ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-A1texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-A1thickness ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-gravel ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-greatgroup ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-order ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-subgroup ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-suborder ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2339,6 +2401,17 @@ ansis:SoilProfile
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedProfile ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass ansis:Profile-construction ;
+      owl:onProperty sosa:usedProcedure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:onClass ansis:Profile-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2363,22 +2436,11 @@ ansis:SoilProfile
   ansis:relatedSite my:Site_1 ;
   ansis:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
 .""" ;
-  skos:note """A soil profile is a local sample of the horizon-sequence. Importantly, it records the set of horizons present at this location. 
-Each horizon may then have a detailed description determned through a set of observations relating to the different characteristic properties. """ ;
+  skos:note """A soil profile is a local sample of a soil body. Importantly, it records the set of horizons present at this location. 
+Each horizon may then have a detailed description determined through a set of observations relating to the different characteristic properties. """ ;
+  skos:note "If type=composite, then it is expected that there are 2::n related profiles whose type=single" ;
   skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
   skos:prefLabel "Soil profile" ;
-.
-ansis:SoilProfile-composite
-  a owl:Class ;
-  rdfs:subClassOf ansis:SoilProfile ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:relatedProfile ;
-    ] ;
-  skos:definition "Virtual profile composed of a set of individual soil profiles at a single site" ;
-  skos:note "Composite soil samples are associated with a virtual soil profile which is a composite of individual profiles at a site." ;
-  skos:prefLabel "Composite soil profile" ;
 .
 ansis:SoilSample
   a owl:Class ;
@@ -2736,16 +2798,10 @@ ansis:classification-order
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range [
-      a owl:Class ;
-      owl:unionOf (
-          ansis:SoilOrder
-          ansis:SoilSuborder
-        ) ;
-    ] ;
+  rdfs:range ansis:SoilOrder ;
   rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
-  skos:prefLabel "soil classification - sub-order or order" ;
+  skos:prefLabel "soil classification - order" ;
 .
 ansis:classification-subgroup
   a owl:ObjectProperty ;
@@ -2756,6 +2812,16 @@ ansis:classification-subgroup
   rdfs:subPropertyOf ansis:classification ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
+.
+ansis:classification-suborder
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
+  rdfs:range ansis:SoilSuborder ;
+  rdfs:subPropertyOf ansis:classification ;
+  skos:broadMatch prop:soil-classification ;
+  skos:prefLabel "soil classification - sub-order" ;
 .
 ansis:colour
   a owl:ObjectProperty ;
@@ -3102,6 +3168,22 @@ ansis:phosphorus
   schema:domainIncludes ansis:SoilLayer ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil phosphorus" ;
+.
+ansis:profile-type-Characterisation
+  a ansis:Profile-type ;
+  skos:prefLabel "Characterisation profile or norm" ;
+.
+ansis:profile-type-Composite
+  a ansis:Profile-type ;
+  skos:prefLabel "Composite profile" ;
+.
+ansis:profile-type-Single
+  a ansis:Profile-type ;
+  skos:prefLabel "Single profile" ;
+.
+ansis:purpose
+  a owl:ObjectProperty ;
+  skos:prefLabel "Purpose of activity" ;
 .
 ansis:relatedActivity
   a owl:ObjectProperty ;
