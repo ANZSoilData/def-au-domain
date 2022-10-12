@@ -284,6 +284,7 @@ my:Profile_1
   geo:hasGeometry my:Point_1 ;
   skos:prefLabel "profile 1" ;
   sosa:isSampleOf my:Body-88 ;
+  sosa:usedProcedure <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
   ansis:classification [
       ansis:classification-order "CH" ;
       ansis:classification-suborder "AB" ;
@@ -299,7 +300,7 @@ my:Profile_1
   ansis:relatedLayer my:Horizon_B21s ;
   ansis:relatedLayer my:Horizon_B22s ;
   ansis:relatedSite my:Site_1 ;
-  ansis:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
+  ansis:type ansis:profile-type-Single ;
 .
 my:S1-A12-in-P1
   a ansis:SoilSample ;
