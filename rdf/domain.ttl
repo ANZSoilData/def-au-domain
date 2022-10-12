@@ -26,6 +26,372 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+asc:Alteration-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "HZ"
+          "JZ"
+          "P"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Alteration code" ;
+.
+asc:Classifier-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "AF"
+          "AG"
+          "AH"
+          "AI"
+          "AJ"
+          "AK"
+          "AL"
+          "AM"
+          "AO"
+          "AP"
+          "AQ"
+          "AR"
+          "AS"
+          "AT"
+          "AU"
+          "AV"
+          "AW"
+          "AX"
+          "AY"
+          "AZ"
+          "BA"
+          "BB"
+          "BC"
+          "BD"
+          "BE"
+          "BF"
+          "BG"
+          "BH"
+          "BI"
+          "BJ"
+          "BK"
+          "BL"
+          "BN"
+          "BP"
+          "BR"
+          "BT"
+          "BU"
+          "BV"
+          "BW"
+          "BX"
+          "BY"
+          "BZ"
+          "CB"
+          "CC"
+          "CD"
+          "CE"
+          "CF"
+          "CG"
+          "CI"
+          "CJ"
+          "CK"
+          "CL"
+          "CM"
+          "CN"
+          "CO"
+          "CP"
+          "CQ"
+          "CR"
+          "CS"
+          "CU"
+          "CV"
+          "CW"
+          "CX"
+          "CY"
+          "CZ"
+          "DA"
+          "DB"
+          "DC"
+          "DD"
+          "DF"
+          "DG"
+          "DH"
+          "DI"
+          "DJ"
+          "DK"
+          "DL"
+          "DM"
+          "DN"
+          "DO"
+          "DP"
+          "DQ"
+          "DR"
+          "DT"
+          "DU"
+          "DV"
+          "DW"
+          "DX"
+          "DY"
+          "DZ"
+          "EA"
+          "EB"
+          "EC"
+          "ED"
+          "EE"
+          "EF"
+          "EG"
+          "EH"
+          "EI"
+          "EJ"
+          "EK"
+          "EL"
+          "EM"
+          "EN"
+          "EO"
+          "EP"
+          "EQ"
+          "ER"
+          "ES"
+          "ET"
+          "EU"
+          "EV"
+          "EW"
+          "EX"
+          "EY"
+          "EZ"
+          "FB"
+          "FC"
+          "FD"
+          "FF"
+          "FG"
+          "FH"
+          "FJ"
+          "FK"
+          "FL"
+          "FM"
+          "FN"
+          "FO"
+          "FP"
+          "FQ"
+          "FR"
+          "FS"
+          "FU"
+          "FV"
+          "FW"
+          "FX"
+          "FY"
+          "FZ"
+          "GA"
+          "GB"
+          "GC"
+          "GD"
+          "GE"
+          "GF"
+          "GG"
+          "GH"
+          "GI"
+          "GJ"
+          "GK"
+          "GL"
+          "GM"
+          "GN"
+          "GO"
+          "GP"
+          "GQ"
+          "GR"
+          "GS"
+          "GT"
+          "GU"
+          "GV"
+          "GW"
+          "GX"
+          "GY"
+          "HA"
+          "HB"
+          "HC"
+          "HD"
+          "HE"
+          "HF"
+          "HG"
+          "HH"
+          "HI"
+          "HJ"
+          "HK"
+          "HL"
+          "HM"
+          "HN"
+          "HO"
+          "HR"
+          "HS"
+          "HT"
+          "HU"
+          "HV"
+          "HW"
+          "HX"
+          "IA"
+          "IB"
+          "IC"
+          "ID"
+          "IE"
+          "IF"
+          "IG"
+          "IH"
+          "IJ"
+          "IL"
+          "IM"
+          "IS"
+          "IT"
+          "IU"
+          "IV"
+          "IW"
+          "IX"
+          "IY"
+          "IZ"
+          "JA"
+          "JB"
+          "JC"
+          "JD"
+          "JE"
+          "JF"
+          "JG"
+          "JH"
+          "JI"
+          "JK"
+          "JL"
+          "JM"
+          "JN"
+          "JP"
+          "JQ"
+          "JR"
+          "JT"
+          "JU"
+          "JV"
+          "JW"
+          "JX"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Classifier code" ;
+.
+asc:Clay-content-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "Q"
+          "R"
+          "S"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Clay Content code" ;
+.
+asc:Colour-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "AA"
+          "AB"
+          "AC"
+          "AD"
+          "AE"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Colour Class code" ;
+.
+asc:Depth-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "T"
+          "U"
+          "V"
+          "X"
+          "Y"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Depth code" ;
+.
+asc:Gravel-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "E"
+          "F"
+          "G"
+          "H"
+          "I"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Gravel Nature code" ;
+.
+asc:Order-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "AN"
+          "CA"
+          "CH"
+          "DE"
+          "FE"
+          "HY"
+          "KA"
+          "KU"
+          "OR"
+          "PO"
+          "RE"
+          "RU"
+          "SO"
+          "TE"
+          "VE"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Order code" ;
+.
+asc:Organic-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "OA"
+          "OB"
+          "OC"
+          "OD"
+          "OE"
+          "OF"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Organic Type code" ;
+.
+asc:Texture-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "J"
+          "K"
+          "L"
+          "M"
+          "N"
+          "O"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Texture code" ;
+.
+asc:Thickness-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "B"
+          "C"
+          "D"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Thickness code" ;
+.
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-0>
   a ansis:FragmentAbundance ;
 .
@@ -2138,48 +2504,57 @@ ansis:SoilClassification
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-order ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-suborder ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-A1texture ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-A1thickness ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-Btexture ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-depth ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-gravel ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Classifier-code ;
       owl:onProperty ansis:classification-greatgroup ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Classifier-code ;
       owl:onProperty ansis:classification-subgroup ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Depth-code ;
+      owl:onProperty ansis:classification-family-depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Gravel-code ;
+      owl:onProperty ansis:classification-family-gravel ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Texture-code ;
+      owl:onProperty ansis:classification-family-A1texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Texture-code ;
+      owl:onProperty ansis:classification-family-Btexture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asc:Thickness-code ;
+      owl:onProperty ansis:classification-family-A1thickness ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange asc:Classifier-code ;
+      owl:onProperty ansis:classification-suborder ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange asc:Order-code ;
+      owl:onProperty ansis:classification-order ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Soil classification" ;
 .
