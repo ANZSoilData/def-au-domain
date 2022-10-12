@@ -140,31 +140,48 @@ my:Create_Site-1
 my:Horizon_A11
   a ansis:SoilHorizon ;
   skos:prefLabel "Horizon A11" ;
-  ansis:designation "A11" ;
+  ansis:designation [
+      ansis:designation-master "A" ;
+      ansis:designation-subdivision "11" ;
+    ] ;
   ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_A12
   a ansis:SoilHorizon ;
   skos:prefLabel "Horizon A12" ;
-  ansis:designation "A12" ;
+  ansis:designation [
+      ansis:designation-master "A" ;
+      ansis:designation-subdivision "12" ;
+    ] ;
   ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_A2
   a ansis:SoilHorizon ;
   skos:prefLabel "Horizon A2" ;
-  ansis:designation "A2" ;
+  ansis:designation [
+      ansis:designation-master "A" ;
+      ansis:designation-subdivision "2" ;
+    ] ;
   ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_B21s
   a ansis:SoilHorizon ;
   skos:prefLabel "Horizon B21s" ;
-  ansis:designation "B21s" ;
+  ansis:designation [
+      ansis:designation-master "B" ;
+      ansis:designation-subdivision "21" ;
+      ansis:designation-suffix "s" ;
+    ] ;
   ansis:relatedBody my:Body-88 ;
 .
 my:Horizon_B22s
   a ansis:SoilHorizon ;
   skos:prefLabel "Horizon B22s" ;
-  ansis:designation "B22s" ;
+  ansis:designation [
+      ansis:designation-master "B" ;
+      ansis:designation-subdivision "22" ;
+      ansis:designation-suffix "s" ;
+    ] ;
   ansis:relatedBody my:Body-88 ;
 .
 my:L-0-15-P1
@@ -267,7 +284,10 @@ my:Profile_1
   geo:hasGeometry my:Point_1 ;
   skos:prefLabel "profile 1" ;
   sosa:isSampleOf my:Body-88 ;
-  ansis:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
+  ansis:classification [
+      ansis:classification-order "CH" ;
+      ansis:classification-suborder "AB" ;
+    ] ;
   ansis:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
   ansis:depth-RHorizon "106 cm" ;
   ansis:depth-Substrate "106 cm" ;

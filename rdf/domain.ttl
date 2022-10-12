@@ -1743,6 +1743,30 @@ ansis:FragmentSize
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Coarse fragment size classifiers" ;
 .
+ansis:HorizonDesignation
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:designation-master ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:designation-prefix ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:designation-subdivision ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:designation-suffix ;
+    ] ;
+  skos:prefLabel "Soil horizon designation" ;
+.
 ansis:LandCover
   a owl:Class ;
   rdfs:subClassOf ansis:LandscapeEntity ;
@@ -2092,6 +2116,12 @@ ansis:SoilBody
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ansis:SoilClassification ;
+      owl:onProperty ansis:classification ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedLayer ;
     ] ;
@@ -2103,6 +2133,55 @@ ansis:SoilBody
 .""" ;
   skos:note "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
   skos:prefLabel "Soil body" ;
+.
+ansis:SoilClassification
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-order ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-suborder ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-A1texture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-A1thickness ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-Btexture ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-family-gravel ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-greatgroup ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:classification-subgroup ;
+    ] ;
+  skos:prefLabel "Soil classification" ;
 .
 ansis:SoilConsistence
   a owl:Class ;
@@ -2142,11 +2221,6 @@ ansis:SoilHorizon
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:designation ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:distinctness ;
     ] ;
@@ -2154,6 +2228,12 @@ ansis:SoilHorizon
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:shape ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass ansis:HorizonDesignation ;
+      owl:onProperty ansis:designation ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
   skos:example """my:Horizon_A12
@@ -2332,46 +2412,6 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-A1texture ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-A1thickness ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-depth ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-family-gravel ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-greatgroup ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-order ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-subgroup ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:classification-suborder ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:depth-RHorizon ;
     ] ;
   rdfs:subClassOf [
@@ -2393,6 +2433,12 @@ ansis:SoilProfile
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedSubstrate ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ansis:SoilClassification ;
+      owl:onProperty ansis:classification ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2734,92 +2780,83 @@ ansis:classification
   skos:prefLabel "soil classification" ;
 .
 ansis:classification-family-A1texture
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Family ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon texture" ;
 .
 ansis:classification-family-A1thickness
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Family ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon thickness" ;
 .
 ansis:classification-family-Btexture
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Family ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - B horizon texture" ;
 .
 ansis:classification-family-depth
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Family ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Soil depth" ;
 .
 ansis:classification-family-gravel
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Family ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Gravel of the surface and A1 horizon" ;
 .
 ansis:classification-greatgroup
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Class ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
 .
 ansis:classification-order
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range ansis:SoilOrder ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - order" ;
 .
 ansis:classification-subgroup
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range asc:Class ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
 .
 ansis:classification-suborder
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  rdfs:range ansis:SoilSuborder ;
-  rdfs:subPropertyOf ansis:classification ;
+  rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - sub-order" ;
 .
@@ -2945,13 +2982,32 @@ ansis:depth-upper-pos
   skos:prefLabel "upper-depth(position)" ;
 .
 ansis:designation
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilHorizon ;
-  rdfs:subPropertyOf skos:notation ;
   skos:definition "soil horizon designation" ;
   skos:exactMatch prop:horizon-classification ;
   skos:prefLabel "horizon designation" ;
+.
+ansis:designation-master
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf skos:notation ;
+  skos:prefLabel "Soil horizon designation master" ;
+.
+ansis:designation-prefix
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf skos:notation ;
+  skos:prefLabel "Soil horizon designation prefix" ;
+.
+ansis:designation-subdivision
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf skos:notation ;
+  skos:prefLabel "Soil horizon designation subdivision" ;
+.
+ansis:designation-suffix
+  a owl:DatatypeProperty ;
+  rdfs:subPropertyOf skos:notation ;
+  skos:prefLabel "Soil horizon designation suffix" ;
 .
 ansis:distinctness
   a owl:ObjectProperty ;
