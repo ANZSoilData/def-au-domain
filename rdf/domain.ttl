@@ -392,6 +392,18 @@ asc:Thickness-code
     ] ;
   skos:prefLabel "ASC Thickness code" ;
 .
+asc:Water-repellence-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "NR"
+          "SR"
+          "WR"
+        ) ;
+    ] ;
+  skos:prefLabel "ASC Water repellence code" ;
+.
 <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-0>
   a ansis:FragmentAbundance ;
 .
@@ -2109,13 +2121,55 @@ ansis:FragmentSize
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Coarse fragment size classifiers" ;
 .
+ansis:Horizon-code
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "B"
+          "C"
+          "D"
+          "O"
+          "P"
+          "R"
+          xsd:string
+        ) ;
+    ] ;
+  skos:note "The long-established codes O, P, A, B ,C ,D, R are used wherever possible. Transitional horizons are designated with combinations of these.  " ;
+  skos:prefLabel "Horizon code" ;
+.
+ansis:Horizon-suffix
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "b"
+          "c"
+          "d"
+          "e"
+          "f"
+          "g"
+          "h"
+          "j"
+          "k"
+          "n"
+          "p"
+          "q"
+          "r"
+          "s"
+          "t"
+          "w"
+          "x"
+          "y"
+          "z"
+          "?"
+        ) ;
+    ] ;
+  skos:prefLabel "Horizon designation suffix" ;
+.
 ansis:HorizonDesignation
   a owl:Class ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:designation-master ;
-    ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2128,9 +2182,22 @@ ansis:HorizonDesignation
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange ansis:Horizon-suffix ;
       owl:onProperty ansis:designation-suffix ;
     ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange ansis:Horizon-code ;
+      owl:onProperty ansis:designation-master ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:example """[
+   a ansis:HorizonDesignation ;
+   ansis:designation-master \"B\" ;
+   ansis:designation-subdivision \"22\" ;
+   ansis:designation-suffix \"s\" ;
+]""" ;
   skos:prefLabel "Soil horizon designation" ;
 .
 ansis:LandCover
@@ -2556,6 +2623,11 @@ ansis:SoilClassification
       owl:onProperty ansis:classification-order ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:example """[
+      a ansis:SoilClassification ;
+      ansis:classification-order \"CH\" ;
+      ansis:classification-suborder \"AB\" ;
+]""" ;
   skos:prefLabel "Soil classification" ;
 .
 ansis:SoilConsistence
@@ -2611,10 +2683,14 @@ ansis:SoilHorizon
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
-  skos:example """my:Horizon_A12
+  skos:example """my:Horizon_B22s
   a ansis:SoilHorizon ;
-  skos:prefLabel \"Horizon A12\" ;
-  ansis:designation \"A12\" ;
+  skos:prefLabel \"Horizon B22s\" ;
+  ansis:designation [
+      ansis:designation-master \"B\" ;
+      ansis:designation-subdivision \"22\" ;
+      ansis:designation-suffix \"s\" ;
+    ] ;
   ansis:relatedBody my:Body-88 ;
 .""" ;
   skos:note "Soil horizons are designated A1, B2, R etc. " ;
@@ -3137,7 +3213,7 @@ ansis:chemistry
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilLayer ;
   skos:narrowMatch prop:chemical-concentration ;
-  skos:prefLabel "Soil chemistry" ;
+  skos:prefLabel "soil chemistry" ;
 .
 ansis:chloride
   a owl:DatatypeProperty ;
@@ -3366,16 +3442,6 @@ ansis:designation
 .
 ansis:designation-master
   a owl:DatatypeProperty ;
-  rdfs:range [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "B"
-          "C"
-          "D"
-          "R"
-        ) ;
-    ] ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation master" ;
 .
@@ -3393,31 +3459,6 @@ ansis:designation-subdivision
 .
 ansis:designation-suffix
   a owl:DatatypeProperty ;
-  rdfs:range [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "b"
-          "c"
-          "d"
-          "e"
-          "f"
-          "g"
-          "h"
-          "j"
-          "k"
-          "n"
-          "p"
-          "q"
-          "r"
-          "s"
-          "t"
-          "w"
-          "x"
-          "y"
-          "z"
-          "?"
-        ) ;
-    ] ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation suffix" ;
 .
