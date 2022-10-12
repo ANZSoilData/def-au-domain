@@ -4,13 +4,17 @@ A Soil Profile is a vertical section of a [soil body](soil-body.md) from the soi
 
 The intention of a soil profile is to sample a [soil body](soil-body.md). 
 
-The _type_ of profile indicates the procedure through which the profile was created at a [Soil Site](site.md).
+The procedure through which the profile was created at a [Soil Site](site.md).
 
-Soil profile types can include, as examples, those listed in ([ASLS](https://catalogue.nla.gov.au/Record/4273240)) -  soil pit, existing vertical exposures, relatively undisturbed soil cores, and auger boring.
+Soil profiles can be created through a variety of procedures, such as those listed in ([ASLS](https://catalogue.nla.gov.au/Record/4273240)) - ( soil pit | existing vertical exposures | relatively undisturbed soil cores | auger boring ).
+
+Soil profile types include ( single | characterisation (reference or norm) | composite ). 
 
 [Soil samples](soil-sample.md) are taken in soil profiles. 
-Where samples are composited from several physical profiles, we associate these with a 'virtual composite profile' composed of a set of profiles at a site. 
-[Observations](sosa.md) are made on the samples, that allow the body to be characterised. The geometry of a composite soil-profile is a polygon or set of points.  
+Where samples are composited from several physical profiles, we associate these with a 'composite profile' composed of two or more single profiles at a site. 
+[Observations](sosa.md) are made on the samples, that allow the body to be characterised. The geometry of a composite soil-profile is a polygon or set of points. 
+
+Soil profiles may be be classified using the order-suborder-greatgroup-subgroup-family system. 
 
 ![Soil profile](image/Soil-profile.png)
 
