@@ -168,6 +168,7 @@ my:Horizon_B21s
   a ansis:SoilHorizon ;
   skos:prefLabel "Horizon B21s" ;
   ansis:designation [
+      a ansis:HorizonDesignation ;
       ansis:designation-master "B" ;
       ansis:designation-subdivision "21" ;
       ansis:designation-suffix "s" ;

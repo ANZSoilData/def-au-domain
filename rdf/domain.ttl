@@ -2991,21 +2991,58 @@ ansis:designation
 .
 ansis:designation-master
   a owl:DatatypeProperty ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "B"
+          "C"
+          "D"
+          "R"
+        ) ;
+    ] ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation master" ;
 .
 ansis:designation-prefix
   a owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation prefix" ;
 .
 ansis:designation-subdivision
   a owl:DatatypeProperty ;
+  rdfs:range xsd:integer ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation subdivision" ;
 .
 ansis:designation-suffix
   a owl:DatatypeProperty ;
+  rdfs:range [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "b"
+          "c"
+          "d"
+          "e"
+          "f"
+          "g"
+          "h"
+          "j"
+          "k"
+          "n"
+          "p"
+          "q"
+          "r"
+          "s"
+          "t"
+          "w"
+          "x"
+          "y"
+          "z"
+          "?"
+        ) ;
+    ] ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation suffix" ;
 .
