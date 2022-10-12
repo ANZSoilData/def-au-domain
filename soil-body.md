@@ -9,6 +9,8 @@ A Soil Body is bounded above by the surface and below by the [R-Horizon](soil-la
 
 Soil bodies are characterised through [observations](sosa.md) made on [soil profiles](soil-profile.md) at [soil sites](site.md). 
 
+Soil bodies may be be classified using the order-suborder-greatgroup-subgroup-family system used for [soil profiles](soil-profile.md). 
+
 ![Soil body](image/Soil-body.png)
 
 Note: [Soil Horizon](soil-layer.md) is a special kind of layer, defined on pedological grounds. 
