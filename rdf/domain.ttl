@@ -1145,53 +1145,6 @@ ansis:Erosion
   a owl:Class ;
   skos:prefLabel "Erosion" ;
 .
-ansis:Horizon-code
-  a rdfs:Datatype ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "B"
-          "C"
-          "D"
-          "O"
-          "P"
-          "R"
-          xsd:string
-        ) ;
-    ] ;
-  skos:note "The long-established codes O, P, A, B ,C ,D, R are used wherever possible. Transitional horizons are designated with combinations of these.  " ;
-  skos:prefLabel "Horizon code" ;
-.
-ansis:Horizon-suffix
-  a rdfs:Datatype ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "b"
-          "c"
-          "d"
-          "e"
-          "f"
-          "g"
-          "h"
-          "j"
-          "k"
-          "n"
-          "p"
-          "q"
-          "r"
-          "s"
-          "t"
-          "w"
-          "x"
-          "y"
-          "z"
-          "?"
-        ) ;
-    ] ;
-  skos:prefLabel "Horizon designation suffix" ;
-.
 ansis:HorizonDesignation
   a owl:Class ;
   rdfs:subClassOf [
@@ -1752,17 +1705,17 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:relatedPeds ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedSegregations ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedVoids ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:structure ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -3436,12 +3389,6 @@ ansis:relatedPans
   schema:domainIncludes ansis:SoilLayer ;
   rdfs:range ansis:SoilPans ;
   skos:prefLabel "related Pans" ;
-.
-ansis:relatedPeds
-  a owl:ObjectProperty ;
-  schema:domainIncludes ansis:SoilLayer ;
-  rdfs:range ansis:SoilStructure ;
-  skos:prefLabel "related Peds" ;
 .
 ansis:relatedProfile
   a owl:ObjectProperty ;
