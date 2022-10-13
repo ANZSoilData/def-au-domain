@@ -5,8 +5,10 @@
 
 @prefix ansis: <https://anzsoil.org/def/au/domain/> .
 @prefix asc: <http://anzsoil.org/def/au/asc/> .
+@prefix asls: <https://anzsoil.org/def/au/domain/asls-code/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ls: <http://anzsoil.org/def/au/asls/land-surface/> .
 @prefix my: <https://my.example.org/soil/> .
 @prefix orcid: <https://orcid.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -23,6 +25,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix sp: <http://anzsoil.org/def/au/asls/soil-profile/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -404,128 +407,32 @@ asc:Water-repellence-code
     ] ;
   skos:prefLabel "ASC Water repellence code" ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-0>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-1>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-2>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-3>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-4>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-5>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-6>
-  a ansis:FragmentAbundance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-A>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-AP>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-AT>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-R>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-RP>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-RT>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-S>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-SP>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-ST>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-U>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-UP>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-shape-UT>
-  a ansis:FragmentShape ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-1>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-2>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-3>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-4>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-5>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-6>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-size-7>
-  a ansis:FragmentSize ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-0>
+ls:disturbance-of-site-0
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-1>
+ls:disturbance-of-site-1
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-2>
+ls:disturbance-of-site-2
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-3>
+ls:disturbance-of-site-3
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-4>
+ls:disturbance-of-site-4
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-5>
+ls:disturbance-of-site-5
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-6>
+ls:disturbance-of-site-6
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-7>
+ls:disturbance-of-site-7
   a ansis:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/land-surface/disturbance-of-site-8>
+ls:disturbance-of-site-8
   a ansis:Disturbance ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/lithology-CC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/lithology-IS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/lithology-OT>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/lithology-OW>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/lithology-PU>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/land-surface/lithology-SS>
-  a ansis:Lithology ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-ALC>
   a ansis:LandformElement ;
@@ -953,594 +860,6 @@ asc:Water-repellence-code
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VM>
   a ansis:LandformPattern ;
 .
-sp:coarse-fragments-distribution-D
-  a ansis:FragmentDistribution ;
-.
-sp:coarse-fragments-distribution-R
-  a ansis:FragmentDistribution ;
-.
-sp:coarse-fragments-distribution-S
-  a ansis:FragmentDistribution ;
-.
-sp:coarse-fragments-distribution-U
-  a ansis:FragmentDistribution ;
-.
-sp:field-texture-AP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-C
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CFS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CFS-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CFS-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CKS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CKS-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CKS-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CL-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CL-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLFS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLFS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLFS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLFS-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLFS-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLKS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLKS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLKS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLKS-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLKS-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLS-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CLS-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CS-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-CS-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSCL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSCL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSCL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSCL-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSCL-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSLC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSLC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSLC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSLMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSLMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSLMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSMHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSMHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-FSMHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-GP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-HC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-HC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-HC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-HP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-IP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSCL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSCL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSCL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSCL-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSCL-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSLC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSLC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSLC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSLMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSLMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSLMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSMHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSMHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-KSMHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-L
-  a ansis:TextureGrade ;
-.
-sp:field-texture-L-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-L-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LFS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LFS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LFS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LKS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LKS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LKS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LS
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LS-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-LS-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-MC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-MC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-MC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-MHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-MHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-MHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-S
-  a ansis:TextureGrade ;
-.
-sp:field-texture-S-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-S-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SCL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SCL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SCL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SCL-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SCL-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SLC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SLC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SLC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SLMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SLMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SLMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SMHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SMHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SMHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-SP
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZCL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZCL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZCL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZCL-heavy
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZCL-light
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZHC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZL
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZL-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZL-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZLC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZLC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZLC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZLMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZLMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZLMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZMC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZMC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZMC-I
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZMHC
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZMHC-A
-  a ansis:TextureGrade ;
-.
-sp:field-texture-ZMHC-I
-  a ansis:TextureGrade ;
-.
-sp:horizon-A1
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-A2
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-A3
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-B1
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-B2
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-B3
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-O1
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-O2
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-P1
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-P2
-  a ansis:PrimaryNotation ;
-.
-sp:horizon-boundary-distinctness-A
-  a ansis:Boundary-distinctness ;
-.
-sp:horizon-boundary-distinctness-C
-  a ansis:Boundary-distinctness ;
-.
-sp:horizon-boundary-distinctness-D
-  a ansis:Boundary-distinctness ;
-.
-sp:horizon-boundary-distinctness-G
-  a ansis:Boundary-distinctness ;
-.
-sp:horizon-boundary-distinctness-S
-  a ansis:Boundary-distinctness ;
-.
-sp:horizon-boundary-shape-B
-  a ansis:BoundaryShape ;
-.
-sp:horizon-boundary-shape-I
-  a ansis:BoundaryShape ;
-.
-sp:horizon-boundary-shape-S
-  a ansis:BoundaryShape ;
-.
-sp:horizon-boundary-shape-T
-  a ansis:BoundaryShape ;
-.
-sp:horizon-boundary-shape-W
-  a ansis:BoundaryShape ;
-.
-sp:horizons-A
-  a ansis:PrimaryNotation ;
-.
-sp:horizons-B
-  a ansis:PrimaryNotation ;
-.
-sp:horizons-C
-  a ansis:PrimaryNotation ;
-.
-sp:horizons-D
-  a ansis:PrimaryNotation ;
-.
-sp:horizons-O
-  a ansis:PrimaryNotation ;
-.
-sp:horizons-P
-  a ansis:PrimaryNotation ;
-.
-sp:horizons-R
-  a ansis:PrimaryNotation ;
-.
 sp:observation-type-A
   a ansis:Profile-construction ;
 .
@@ -1552,21 +871,6 @@ sp:observation-type-E
 .
 sp:observation-type-P
   a ansis:Profile-construction ;
-.
-sp:structure-pedality-grade-G
-  a ansis:PedalityGrade ;
-.
-sp:structure-pedality-grade-M
-  a ansis:PedalityGrade ;
-.
-sp:structure-pedality-grade-S
-  a ansis:PedalityGrade ;
-.
-sp:structure-pedality-grade-V
-  a ansis:PedalityGrade ;
-.
-sp:structure-pedality-grade-W
-  a ansis:PedalityGrade ;
 .
 sp:surfacecondition-C
   a ansis:DryCondition ;
@@ -1619,404 +923,131 @@ sp:water-repellence-R
 sp:water-repellence-S
   a ansis:WaterRepellence ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-AC>
+subst:genesis-AC
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-AL>
+subst:genesis-AL
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-AT>
+subst:genesis-AT
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-BE>
+subst:genesis-BE
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-CD>
+subst:genesis-CD
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-CN>
+subst:genesis-CN
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-CO>
+subst:genesis-CO
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-DR>
+subst:genesis-DR
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-ED>
+subst:genesis-ED
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-ES>
+subst:genesis-ES
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-ET>
+subst:genesis-ET
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-EV>
+subst:genesis-EV
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-FC>
+subst:genesis-FC
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-FI>
+subst:genesis-FI
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-GY>
+subst:genesis-GY
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-HA>
+subst:genesis-HA
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-IG>
+subst:genesis-IG
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-IN>
+subst:genesis-IN
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-KC>
+subst:genesis-KC
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-LA>
+subst:genesis-LA
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-LC>
+subst:genesis-LC
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-LD>
+subst:genesis-LD
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-LO>
+subst:genesis-LO
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-MA>
+subst:genesis-MA
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-MD>
+subst:genesis-MD
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-ME>
+subst:genesis-ME
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-PA>
+subst:genesis-PA
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-PC>
+subst:genesis-PC
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-PL>
+subst:genesis-PL
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-PW>
+subst:genesis-PW
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-RB>
+subst:genesis-RB
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SA>
+subst:genesis-SA
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SC>
+subst:genesis-SC
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SD>
+subst:genesis-SD
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SE>
+subst:genesis-SE
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SH>
+subst:genesis-SH
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SP>
+subst:genesis-SP
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-SR>
+subst:genesis-SR
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-ST>
+subst:genesis-ST
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-TI>
+subst:genesis-TI
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-VA>
+subst:genesis-VA
   a ansis:MassGenesis ;
 .
-<http://anzsoil.org/def/au/asls/substrate/genesis-VO>
+subst:genesis-VO
   a ansis:MassGenesis ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AD>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AF>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AG>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AH>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AM>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AN>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AP>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-AS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-BA>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-BB>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-BO>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-BR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-C>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-CB>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-CG>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-CH>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-CO>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-CU>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-DI>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-DM>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-DR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-FC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GA>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GD>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GE>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GN>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GV>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GW>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-GY>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-HA>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-HO>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-IG>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-JA>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-KA>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-KC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-KL>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-KM>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-KR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-KS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-LC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-LI>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-M>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MB>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MD>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-ME>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MG>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MI>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-ML>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MU>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-MY>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PE>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PG>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PH>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PL>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PO>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-PY>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-QP>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-QS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-QU>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-QZ>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-R>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-RB>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-RH>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-S>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SA>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SD>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SH>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SK>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SL>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SN>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-ST>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-SY>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-TR>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-TU>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-UC>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-VB>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-VG>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-Z>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/lithology-ZS>
-  a ansis:Lithology ;
-.
-<http://anzsoil.org/def/au/asls/substrate/material-strength-M>
-  a ansis:Strength ;
-.
-<http://anzsoil.org/def/au/asls/substrate/material-strength-S>
-  a ansis:Strength ;
-.
-<http://anzsoil.org/def/au/asls/substrate/material-strength-VS>
-  a ansis:Strength ;
-.
-<http://anzsoil.org/def/au/asls/substrate/material-strength-VW>
-  a ansis:Strength ;
-.
-<http://anzsoil.org/def/au/asls/substrate/material-strength-W>
-  a ansis:Strength ;
 .
 schema:domainIncludes
   a owl:ObjectProperty ;
@@ -2052,37 +1083,50 @@ sosa:ObservableProperty
   owl:imports ssn: ;
   owl:imports <https://linked.data.gov.au/def/project> ;
 .
-ansis:Boundary-distinctness
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Boundary distinctness" ;
-.
-ansis:BoundaryShape
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Shape of lower boundary" ;
-.
 ansis:CoarseFragments
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:abundance ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Coarse-fragments-distribution ;
       owl:onProperty ansis:distribution ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Material-strength ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              asls:Rock-lithology
+              asls:Unconsolidated-lithology
+              asls:Coarse-fragments-lithology
+            ) ;
+        ] ;
+      owl:onProperty ansis:lithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Coarse-fragments-shape ;
       owl:onProperty ansis:shape ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Coarse-fragments-size ;
       owl:onProperty ansis:size ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange asls:Coarse-fragments-abundance ;
+      owl:onProperty ansis:abundance ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Coarse fragments" ;
 .
@@ -2100,26 +1144,6 @@ ansis:DryCondition
 ansis:Erosion
   a owl:Class ;
   skos:prefLabel "Erosion" ;
-.
-ansis:FragmentAbundance
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Coarse fragment abundance classifiers" ;
-.
-ansis:FragmentDistribution
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Coarse fragment distribution classifiers" ;
-.
-ansis:FragmentShape
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Coarse fragment shape classifiers" ;
-.
-ansis:FragmentSize
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Coarse fragment size classifiers" ;
 .
 ansis:Horizon-code
   a rdfs:Datatype ;
@@ -2183,12 +1207,12 @@ ansis:HorizonDesignation
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange ansis:Horizon-suffix ;
+      owl:onDataRange asls:Horizon-suffix ;
       owl:onProperty ansis:designation-suffix ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange ansis:Horizon-code ;
+      owl:onDataRange asls:Horizon-code ;
       owl:onProperty ansis:designation-master ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -2360,11 +1384,6 @@ ansis:LandsurveySite
   skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
   skos:scopeNote "More specific types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site" ;
 .
-ansis:Lithology
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Lithology type" ;
-.
 ansis:MassGenesis
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
@@ -2415,17 +1434,6 @@ ansis:Outcrop
       owl:onProperty ansis:abundance ;
     ] ;
   skos:prefLabel "Outcrop" ;
-.
-ansis:PedalityGrade
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Pedality grade" ;
-.
-ansis:PrimaryNotation
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:definition "Primary notation for a horizon-type within a sequence" ;
-  skos:prefLabel "Horizon notation" ;
 .
 ansis:Profile-construction
   a owl:Class ;
@@ -2653,7 +1661,8 @@ ansis:SoilCutans
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Cutans-distinctness ;
       owl:onProperty ansis:distinctness ;
     ] ;
   skos:prefLabel "Cutans" ;
@@ -2663,17 +1672,14 @@ ansis:SoilHorizon
   rdfs:subClassOf ansis:SoilLayer ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom ansis:BoundaryShape ;
-      owl:onProperty ansis:shape ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Boundary-distinctness ;
       owl:onProperty ansis:distinctness ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Boundary-shape ;
       owl:onProperty ansis:shape ;
     ] ;
   rdfs:subClassOf [
@@ -2708,11 +1714,6 @@ ansis:SoilHorizonR
 .
 ansis:SoilLayer
   a owl:Class ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom ansis:TextureGrade ;
-      owl:onProperty ansis:texture ;
-    ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -2762,6 +1763,18 @@ ansis:SoilLayer
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedVoids ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              asls:Field-texture-grade-mineral
+              asls:Field-texture-organic
+            ) ;
+        ] ;
+      owl:onProperty ansis:texture ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2821,20 +1834,6 @@ ansis:SoilPans
       owl:onProperty ansis:structure ;
     ] ;
   skos:prefLabel "Pans" ;
-.
-ansis:SoilPeds
-  a owl:Class ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty dcterms:type ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:size ;
-    ] ;
-  skos:prefLabel "Peds" ;
 .
 ansis:SoilProfile
   a owl:Class ;
@@ -3063,6 +2062,28 @@ Samples are taken from profiles, and observations made on those samples in order
 .""" ;
   skos:prefLabel "Soil site" ;
 .
+ansis:SoilStructure
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Pedality-grade ;
+      owl:onProperty ansis:grade ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Pedality-type ;
+      owl:onProperty ansis:type ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Pedality-size ;
+      owl:onProperty ansis:size ;
+    ] ;
+  skos:prefLabel "Soil structure" ;
+.
 ansis:SoilSuborder
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
@@ -3102,11 +2123,6 @@ ansis:SoilVoids
     ] ;
   skos:prefLabel "Voids in soil - pores and cracks" ;
 .
-ansis:Strength
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Strength of material" ;
-.
 ansis:Substrate
   a owl:Class ;
   rdfs:subClassOf [
@@ -3142,11 +2158,6 @@ ansis:Substrate
   skos:definition "observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil." ;
   skos:prefLabel "Substrate" ;
 .
-ansis:TextureGrade
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "FIeld texture grade" ;
-.
 ansis:Treatment
   a owl:Class ;
   rdfs:subClassOf sosa:Actuation ;
@@ -3168,7 +2179,6 @@ ansis:abundance
   schema:domainIncludes ansis:SoilMottles ;
   schema:domainIncludes ansis:SoilSegregations ;
   schema:domainIncludes ansis:SoilVoids ;
-  rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:exactMatch prop:abundance ;
   skos:narrowMatch prop:coarse-fragments-abundance ;
   skos:narrowMatch prop:cutans-abundance ;
@@ -3193,6 +2203,613 @@ ansis:alk-earth-carbonates
   schema:domainIncludes ansis:SoilLayer ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "soil alkaline earth carbonates" ;
+.
+asls:Boundary-distinctness
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Boundaries p199" ;
+  rdfs:seeAlso sp:horizon-boundary-distinctness ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "S"
+          "A"
+          "C"
+          "G"
+          "D"
+        ) ;
+    ] ;
+  skos:prefLabel "Boundary distinctness" ;
+.
+asls:Boundary-shape
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Boundaries p200" ;
+  rdfs:seeAlso sp:horizon-boundary-shape ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "S"
+          "W"
+          "I"
+          "T"
+          "B"
+        ) ;
+    ] ;
+  skos:prefLabel "Boundary shape" ;
+.
+asls:Coarse-fragments-abundance
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface: Coarse fragments p139" ;
+  rdfs:seeAlso ls:coarse-fragments-abundance ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "0"
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+          "6"
+        ) ;
+    ] ;
+  skos:prefLabel "Coarse fragments abundance" ;
+.
+asls:Coarse-fragments-distribution
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil profile: Coarse fragments p170" ;
+  rdfs:seeAlso sp:coarse-fragments-distribution ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "U"
+          "R"
+          "S"
+          "D"
+        ) ;
+    ] ;
+  skos:prefLabel "Coarse fragments disttribution" ;
+.
+asls:Coarse-fragments-lithology
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface: Coarse fragments p142" ;
+  rdfs:seeAlso ls:coarse-fragments-lithology ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "IS"
+          "SS"
+          "CC"
+          "PU"
+          "OW"
+          "OT"
+        ) ;
+    ] ;
+  skos:prefLabel "Coarse fragments lithology" ;
+.
+asls:Coarse-fragments-shape
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface: Coarse fragments p142" ;
+  rdfs:seeAlso ls:coarse-fragments-shape ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "S"
+          "U"
+          "R"
+          "AT"
+          "ST"
+          "UT"
+          "RT"
+          "AP"
+          "SP"
+          "UP"
+          "RP"
+        ) ;
+    ] ;
+  skos:prefLabel "Coarse fragments shape" ;
+.
+asls:Coarse-fragments-size
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface: Coarse fragments p140" ;
+  rdfs:seeAlso ls:coarse-fragments-size ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+          "6"
+          "7"
+        ) ;
+    ] ;
+  skos:prefLabel "Coarse fragments size" ;
+.
+asls:Cutans-distinctness
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Cutans p183" ;
+  rdfs:seeAlso sp:horizon-boundary-distinctness ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "F"
+          "D"
+          "P"
+        ) ;
+    ] ;
+  skos:prefLabel "Cutans distinctness" ;
+.
+asls:Field-texture-grade-mineral
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Field texture p164" ;
+  rdfs:seeAlso sp:field-texture-mineral ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "CL"
+          "CL+"
+          "CL-"
+          "CLA"
+          "CLI"
+          "CLS"
+          "CLS-I"
+          "CLFS"
+          "CLKS"
+          "CLS-"
+          "CLS+"
+          "CLS-A"
+          "CS"
+          "CS+"
+          "CFS"
+          "CS-"
+          "CKS"
+          "HC"
+          "HCI"
+          "HCA"
+          "KSHC"
+          "SHC"
+          "FSHC"
+          "ZHC"
+          "L"
+          "LI"
+          "LA"
+          "LC"
+          "ZLC"
+          "SLC"
+          "LCI"
+          "LCA"
+          "KSLC"
+          "FSLC"
+          "LMC"
+          "ZLMC"
+          "FSLMC"
+          "KSLMC"
+          "LMCI"
+          "SLMC"
+          "LMCA"
+          "LS"
+          "LFS"
+          "LSI"
+          "LKS"
+          "LSA"
+          "MC"
+          "ZMC"
+          "MCI"
+          "SMC"
+          "FSMC"
+          "MCA"
+          "KSMC"
+          "MHC"
+          "ZMHC"
+          "MHCA"
+          "SMHC"
+          "FSMHC"
+          "MHCI"
+          "KSMHC"
+          "S"
+          "SA"
+          "KS"
+          "SI"
+          "FS"
+          "SCL"
+          "SCL-"
+          "SCL+"
+          "FSCL"
+          "SCLA"
+          "SCLI"
+          "KSCL"
+          "SL"
+          "FSL"
+          "KSL"
+          "SLA"
+          "SLI"
+          "ZCL"
+          "ZCL-"
+          "ZCLI"
+          "ZCLA"
+          "ZCL+"
+          "ZL"
+          "ZLI"
+          "ZLA"
+        ) ;
+    ] ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "CL"
+          "CLS"
+          "CLFS"
+          "CLKS"
+          "CS"
+          "CFS"
+          "CKS"
+          "HC"
+          "KSHC"
+          "SHC"
+          "FSHC"
+          "ZHC"
+          "L"
+          "LC"
+          "ZLC"
+          "SLC"
+          "KSLC"
+          "FSLC"
+          "LMC"
+          "ZLMC"
+          "FSLMC"
+          "KSLMC"
+          "SLMC"
+          "LS"
+          "LFS"
+          "LKS"
+          "MC"
+          "ZMC"
+          "SMC"
+          "FSMC"
+          "KSMC"
+          "MHC"
+          "ZMHC"
+          "SMHC"
+          "FSMHC"
+          "KSMHC"
+          "S"
+          "KS"
+          "FS"
+          "SCL"
+          "FSCL"
+          "KSCL"
+          "SL"
+          "FSL"
+          "KSL"
+          "ZCL"
+          "ZL"
+        ) ;
+    ] ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "CL"
+          "CLS"
+          "CS"
+          "HC"
+          "L"
+          "LC"
+          "LMC"
+          "LS"
+          "MC"
+          "MHC"
+          "S"
+          "SCL"
+          "SL"
+          "ZCL"
+          "ZL"
+        ) ;
+    ] ;
+  skos:prefLabel "Field-texture grade - mineral soils" ;
+.
+asls:Field-texture-organic
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Field texture p169" ;
+  rdfs:seeAlso sp:field-texture-organic ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "AP"
+          "CP"
+          "GP"
+          "HP"
+          "IP"
+          "LP"
+          "SP"
+        ) ;
+    ] ;
+  skos:prefLabel "Field-texture grade - organic soils" ;
+.
+asls:Field-texture-qualification
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Field texture p166" ;
+  rdfs:seeAlso sp:field-texture-qualifier ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "-"
+          "+"
+          "A"
+          "I"
+        ) ;
+    ] ;
+  skos:prefLabel "Field-texture qualification" ;
+.
+asls:Horizon-code
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Horizons p148" ;
+  rdfs:seeAlso sp:horizon-type ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "B"
+          "C"
+          "D"
+          "O"
+          "P"
+          "R"
+          xsd:string
+        ) ;
+    ] ;
+  skos:note "The long-established codes O, P, A, B ,C ,D, R are used wherever possible. Transitional horizons are designated with combinations of these.  " ;
+  skos:prefLabel "Horizon code" ;
+.
+asls:Horizon-suffix
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Horizons p153" ;
+  rdfs:seeAlso sp:horizon-suffix ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "b"
+          "c"
+          "d"
+          "e"
+          "f"
+          "g"
+          "h"
+          "j"
+          "k"
+          "n"
+          "p"
+          "q"
+          "r"
+          "s"
+          "t"
+          "w"
+          "x"
+          "y"
+          "z"
+          "?"
+        ) ;
+    ] ;
+  skos:prefLabel "Horizon designation suffix" ;
+.
+asls:Material-strength
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Substrate: Table 32 p209" ;
+  rdfs:seeAlso subst:material-strength ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "VW"
+          "W"
+          "M"
+          "S"
+          "VS"
+        ) ;
+    ] ;
+  skos:prefLabel "Strength of material" ;
+.
+asls:Moisture-status
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
+  rdfs:seeAlso sp:colour-stat ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "M"
+          "D"
+        ) ;
+    ] ;
+  skos:prefLabel "Moisture status" ;
+.
+asls:Mottle-type
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
+  rdfs:seeAlso sp:mottle-type ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "M"
+          "X"
+          "Y"
+          "Z"
+        ) ;
+    ] ;
+  skos:prefLabel "Mottle type" ;
+.
+asls:Pedality-grade
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Structure p171" ;
+  rdfs:seeAlso sp:structure-pedality-grade ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "G"
+          "V"
+          "W"
+          "M"
+          "S"
+        ) ;
+    ] ;
+  skos:prefLabel "Pedality grade" ;
+.
+asls:Pedality-size
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Structure p172" ;
+  rdfs:seeAlso sp:structure-pedality-size ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+          "6"
+          "7"
+          "8"
+          "9"
+        ) ;
+    ] ;
+  skos:prefLabel "Pedality size" ;
+.
+asls:Pedality-type
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil Profile: Structure p173" ;
+  rdfs:seeAlso sp:structure-pedality-type ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "PL"
+          "PR"
+          "CO"
+          "AB"
+          "SB"
+          "PO"
+          "LE"
+          "GR"
+          "CA"
+        ) ;
+    ] ;
+  skos:prefLabel "Pedality type" ;
+.
+asls:Rock-lithology
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Substrate: Table 35 p214" ;
+  rdfs:seeAlso subst:lithology-rock ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "AC"
+          "AD"
+          "AF"
+          "AG"
+          "AH"
+          "AM"
+          "AN"
+          "AP"
+          "AR"
+          "AS"
+          "BA"
+          "BB"
+          "BR"
+          "C"
+          "CG"
+          "CH"
+          "CO"
+          "CU"
+          "DI"
+          "DM"
+          "DR"
+          "FC"
+          "GA"
+          "GD"
+          "GE"
+          "GN"
+          "GR"
+          "GS"
+          "GV"
+          "GW"
+          "GY"
+          "HA"
+          "HO"
+          "IG"
+          "JA"
+          "KA"
+          "KC"
+          "KL"
+          "KM"
+          "KR"
+          "KS"
+          "LC"
+          "LI"
+          "M"
+          "MB"
+          "MD"
+          "ME"
+          "MG"
+          "MI"
+          "ML"
+          "MS"
+          "MU"
+          "MY"
+          "PC"
+          "PE"
+          "PG"
+          "PH"
+          "PL"
+          "PO"
+          "PY"
+          "QP"
+          "QS"
+          "QU"
+          "QZ"
+          "R"
+          "RB"
+          "RH"
+          "S"
+          "SA"
+          "SD"
+          "SH"
+          "SK"
+          "SL"
+          "SR"
+          "ST"
+          "SY"
+          "TR"
+          "TU"
+          "UC"
+          "VB"
+          "VG"
+          "Z"
+          "ZS"
+        ) ;
+    ] ;
+  skos:prefLabel "Rock lithology" ;
+.
+asls:Unconsolidated-lithology
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Substrate: Table 33 p210" ;
+  rdfs:seeAlso subst:lithology-unconsolidated ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "AF"
+          "AS"
+          "BB"
+          "BO"
+          "C"
+          "CB"
+          "GV"
+          "KS"
+          "ML"
+          "S"
+          "SK"
+          "SN"
+          "Z"
+        ) ;
+    ] ;
+  skos:prefLabel "Unconsodlidated material lithology" ;
 .
 ansis:c_n_ratio
   a owl:DatatypeProperty ;
@@ -3442,31 +3059,34 @@ ansis:designation
 .
 ansis:designation-master
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation master" ;
 .
 ansis:designation-prefix
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:range xsd:integer ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation prefix" ;
 .
 ansis:designation-subdivision
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:range xsd:integer ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation subdivision" ;
 .
 ansis:designation-suffix
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:subPropertyOf skos:notation ;
   skos:prefLabel "Soil horizon designation suffix" ;
 .
 ansis:distinctness
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilHorizon ;
-  rdfs:range ansis:Boundary-distinctness ;
   skos:definition "distinctness of lower boundary" ;
   skos:exactMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "boundary distinctness" ;
@@ -3479,10 +3099,9 @@ ansis:distinctness-pos
   skos:prefLabel "distinctness(position)" ;
 .
 ansis:distribution
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
-  rdfs:range ansis:FragmentDistribution ;
   skos:exactMatch prop:coarse-fragments-distribution ;
   skos:prefLabel "distribution" ;
 .
@@ -3502,6 +3121,7 @@ ansis:fe_al_si
 .
 ansis:frequency
   a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:exactMatch prop:frequency ;
   skos:prefLabel "frequency" ;
@@ -3519,6 +3139,13 @@ ansis:geomorphologyStatus
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:LandformElement ;
   skos:prefLabel "status of geomorphological activity" ;
+.
+ansis:grade
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilStructure ;
+  skos:exactMatch prop:structure-pedality-grade ;
+  skos:prefLabel "grade" ;
 .
 ansis:grain-size
   a owl:DatatypeProperty ;
@@ -3585,12 +3212,11 @@ ansis:lime-req
   skos:prefLabel "soil lime requirement" ;
 .
 ansis:lithology
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
   schema:domainIncludes ansis:Outcrop ;
   schema:domainIncludes ansis:Substrate ;
-  rdfs:range ansis:Lithology ;
   skos:definition "lithological type of material" ;
   skos:exactMatch prop:lithology ;
   skos:narrowMatch prop:coarse-fragments-lithology ;
@@ -3660,16 +3286,8 @@ ansis:pH
 ansis:pedality
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  rdfs:range ansis:SoilPeds ;
+  rdfs:range ansis:SoilStructure ;
   skos:prefLabel "pedality" ;
-.
-ansis:pedality-grade
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:SoilPeds ;
-  rdfs:range ansis:PedalityGrade ;
-  skos:exactMatch prop:structure-pedality-grade ;
-  skos:prefLabel "pedality grade" ;
 .
 ansis:phosphorus
   a owl:DatatypeProperty ;
@@ -3822,7 +3440,7 @@ ansis:relatedPans
 ansis:relatedPeds
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilLayer ;
-  rdfs:range ansis:SoilPeds ;
+  rdfs:range ansis:SoilStructure ;
   skos:prefLabel "related Peds" ;
 .
 ansis:relatedProfile
@@ -3898,7 +3516,7 @@ ansis:sat-extracts
   skos:prefLabel "soil saturation extracts" ;
 .
 ansis:shape
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
   schema:domainIncludes ansis:SoilHorizon ;
@@ -3925,13 +3543,13 @@ ansis:siteDisturbance
   skos:prefLabel "disturbance of site" ;
 .
 ansis:size
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
   schema:domainIncludes ansis:Roots ;
   schema:domainIncludes ansis:SoilMottles ;
-  schema:domainIncludes ansis:SoilPeds ;
   schema:domainIncludes ansis:SoilSegregations ;
+  schema:domainIncludes ansis:SoilStructure ;
   schema:domainIncludes ansis:SoilVoids ;
   skos:exactMatch prop:size ;
   skos:narrowMatch prop:coarse-fragments-size ;
@@ -3945,14 +3563,13 @@ ansis:size
   skos:prefLabel "size" ;
 .
 ansis:strength
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
   schema:domainIncludes ansis:SoilConsistence ;
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilSegregations ;
   schema:domainIncludes ansis:Substrate ;
-  rdfs:range ansis:Strength ;
   skos:exactMatch prop:strength ;
   skos:narrowMatch prop:consistence-strength ;
   skos:narrowMatch prop:material-strength ;
@@ -3963,6 +3580,7 @@ ansis:structure
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilPans ;
+  rdfs:range ansis:SoilStructure ;
   skos:exactMatch prop:structure ;
   skos:narrowMatch prop:material-structure ;
   skos:narrowMatch prop:pans-structure ;
@@ -3978,7 +3596,7 @@ ansis:sulfur
   skos:prefLabel "soil sulfur" ;
 .
 ansis:texture
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:Substrate ;
@@ -3988,14 +3606,15 @@ ansis:texture
   skos:prefLabel "material texture" ;
 .
 ansis:type
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilConsistence ;
   schema:domainIncludes ansis:SoilCutans ;
   schema:domainIncludes ansis:SoilPans ;
-  schema:domainIncludes ansis:SoilPeds ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSegregations ;
   schema:domainIncludes ansis:SoilSite ;
+  schema:domainIncludes ansis:SoilStructure ;
   rdfs:subPropertyOf dcterms:type ;
   skos:definition "type of ansis soil entity" ;
   skos:exactMatch prop:type ;
