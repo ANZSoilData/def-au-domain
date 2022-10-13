@@ -34,39 +34,51 @@ my:A11-in-P1
   a ansis:SoilSample ;
   skos:prefLabel "Layer A11 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A11 ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-3 ;
-  ansis:coarse-fragment-abundance "10 %" ;
+  ansis:relatedCoarseFragments [
+    ansis:abundance "3"^^asls:Coarse-fragments-abundance ;
+    ansis:abundance "10 %" ;
+  ] ;
   ansis:density-bulk "1.2 g/cm3" ;
   ansis:depth-lower "17 cm" ;
   ansis:depth-upper "0 cm" ;
-  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
-  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
+  ansis:texture "SL" ;
+  ansis:structure [
+    ansis:grade "W" ;
+  ] ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:A12-in-P1
   a ansis:SoilSample ;
   skos:prefLabel "Layer A12 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A12 ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-  ansis:coarse-fragment-abundance "5 %" ;
+  ansis:relatedCoarseFragments [
+    ansis:abundance "2"^^asls:Coarse-fragments-abundance ;
+    ansis:abundance "5 %" ;
+  ] ;
   ansis:density-bulk "1.4 g/cm3" ;
   ansis:depth-lower "35 cm" ;
   ansis:depth-upper "17 cm" ;
-  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
-  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-W> ;
+  ansis:texture "SL" ;
+  ansis:structure [
+    ansis:grade "W" ;
+  ] ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:A2-in-P1
   a ansis:SoilSample ;
   skos:prefLabel "Layer A2 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A2 ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
-  ansis:coarse-fragment-abundance "0 %" ;
+  ansis:relatedCoarseFragments [
+    ansis:abundance "0"^^asls:Coarse-fragments-abundance ;
+    ansis:abundance "0 %" ;
+  ] ;
   ansis:density-bulk "1.5 g/cm3" ;
   ansis:depth-lower "58 cm" ;
   ansis:depth-upper "35 cm" ;
-  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-SL> ;
-  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-v> ;
+  ansis:texture "SL" ;
+  ansis:structure [
+    ansis:grade "V" ;
+  ] ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:B-A11-P1
@@ -74,7 +86,7 @@ my:B-A11-P1
   skos:prefLabel "Lower Boundary A11 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A11 ;
   ansis:depth "17 cm" ;
-  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-D> ;
+  ansis:distinctness "D" ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:B-A12-P1
@@ -82,7 +94,7 @@ my:B-A12-P1
   skos:prefLabel "Lower Boundary A12 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A12 ;
   ansis:depth "35 cm" ;
-  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-C> ;
+  ansis:distinctness "C" ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:B-A2-P1
@@ -90,7 +102,7 @@ my:B-A2-P1
   skos:prefLabel "Lower Boundary A2 in Profile 1" ;
   sosa:isSampleOf my:Horizon_A2 ;
   ansis:depth "58 cm" ;
-  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-A> ;
+  ansis:distinctness "A" ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:B-B21s-P1
@@ -98,33 +110,41 @@ my:B-B21s-P1
   skos:prefLabel "Lower Boundary B21s in Profile 1" ;
   sosa:isSampleOf my:Horizon_B21s ;
   ansis:depth "80 cm" ;
-  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-G> ;
+  ansis:distinctness "G" ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:B21s-in-P1
   a ansis:SoilSample ;
   skos:prefLabel "Layer B21s in Profile 1" ;
   sosa:isSampleOf my:Horizon_B21s ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
-  ansis:coarse-fragment-abundance "0 %" ;
+  ansis:relatedCoarseFragments [
+    ansis:abundance "0"^^asls:Coarse-fragments-abundance ;
+    ansis:abundance "0 %" ;
+  ] ;
   ansis:density-bulk "1.3 g/cm3" ;
   ansis:depth-lower "80 cm" ;
   ansis:depth-upper "58 cm" ;
-  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-MC> ;
-  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+  ansis:texture "MC" ;
+  ansis:structure [
+    ansis:grade "M" ;
+  ] ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:B22s-in-P1
   a ansis:SoilSample ;
   skos:prefLabel "Layer B22s in Profile 1" ;
   sosa:isSampleOf my:Horizon_B22s ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-0 ;
-  ansis:coarse-fragment-abundance "0 %" ;
+  ansis:relatedCoarseFragments [
+    ansis:abundance "0"^^asls:Coarse-fragments-abundance ;
+    ansis:abundance "0 %" ;
+  ] ;
   ansis:density-bulk "1.3 g/cm3" ;
   ansis:depth-lower "106 cm" ;
   ansis:depth-upper "80 cm" ;
-  ansis:fieldTexture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-LMC> ;
-  ansis:pedality-grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+  ansis:texture "LMC" ;
+  ansis:structure [
+    ansis:grade "M" ;
+  ] ;
   ansis:relatedProfile my:Profile_1 ;
 .
 my:Body-88
@@ -342,7 +362,9 @@ my:Site_1
   geo:hasGeometry my:Polygon_1 ;
   skos:prefLabel "site 1" ;
   ansis:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+  ansis:relatedCoarseFragments [
+    ansis:abundance "2"^^asls:Coarse-fragments-abundance ;
+  ] ;
   ansis:has-erosion ls:erosion-wind ;
   ansis:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
   ansis:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
