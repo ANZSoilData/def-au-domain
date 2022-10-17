@@ -199,14 +199,6 @@ my:O1-dens-A12-in-P1
   sosa:observedProperty ansis:density-bulk ;
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
 .
-my:O2-dens-S1-A12-in-P1
-  a sosa:Observation ;
-  skos:prefLabel "Measurement of bulk density of sample 1 from horizon A12 in profile 1" ;
-  sosa:hasFeatureOfInterest my:S1-A12-in-P1 ;
-  sosa:hasSimpleResult "1.4 g/cm3" ;
-  sosa:observedProperty ansis:density-bulk ;
-  sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
-.
 my:O2-dens-S1-in-P1
   a sosa:Observation ;
   skos:prefLabel "Measurement of bulk density of sample 1 from profile 1" ;
@@ -243,6 +235,7 @@ my:O5-upperdepth-A12-in-P1
   sosa:madeBySensor <https://orcid.org/0000-0002-2991-2308> ;
   sosa:observedProperty ansis:depth-upper ;
   sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
+  sosa:usedProcedure <https://example.org/soil/procedure/P723h> ;
 .
 my:Point_1
   a sf:Point ;
@@ -264,31 +257,22 @@ my:Profile_1
       ansis:classification-suborder "AB" ;
     ] ;
   ansis:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
+  ansis:depth "106 cm" ;
   ansis:depth-RHorizon "106 cm" ;
   ansis:depth-Substrate "106 cm" ;
-  ansis:depth-lower "106 cm" ;
-  ansis:depth-upper "0 cm" ;
   ansis:relatedLayer my:Horizon_A11 ;
   ansis:relatedLayer my:Horizon_A12 ;
   ansis:relatedLayer my:Horizon_A2 ;
   ansis:relatedLayer my:Horizon_B21s ;
   ansis:relatedLayer my:Horizon_B22s ;
-  ansis:relatedSite my:Site_1 ;
+  ansis:relatedSoilSite my:Site_1 ;
   ansis:type ansis:profile-type-Single ;
-.
-my:S1-A12-in-P1
-  a ansis:SoilSample ;
-  skos:prefLabel "Sample 1 from depth range 25-30 cm in horizon A12 in profile P1" ;
-  sosa:isSampleOf my:Horizon_A12 ;
-  ansis:depth-lower "30 cm" ;
-  ansis:depth-upper "25 cm" ;
-  ansis:relatedProfile my:Profile_1 ;
-  ansis:type ansis:Sample-type-material ;
 .
 my:S1-in-P1
   a ansis:SoilSample ;
-  skos:prefLabel "Sample 1 from depth range 25-30 cm in profile P1" ;
+  skos:prefLabel "Sample 1 from depth range 25-30 cm from horizon A12 in profile P1" ;
   sosa:isSampleOf my:Body-88 ;
+  sosa:isSampleOf my:Horizon_A12 ;
   ansis:depth-lower "30 cm" ;
   ansis:depth-upper "25 cm" ;
   ansis:relatedProfile my:Profile_1 ;
@@ -380,7 +364,6 @@ my:visit-S1-2
   prov:endedAtTime "2022-09-07T13:00:00+10:00"^^xsd:dateTime ;
   prov:startedAtTime "2022-09-07T09:00:00+10:00"^^xsd:dateTime ;
   ansis:relatedActivity my:O1-dens-A12-in-P1 ;
-  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
   ansis:relatedActivity my:O3-dens-S2-in-P1 ;
   ansis:relatedActivity my:O4-dens-S3-in-P1 ;
   ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
