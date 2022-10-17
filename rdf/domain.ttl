@@ -1488,6 +1488,10 @@ ansis:Roots
     ] ;
   skos:prefLabel "Roots" ;
 .
+ansis:Sample-type-component
+  a ansis:SoilSampleType ;
+  skos:prefLabel "Component element" ;
+.
 ansis:Sample-type-in-place
   a ansis:SoilSampleType ;
   skos:prefLabel "In place sample type" ;
@@ -1667,15 +1671,6 @@ ansis:SoilClassification
       ansis:classification-suborder \"AB\" ;
 ]""" ;
   skos:prefLabel "Soil classification" ;
-.
-ansis:SoilConsistence
-  a owl:Class ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:strength ;
-    ] ;
-  skos:prefLabel "Consistence" ;
 .
 ansis:SoilFabric
   a owl:Class ;
@@ -3787,7 +3782,6 @@ ansis:strength
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
-  schema:domainIncludes ansis:SoilConsistence ;
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilSegregations ;
   schema:domainIncludes ansis:Substrate ;
@@ -3831,7 +3825,6 @@ ansis:type
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Cutans ;
   schema:domainIncludes ansis:Pans ;
-  schema:domainIncludes ansis:SoilConsistence ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:SoilSample ;
   schema:domainIncludes ansis:SoilSegregations ;

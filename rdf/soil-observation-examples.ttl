@@ -77,6 +77,13 @@ my:A12-in-P1
   ansis:texture "SL" ;
   ansis:type ansis:Sample-type-in-place ;
 .
+my:A12-in-P1-Roots
+  a ansis:SoilSample ;
+  skos:prefLabel "Roots component in Horizon A12 in Profile P1" ;
+  sosa:isSampleOf my:A12-in-P1 ;
+  ansis:relatedProfile my:Profile_1 ;
+  ansis:type ansis:Sample-type-component ;
+.
 my:A2-in-P1
   a ansis:SoilSample ;
   skos:prefLabel "Horizon A2 in Profile 1" ;
@@ -236,6 +243,22 @@ my:O5-upperdepth-A12-in-P1
   sosa:observedProperty ansis:depth-upper ;
   sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
   sosa:usedProcedure <https://example.org/soil/procedure/P723h> ;
+.
+my:O6-roots-a-A12-P1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of abundance of Roots component in Horizon A12 in Profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1-Roots ;
+  sosa:hasSimpleResult "2" ;
+  sosa:observedProperty ansis:abundance ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
+.
+my:O7-roots-s-A12-P1_1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of size of Roots component in Horizon A12 in Profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1-Roots ;
+  sosa:hasSimpleResult "4" ;
+  sosa:observedProperty ansis:size ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
 .
 my:Point_1
   a sf:Point ;
