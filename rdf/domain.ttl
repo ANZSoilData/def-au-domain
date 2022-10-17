@@ -1756,11 +1756,6 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:relatedConsistence ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedMottles ;
     ] ;
   rdfs:subClassOf [
@@ -1810,6 +1805,21 @@ ansis:SoilOrder
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:prefLabel "Soil order" ;
+.
+ansis:SoilPlasticity
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:type ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:degree ;
+    ] ;
+  skos:note "Plasticity degree only applies to Normal plasticity" ;
+  skos:prefLabel "Soil plasticity" ;
 .
 ansis:SoilProfile
   a owl:Class ;
@@ -2045,6 +2055,20 @@ Samples are taken from profiles, and observations made on those samples in order
 .""" ;
   skos:prefLabel "Soil site" ;
 .
+ansis:SoilStrength
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:soil-water-status ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  skos:prefLabel "Soil strength" ;
+.
 ansis:SoilStructure
   a owl:Class ;
   rdfs:subClassOf [
@@ -2070,7 +2094,7 @@ ansis:SoilStructure
       owl:onDataRange asls:Pedality-size ;
       owl:onProperty ansis:size ;
     ] ;
-  skos:prefLabel "Soil structure" ;
+  skos:prefLabel "Soil structure (pedality)" ;
 .
 ansis:SoilSuborder
   a owl:Class ;
@@ -3151,6 +3175,10 @@ ansis:contrast
   skos:exactMatch prop:contrast ;
   skos:prefLabel "contrast" ;
 .
+ansis:degree
+  a owl:ObjectProperty ;
+  skos:prefLabel "degree of phenomenon" ;
+.
 ansis:density
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -3490,12 +3518,6 @@ ansis:pH
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "Soil pH" ;
 .
-ansis:pedality
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:range ansis:SoilStructure ;
-  skos:prefLabel "pedality" ;
-.
 ansis:phosphorus
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -3530,11 +3552,6 @@ ansis:relatedBody
   skos:definition "related mappable soil body containing a set of layers and horizons" ;
   skos:prefLabel "related soil body" ;
 .
-ansis:relatedBoundary
-  a owl:ObjectProperty ;
-  skos:definition "related boundary within a soil body or sample" ;
-  skos:prefLabel "related boundary" ;
-.
 ansis:relatedCoarseFragments
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilBody ;
@@ -3542,12 +3559,6 @@ ansis:relatedCoarseFragments
   schema:domainIncludes ansis:SoilProfile ;
   rdfs:range ansis:CoarseFragments ;
   skos:prefLabel "related Coarse Fragments" ;
-.
-ansis:relatedConsistence
-  a owl:ObjectProperty ;
-  schema:domainIncludes ansis:SoilLayer ;
-  rdfs:range ansis:SoilConsistence ;
-  skos:prefLabel "related Consistence" ;
 .
 ansis:relatedCutans
   a owl:ObjectProperty ;
@@ -3762,6 +3773,15 @@ ansis:size
   skos:narrowMatch prop:structure-pedality-size ;
   skos:narrower ansis:grain-size ;
   skos:prefLabel "size" ;
+.
+ansis:soil-water-status
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "soil water status" ;
+.
+ansis:stickiness
+  a owl:ObjectProperty ;
+  skos:prefLabel "stickiness" ;
 .
 ansis:strength
   a owl:DatatypeProperty ;
