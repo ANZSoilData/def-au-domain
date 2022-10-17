@@ -1339,13 +1339,14 @@ ansis:LandsurveySite
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:type ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty geo:hasGeometry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty geo:hasGeometry ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange ansis:SiteType ;
+      owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1471,13 +1472,6 @@ ansis:Profile-construction
   skos:note "e.g. pit, auger bore, core, exposure" ;
   skos:prefLabel "Construction of profile" ;
 .
-ansis:Profile-type
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:definition "Type of soil observation profile e.g. single, composite, derived, reference/characterisation" ;
-  skos:note "e.g. single, composite, derived, reference/characterisation" ;
-  skos:prefLabel "Type of profile" ;
-.
 ansis:Roots
   a owl:Class ;
   rdfs:subClassOf [
@@ -1493,6 +1487,21 @@ ansis:Roots
       owl:onProperty ansis:diameter ;
     ] ;
   skos:prefLabel "Roots" ;
+.
+ansis:Sample-type-in-place
+  a ansis:SoilSampleType ;
+  skos:prefLabel "In place sample type" ;
+.
+ansis:Sample-type-material
+  a ansis:SoilSampleType ;
+  skos:prefLabel "Material sample type" ;
+.
+ansis:SiteType
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Type of land survey site e.g. monitoring, opportunistic, farm, pedology" ;
+  skos:note "e.g. monitoring, opportunistic, farm, pedology" ;
+  skos:prefLabel "Type of site" ;
 .
 ansis:SiteVisit
   a owl:Class ;
@@ -1875,7 +1884,7 @@ ansis:SoilProfile
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass ansis:Profile-type ;
+      owl:onClass ansis:SoilProfileType ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1904,6 +1913,13 @@ Each horizon may then have a detailed description determined through a set of ob
   skos:note "If type=composite, then it is expected that there are 2::n related profiles whose type=single" ;
   skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
   skos:prefLabel "Soil profile" ;
+.
+ansis:SoilProfileType
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Type of soil observation profile e.g. single, composite, derived, reference/characterisation" ;
+  skos:note "e.g. single, composite, derived, reference/characterisation" ;
+  skos:prefLabel "Type of profile" ;
 .
 ansis:SoilSample
   a owl:Class ;
@@ -1944,9 +1960,9 @@ ansis:SoilSample
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass ansis:SoilSampleType ;
       owl:onProperty ansis:type ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:example """my:S3-20-40-in-P1
   a ansis:SoilSample ;
@@ -3488,15 +3504,15 @@ ansis:phosphorus
   skos:prefLabel "soil phosphorus" ;
 .
 ansis:profile-type-Characterisation
-  a ansis:Profile-type ;
+  a ansis:SoilProfileType ;
   skos:prefLabel "Characterisation profile or norm" ;
 .
 ansis:profile-type-Composite
-  a ansis:Profile-type ;
+  a ansis:SoilProfileType ;
   skos:prefLabel "Composite profile" ;
 .
 ansis:profile-type-Single
-  a ansis:Profile-type ;
+  a ansis:SoilProfileType ;
   skos:prefLabel "Single profile" ;
 .
 ansis:purpose
@@ -3791,16 +3807,17 @@ ansis:texture
   skos:prefLabel "material texture" ;
 .
 ansis:type
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Cutans ;
   schema:domainIncludes ansis:Pans ;
   schema:domainIncludes ansis:SoilConsistence ;
   schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
   schema:domainIncludes ansis:SoilSegregations ;
   schema:domainIncludes ansis:SoilSite ;
   schema:domainIncludes ansis:SoilStructure ;
-  rdfs:subPropertyOf dcterms:type ;
+  skos:closeMatch dcterms:type ;
   skos:definition "type of ansis soil entity" ;
   skos:exactMatch prop:type ;
   skos:narrowMatch prop:consistence-plasticity-type ;
