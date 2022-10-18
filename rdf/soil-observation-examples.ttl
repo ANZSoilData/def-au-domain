@@ -22,6 +22,9 @@
 @prefix subst: <http://anzsoil.org/def/au/asls/substrate/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ansis:CoarseFragments
+  rdfs:subClassOf sosa:FeatureOfInterest ;
+.
 ansis:SoilSampleType
   rdfs:subClassOf [
       a rdfs:Datatype ;
@@ -77,10 +80,27 @@ my:A12-in-P1
   ansis:texture "SL" ;
   ansis:type ansis:Sample-type-in-place ;
 .
+my:A12-in-P1-Coarse-fragments
+  a ansis:SoilSample ;
+  skos:prefLabel "Coarse fragments component in Horizon A12 in Profile P1" ;
+  sosa:isSampleOf my:A12-in-P1 ;
+  ansis:component-type ansis:CoarseFragments ;
+  ansis:relatedProfile my:Profile_1 ;
+  ansis:type ansis:Sample-type-component ;
+.
 my:A12-in-P1-Roots
   a ansis:SoilSample ;
   skos:prefLabel "Roots component in Horizon A12 in Profile P1" ;
   sosa:isSampleOf my:A12-in-P1 ;
+  ansis:component-type ansis:Roots ;
+  ansis:relatedProfile my:Profile_1 ;
+  ansis:type ansis:Sample-type-component ;
+.
+my:A12-in-P1-Structure
+  a ansis:SoilSample ;
+  skos:prefLabel "Soil structure component in Horizon A12 in Profile P1" ;
+  sosa:isSampleOf my:A12-in-P1 ;
+  ansis:component-type ansis:SoilStructure ;
   ansis:relatedProfile my:Profile_1 ;
   ansis:type ansis:Sample-type-component ;
 .
@@ -206,6 +226,14 @@ my:O1-dens-A12-in-P1
   sosa:observedProperty ansis:density-bulk ;
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
 .
+my:O10-structure-grade-A12-P1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of pedality grade in Horizon A12 in Profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1-Structure ;
+  sosa:hasSimpleResult "W" ;
+  sosa:observedProperty ansis:grade ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
+.
 my:O2-dens-S1-in-P1
   a sosa:Observation ;
   skos:prefLabel "Measurement of bulk density of sample 1 from profile 1" ;
@@ -252,12 +280,28 @@ my:O6-roots-a-A12-P1
   sosa:observedProperty ansis:abundance ;
   sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
 .
-my:O7-roots-s-A12-P1_1
+my:O7-roots-s-A12-P1
   a sosa:Observation ;
   skos:prefLabel "Observation of size of Roots component in Horizon A12 in Profile P1" ;
   sosa:hasFeatureOfInterest my:A12-in-P1-Roots ;
   sosa:hasSimpleResult "4" ;
   sosa:observedProperty ansis:size ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
+.
+my:O8-cf-a1-A12-P1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of abundance of coarse fragments component in Horizon A12 in Profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1-Coarse-fragments ;
+  sosa:hasSimpleResult "2" ;
+  sosa:observedProperty ansis:abundance ;
+  sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
+.
+my:O9-cf-a2-A12-P1
+  a sosa:Observation ;
+  skos:prefLabel "Observation of abundance of coarse fragments component in Horizon A12 in Profile P1" ;
+  sosa:hasFeatureOfInterest my:A12-in-P1-Coarse-fragments ;
+  sosa:hasSimpleResult "5 %" ;
+  sosa:observedProperty ansis:abundance ;
   sosa:resultTime "2022-09-13T15:35:00"^^xsd:dateTime ;
 .
 my:Point_1
