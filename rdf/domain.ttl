@@ -408,646 +408,646 @@ asc:Water-repellence-code
   skos:prefLabel "ASC Water repellence code" ;
 .
 ls:disturbance-of-site-0
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-1
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-2
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-3
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-4
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-5
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-6
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-7
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 ls:disturbance-of-site-8
-  a ansis:Disturbance ;
+  a asls:Disturbance ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-ALC>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BAN>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BAR>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BEA>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BEN>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BER>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BKP>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BOU>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BRI>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-BRK>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CBE>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CFS>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CIR>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CLI>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CON>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-COS>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CRA>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-CUT>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DAM>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DBA>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DDE>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DOC>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DOL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUB>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUC>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUH>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUN>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUP>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-DUS>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-EMB>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-EST>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FAN>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FIL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FLD>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FOO>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-FOR>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-GUL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-HCR>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-HSL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-ITF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LAG>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LAK>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LDS>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LEV>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-LUN>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-MAA>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-MOU>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-OXB>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PED>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PIT>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PLA>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PLY>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-PST>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-REC>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-REF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RER>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RES>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RFL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-RPL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SCA>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SCD>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SCR>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SFS>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SRP>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-STB>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-STC>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-STF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SUS>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SWL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-SWP>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TAL>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TDC>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TDF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TEF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TEP>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TOR>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TRE>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-TUM>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-element-VLF>
-  a ansis:LandformElement ;
+  a asls:LandformElement-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ALF>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ALP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ANA>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-BAD>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-BAR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-BEA>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-CAL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-CHE>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-COR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-COV>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-DEL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-DUN>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-ESC>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-FLO>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-HIL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-KAR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LAC>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LAV>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LON>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-LOW>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MAD>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MAR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MEA>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MET>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-MOU>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PAR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PED>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PEP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PLA>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PLT>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PLY>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-PNP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-RIS>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-SAN>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-SHF>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-STA>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-TEL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-TER>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-TID>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/landform-pattern-VOL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-B>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-LP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PH>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PM>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RH>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RM>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SH>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SM>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UH>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UR>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VH>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VL>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VM>
-  a ansis:LandformPattern ;
+  a asls:LandformPattern-type ;
 .
 sp:observation-type-A
-  a ansis:Profile-construction ;
+  a asls:Profile-construction ;
 .
 sp:observation-type-C
-  a ansis:Profile-construction ;
+  a asls:Profile-construction ;
 .
 sp:observation-type-E
-  a ansis:Profile-construction ;
+  a asls:Profile-construction ;
 .
 sp:observation-type-P
-  a ansis:Profile-construction ;
+  a asls:Profile-construction ;
 .
 sp:surfacecondition-C
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-F
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-G
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-H
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-L
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-M
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-O
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-P
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-R
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-S
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-T
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-X
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-Y
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:surfacecondition-Z
-  a ansis:DryCondition ;
+  a asls:Surface-Condition ;
 .
 sp:water-repellence-N
-  a ansis:WaterRepellence ;
+  a asls:Water-repellence ;
 .
 sp:water-repellence-R
-  a ansis:WaterRepellence ;
+  a asls:Water-repellence ;
 .
 sp:water-repellence-S
-  a ansis:WaterRepellence ;
+  a asls:Water-repellence ;
 .
 subst:genesis-AC
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-AL
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-AT
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-BE
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-CD
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-CN
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-CO
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-DR
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-ED
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-ES
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-ET
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-EV
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-FC
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-FI
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-GY
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-HA
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-IG
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-IN
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-KC
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-LA
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-LC
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-LD
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-LO
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-MA
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-MD
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-ME
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-PA
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-PC
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-PL
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-PW
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-RB
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SA
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SC
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SD
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SE
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SH
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SP
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-SR
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-ST
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-TI
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-VA
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 subst:genesis-VO
-  a ansis:MassGenesis ;
+  a asls:Mass-genesis ;
 .
 schema:domainIncludes
   a owl:ObjectProperty ;
@@ -1171,17 +1171,6 @@ ansis:Cutans
     ] ;
   skos:prefLabel "Cutans" ;
 .
-ansis:Disturbance
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:definition "disturbance of a site" ;
-  skos:prefLabel "Disturbance" ;
-.
-ansis:DryCondition
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Condition of surface soil when dry" ;
-.
 ansis:Erosion
   a owl:Class ;
   skos:prefLabel "Erosion" ;
@@ -1276,7 +1265,6 @@ ansis:Landform
 .
 ansis:LandformElement
   a owl:Class ;
-  a skos:Concept ;
   rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1290,7 +1278,7 @@ ansis:LandformElement
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass skos:Concept ;
+      owl:onClass asls:LandformElement-type ;
       owl:onProperty ansis:landformElementName ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1298,7 +1286,6 @@ ansis:LandformElement
 .
 ansis:LandformPattern
   a owl:Class ;
-  a skos:Concept ;
   rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1309,6 +1296,12 @@ ansis:LandformPattern
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:geomorphologyStatus ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:LandformPattern-type ;
+      owl:onProperty ansis:landformPatternName ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Landform pattern (>600m)" ;
 .
@@ -1384,11 +1377,6 @@ ansis:LandsurveySite
   skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
   skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
   skos:scopeNote "More specific types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site" ;
-.
-ansis:MassGenesis
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Mass genesis classification" ;
 .
 ansis:Microrelief
   a owl:Class ;
@@ -1507,13 +1495,6 @@ ansis:Pans
       owl:onProperty ansis:continuity ;
     ] ;
   skos:prefLabel "Pans" ;
-.
-ansis:Profile-construction
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:definition "Construction of soil observation profile e.g. pit, auger bore, core, exposure" ;
-  skos:note "e.g. pit, auger bore, core, exposure" ;
-  skos:prefLabel "Construction of profile" ;
 .
 ansis:RSS-colour
   a owl:Class ;
@@ -1911,7 +1892,7 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Water-repellence ;
+      owl:onClass asls:Water-repellence-codes ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
   rdfs:subClassOf [
@@ -2005,7 +1986,7 @@ ansis:SoilProfile
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom asls:Surface-condition ;
+      owl:allValuesFrom asls:Surface-condition-codes ;
       owl:onProperty ansis:surface-condition ;
     ] ;
   rdfs:subClassOf [
@@ -2062,14 +2043,14 @@ ansis:SoilProfile
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass ansis:Profile-construction ;
-      owl:onProperty sosa:usedProcedure ;
+      owl:onClass ansis:SoilProfileType ;
+      owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass ansis:SoilProfileType ;
-      owl:onProperty ansis:type ;
+      owl:onClass asls:Profile-construction ;
+      owl:onProperty sosa:usedProcedure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
@@ -2339,11 +2320,6 @@ ansis:Voids
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Voids in soil - pores and cracks" ;
-.
-ansis:WaterRepellence
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:prefLabel "Water repellence" ;
 .
 ansis:abundance
   a owl:DatatypeProperty ;
@@ -2666,6 +2642,12 @@ asls:Cutans-type
     ] ;
   skos:prefLabel "Cutans type" ;
 .
+asls:Disturbance
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "disturbance of a site" ;
+  skos:prefLabel "Disturbance" ;
+.
 asls:Fabric-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Fabric p181" ;
@@ -2931,6 +2913,19 @@ asls:Horizon-suffix
         ) ;
     ] ;
   skos:prefLabel "Horizon designation suffix" ;
+.
+asls:LandformElement-type
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Landform element glossary" ;
+.
+asls:LandformPattern-type
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Landform pattern name" ;
+.
+asls:Mass-genesis
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Mass genesis classification" ;
 .
 asls:Material-strength
   a rdfs:Datatype ;
@@ -3199,6 +3194,13 @@ asls:Pore-diameter
     ] ;
   skos:prefLabel "Diameter of macropores" ;
 .
+asls:Profile-construction
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Construction of soil observation profile e.g. pit, auger bore, core, exposure" ;
+  skos:note "e.g. pit, auger bore, core, exposure" ;
+  skos:prefLabel "Construction of profile" ;
+.
 asls:Rock-lithology
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate: Table 35 p214" ;
@@ -3452,7 +3454,12 @@ asls:Soil-permeability
     ] ;
   skos:prefLabel "Soil permeability" ;
 .
-asls:Surface-condition
+asls:Surface-Condition
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Condition of surface soil when dry" ;
+.
+asls:Surface-condition-codes
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Condition p189" ;
   rdfs:subClassOf [
@@ -3501,6 +3508,11 @@ asls:Unconsolidated-lithology
   skos:prefLabel "Unconsodlidated material lithology" ;
 .
 asls:Water-repellence
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Water repellence" ;
+.
+asls:Water-repellence-codes
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Water repellence p191" ;
   rdfs:subClassOf [
@@ -3668,7 +3680,7 @@ ansis:condition-when-dry
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilSurface ;
-  rdfs:range ansis:DryCondition ;
+  rdfs:range asls:Surface-Condition ;
   skos:exactMatch prop:condition-of-surface-soil-when-dry ;
   skos:prefLabel "condition when dry" ;
 .
@@ -3864,6 +3876,7 @@ ansis:geomorphologyMode
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:LandformElement ;
+  schema:domainIncludes ansis:LandformPattern ;
   skos:definition "mode of geomorphological activity" ;
   skos:exactMatch prop:mode-of-geomorphological-activity ;
   skos:prefLabel "geomorphology mode" ;
@@ -3871,7 +3884,7 @@ ansis:geomorphologyMode
 ansis:geomorphologyStatus
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:LandformElement ;
+  schema:domainIncludes ansis:LandformPattern ;
   skos:prefLabel "status of geomorphological activity" ;
 .
 ansis:grade
@@ -3933,6 +3946,12 @@ ansis:landformElementName
   schema:domainIncludes ansis:LandformElement ;
   skos:prefLabel "landform element name" ;
 .
+ansis:landformPatternName
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformPattern ;
+  skos:prefLabel "landform pattern name" ;
+.
 ansis:length
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -3976,7 +3995,7 @@ ansis:mass-genesis
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Substrate ;
-  rdfs:range ansis:MassGenesis ;
+  rdfs:range asls:Mass-genesis ;
   skos:exactMatch prop:substrate-genesis ;
   skos:prefLabel "mass genesis" ;
 .
@@ -4165,7 +4184,7 @@ ansis:relatedLandform
 ansis:relatedLandformElement
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:Landform ;
-  rdfs:range ansis:LandformElement ;
+  rdfs:range asls:LandformElement-type ;
   skos:definition "landform element in the vicinity of this entity (~40m)" ;
   skos:prefLabel "related landform element" ;
 .
@@ -4319,7 +4338,7 @@ ansis:siteDisturbance
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilSite ;
-  rdfs:range ansis:Disturbance ;
+  rdfs:range asls:Disturbance ;
   skos:exactMatch prop:disturbance-of-site ;
   skos:prefLabel "disturbance of site" ;
 .
@@ -4453,7 +4472,7 @@ ansis:waterRepellence
   schema:domainIncludes ansis:SoilHorizon ;
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilSurface ;
-  rdfs:range ansis:WaterRepellence ;
+  rdfs:range asls:Water-repellence ;
   skos:exactMatch prop:water-repellence ;
   skos:prefLabel "water repellence" ;
 .
