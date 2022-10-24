@@ -1055,6 +1055,12 @@ schema:domainIncludes
 schema:rangeIncludes
   a owl:ObjectProperty ;
 .
+geo:hasGeometry
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandsurveySite ;
+  schema:domainIncludes ansis:SoilBody ;
+  schema:domainIncludes ansis:SoilProfile ;
+.
 prov:Activity
   rdfs:subClassOf [
       a owl:Restriction ;
