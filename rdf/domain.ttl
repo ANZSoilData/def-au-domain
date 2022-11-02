@@ -1457,7 +1457,12 @@ ansis:LandsurveySite
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:hasLandform ;
+      owl:onProperty ansis:hasLandformElement ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasLandformPattern ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1652,7 +1657,7 @@ ansis:Sample
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom owl:Class ;
-      owl:onProperty ansis:component-type ;
+      owl:onProperty ansis:component ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1850,7 +1855,12 @@ ansis:SoilBody
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:hasLandform ;
+      owl:onProperty ansis:hasLandformElement ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasLandformPattern ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2040,6 +2050,11 @@ ansis:SoilLayer
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:depth-lower ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSoilBody ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2247,6 +2262,12 @@ ansis:SoilProfile
       a owl:Restriction ;
       owl:onClass asls:Profile-construction ;
       owl:onProperty sosa:usedProcedure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Profile-purpose ;
+      owl:onProperty ansis:purpose ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
@@ -4028,6 +4049,18 @@ asls:Profile-construction
   skos:note "e.g. pit, auger bore, core, exposure" ;
   skos:prefLabel "Construction of profile" ;
 .
+asls:Profile-purpose
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Soil profile" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "characterisation"
+          "other"
+        ) ;
+    ] ;
+  skos:prefLabel "Purpose of profile" ;
+.
 asls:Relative-inclination
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p22" ;
@@ -4640,15 +4673,15 @@ ansis:colour
   skos:exactMatch prop:colour ;
   skos:prefLabel "colour" ;
 .
+ansis:component
+  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:SoilSampleType ;
+  skos:prefLabel "type of component element" ;
+.
 ansis:component-proportions
   a owl:DatatypeProperty ;
   skos:definition "Relative proportions of the components" ;
   skos:prefLabel "proportions of components" ;
-.
-ansis:component-type
-  a owl:ObjectProperty ;
-  schema:domainIncludes ansis:SoilSampleType ;
-  skos:prefLabel "type of component element" ;
 .
 ansis:compound-pedality
   a owl:DatatypeProperty ;
@@ -4993,6 +5026,7 @@ ansis:hasLandformElement
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilSite ;
   rdfs:range ansis:LandformElement ;
+  rdfs:subPropertyOf ansis:hasLandform ;
   skos:definition "landform element around this entity (<20m)" ;
   skos:prefLabel "landform element" ;
 .
@@ -5002,6 +5036,7 @@ ansis:hasLandformPattern
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilSite ;
   rdfs:range ansis:LandformPattern ;
+  rdfs:subPropertyOf ansis:hasLandform ;
   skos:definition "landform pattern around this entity (>600m)" ;
   skos:prefLabel "landform pattern" ;
 .
@@ -5287,7 +5322,7 @@ ansis:porosity
   schema:domainIncludes ansis:Substrate ;
   skos:prefLabel "porosity" ;
 .
-ansis:profile-type-Characterisation
+ansis:profile-purpose-characterisation
   a ansis:SoilProfileType ;
   skos:prefLabel "Characterisation profile or norm" ;
 .
