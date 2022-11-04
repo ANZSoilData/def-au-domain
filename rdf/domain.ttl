@@ -4105,6 +4105,7 @@ asls:Pore-diameter
 asls:Profile-construction
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
+  owl:equivalentClass sp:type-of-soil-observation ;
   skos:definition "Construction of soil observation profile e.g. pit, auger bore, core, exposure, or composite" ;
   skos:note "e.g. pit, auger bore, core, exposure, or composite" ;
   skos:prefLabel "Construction of profile" ;
