@@ -40,6 +40,8 @@ asc:Alteration-code
           "P"
         ) ;
     ] ;
+  owl:equivalentClass asc:Alteration ;
+  owl:equivalentClass asc:Alteration-instances ;
   skos:prefLabel "ASC Alteration code" ;
 .
 asc:Classifier-code
@@ -273,6 +275,7 @@ asc:Classifier-code
           "JX"
         ) ;
     ] ;
+  owl:equivalentClass asc:Class ;
   skos:prefLabel "ASC Classifier code" ;
 .
 asc:Clay-content-code
@@ -285,6 +288,8 @@ asc:Clay-content-code
           "S"
         ) ;
     ] ;
+  owl:equivalentClass asc:Clay-content ;
+  owl:equivalentClass asc:Clay-instances ;
   skos:prefLabel "ASC Clay Content code" ;
 .
 asc:Colour-code
@@ -299,6 +304,7 @@ asc:Colour-code
           "AE"
         ) ;
     ] ;
+  owl:equivalentClass asc:ColourClass ;
   skos:prefLabel "ASC Colour Class code" ;
 .
 asc:Depth-code
@@ -313,6 +319,8 @@ asc:Depth-code
           "Y"
         ) ;
     ] ;
+  owl:equivalentClass asc:Depth ;
+  owl:equivalentClass asc:Depth-instances ;
   skos:prefLabel "ASC Depth code" ;
 .
 asc:Gravel-code
@@ -327,6 +335,8 @@ asc:Gravel-code
           "I"
         ) ;
     ] ;
+  owl:equivalentClass asc:Gravel-instances ;
+  owl:equivalentClass asc:Gravel-nature ;
   skos:prefLabel "ASC Gravel Nature code" ;
 .
 asc:Order-code
@@ -351,6 +361,7 @@ asc:Order-code
           "VE"
         ) ;
     ] ;
+  owl:equivalentClass asc:Order ;
   skos:prefLabel "ASC Order code" ;
 .
 asc:Organic-code
@@ -366,6 +377,8 @@ asc:Organic-code
           "OF"
         ) ;
     ] ;
+  owl:equivalentClass asc:Organic-instances ;
+  owl:equivalentClass asc:Organic-type ;
   skos:prefLabel "ASC Organic Type code" ;
 .
 asc:Texture-code
@@ -381,6 +394,8 @@ asc:Texture-code
           "O"
         ) ;
     ] ;
+  owl:equivalentClass asc:Texture ;
+  owl:equivalentClass asc:Texture-instances ;
   skos:prefLabel "ASC Texture code" ;
 .
 asc:Thickness-code
@@ -394,6 +409,8 @@ asc:Thickness-code
           "D"
         ) ;
     ] ;
+  owl:equivalentClass asc:Thickness ;
+  owl:equivalentClass asc:Thickness-instances ;
   skos:prefLabel "ASC Thickness code" ;
 .
 asc:Water-repellence-code
@@ -406,6 +423,8 @@ asc:Water-repellence-code
           "WR"
         ) ;
     ] ;
+  owl:equivalentClass asc:Water-instances ;
+  owl:equivalentClass asc:Water-repellence ;
   skos:prefLabel "ASC Water repellence code" ;
 .
 ls:disturbance-of-site-0
@@ -1065,7 +1084,6 @@ geo:hasGeometry
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
-  schema:domainIncludes ansis:SoilSample ;
   schema:domainIncludes ansis:SoilSite ;
 .
 prov:Activity
@@ -2631,6 +2649,7 @@ asls:Boundary-distinctness
           "D"
         ) ;
     ] ;
+  owl:equivalentClass sp:horizon-boundary-distinctness ;
   skos:prefLabel "Boundary distinctness" ;
 .
 asls:Boundary-shape
@@ -2647,6 +2666,7 @@ asls:Boundary-shape
           "B"
         ) ;
     ] ;
+  owl:equivalentClass sp:horizon-boundary-shape ;
   skos:prefLabel "Boundary shape" ;
 .
 asls:Carbonate-effervescence
@@ -2662,6 +2682,7 @@ asls:Carbonate-effervescence
           "V"
         ) ;
     ] ;
+  owl:equivalentClass sp:effervescence-of-carbonate-in-fine-earth ;
   skos:prefLabel "Effervescence of carbonate in fine earth" ;
 .
 asls:Channel-depth-width
@@ -2676,6 +2697,7 @@ asls:Channel-depth-width
           "V"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-relative-depth-width> ;
   skos:prefLabel "Channel depth relative to width" ;
 .
 asls:Channel-development
@@ -2690,6 +2712,7 @@ asls:Channel-development
           "A"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-development> ;
   skos:prefLabel "Stream channel development" ;
 .
 asls:Channel-directionality
@@ -2707,6 +2730,7 @@ asls:Channel-directionality
           "N"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-network-directionality> ;
   skos:prefLabel "Channel network directionality" ;
 .
 asls:Channel-integration
@@ -2720,6 +2744,7 @@ asls:Channel-integration
           "D"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-network-integration> ;
   skos:prefLabel "Channel network integration" ;
 .
 asls:Channel-migration
@@ -2733,6 +2758,7 @@ asls:Channel-migration
           "F"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-migration> ;
   skos:prefLabel "Stream channel migration rate" ;
 .
 asls:Channel-pattern
@@ -2747,6 +2773,7 @@ asls:Channel-pattern
           "R"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/streamwise-channel-pattern> ;
   skos:prefLabel "Streamwise channel pattern" ;
 .
 asls:Channel-spacing
@@ -2765,6 +2792,7 @@ asls:Channel-spacing
           "NU"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-spacing> ;
   skos:prefLabel "Stream channel spacing" ;
 .
 asls:Coarse-fragments-abundance
@@ -2783,6 +2811,7 @@ asls:Coarse-fragments-abundance
           "6"
         ) ;
     ] ;
+  owl:equivalentClass ls:coarse-fragments-abundance ;
   skos:prefLabel "Abundance of coarse fragments" ;
 .
 asls:Coarse-fragments-distribution
@@ -2798,6 +2827,7 @@ asls:Coarse-fragments-distribution
           "D"
         ) ;
     ] ;
+  owl:equivalentClass sp:coarse-fragments-distribution ;
   skos:prefLabel "Coarse fragments disttribution" ;
 .
 asls:Coarse-fragments-shape
@@ -2821,6 +2851,7 @@ asls:Coarse-fragments-shape
           "RP"
         ) ;
     ] ;
+  owl:equivalentClass ls:coarse-fragments-shape ;
   skos:prefLabel "Coarse fragments shape" ;
 .
 asls:Coarse-fragments-size
@@ -2839,6 +2870,7 @@ asls:Coarse-fragments-size
           "7"
         ) ;
     ] ;
+  owl:equivalentClass ls:coarse-fragments-size ;
   skos:prefLabel "Coarse fragments size" ;
 .
 asls:Colour-moisture-status
@@ -2852,6 +2884,7 @@ asls:Colour-moisture-status
           "D"
         ) ;
     ] ;
+  owl:equivalentClass sp:colour-stat ;
   skos:prefLabel "Moisture status for colour description" ;
 .
 asls:Confidence-substrate-is-parent
@@ -2866,6 +2899,7 @@ asls:Confidence-substrate-is-parent
           "A"
         ) ;
     ] ;
+  owl:equivalentClass subst:confidence ;
   skos:prefLabel "Confidence that substrate is parent material" ;
 .
 asls:Consistence-plasticity-degree
@@ -2880,6 +2914,7 @@ asls:Consistence-plasticity-degree
           "3"
         ) ;
     ] ;
+  owl:equivalentClass sp:consistence-plasticity-degree ;
   skos:prefLabel "Consistence - plasticity-degree" ;
 .
 asls:Consistence-plasticity-type
@@ -2894,6 +2929,7 @@ asls:Consistence-plasticity-type
           "T"
         ) ;
     ] ;
+  owl:equivalentClass sp:consistence-plasticity-type ;
   skos:prefLabel "Consistence - plasticity-type" ;
 .
 asls:Consistence-soil-water-status
@@ -2908,6 +2944,7 @@ asls:Consistence-soil-water-status
           "W"
         ) ;
     ] ;
+  owl:equivalentClass sp:soil-water-status ;
   skos:prefLabel "Consistence - soil-water-status" ;
 .
 asls:Consistence-stickiness
@@ -2922,6 +2959,7 @@ asls:Consistence-stickiness
           "3"
         ) ;
     ] ;
+  owl:equivalentClass sp:consistence-stickiness ;
   skos:prefLabel "Consistence - stickiness" ;
 .
 asls:Consistence-strength
@@ -2940,6 +2978,7 @@ asls:Consistence-strength
           "7"
         ) ;
     ] ;
+  owl:equivalentClass sp:consistence-strength ;
   skos:prefLabel "Consistence - strength" ;
 .
 asls:Cracks-width
@@ -2956,6 +2995,7 @@ asls:Cracks-width
           "5"
         ) ;
     ] ;
+  owl:equivalentClass sp:voids-cracks ;
   skos:prefLabel "Width of cracks" ;
 .
 asls:Cutans-abundance
@@ -2971,6 +3011,7 @@ asls:Cutans-abundance
           "3"
         ) ;
     ] ;
+  owl:equivalentClass sp:cutans-abundance ;
   skos:prefLabel "Abundance of cutans" ;
 .
 asls:Cutans-distinctness
@@ -2985,6 +3026,7 @@ asls:Cutans-distinctness
           "P"
         ) ;
     ] ;
+  owl:equivalentClass sp:cutans-distinctness ;
   skos:prefLabel "Cutans distinctness" ;
 .
 asls:Cutans-type
@@ -3003,6 +3045,7 @@ asls:Cutans-type
           "O"
         ) ;
     ] ;
+  owl:equivalentClass sp:cutans-type ;
   skos:prefLabel "Cutans type" ;
 .
 asls:Disturbance
@@ -3023,6 +3066,7 @@ asls:Fabric-type
           "S"
         ) ;
     ] ;
+  owl:equivalentClass sp:fabric ;
   skos:prefLabel "Fabric type" ;
 .
 asls:Field-texture-grade-mineral
@@ -3191,6 +3235,7 @@ asls:Field-texture-grade-mineral
           "ZL"
         ) ;
     ] ;
+  owl:equivalentClass sp:field-texture-mineral ;
   skos:prefLabel "Field-texture grade - mineral soils" ;
 .
 asls:Field-texture-organic
@@ -3209,6 +3254,7 @@ asls:Field-texture-organic
           "SP"
         ) ;
     ] ;
+  owl:equivalentClass sp:field-texture-organic ;
   skos:prefLabel "Field-texture grade - organic soils" ;
 .
 asls:Field-texture-qualification
@@ -3224,6 +3270,7 @@ asls:Field-texture-qualification
           "I"
         ) ;
     ] ;
+  owl:equivalentClass sp:field-texture-qualifier ;
   skos:prefLabel "Field-texture qualification" ;
 .
 asls:Field-texture-substrate
@@ -3238,6 +3285,7 @@ asls:Field-texture-substrate
           "A"
         ) ;
     ] ;
+  owl:equivalentClass subst:texture ;
   skos:prefLabel "Field-texture grade - substrate" ;
 .
 asls:Geomorphology-agent
@@ -3266,6 +3314,7 @@ asls:Geomorphology-agent
           "IM"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/geomorphological-agents> ;
   skos:prefLabel "Geomorphology agent" ;
 .
 asls:Geomorphology-mode
@@ -3283,6 +3332,7 @@ asls:Geomorphology-mode
           "SU"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/mode-of-geomorphological-activity> ;
   skos:prefLabel "Geomorphology mode" ;
 .
 asls:Geomorphology-status
@@ -3349,6 +3399,7 @@ asls:Horizon-code
           xsd:string
         ) ;
     ] ;
+  owl:equivalentClass sp:horizon-type ;
   skos:note "The long-established codes O, P, A, B ,C ,D, R are used wherever possible. Transitional horizons are designated with combinations of these.  " ;
   skos:prefLabel "Horizon code" ;
 .
@@ -3381,6 +3432,7 @@ asls:Horizon-suffix
           "?"
         ) ;
     ] ;
+  owl:equivalentClass sp:horizon-suffix ;
   skos:prefLabel "Horizon designation suffix" ;
 .
 asls:Landform-element-name
@@ -3471,6 +3523,7 @@ asls:Landform-element-name
           "VLF"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/landform-element-glossary> ;
   skos:prefLabel "Landform element name" ;
 .
 asls:Landform-element-type
@@ -3491,6 +3544,7 @@ asls:Landform-element-type
           "D"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/morphological-type> ;
   skos:prefLabel "Landform element morphological type" ;
 .
 asls:Landform-pattern-erosional
@@ -3523,6 +3577,7 @@ asls:Landform-pattern-erosional
           "B"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-patterns> ;
   skos:prefLabel "Landform pattern - simple erosional" ;
 .
 asls:Landform-pattern-name
@@ -3573,6 +3628,7 @@ asls:Landform-pattern-name
           "VOL"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/landform-pattern-glossary> ;
   skos:prefLabel "Landform pattern name" ;
 .
 asls:LandformElement-type
@@ -3598,6 +3654,7 @@ asls:Lithology-coarse-fragments
           "OT"
         ) ;
     ] ;
+  owl:equivalentClass ls:coarse-fragments-lithology ;
   skos:prefLabel "Coarse fragments lithology" ;
 .
 asls:Lithology-rock
@@ -3692,6 +3749,7 @@ asls:Lithology-rock
           "ZS"
         ) ;
     ] ;
+  owl:equivalentClass subst:lithology-rock ;
   skos:prefLabel "Rock lithology" ;
 .
 asls:Lithology-unconsolidated
@@ -3716,6 +3774,7 @@ asls:Lithology-unconsolidated
           "Z"
         ) ;
     ] ;
+  owl:equivalentClass subst:lithology-unconsolidated ;
   skos:prefLabel "Unconsodlidated material lithology" ;
 .
 asls:Location-in-element
@@ -3729,11 +3788,13 @@ asls:Location-in-element
           "B"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/location-within-the-landform-element> ;
   skos:prefLabel "Location within the landform element" ;
 .
 asls:Mass-genesis
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
+  owl:equivalentClass subst:mass-genetic-type-glossary ;
   skos:prefLabel "Mass genesis classification" ;
 .
 asls:Mass-genesis-code
@@ -3755,6 +3816,7 @@ asls:Mass-genesis-code
           ]
         ) ;
     ] ;
+  owl:equivalentClass subst:genesis ;
   skos:prefLabel "Mass genesis code" ;
 .
 asls:Material-strength
@@ -3771,6 +3833,7 @@ asls:Material-strength
           "VS"
         ) ;
     ] ;
+  owl:equivalentClass subst:material-strength ;
   skos:prefLabel "Strength of material" ;
 .
 asls:Mottle-abundance
@@ -3787,6 +3850,7 @@ asls:Mottle-abundance
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:mottle-abundance ;
   skos:prefLabel "Abundance of Mottles" ;
 .
 asls:Mottle-colour
@@ -3806,6 +3870,7 @@ asls:Mottle-colour
           "P"
         ) ;
     ] ;
+  owl:equivalentClass sp:mottle-colour ;
   skos:prefLabel "Mottle colour" ;
 .
 asls:Mottle-contrast
@@ -3820,6 +3885,7 @@ asls:Mottle-contrast
           "P"
         ) ;
     ] ;
+  owl:equivalentClass sp:mottle-contrast ;
   skos:prefLabel "Mottle contrast" ;
 .
 asls:Mottle-distinctness
@@ -3834,6 +3900,7 @@ asls:Mottle-distinctness
           "D"
         ) ;
     ] ;
+  owl:equivalentClass sp:mottle-boundary-distinctness ;
   skos:prefLabel "Mottle distinctness of boundaries" ;
 .
 asls:Mottle-size
@@ -3849,6 +3916,7 @@ asls:Mottle-size
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:mottle-size ;
   skos:prefLabel "Mottle size" ;
 .
 asls:Mottle-type
@@ -3864,6 +3932,7 @@ asls:Mottle-type
           "Z"
         ) ;
     ] ;
+  owl:equivalentClass sp:mottle-type ;
   skos:prefLabel "Mottle type" ;
 .
 asls:Pans-cementation
@@ -3879,6 +3948,7 @@ asls:Pans-cementation
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:pans-cementation ;
   skos:prefLabel "Pans cementation" ;
 .
 asls:Pans-continuity
@@ -3892,6 +3962,7 @@ asls:Pans-continuity
           "B"
         ) ;
     ] ;
+  owl:equivalentClass sp:pans-continuity ;
   skos:prefLabel "Pans continuity" ;
 .
 asls:Pans-structure
@@ -3908,6 +3979,7 @@ asls:Pans-structure
           "R"
         ) ;
     ] ;
+  owl:equivalentClass sp:pans-structure ;
   skos:prefLabel "Pans structure" ;
 .
 asls:Pans-type
@@ -3933,6 +4005,7 @@ asls:Pans-type
           "O"
         ) ;
     ] ;
+  owl:equivalentClass sp:pans-type ;
   skos:prefLabel "Pans type" ;
 .
 asls:Pedality-grade
@@ -3949,6 +4022,7 @@ asls:Pedality-grade
           "S"
         ) ;
     ] ;
+  owl:equivalentClass sp:structure-pedality-grade ;
   skos:prefLabel "Pedality grade" ;
 .
 asls:Pedality-size
@@ -3969,6 +4043,7 @@ asls:Pedality-size
           "9"
         ) ;
     ] ;
+  owl:equivalentClass sp:structure-pedality-size ;
   skos:prefLabel "Pedality size" ;
 .
 asls:Pedality-type
@@ -3989,6 +4064,7 @@ asls:Pedality-type
           "CA"
         ) ;
     ] ;
+  owl:equivalentClass sp:structure-pedality-type ;
   skos:prefLabel "Pedality type" ;
 .
 asls:Pore-abundance
@@ -4007,6 +4083,7 @@ asls:Pore-abundance
           "6"
         ) ;
     ] ;
+  owl:equivalentClass sp:voids-macropores-abundance ;
   skos:prefLabel "Abundance of macropores" ;
 .
 asls:Pore-diameter
@@ -4022,6 +4099,7 @@ asls:Pore-diameter
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:voids-macropores-diameter ;
   skos:prefLabel "Diameter of macropores" ;
 .
 asls:Profile-construction
@@ -4055,6 +4133,7 @@ asls:Relative-inclination
           "I"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/relative-inclination-of-slope-elements> ;
   skos:prefLabel "Relative inclination" ;
 .
 asls:Relief
@@ -4070,6 +4149,7 @@ asls:Relief
           "P"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/relief> ;
   skos:prefLabel "Relief" ;
 .
 asls:Rock-alteration
@@ -4085,10 +4165,12 @@ asls:Rock-alteration
           "O"
         ) ;
     ] ;
+  owl:equivalentClass subst:alteration ;
   skos:prefLabel "Type of alteration of rock material" ;
 .
 asls:Rock-genesis-hardened-artificial
   a rdfs:Datatype ;
+  owl:equivalentClass subst:genesis-hardened-artificially ;
   owl:oneOf (
       "SO"
       "CN"
@@ -4098,6 +4180,7 @@ asls:Rock-genesis-hardened-artificial
 .
 asls:Rock-genesis-hardened-chemically
   a rdfs:Datatype ;
+  owl:equivalentClass subst:genesis-hardened-chemically ;
   owl:oneOf (
       "RB"
       "FC"
@@ -4110,6 +4193,7 @@ asls:Rock-genesis-hardened-chemically
 .
 asls:Rock-genesis-hardened-evaporite
   a rdfs:Datatype ;
+  owl:equivalentClass subst:genesis-hardened-evaporites ;
   owl:oneOf (
       "HA"
       "GY"
@@ -4119,6 +4203,7 @@ asls:Rock-genesis-hardened-evaporite
 .
 asls:Rock-genesis-sediments
   a rdfs:Datatype ;
+  owl:equivalentClass subst:genesis-unconsolidated ;
   owl:oneOf (
       "AL"
       "CO"
@@ -4143,6 +4228,7 @@ asls:Rock-genesis-sediments
 .
 asls:Rock-genesis-unweathered
   a rdfs:Datatype ;
+  owl:equivalentClass subst:genesis-unweathered ;
   owl:oneOf (
       "IG"
       "PL"
@@ -4157,6 +4243,7 @@ asls:Rock-genesis-unweathered
 .
 asls:Rock-genesis-weathered
   a rdfs:Datatype ;
+  owl:equivalentClass subst:genesis-weathered ;
   owl:oneOf (
       "PW"
       "SA"
@@ -4178,6 +4265,7 @@ asls:Root-abundance
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:roots-abundance ;
   skos:prefLabel "Root abundance" ;
 .
 asls:Root-size
@@ -4193,6 +4281,7 @@ asls:Root-size
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:roots-size ;
   skos:prefLabel "Root size" ;
 .
 asls:Segregations-abundance
@@ -4209,6 +4298,7 @@ asls:Segregations-abundance
           "5"
         ) ;
     ] ;
+  owl:equivalentClass sp:segregations-abundance ;
   skos:prefLabel "Abundance of segregations" ;
 .
 asls:Segregations-form
@@ -4228,6 +4318,7 @@ asls:Segregations-form
           "L"
         ) ;
     ] ;
+  owl:equivalentClass sp:segregations-form ;
   skos:prefLabel "Form of segregations" ;
 .
 asls:Segregations-magnetic-attributes
@@ -4240,6 +4331,7 @@ asls:Segregations-magnetic-attributes
           "M"
         ) ;
     ] ;
+  owl:equivalentClass sp:segregations-magnetic ;
   skos:prefLabel "Magnetic attributes of segregations" ;
 .
 asls:Segregations-nature
@@ -4264,6 +4356,7 @@ asls:Segregations-nature
           "O"
         ) ;
     ] ;
+  owl:equivalentClass sp:segregations-nature ;
   skos:prefLabel "Nature of segregations" ;
 .
 asls:Segregations-size
@@ -4279,6 +4372,7 @@ asls:Segregations-size
           "5"
         ) ;
     ] ;
+  owl:equivalentClass sp:segregations-size ;
   skos:prefLabel "Size of segregations" ;
 .
 asls:Segregations-strength
@@ -4291,6 +4385,7 @@ asls:Segregations-strength
           "2"
         ) ;
     ] ;
+  owl:equivalentClass sp:segregations-strength ;
   skos:prefLabel "Strength of segregations" ;
 .
 asls:Site-drainage
@@ -4307,6 +4402,7 @@ asls:Site-drainage
           "6"
         ) ;
     ] ;
+  owl:equivalentClass sp:soil-water-drainage ;
   skos:prefLabel "Site drainage" ;
 .
 asls:Slope-class
@@ -4325,6 +4421,7 @@ asls:Slope-class
           "CL"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/slope-class> ;
   skos:prefLabel "Slope class" ;
 .
 asls:Slope-modal
@@ -4342,6 +4439,7 @@ asls:Slope-modal
           "PR"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/modal-slope> ;
   skos:prefLabel "Modal terrain slope" ;
 .
 asls:Slope-procedure
@@ -4356,6 +4454,7 @@ asls:Slope-procedure
           "E"
         ) ;
     ] ;
+  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/slope-evaluation> ;
   skos:definition "Means of evaluation of slope" ;
   skos:prefLabel "Slope procedure" ;
 .
@@ -4371,6 +4470,7 @@ asls:Soil-permeability
           "4"
         ) ;
     ] ;
+  owl:equivalentClass sp:soil-water-permeability ;
   skos:prefLabel "Soil permeability" ;
 .
 asls:Substrate-discontinuity-spacing
@@ -4386,6 +4486,7 @@ asls:Substrate-discontinuity-spacing
           "C"
         ) ;
     ] ;
+  owl:equivalentClass subst:discontinuity-spacing ;
   skos:prefLabel "Spacing of discontinuities" ;
 .
 asls:Substrate-grain-size
@@ -4399,6 +4500,7 @@ asls:Substrate-grain-size
           "3"
         ) ;
     ] ;
+  owl:equivalentClass subst:grain-size ;
   skos:prefLabel "Substrate grain size" ;
 .
 asls:Substrate-mineral-composition
@@ -4419,6 +4521,7 @@ asls:Substrate-mineral-composition
           "Y"
         ) ;
     ] ;
+  owl:equivalentClass subst:mineral-composition ;
   skos:prefLabel "Substrate mineral composition" ;
 .
 asls:Substrate-porosity
@@ -4432,6 +4535,7 @@ asls:Substrate-porosity
           "2"
         ) ;
     ] ;
+  owl:equivalentClass subst:porosity ;
   skos:prefLabel "Substrate porosity" ;
 .
 asls:Substrate-strength-class
@@ -4447,6 +4551,7 @@ asls:Substrate-strength-class
           "VS"
         ) ;
     ] ;
+  owl:equivalentClass subst:material-strength ;
   skos:prefLabel "Substrate strength" ;
 .
 asls:Substrate-structure
@@ -4465,6 +4570,7 @@ asls:Substrate-structure
           "L"
         ) ;
     ] ;
+  owl:equivalentClass subst:material-structure ;
   skos:prefLabel "Substrate structure" ;
 .
 asls:Surface-Condition
@@ -4494,11 +4600,13 @@ asls:Surface-condition-codes
           "O"
         ) ;
     ] ;
+  owl:equivalentClass sp:condition-of-surface-soil-when-dry ;
   skos:prefLabel "Condition of surface soil when dry" ;
 .
 asls:Water-repellence
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
+  owl:equivalentClass sp:water-repellence ;
   skos:prefLabel "Water repellence" ;
 .
 asls:Water-repellence-codes
@@ -4512,6 +4620,7 @@ asls:Water-repellence-codes
           "S"
         ) ;
     ] ;
+  owl:equivalentClass sp:water-repellence ;
   skos:prefLabel "Water repellence" ;
 .
 ansis:c_n_ratio
