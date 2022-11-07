@@ -898,6 +898,7 @@ sp:observation-type-P
 .
 sp:surfacecondition-C
   a asls:Surface-Condition ;
+  owl:equivalentClass sp:condition-of-surface-soil-when-dry ;
 .
 sp:surfacecondition-F
   a asls:Surface-Condition ;
@@ -1272,24 +1273,31 @@ ansis:Cutans
 .
 ansis:Erosion
   a owl:Class ;
-  skos:prefLabel "Erosion" ;
-.
-ansis:Gilgai-microrelief
-  a owl:Class ;
-  rdfs:subClassOf ansis:Microrelief ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Gilgai-proportions ;
-      owl:onProperty ansis:component-proportions ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Erosion-severity ;
+      owl:onProperty ansis:degree ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Gilgai-type ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Erosion-gully-depth ;
+      owl:onProperty ansis:depth-gully ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Erosion-state ;
+      owl:onProperty ansis:state ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Erosion-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:prefLabel "Gilgai microrelief" ;
+  skos:prefLabel "Erosion" ;
 .
 ansis:HorizonDesignation
   a owl:Class ;
@@ -1323,6 +1331,34 @@ ansis:HorizonDesignation
 ]""" ;
   skos:prefLabel "Soil horizon designation" ;
 .
+ansis:Inundation
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Inundation-depth ;
+      owl:onProperty ansis:depth ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Inundation-duration ;
+      owl:onProperty ansis:duration ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Inundation-frequency ;
+      owl:onProperty ansis:frequency ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange asls:Inundation-velocity ;
+      owl:onProperty ansis:velocity ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "Inundation" ;
+.
 ansis:LandCover
   a owl:Class ;
   rdfs:subClassOf ansis:LandscapeEntity ;
@@ -1337,6 +1373,21 @@ ansis:LandSurface
   rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:allValuesFrom asls:Runoff ;
+      owl:onProperty ansis:runoff ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:aspect ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:elevation ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasMicrorelief ;
     ] ;
@@ -1348,7 +1399,28 @@ ansis:LandSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasCoarseFragments ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasInundation ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasOutcrop ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:height-drainage ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Aggradation ;
+      owl:onProperty ansis:aggradation ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1408,7 +1480,7 @@ ansis:LandformElement
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass asls:Geomorphology-agent ;
-      owl:onProperty ansis:geomorphologyAgent ;
+      owl:onProperty ansis:agent ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1472,7 +1544,7 @@ ansis:LandformPattern
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass asls:Geomorphology-agent ;
-      owl:onProperty ansis:geomorphologyAgent ;
+      owl:onProperty ansis:agent ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1592,7 +1664,101 @@ ansis:LandsurveySite
 .
 ansis:Microrelief
   a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasMicrorelief-biotic ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasMicrorelief-gilgai ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasMicrorelief-hummocky ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:hasMicrorelief-other ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:height ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:length ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Microrelief-component ;
+      owl:onProperty ansis:component ;
+    ] ;
   skos:prefLabel "Microrelief" ;
+  skos:scopeNote """'height' is vertical distance between base of depression of flat, and horizontal line joining crests of mounds or hummocks
+'length' is horizontal distance between crests of mounds or tops of hummocks""" ;
+.
+ansis:Microrelief-biotic
+  a owl:Class ;
+  rdfs:subClassOf ansis:Microrelief ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Microrelief-component ;
+      owl:onProperty ansis:component ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Microrelief-biotic-agent ;
+      owl:onProperty ansis:agent ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "Biotic microrelief" ;
+.
+ansis:Microrelief-gilgai
+  a owl:Class ;
+  rdfs:subClassOf ansis:Microrelief ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Microrelief-gilgai-proportions ;
+      owl:onProperty ansis:proportions ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Microrelief-gilgai-type ;
+      owl:onProperty ansis:type ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "Gilgai microrelief" ;
+.
+ansis:Microrelief-hummocky
+  a owl:Class ;
+  rdfs:subClassOf ansis:Microrelief ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Microrelief-hummocky-type ;
+      owl:onProperty ansis:type ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "Hummocky microrelief" ;
+.
+ansis:Microrelief-other
+  a owl:Class ;
+  rdfs:subClassOf ansis:Microrelief ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Microrelief-other-type ;
+      owl:onProperty ansis:type ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  skos:prefLabel "Other microrelief" ;
 .
 ansis:Mottles
   a owl:Class ;
@@ -1641,27 +1807,10 @@ ansis:Munsell-colour
 .
 ansis:Outcrop
   a owl:Class ;
-  rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom ansis:SoilSite ;
-      owl:onProperty ansis:relatedSite ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:allValuesFrom [
-          a owl:Class ;
-          owl:unionOf (
-              ansis:Substrate
-              geo:Feature
-            ) ;
-        ] ;
-      owl:onProperty sosa:isSampleOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Outcrop-abundance ;
       owl:onProperty ansis:abundance ;
     ] ;
   rdfs:subClassOf [
@@ -2649,6 +2798,21 @@ ansis:acid-sulfate
   rdfs:subPropertyOf ansis:chemistry ;
   skos:prefLabel "acid sulfate soils" ;
 .
+ansis:agent
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandformElement ;
+  schema:domainIncludes ansis:LandformPattern ;
+  schema:domainIncludes ansis:Microrelief-biotic ;
+  skos:definition "agent of geomorphological or biotic activity" ;
+  skos:prefLabel "agent" ;
+.
+ansis:aggradation
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandSurface ;
+  skos:prefLabel "aggradation" ;
+.
 ansis:alk-earth-carbonates
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -2660,6 +2824,21 @@ ansis:alteration
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Substrate ;
   skos:prefLabel "alteration" ;
+.
+asls:Aggradation
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land Surface p138" ;
+  rdfs:seeAlso sp:horizon-boundary-distinctness ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "X"
+          "0"
+          "1"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:aggradation ;
+  skos:prefLabel "Aggradation type" ;
 .
 asls:Boundary-distinctness
   a rdfs:Datatype ;
@@ -3080,6 +3259,68 @@ asls:Disturbance
   skos:definition "disturbance of a site" ;
   skos:prefLabel "Disturbance" ;
 .
+asls:Erosion-gully-depth
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p137" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "1"
+          "2"
+          "3"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:erosion-gully-depth ;
+  skos:prefLabel "Gully depth" ;
+.
+asls:Erosion-severity
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p134-138" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "0"
+          "1"
+          "2"
+          "3"
+          "4"
+        ) ;
+    ] ;
+  skos:prefLabel "Erosion severity" ;
+.
+asls:Erosion-state
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p134" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "S"
+          "P"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:erosion-state ;
+  skos:prefLabel "Erosion state" ;
+.
+asls:Erosion-type
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p134-138" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "W"
+          "C"
+          "S"
+          "R"
+          "G"
+          "T"
+          "B"
+          "V"
+          "M"
+        ) ;
+    ] ;
+  skos:prefLabel "Erosion type" ;
+.
 asls:Fabric-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Fabric p181" ;
@@ -3378,36 +3619,6 @@ asls:Geomorphology-status
   skos:definition "Status of geomorphological activity" ;
   skos:prefLabel "Geomorphology status" ;
 .
-asls:Gilgai-proportions
-  a rdfs:Datatype ;
-  dcterms:source "ASLS 3ed, Land surface p130" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "B"
-          "C"
-          "D"
-        ) ;
-    ] ;
-  skos:prefLabel "Gilgai proportions" ;
-.
-asls:Gilgai-type
-  a rdfs:Datatype ;
-  dcterms:source "ASLS 3ed, Land surface p129" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "C"
-          "N"
-          "L"
-          "A"
-          "M"
-          "G"
-        ) ;
-    ] ;
-  skos:prefLabel "Gilgai type" ;
-.
 asls:Horizon-code
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Horizons p148" ;
@@ -3460,6 +3671,67 @@ asls:Horizon-suffix
     ] ;
   owl:equivalentClass sp:horizon-suffix ;
   skos:prefLabel "Horizon designation suffix" ;
+.
+asls:Inundation-depth
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p139" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:inundation-depth ;
+  skos:prefLabel "Inundation depth" ;
+.
+asls:Inundation-duration
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p139" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "1"
+          "2"
+          "3"
+          "4"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:inundation-duration ;
+  skos:prefLabel "Inundation duration" ;
+.
+asls:Inundation-frequency
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p138" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "0"
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:inundation-frequency ;
+  skos:prefLabel "Inundation frequency" ;
+.
+asls:Inundation-velocity
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p139" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "L"
+          "H"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:inundation-runon-velocity ;
+  skos:prefLabel "Inundation runon velocity" ;
 .
 asls:Landform-element-name
   a rdfs:Datatype ;
@@ -3862,6 +4134,122 @@ asls:Material-strength
   owl:equivalentClass subst:material-strength ;
   skos:prefLabel "Strength of material" ;
 .
+asls:Microrelief-biotic-agent
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land Surface p131" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "N"
+          "M"
+          "B"
+          "T"
+          "A"
+          "V"
+          "O"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:biotic-microrelief-agents ;
+  skos:prefLabel "Microrelief: biotic agent" ;
+.
+asls:Microrelief-component
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land Surface p131, 133" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "M"
+          "E"
+          "D"
+          "L"
+          "H"
+          "T"
+          "O"
+          "S"
+          "K"
+          "F"
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:unionOf (
+          ls:biotic-microrelief-components
+          ls:microrelief-component-sampled
+        ) ;
+    ] ;
+  skos:prefLabel "Microrelief-component" ;
+.
+asls:Microrelief-gilgai-proportions
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p130" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "A"
+          "B"
+          "C"
+          "D"
+        ) ;
+    ] ;
+  skos:prefLabel "Gilgai proportions" ;
+.
+asls:Microrelief-gilgai-type
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p129" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "C"
+          "N"
+          "L"
+          "A"
+          "M"
+          "G"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:gilgai-microrelief-type ;
+  skos:prefLabel "Gilgai type" ;
+.
+asls:Microrelief-hummocky-type
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p132" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "U"
+          "K"
+          "I"
+          "S"
+          "R"
+          "T"
+          "P"
+          "H"
+          "O"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:other-microrelief-type ;
+  skos:prefLabel "Hummocky microrelief type" ;
+.
+asls:Microrelief-other-type
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface p132" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "U"
+          "K"
+          "I"
+          "S"
+          "R"
+          "T"
+          "P"
+          "H"
+          "O"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:other-microrelief-type ;
+  skos:prefLabel "Gilgai type" ;
+.
 asls:Mottle-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
@@ -3960,6 +4348,23 @@ asls:Mottle-type
     ] ;
   owl:equivalentClass sp:mottle-type ;
   skos:prefLabel "Mottle type" ;
+.
+asls:Outcrop-abundance
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land surface: Rock outcrop p143" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "0"
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:rock-outcrop-abundance ;
+  skos:prefLabel "Outcrop abundance" ;
 .
 asls:Pans-cementation
   a rdfs:Datatype ;
@@ -4299,6 +4704,23 @@ asls:Root-size
   owl:equivalentClass sp:roots-size ;
   skos:prefLabel "Root size" ;
 .
+asls:Runoff
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land Surface p144" ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "0"
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:runoff ;
+  skos:prefLabel "Runoff" ;
+.
 asls:Segregations-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p196" ;
@@ -4591,6 +5013,7 @@ asls:Substrate-structure
 asls:Surface-Condition
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
+  owl:equivalentClass sp:condition-of-surface-soil-when-dry ;
   skos:prefLabel "Condition of surface soil when dry" ;
 .
 asls:Surface-condition-codes
@@ -4637,6 +5060,14 @@ asls:Water-repellence-codes
     ] ;
   owl:equivalentClass sp:water-repellence ;
   skos:prefLabel "Water repellence" ;
+.
+ansis:aspect
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandSurface ;
+  schema:domainIncludes ansis:LandsurveySite ;
+  rdfs:range xsd:integer ;
+  skos:prefLabel "aspect" ;
 .
 ansis:c_n_ratio
   a owl:DatatypeProperty ;
@@ -4784,11 +5215,6 @@ ansis:component
   schema:domainIncludes ansis:SoilSampleType ;
   skos:prefLabel "type of component element" ;
 .
-ansis:component-proportions
-  a owl:DatatypeProperty ;
-  skos:definition "Relative proportions of the components" ;
-  skos:prefLabel "proportions of components" ;
-.
 ansis:compound-pedality
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -4824,8 +5250,9 @@ ansis:contrast
 ansis:degree
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Erosion ;
   schema:domainIncludes ansis:SoilPlasticity ;
-  skos:prefLabel "degree or intensity of phenomenon" ;
+  skos:prefLabel "degree or severity or intensity of phenomenon" ;
 .
 ansis:density
   a owl:DatatypeProperty ;
@@ -4847,6 +5274,7 @@ ansis:depth
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes geo:Feature ;
+  schema:domainIncludes ansis:Inundation ;
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:Substrate ;
   skos:definition "depth of entity" ;
@@ -4860,6 +5288,13 @@ ansis:depth
   skos:narrowMatch prop:inundation-depth ;
   skos:narrowMatch prop:observation-depth ;
   skos:prefLabel "depth" ;
+.
+ansis:depth-gully
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Erosion ;
+  rdfs:subPropertyOf ansis:depth ;
+  skos:prefLabel "gully depth" ;
 .
 ansis:depth-lower
   a owl:DatatypeProperty ;
@@ -5007,9 +5442,19 @@ ansis:drainage
   schema:domainIncludes ansis:SoilSite ;
   skos:prefLabel "drainage" ;
 .
+ansis:duration
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Inundation ;
+  rdfs:range <https://w3id.org/cdt/ucum> ;
+  skos:exactMatch prop:frequency ;
+  skos:prefLabel "duration" ;
+.
 ansis:elevation
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandSurface ;
+  schema:domainIncludes ansis:LandsurveySite ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:exactMatch prop:elevation ;
   skos:prefLabel "elevation above MSL" ;
@@ -5030,17 +5475,10 @@ ansis:fe_al_si
 ansis:frequency
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Inundation ;
   rdfs:range <https://w3id.org/cdt/ucum> ;
   skos:exactMatch prop:frequency ;
   skos:prefLabel "frequency" ;
-.
-ansis:geomorphologyAgent
-  a owl:ObjectProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:LandformElement ;
-  schema:domainIncludes ansis:LandformPattern ;
-  skos:definition "agent of geomorphological activity" ;
-  skos:prefLabel "geomorphology agent" ;
 .
 ansis:geomorphologyMode
   a owl:ObjectProperty ;
@@ -5106,6 +5544,13 @@ ansis:hasErosion
   skos:closeMatch prop:erosion-state ;
   skos:prefLabel "erosion " ;
 .
+ansis:hasInundation
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandSurface ;
+  rdfs:range ansis:Inundation ;
+  skos:prefLabel "inundation" ;
+.
 ansis:hasLandCover
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:LandsurveySite ;
@@ -5166,6 +5611,34 @@ ansis:hasMicrorelief
   skos:definition "microrelief at the site" ;
   skos:prefLabel "microrelief" ;
 .
+ansis:hasMicrorelief-biotic
+  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Microrelief ;
+  rdfs:range ansis:Microrelief-biotic ;
+  skos:definition "biotic microrelief at the site" ;
+  skos:prefLabel "biotic microrelief" ;
+.
+ansis:hasMicrorelief-gilgai
+  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Microrelief ;
+  rdfs:range ansis:Microrelief-gilgai ;
+  skos:definition "gilgai microrelief at the site" ;
+  skos:prefLabel "gilgai microrelief" ;
+.
+ansis:hasMicrorelief-hummocky
+  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Microrelief ;
+  rdfs:range ansis:Microrelief-hummocky ;
+  skos:definition "hummocky microrelief at the site" ;
+  skos:prefLabel "hummocky microrelief" ;
+.
+ansis:hasMicrorelief-other
+  a owl:ObjectProperty ;
+  schema:domainIncludes ansis:Microrelief ;
+  rdfs:range ansis:Microrelief-other ;
+  skos:definition "other microrelief at the site" ;
+  skos:prefLabel "other microrelief" ;
+.
 ansis:hasMottles
   a owl:ObjectProperty ;
   schema:domainIncludes ansis:SoilHorizon ;
@@ -5178,8 +5651,8 @@ ansis:hasOutcrop
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilSite ;
   rdfs:range ansis:Outcrop ;
-  skos:definition "outcrop at this entity" ;
-  skos:prefLabel "related outcrop" ;
+  skos:definition "rock outcrop at this entity" ;
+  skos:prefLabel "outcrop" ;
 .
 ansis:hasPans
   a owl:ObjectProperty ;
@@ -5236,6 +5709,12 @@ ansis:height
   skos:narrowMatch prop:microrelief-vertical-interval ;
   skos:narrowMatch prop:relief ;
   skos:prefLabel "height" ;
+.
+ansis:height-drainage
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:subPropertyOf ansis:height ;
+  skos:prefLabel "drainage height" ;
 .
 ansis:hue
   a owl:DatatypeProperty ;
@@ -5423,6 +5902,13 @@ ansis:porosity
   schema:domainIncludes ansis:Substrate ;
   skos:prefLabel "porosity" ;
 .
+ansis:proportions
+  a owl:DatatypeProperty ;
+  schema:domainIncludes ansis:Microrelief ;
+  schema:domainIncludes ansis:Microrelief-gilgai ;
+  skos:definition "Relative proportions of the components" ;
+  skos:prefLabel "proportions of components" ;
+.
 ansis:purpose
   a owl:DatatypeProperty ;
   schema:domainIncludes ansis:SiteVisit ;
@@ -5548,6 +6034,12 @@ ansis:relief
   schema:domainIncludes ansis:LandformPattern ;
   skos:prefLabel "relief" ;
 .
+ansis:runoff
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:LandSurface ;
+  skos:prefLabel "runoff" ;
+.
 ansis:sat-extracts
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -5600,6 +6092,12 @@ ansis:spacing
   skos:exactMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "spacing " ;
   skos:scopeNote "in the context of substrate this refers to the spacing of discontinuities" ;
+.
+ansis:state
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Erosion ;
+  skos:prefLabel "state" ;
 .
 ansis:stickiness
   a owl:ObjectProperty ;
@@ -5694,6 +6192,22 @@ ansis:value
   schema:domainIncludes ansis:Colour ;
   schema:domainIncludes ansis:SoilClassification ;
   skos:prefLabel "value" ;
+.
+ansis:velocity
+  a owl:DatatypeProperty ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Inundation ;
+  skos:definition "velocity of entity" ;
+  skos:exactMatch prop:depth ;
+  skos:narrowMatch prop:depth-free-water ;
+  skos:narrowMatch prop:depth-of-horizon ;
+  skos:narrowMatch prop:depth-of-horizon-lower ;
+  skos:narrowMatch prop:depth-of-horizon-upper ;
+  skos:narrowMatch prop:depth-to-r-horizon ;
+  skos:narrowMatch prop:erosion-gully-depth ;
+  skos:narrowMatch prop:inundation-depth ;
+  skos:narrowMatch prop:observation-depth ;
+  skos:prefLabel "velocity" ;
 .
 ansis:visitor
   a owl:ObjectProperty ;
