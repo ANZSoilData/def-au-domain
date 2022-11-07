@@ -867,13 +867,22 @@ sprop:frequency
   skos:narrower sprop:inundation-frequency ;
   skos:prefLabel "Frequency"@en ;
 .
-sprop:geomorphological-agent
+sprop:geomorphology-agent
   a qudt:QuantityKind ;
   a skos:Concept ;
   a sosa:ObservableProperty ;
   dcterms:identifier "https://anzsoil.org/def/au/property/geomorphological-agents"^^xsd:anyURI ;
   skos:definition "Geomorphological agent that plays a role in producing distinctive landform elements."@en ;
   skos:prefLabel "Geomorphological agent"@en ;
+.
+sprop:geomorphology-mode
+  a qudt:QuantityKind ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  dcterms:identifier "https://anzsoil.org/def/au/property/mode-of-geomorphological-activity"^^xsd:anyURI ;
+  skos:definition "Various modes of geomorphological activity may be distinguished (Figure 3)."@en ;
+  skos:exactMatch <https://anzsoil.org/def/au/domain/geomorphologyMode> ;
+  skos:prefLabel "Mode of geomorphological activity"@en ;
 .
 sprop:gilgai-microrelief-proportions
   a qudt:QuantityKind ;
@@ -1109,15 +1118,6 @@ Modal slope class determines the use of certain adjectives applied to landform p
 Table 5 defines the category badlands by various combinations of high slope values and low relief values. These combinations imply extremely close spacing of streams or valleys. Specifically, if one assumes a sawtooth terrain profile, the valley spacing implied is less than 100 m in areas with 50 m relief and less than 30 m in areas with 5 m relief; these values appear to accord with usage.
 Table 7 lists types of landform pattern in order of their typical class of modal slope. This table should not be regarded as definitive, for slope within each type of landform pattern may vary widely."""@en ;
   skos:prefLabel "Modal slope"@en ;
-.
-sprop:mode-of-geomorphological-activity
-  a qudt:QuantityKind ;
-  a skos:Concept ;
-  a sosa:ObservableProperty ;
-  dcterms:identifier "https://anzsoil.org/def/au/property/mode-of-geomorphological-activity"^^xsd:anyURI ;
-  skos:definition "Various modes of geomorphological activity may be distinguished (Figure 3)."@en ;
-  skos:exactMatch <https://anzsoil.org/def/au/domain/geomorphologyMode> ;
-  skos:prefLabel "Mode of geomorphological activity"@en ;
 .
 sprop:molar-concentration
   a qudt:QuantityKind ;
