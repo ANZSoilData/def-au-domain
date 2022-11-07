@@ -5119,6 +5119,7 @@ ansis:classification
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
+  rdfs:subPropertyOf ansis:type ;
   skos:exactMatch prop:soil-classification ;
   skos:prefLabel "has classification" ;
 .
@@ -5347,6 +5348,7 @@ ansis:designation
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilHorizon ;
+  rdfs:subPropertyOf ansis:classification ;
   skos:definition "soil horizon designation" ;
   skos:exactMatch prop:horizon-classification ;
   skos:prefLabel "horizon designation" ;
