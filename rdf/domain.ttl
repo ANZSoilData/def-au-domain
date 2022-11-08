@@ -9,6 +9,7 @@
 @prefix asls: <https://anzsoil.org/def/au/domain/asls-code/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix lf: <http://anzsoil.org/def/au/asls/landform/> .
 @prefix ls: <http://anzsoil.org/def/au/asls/land-surface/> .
 @prefix my: <https://my.example.org/soil/> .
 @prefix orcid: <https://orcid.org/> .
@@ -32,6 +33,7 @@
 
 asc:Alteration-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -46,6 +48,7 @@ asc:Alteration-code
 .
 asc:Classifier-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -280,6 +283,7 @@ asc:Classifier-code
 .
 asc:Clay-content-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -294,6 +298,7 @@ asc:Clay-content-code
 .
 asc:Colour-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -309,6 +314,7 @@ asc:Colour-code
 .
 asc:Depth-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -325,6 +331,7 @@ asc:Depth-code
 .
 asc:Gravel-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -341,6 +348,7 @@ asc:Gravel-code
 .
 asc:Order-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -366,6 +374,7 @@ asc:Order-code
 .
 asc:Organic-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -383,6 +392,7 @@ asc:Organic-code
 .
 asc:Texture-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -400,6 +410,7 @@ asc:Texture-code
 .
 asc:Thickness-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -415,6 +426,7 @@ asc:Thickness-code
 .
 asc:Water-repellence-code
   a rdfs:Datatype ;
+  dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
@@ -454,430 +466,430 @@ ls:disturbance-of-site-7
 ls:disturbance-of-site-8
   a asls:Disturbance ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-ALC>
+lf:landform-element-ALC
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BAN>
+lf:landform-element-BAN
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BAR>
+lf:landform-element-BAR
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BEA>
+lf:landform-element-BEA
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BEN>
+lf:landform-element-BEN
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BER>
+lf:landform-element-BER
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BKP>
+lf:landform-element-BKP
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BOU>
+lf:landform-element-BOU
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BRI>
+lf:landform-element-BRI
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-BRK>
+lf:landform-element-BRK
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CBE>
+lf:landform-element-CBE
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CFS>
+lf:landform-element-CFS
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CIR>
+lf:landform-element-CIR
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CLI>
+lf:landform-element-CLI
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CON>
+lf:landform-element-CON
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-COS>
+lf:landform-element-COS
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CRA>
+lf:landform-element-CRA
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-CUT>
+lf:landform-element-CUT
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DAM>
+lf:landform-element-DAM
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DBA>
+lf:landform-element-DBA
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DDE>
+lf:landform-element-DDE
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DOC>
+lf:landform-element-DOC
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DOL>
+lf:landform-element-DOL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUB>
+lf:landform-element-DUB
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUC>
+lf:landform-element-DUC
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUF>
+lf:landform-element-DUF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUH>
+lf:landform-element-DUH
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUN>
+lf:landform-element-DUN
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUP>
+lf:landform-element-DUP
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-DUS>
+lf:landform-element-DUS
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-EMB>
+lf:landform-element-EMB
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-EST>
+lf:landform-element-EST
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-FAN>
+lf:landform-element-FAN
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-FIL>
+lf:landform-element-FIL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-FLD>
+lf:landform-element-FLD
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-FOO>
+lf:landform-element-FOO
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-FOR>
+lf:landform-element-FOR
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-GUL>
+lf:landform-element-GUL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-HCR>
+lf:landform-element-HCR
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-HSL>
+lf:landform-element-HSL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-ITF>
+lf:landform-element-ITF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-LAG>
+lf:landform-element-LAG
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-LAK>
+lf:landform-element-LAK
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-LDS>
+lf:landform-element-LDS
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-LEV>
+lf:landform-element-LEV
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-LUN>
+lf:landform-element-LUN
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-MAA>
+lf:landform-element-MAA
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-MOU>
+lf:landform-element-MOU
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-OXB>
+lf:landform-element-OXB
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-PED>
+lf:landform-element-PED
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-PIT>
+lf:landform-element-PIT
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-PLA>
+lf:landform-element-PLA
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-PLY>
+lf:landform-element-PLY
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-PST>
+lf:landform-element-PST
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-REC>
+lf:landform-element-REC
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-REF>
+lf:landform-element-REF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-RER>
+lf:landform-element-RER
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-RES>
+lf:landform-element-RES
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-RFL>
+lf:landform-element-RFL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-RPL>
+lf:landform-element-RPL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SCA>
+lf:landform-element-SCA
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SCD>
+lf:landform-element-SCD
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SCR>
+lf:landform-element-SCR
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SFS>
+lf:landform-element-SFS
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SRP>
+lf:landform-element-SRP
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-STB>
+lf:landform-element-STB
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-STC>
+lf:landform-element-STC
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-STF>
+lf:landform-element-STF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SUS>
+lf:landform-element-SUS
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SWL>
+lf:landform-element-SWL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-SWP>
+lf:landform-element-SWP
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TAL>
+lf:landform-element-TAL
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TDC>
+lf:landform-element-TDC
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TDF>
+lf:landform-element-TDF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TEF>
+lf:landform-element-TEF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TEP>
+lf:landform-element-TEP
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TOR>
+lf:landform-element-TOR
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TRE>
+lf:landform-element-TRE
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-TUM>
+lf:landform-element-TUM
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-element-VLF>
+lf:landform-element-VLF
   a asls:LandformElement-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-ALF>
+lf:landform-pattern-ALF
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-ALP>
+lf:landform-pattern-ALP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-ANA>
+lf:landform-pattern-ANA
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-BAD>
+lf:landform-pattern-BAD
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-BAR>
+lf:landform-pattern-BAR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-BEA>
+lf:landform-pattern-BEA
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-CAL>
+lf:landform-pattern-CAL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-CHE>
+lf:landform-pattern-CHE
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-COR>
+lf:landform-pattern-COR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-COV>
+lf:landform-pattern-COV
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-DEL>
+lf:landform-pattern-DEL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-DUN>
+lf:landform-pattern-DUN
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-ESC>
+lf:landform-pattern-ESC
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-FLO>
+lf:landform-pattern-FLO
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-HIL>
+lf:landform-pattern-HIL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-KAR>
+lf:landform-pattern-KAR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-LAC>
+lf:landform-pattern-LAC
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-LAV>
+lf:landform-pattern-LAV
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-LON>
+lf:landform-pattern-LON
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-LOW>
+lf:landform-pattern-LOW
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-MAD>
+lf:landform-pattern-MAD
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-MAR>
+lf:landform-pattern-MAR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-MEA>
+lf:landform-pattern-MEA
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-MET>
+lf:landform-pattern-MET
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-MOU>
+lf:landform-pattern-MOU
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PAR>
+lf:landform-pattern-PAR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PED>
+lf:landform-pattern-PED
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PEP>
+lf:landform-pattern-PEP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PLA>
+lf:landform-pattern-PLA
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PLT>
+lf:landform-pattern-PLT
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PLY>
+lf:landform-pattern-PLY
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-PNP>
+lf:landform-pattern-PNP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-RIS>
+lf:landform-pattern-RIS
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-SAN>
+lf:landform-pattern-SAN
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-SHF>
+lf:landform-pattern-SHF
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-STA>
+lf:landform-pattern-STA
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-TEL>
+lf:landform-pattern-TEL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-TER>
+lf:landform-pattern-TER
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-TID>
+lf:landform-pattern-TID
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/landform-pattern-VOL>
+lf:landform-pattern-VOL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-B>
+lf:simple-erosional-landform-pattern-B
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GP>
+lf:simple-erosional-landform-pattern-GP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-GR>
+lf:simple-erosional-landform-pattern-GR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-LP>
+lf:simple-erosional-landform-pattern-LP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PH>
+lf:simple-erosional-landform-pattern-PH
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-PM>
+lf:simple-erosional-landform-pattern-PM
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RH>
+lf:simple-erosional-landform-pattern-RH
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RL>
+lf:simple-erosional-landform-pattern-RL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RM>
+lf:simple-erosional-landform-pattern-RM
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RP>
+lf:simple-erosional-landform-pattern-RP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-RR>
+lf:simple-erosional-landform-pattern-RR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SH>
+lf:simple-erosional-landform-pattern-SH
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SL>
+lf:simple-erosional-landform-pattern-SL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SM>
+lf:simple-erosional-landform-pattern-SM
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-SR>
+lf:simple-erosional-landform-pattern-SR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UH>
+lf:simple-erosional-landform-pattern-UH
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UL>
+lf:simple-erosional-landform-pattern-UL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP>
+lf:simple-erosional-landform-pattern-UP
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UR>
+lf:simple-erosional-landform-pattern-UR
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VH>
+lf:simple-erosional-landform-pattern-VH
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VL>
+lf:simple-erosional-landform-pattern-VL
   a asls:LandformPattern-type ;
 .
-<http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-VM>
+lf:simple-erosional-landform-pattern-VM
   a asls:LandformPattern-type ;
 .
 sp:observation-type-A
@@ -1188,18 +1200,6 @@ ansis:CoarseFragments
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Coarse-fragments-distribution ;
-      owl:onProperty ansis:distribution ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Material-strength ;
-      owl:onProperty ansis:strength ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass [
           a owl:Class ;
           owl:unionOf (
@@ -1209,6 +1209,12 @@ ansis:CoarseFragments
             ) ;
         ] ;
       owl:onProperty ansis:lithology ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Coarse-fragments-distribution ;
+      owl:onProperty ansis:distribution ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1224,31 +1230,17 @@ ansis:CoarseFragments
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Material-strength ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:onDataRange asls:Coarse-fragments-abundance ;
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Coarse fragments" ;
-.
-ansis:Colour
-  a owl:Class ;
-  dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:chroma ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:hue ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:value ;
-    ] ;
-  skos:prefLabel "Colour" ;
 .
 ansis:Cracks
   a owl:Class ;
@@ -1298,14 +1290,14 @@ ansis:Erosion
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Erosion-severity ;
-      owl:onProperty ansis:degree ;
+      owl:onDataRange asls:Erosion-gully-depth ;
+      owl:onProperty ansis:depth-gully ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Erosion-gully-depth ;
-      owl:onProperty ansis:depth-gully ;
+      owl:onDataRange asls:Erosion-severity ;
+      owl:onProperty ansis:degree ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -1315,7 +1307,7 @@ ansis:Erosion
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Erosion-type ;
+      owl:onDataRange asls:Erosion-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1478,13 +1470,6 @@ ansis:LandformElement
   rdfs:subClassOf ansis:Landform ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      schema:domainIncludes ansis:LandformElement ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Slope-procedure ;
-      owl:onProperty ansis:method-slope ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:height ;
     ] ;
@@ -1501,19 +1486,19 @@ ansis:LandformElement
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Geomorphology-agent ;
+      owl:onDataRange asls:Geomorphology-agent ;
       owl:onProperty ansis:agent ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Geomorphology-mode ;
+      owl:onDataRange asls:Geomorphology-mode ;
       owl:onProperty ansis:geomorphologyMode ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Landform-element-name ;
+      owl:onDataRange asls:Landform-element-name ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
@@ -1530,14 +1515,14 @@ ansis:LandformElement
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Slope-procedure ;
+      owl:onProperty ansis:method-slope ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange [
-          a owl:Class ;
-          owl:unionOf (
-              asls:Slope-class
-              xsd:string
-            ) ;
-        ] ;
+      owl:onDataRange asls:Slope-class ;
       owl:onProperty ansis:slope ;
     ] ;
   rdfs:subClassOf [
@@ -1565,31 +1550,31 @@ ansis:LandformPattern
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Geomorphology-agent ;
+      owl:onDataRange asls:Geomorphology-agent ;
       owl:onProperty ansis:agent ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Geomorphology-mode ;
+      owl:onDataRange asls:Geomorphology-mode ;
       owl:onProperty ansis:geomorphologyMode ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Geomorphology-status ;
+      owl:onDataRange asls:Geomorphology-status ;
       owl:onProperty ansis:geomorphologyStatus ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Landform-pattern-erosional ;
+      owl:onDataRange asls:Landform-pattern-erosional ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Landform-pattern-name ;
+      owl:onDataRange asls:Landform-pattern-name ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
@@ -1719,7 +1704,7 @@ ansis:Microrelief
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Microrelief-component ;
+      owl:onDataRange asls:Microrelief-component ;
       owl:onProperty ansis:component ;
     ] ;
   skos:prefLabel "Microrelief" ;
@@ -1732,12 +1717,12 @@ ansis:Microrelief-biotic
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Microrelief-component ;
+      owl:onDataRange asls:Microrelief-component ;
       owl:onProperty ansis:component ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Microrelief-biotic-agent ;
+      owl:onDataRange asls:Microrelief-biotic-agent ;
       owl:onProperty ansis:agent ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1754,7 +1739,7 @@ ansis:Microrelief-gilgai
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Microrelief-gilgai-type ;
+      owl:onDataRange asls:Microrelief-gilgai-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1765,7 +1750,7 @@ ansis:Microrelief-hummocky
   rdfs:subClassOf ansis:Microrelief ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Microrelief-hummocky-type ;
+      owl:onDataRange asls:Microrelief-hummocky-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1776,7 +1761,7 @@ ansis:Microrelief-other
   rdfs:subClassOf ansis:Microrelief ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Microrelief-other-type ;
+      owl:onDataRange asls:Microrelief-other-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -1792,7 +1777,7 @@ ansis:Mottles
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Mottle-colour ;
+      owl:onDataRange asls:Mottle-colour ;
       owl:onProperty ansis:colour ;
     ] ;
   rdfs:subClassOf [
@@ -1820,12 +1805,6 @@ ansis:Mottles
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Mottles and other colour patterns" ;
-.
-ansis:Munsell-colour
-  a owl:Class ;
-  dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
-  rdfs:subClassOf ansis:Colour ;
-  skos:prefLabel "Munsell colour" ;
 .
 ansis:Outcrop
   a owl:Class ;
@@ -1859,12 +1838,6 @@ ansis:Pans
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Pans-structure ;
-      owl:onProperty ansis:structure ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Pans-cementation ;
       owl:onProperty ansis:cementation ;
     ] ;
@@ -1873,6 +1846,12 @@ ansis:Pans
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Pans-continuity ;
       owl:onProperty ansis:continuity ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Pans-structure ;
+      owl:onProperty ansis:structure ;
     ] ;
   skos:prefLabel "Pans" ;
 .
@@ -1903,12 +1882,6 @@ ansis:Profile-purpose
         ) ;
     ] ;
   skos:prefLabel "Purpose of profile" ;
-.
-ansis:RSS-colour
-  a owl:Class ;
-  dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
-  rdfs:subClassOf ansis:Colour ;
-  skos:prefLabel "Revised Standard Soil Colour Charts" ;
 .
 ansis:Roots
   a owl:Class ;
@@ -2100,15 +2073,14 @@ ansis:SoilColour
   dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Colour-moisture-status ;
-      owl:onProperty ansis:moisture-status ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:value ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange xsd:string ;
-      owl:onProperty ansis:value ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Colour-moisture-status ;
+      owl:onProperty ansis:moisture-status ;
     ] ;
   skos:prefLabel "Soil colour" ;
 .
@@ -2239,6 +2211,12 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ansis:SoilStrength ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass ansis:SoilStructure ;
       owl:onProperty ansis:structure ;
     ] ;
@@ -2251,18 +2229,6 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Water-repellence-codes ;
-      owl:onProperty ansis:waterRepellence ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange ansis:SoilStrength ;
-      owl:onProperty ansis:strength ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Fabric-type ;
       owl:onProperty ansis:fabric ;
     ] ;
@@ -2271,6 +2237,12 @@ ansis:SoilLayer
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Soil-permeability ;
       owl:onProperty ansis:permeability ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Water-repellence-codes ;
+      owl:onProperty ansis:waterRepellence ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2334,11 +2306,6 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty sosa:usedProcedure ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:depth ;
     ] ;
   rdfs:subClassOf [
@@ -2382,6 +2349,12 @@ ansis:SoilProfile
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedLayer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass asls:Profile-construction ;
+      owl:onProperty sosa:usedProcedure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2458,7 +2431,7 @@ ansis:SoilSample
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass ansis:SoilSampleType ;
+      owl:onDataRange ansis:SoilSampleType ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -2603,13 +2576,13 @@ ansis:SoilSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Surface-condition-codes ;
+      owl:onDataRange asls:Surface-condition-codes ;
       owl:onProperty ansis:condition-when-dry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Water-repellence-codes ;
+      owl:onDataRange asls:Water-repellence-codes ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
   rdfs:subClassOf [
@@ -2692,27 +2665,15 @@ ansis:Substrate
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Substrate-structure ;
-      owl:onProperty ansis:structure ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass [
-          a owl:Class ;
-          owl:unionOf (
-              asls:Mass-genesis
-              asls:Mass-genesis-code
-            ) ;
-        ] ;
-      owl:onProperty ansis:mass-genesis ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Confidence-substrate-is-parent ;
       owl:onProperty ansis:confidence ;
       skos:definition "Degree of confidence that the observed substrate material is the parent material of the observed soil profile or a major part of that profile" ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Mass-genesis-code ;
+      owl:onProperty ansis:mass-genesis ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2740,20 +2701,26 @@ ansis:Substrate
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange asls:Substrate-structure ;
+      owl:onProperty ansis:structure ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:onClass asls:Profile-construction ;
       owl:onProperty sosa:usedProcedure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Substrate-strength-class ;
-      owl:onProperty ansis:strength ;
+      owl:onDataRange asls:Field-texture-substrate ;
+      owl:onProperty ansis:texture ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Field-texture-substrate ;
-      owl:onProperty ansis:texture ;
+      owl:onDataRange asls:Substrate-strength-class ;
+      owl:onProperty ansis:strength ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -2908,7 +2875,7 @@ asls:Channel-depth-width
           "V"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-relative-depth-width> ;
+  owl:equivalentClass lf:stream-channel-relative-depth-width ;
   skos:prefLabel "Channel depth relative to width" ;
 .
 asls:Channel-development
@@ -2923,7 +2890,7 @@ asls:Channel-development
           "A"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-development> ;
+  owl:equivalentClass lf:stream-channel-development ;
   skos:prefLabel "Stream channel development" ;
 .
 asls:Channel-directionality
@@ -2941,7 +2908,7 @@ asls:Channel-directionality
           "N"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-network-directionality> ;
+  owl:equivalentClass lf:stream-channel-network-directionality ;
   skos:prefLabel "Channel network directionality" ;
 .
 asls:Channel-integration
@@ -2955,7 +2922,7 @@ asls:Channel-integration
           "D"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-network-integration> ;
+  owl:equivalentClass lf:stream-channel-network-integration ;
   skos:prefLabel "Channel network integration" ;
 .
 asls:Channel-migration
@@ -2969,7 +2936,7 @@ asls:Channel-migration
           "F"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-migration> ;
+  owl:equivalentClass lf:stream-channel-migration ;
   skos:prefLabel "Stream channel migration rate" ;
 .
 asls:Channel-pattern
@@ -2984,7 +2951,7 @@ asls:Channel-pattern
           "R"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/streamwise-channel-pattern> ;
+  owl:equivalentClass lf:streamwise-channel-pattern ;
   skos:prefLabel "Streamwise channel pattern" ;
 .
 asls:Channel-spacing
@@ -3003,7 +2970,7 @@ asls:Channel-spacing
           "NU"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/stream-channel-spacing> ;
+  owl:equivalentClass lf:stream-channel-spacing ;
   skos:prefLabel "Stream channel spacing" ;
 .
 asls:Coarse-fragments-abundance
@@ -3347,165 +3314,108 @@ asls:Field-texture-grade-mineral
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p164" ;
   rdfs:seeAlso sp:field-texture-mineral ;
   rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "CL"
-          "CL+"
-          "CL-"
-          "CLA"
-          "CLI"
-          "CLS"
-          "CLS-I"
-          "CLFS"
-          "CLKS"
-          "CLS-"
-          "CLS+"
-          "CLS-A"
-          "CS"
-          "CS+"
-          "CFS"
-          "CS-"
-          "CKS"
-          "HC"
-          "HCI"
-          "HCA"
-          "KSHC"
-          "SHC"
-          "FSHC"
-          "ZHC"
-          "L"
-          "LI"
-          "LA"
-          "LC"
-          "ZLC"
-          "SLC"
-          "LCI"
-          "LCA"
-          "KSLC"
-          "FSLC"
-          "LMC"
-          "ZLMC"
-          "FSLMC"
-          "KSLMC"
-          "LMCI"
-          "SLMC"
-          "LMCA"
-          "LS"
-          "LFS"
-          "LSI"
-          "LKS"
-          "LSA"
-          "MC"
-          "ZMC"
-          "MCI"
-          "SMC"
-          "FSMC"
-          "MCA"
-          "KSMC"
-          "MHC"
-          "ZMHC"
-          "MHCA"
-          "SMHC"
-          "FSMHC"
-          "MHCI"
-          "KSMHC"
-          "S"
-          "SA"
-          "KS"
-          "SI"
-          "FS"
-          "SCL"
-          "SCL-"
-          "SCL+"
-          "FSCL"
-          "SCLA"
-          "SCLI"
-          "KSCL"
-          "SL"
-          "FSL"
-          "KSL"
-          "SLA"
-          "SLI"
-          "ZCL"
-          "ZCL-"
-          "ZCLI"
-          "ZCLA"
-          "ZCL+"
-          "ZL"
-          "ZLI"
-          "ZLA"
-        ) ;
-    ] ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "CL"
-          "CLS"
-          "CLFS"
-          "CLKS"
-          "CS"
-          "CFS"
-          "CKS"
-          "HC"
-          "KSHC"
-          "SHC"
-          "FSHC"
-          "ZHC"
-          "L"
-          "LC"
-          "ZLC"
-          "SLC"
-          "KSLC"
-          "FSLC"
-          "LMC"
-          "ZLMC"
-          "FSLMC"
-          "KSLMC"
-          "SLMC"
-          "LS"
-          "LFS"
-          "LKS"
-          "MC"
-          "ZMC"
-          "SMC"
-          "FSMC"
-          "KSMC"
-          "MHC"
-          "ZMHC"
-          "SMHC"
-          "FSMHC"
-          "KSMHC"
-          "S"
-          "KS"
-          "FS"
-          "SCL"
-          "FSCL"
-          "KSCL"
-          "SL"
-          "FSL"
-          "KSL"
-          "ZCL"
-          "ZL"
-        ) ;
-    ] ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "CL"
-          "CLS"
-          "CS"
-          "HC"
-          "L"
-          "LC"
-          "LMC"
-          "LS"
-          "MC"
-          "MHC"
-          "S"
-          "SCL"
-          "SL"
-          "ZCL"
-          "ZL"
+      a owl:Class ;
+      owl:unionOf (
+          [
+            a rdfs:Datatype ;
+            owl:oneOf (
+                "CL"
+                "CLS"
+                "CS"
+                "HC"
+                "L"
+                "LC"
+                "LMC"
+                "LS"
+                "MC"
+                "MHC"
+                "S"
+                "SCL"
+                "SL"
+                "ZCL"
+                "ZL"
+              ) ;
+          ]
+          [
+            a rdfs:Datatype ;
+            owl:oneOf (
+                "CLFS"
+                "CLKS"
+                "CFS"
+                "CKS"
+                "KSHC"
+                "SHC"
+                "FSHC"
+                "ZHC"
+                "ZLC"
+                "SLC"
+                "KSLC"
+                "FSLC"
+                "ZLMC"
+                "FSLMC"
+                "KSLMC"
+                "SLMC"
+                "LFS"
+                "LKS"
+                "ZMC"
+                "SMC"
+                "FSMC"
+                "KSMC"
+                "ZMHC"
+                "SMHC"
+                "FSMHC"
+                "KSMHC"
+                "KS"
+                "FS"
+                "FSCL"
+                "KSCL"
+                "FSL"
+                "KSL"
+              ) ;
+          ]
+          [
+            a rdfs:Datatype ;
+            owl:oneOf (
+                "CL+"
+                "CL-"
+                "CLA"
+                "CLI"
+                "CLS-I"
+                "CLS-"
+                "CLS+"
+                "CLS-A"
+                "CS+"
+                "CS-"
+                "HCI"
+                "HCA"
+                "LI"
+                "LA"
+                "LCI"
+                "LCA"
+                "LMCI"
+                "LMCA"
+                "LSI"
+                "LSA"
+                "MCI"
+                "MCA"
+                "MHCA"
+                "MHCI"
+                "SA"
+                "SI"
+                "SCL-"
+                "SCL+"
+                "SCLA"
+                "SCLI"
+                "SLA"
+                "SLI"
+                "ZCL-"
+                "ZCLI"
+                "ZCLA"
+                "ZCL+"
+                "ZLI"
+                "ZLA"
+              ) ;
+          ]
         ) ;
     ] ;
   owl:equivalentClass sp:field-texture-mineral ;
@@ -3587,7 +3497,7 @@ asls:Geomorphology-agent
           "IM"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/geomorphological-agents> ;
+  owl:equivalentClass lf:geomorphological-agents ;
   skos:prefLabel "Geomorphology agent" ;
 .
 asls:Geomorphology-mode
@@ -3605,7 +3515,7 @@ asls:Geomorphology-mode
           "SU"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/mode-of-geomorphological-activity> ;
+  owl:equivalentClass lf:mode-of-geomorphological-activity ;
   skos:prefLabel "Geomorphology mode" ;
 .
 asls:Geomorphology-status
@@ -3827,7 +3737,7 @@ asls:Landform-element-name
           "VLF"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/landform-element-glossary> ;
+  owl:equivalentClass lf:landform-element-glossary ;
   skos:prefLabel "Landform element name" ;
 .
 asls:Landform-element-type
@@ -3848,7 +3758,7 @@ asls:Landform-element-type
           "D"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/morphological-type> ;
+  owl:equivalentClass lf:morphological-type ;
   skos:prefLabel "Landform element morphological type" ;
 .
 asls:Landform-pattern-erosional
@@ -3881,7 +3791,7 @@ asls:Landform-pattern-erosional
           "B"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-patterns> ;
+  owl:equivalentClass lf:simple-erosional-landform-patterns ;
   skos:prefLabel "Landform pattern - simple erosional" ;
 .
 asls:Landform-pattern-name
@@ -3932,7 +3842,7 @@ asls:Landform-pattern-name
           "VOL"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/landform-pattern-glossary> ;
+  owl:equivalentClass lf:landform-pattern-glossary ;
   skos:prefLabel "Landform pattern name" ;
 .
 asls:LandformElement-type
@@ -4092,7 +4002,7 @@ asls:Location-in-element
           "B"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/location-within-the-landform-element> ;
+  owl:equivalentClass lf:location-within-the-landform-element ;
   skos:prefLabel "Location within the landform element" ;
 .
 asls:Mass-genesis
@@ -4543,6 +4453,7 @@ asls:Pore-diameter
 .
 asls:Profile-construction
   a owl:Class ;
+  dcterms:source "ASLS 3ed, Soil Profile p147" ;
   rdfs:subClassOf skos:Concept ;
   owl:equivalentClass sp:type-of-soil-observation ;
   skos:definition "Construction of soil observation profile e.g. pit, auger bore, core, exposure, or composite" ;
@@ -4561,7 +4472,7 @@ asls:Relative-inclination
           "I"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/relative-inclination-of-slope-elements> ;
+  owl:equivalentClass lf:relative-inclination-of-slope-elements ;
   skos:prefLabel "Relative inclination" ;
 .
 asls:Relief
@@ -4577,7 +4488,7 @@ asls:Relief
           "P"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/relief> ;
+  owl:equivalentClass lf:relief ;
   skos:prefLabel "Relief" ;
 .
 asls:Rock-alteration
@@ -4866,7 +4777,7 @@ asls:Slope-class
           "CL"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/slope-class> ;
+  owl:equivalentClass lf:slope-class ;
   skos:prefLabel "Slope class" ;
 .
 asls:Slope-modal
@@ -4884,7 +4795,7 @@ asls:Slope-modal
           "PR"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/modal-slope> ;
+  owl:equivalentClass lf:modal-slope ;
   skos:prefLabel "Modal terrain slope" ;
 .
 asls:Slope-procedure
@@ -4899,7 +4810,7 @@ asls:Slope-procedure
           "E"
         ) ;
     ] ;
-  owl:equivalentClass <http://anzsoil.org/def/au/asls/landform/slope-evaluation> ;
+  owl:equivalentClass lf:slope-evaluation ;
   skos:definition "Means of evaluation of slope" ;
   skos:prefLabel "Slope procedure" ;
 .
@@ -5118,7 +5029,6 @@ ansis:chloride
 ansis:chroma
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:Colour ;
   skos:definition "colour chroma" ;
   skos:prefLabel "chroma" ;
 .
@@ -5213,7 +5123,6 @@ ansis:colour
   a rdf:Property ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Mottles ;
-  schema:domainIncludes ansis:SoilColour ;
   schema:domainIncludes ansis:SoilHorizon ;
   schema:domainIncludes ansis:SoilLayer ;
   skos:exactMatch prop:colour ;
@@ -5761,7 +5670,6 @@ ansis:height-drainage
 ansis:hue
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:Colour ;
   skos:prefLabel "hue" ;
 .
 ansis:integration
@@ -6220,7 +6128,6 @@ ansis:underlyingMaterial
 ansis:value
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:Colour ;
   schema:domainIncludes ansis:SoilClassification ;
   skos:prefLabel "value" ;
 .
