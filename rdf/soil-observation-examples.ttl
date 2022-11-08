@@ -45,11 +45,12 @@ my:
 my:A11
   a ansis:SoilHorizon ;
   rdfs:comment "Horizon A11" ;
+  ansis:depth-upper "0 cm" ;
   ansis:designation [
       ansis:designation-master "A" ;
       ansis:designation-subdivision "11" ;
     ] ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
 my:A11P1
   a ansis:SoilSample ;
@@ -68,6 +69,7 @@ my:A11P1
       ansis:grade "W" ;
     ] ;
   ansis:texture "SL" ;
+  ansis:type "single" ;
 .
 my:A12
   a ansis:SoilHorizon ;
@@ -76,7 +78,7 @@ my:A12
       ansis:designation-master "A" ;
       ansis:designation-subdivision "12" ;
     ] ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
 my:A12P1
   a ansis:SoilSample ;
@@ -95,6 +97,7 @@ my:A12P1
       ansis:grade "W" ;
     ] ;
   ansis:texture "SL" ;
+  ansis:type "single" ;
 .
 my:A12P1CF
   a ansis:SoilSample ;
@@ -124,7 +127,7 @@ my:A2
       ansis:designation-master "A" ;
       ansis:designation-subdivision "2" ;
     ] ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
 my:A2P1
   a ansis:SoilSample ;
@@ -143,6 +146,7 @@ my:A2P1
       ansis:grade "V" ;
     ] ;
   ansis:texture "SL" ;
+  ansis:type "single" ;
 .
 my:B21s
   a ansis:SoilHorizon ;
@@ -153,7 +157,7 @@ my:B21s
       ansis:designation-subdivision "21" ;
       ansis:designation-suffix "s" ;
     ] ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
 my:B21sP1
   a ansis:SoilSample ;
@@ -172,6 +176,7 @@ my:B21sP1
       ansis:grade "M" ;
     ] ;
   ansis:texture "MC" ;
+  ansis:type "single" ;
 .
 my:B22s
   a ansis:SoilHorizon ;
@@ -181,7 +186,7 @@ my:B22s
       ansis:designation-subdivision "22" ;
       ansis:designation-suffix "s" ;
     ] ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
 my:B22sP1
   a ansis:SoilSample ;
@@ -199,15 +204,16 @@ my:B22sP1
       ansis:grade "M" ;
     ] ;
   ansis:texture "LMC" ;
+  ansis:type "single" ;
 .
-my:Body-88
+my:B88
   a ansis:SoilBody ;
-  skos:prefLabel "Monivae gravelly loam" ;
+  rdfs:label "Monivae gravelly loam" ;
 .
 my:Create_Site-1
   a sosa:Sampling ;
   rdfs:comment "Establish soil Site 1" ;
-  sosa:hasResult my:Site_1 ;
+  sosa:hasResult my:St1 ;
   sosa:madeBySampler <https://orcid.org/0000-0002-1805-2517> ;
 .
 my:O1
@@ -300,7 +306,7 @@ my:P1
   a ansis:SoilProfile ;
   geo:hasGeometry my:Point_1 ;
   rdfs:comment "profile 1" ;
-  sosa:isSampleOf my:Body-88 ;
+  sosa:isSampleOf my:B88 ;
   sosa:usedProcedure <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
   ansis:classification [
       ansis:classification-order "CH" ;
@@ -308,14 +314,17 @@ my:P1
     ] ;
   ansis:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
   ansis:depth "106 cm" ;
-  ansis:depth-RHorizon "106 cm" ;
-  ansis:depth-Substrate "106 cm" ;
+  ansis:depth-reason "depth of interest" ;
+  ansis:purpose "characterisation" ;
   ansis:relatedLayer my:A11 ;
   ansis:relatedLayer my:A12 ;
   ansis:relatedLayer my:A2 ;
   ansis:relatedLayer my:B21s ;
   ansis:relatedLayer my:B22s ;
-  ansis:relatedSoilSite my:Site_1 ;
+  ansis:relatedLayer my:R ;
+  ansis:relatedSoilSite my:St1 ;
+  ansis:relatedSoilSurface my:Sf3 ;
+  ansis:relatedSubstrate my:Sb1 ;
   ansis:type ansis:profile-type-Single ;
 .
 my:Point_1
@@ -327,33 +336,52 @@ my:Polygon_1
   a sf:Polygon ;
   geo:asWKT "POLYGON ((-37.06 144.02, -37.07 144.02, -37.07 144.03, -37.06 144.03, -37.06 144.02))"^^geo:wktLiteral ;
 .
+my:R
+  a ansis:SoilHorizon ;
+  rdfs:comment "R-Horizon in B88" ;
+  ansis:designation [
+      ansis:designation-master "R" ;
+    ] ;
+  ansis:relatedBody my:B88 ;
+.
+my:RP1
+  a ansis:SoilSample ;
+  rdfs:comment "R-Horizon in Profile 1" ;
+  sosa:isSampleOf my:R ;
+  ansis:depth-upper "106 cm" ;
+  ansis:relatedProfile my:P1 ;
+  ansis:type "single" ;
+.
 my:S1P1
   a ansis:SoilSample ;
   rdfs:comment "Sample 1 from depth range 25-30 cm from horizon A12 in profile P1" ;
   sosa:isSampleOf my:A12 ;
-  sosa:isSampleOf my:Body-88 ;
+  sosa:isSampleOf my:B88 ;
   ansis:depth-lower "30 cm" ;
   ansis:depth-upper "25 cm" ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "single" ;
 .
 my:S2P1
   a ansis:SoilSample ;
   rdfs:comment "Sample 2 from profile 1" ;
-  sosa:isSampleOf my:Body-88 ;
+  sosa:isSampleOf my:B88 ;
   ansis:depth-lower "60 cm" ;
   ansis:depth-upper "40 cm" ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "single" ;
 .
 my:S3P1
   a ansis:SoilSample ;
   rdfs:comment "Sample 3 from profile 1" ;
-  sosa:isResultOf my:Sg-20-40-in-P1 ;
-  sosa:isSampleOf my:Body-88 ;
+  sosa:isResultOf my:Sg2P1 ;
+  sosa:isSampleOf my:B88 ;
   ansis:depth-lower "40 cm" ;
   ansis:depth-upper "20 cm" ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "single" ;
 .
-my:Sg-20-40-in-P1
+my:Sg2P1
   a sosa:Sampling ;
   sosa:hasFeatureOfInterest my:P1 ;
   sosa:hasResult my:S3P1 ;
@@ -362,7 +390,7 @@ my:Sg-20-40-in-P1
   sosa:usedProcedure <https://example.org/soil-sampling-procedure-AVH> ;
   ansis:relatedProject <https://example.org/project-438> ;
 .
-my:Site_1
+my:St1
   a ansis:SoilSite ;
   geo:hasGeometry my:Polygon_1 ;
   rdfs:comment "site 1" ;
@@ -373,40 +401,42 @@ my:Site_1
       ansis:abundance "2"^^asls:Coarse-fragments-abundance ;
     ] ;
 .
-my:Sub1P1
+my:Sb1P1
   a ansis:SoilSample ;
   rdfs:comment "Substrate in Profile 1" ;
-  sosa:isSampleOf my:Substrate_1 ;
+  sosa:isSampleOf my:Sb1 ;
   ansis:depth-upper "106 cm" ;
   ansis:lithology subst:lithology-BA ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "single" ;
 .
-my:Substrate_1
+my:Sb1
   a ansis:Substrate ;
   rdfs:comment "Substrate of soil body" ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
-my:Surf3P1
+my:Sf3P1
   a ansis:SoilSample ;
   rdfs:comment "Soil surface in Profile 1" ;
-  sosa:isSampleOf my:Surface_3 ;
+  sosa:isSampleOf my:Sf3 ;
   ansis:condition-when-dry <http://anzsoil.org/def/au/asls/soil-profile/surfacecondition-H> ;
   ansis:depth "0 cm" ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "single" ;
 .
-my:Surface_3
+my:Sf3
   a ansis:SoilSurface ;
   rdfs:comment "Soil surface 3" ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .
 my:visit-S1-1
   a ansis:SiteVisit ;
   prov:endedAtTime "2002-09-19T13:55:00"^^xsd:dateTime ;
   prov:startedAtTime "2002-09-19T10:35:00"^^xsd:dateTime ;
   ansis:relatedActivity my:Create_Site-1 ;
-  ansis:relatedActivity my:Sg-20-40-in-P1 ;
+  ansis:relatedActivity my:Sg2P1 ;
   ansis:relatedProject <https://example.org/project-438> ;
-  ansis:relatedSite my:Site_1 ;
+  ansis:relatedSite my:St1 ;
   ansis:visitor <https://orcid.org/0000-0002-1805-2517> ;
   ansis:visitor <mailto:peter.wilson@csiro.au> ;
 .
@@ -419,7 +449,7 @@ my:visit-S1-2
   ansis:relatedActivity my:O4 ;
   ansis:relatedActivity my:O5 ;
   ansis:relatedProject <https://example.org/project-9765> ;
-  ansis:relatedSite my:Site_1 ;
+  ansis:relatedSite my:St1 ;
   ansis:visitor <https://orcid.org/0000-0002-0693-1899> ;
   ansis:visitor <https://orcid.org/0000-0002-1805-2517> ;
 .
