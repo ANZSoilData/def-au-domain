@@ -1110,6 +1110,12 @@ prov:Activity
 sosa:ObservableProperty
   rdfs:subClassOf rdf:Property ;
 .
+sosa:isSampleOf
+  schema:domainIncludes ansis:LandsurveySite ;
+  schema:domainIncludes ansis:SoilProfile ;
+  schema:domainIncludes ansis:SoilSample ;
+  schema:domainIncludes ansis:SoilSite ;
+.
 sosa:usedProcedure
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:Substrate ;
