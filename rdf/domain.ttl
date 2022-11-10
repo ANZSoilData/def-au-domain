@@ -1,6 +1,7 @@
 # baseURI: https://anzsoil.org/def/au/domain
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.opengis.net/ont/geosparql
+# imports: http://www.opengis.net/ont/sf
 # imports: http://www.w3.org/ns/ssn/
 # imports: https://linked.data.gov.au/def/project
 
@@ -1115,13 +1116,15 @@ sosa:usedProcedure
 .
 <https://anzsoil.org/def/au/domain>
   a owl:Ontology ;
+  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
+  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
   dcterms:contributor <mailto:peter.wilson@csiro.au> ;
   dcterms:created "2022-07-21"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:description "A domain-model for Australian soil data" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-10-20"^^xsd:date ;
+  dcterms:modified "2022-11-09"^^xsd:date ;
   dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
   dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
   dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
@@ -1129,6 +1132,7 @@ sosa:usedProcedure
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.opengis.net/ont/sf> ;
   owl:imports ssn: ;
   owl:imports <https://linked.data.gov.au/def/project> ;
 .
@@ -1249,18 +1253,6 @@ ansis:Cracks
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Cracks-width ;
       owl:onProperty ansis:width ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Pore-diameter ;
-      owl:onProperty ansis:diameter ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange asls:Pore-abundance ;
-      owl:onProperty ansis:abundance ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Voids in soil - pores and cracks" ;
 .
@@ -1959,6 +1951,19 @@ ansis:Segregations
     ] ;
   skos:prefLabel "Segregations" ;
 .
+ansis:Site-purpose
+  a rdfs:Datatype ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "characterisation"
+          "sampling"
+          "monitoring"
+          "classification"
+        ) ;
+    ] ;
+  skos:prefLabel "Purpose of site" ;
+.
 ansis:SiteType
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
@@ -2152,55 +2157,47 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:relatedSoilBody ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:CoarseFragments ;
       owl:onProperty ansis:hasCoarseFragments ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Cracks ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasCracks ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Cutans ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasCutans ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Mottles ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasMottles ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Pans ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasPans ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Pores ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasPores ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Roots ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasRoots ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:Segregations ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasSegregations ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedSoilBody ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2254,7 +2251,7 @@ ansis:SoilLayer
               asls:Field-texture-organic
             ) ;
         ] ;
-      owl:onProperty ansis:texture-hand ;
+      owl:onProperty ansis:texture ;
     ] ;
   skos:definition """region within a soil body usually observed as a specified depth interval within a profile
 """ ;
@@ -2297,11 +2294,6 @@ ansis:SoilProfile
       a owl:Restriction ;
       owl:allValuesFrom ansis:SoilBody ;
       owl:onProperty sosa:isSampleOf ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty geo:hasGeometry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2349,6 +2341,12 @@ ansis:SoilProfile
       a owl:Restriction ;
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedLayer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass sf:Point ;
+      owl:onProperty geo:hasGeometry ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2411,11 +2409,6 @@ ansis:SoilSample
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:relatedProfile ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:component ;
     ] ;
@@ -2428,6 +2421,11 @@ ansis:SoilSample
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:depth-upper ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedProfile ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2476,22 +2474,7 @@ ansis:SoilSite
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:design-site ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:design-survey ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasSubstrate ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:purpose ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2503,6 +2486,24 @@ ansis:SoilSite
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass ansis:SoilBody ;
       owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange ansis:Site-purpose ;
+      owl:onProperty ansis:purpose ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange ansis:SoilSite-design ;
+      owl:onProperty ansis:design-site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange ansis:Survey-design ;
+      owl:onProperty ansis:design-survey ;
     ] ;
   skos:definition """A site where samples, observations, and treatments of soil are carried out.  
 Samples are taken from profiles, and observations made on those samples in order to characterize the soil-body in which the site is located. """ ;
@@ -2518,6 +2519,20 @@ Samples are taken from profiles, and observations made on those samples in order
   ansis:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
 .""" ;
   skos:prefLabel "Soil site" ;
+.
+ansis:SoilSite-design
+  a rdfs:Datatype ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "ASLS"
+          "grid"
+          "transect"
+        ) ;
+    ] ;
+  skos:note "ASLS, grid, transect" ;
+  skos:prefLabel "Site design" ;
 .
 ansis:SoilStrength
   a owl:Class ;
@@ -2673,7 +2688,7 @@ ansis:Substrate
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onDataRange asls:Mass-genesis-code ;
-      owl:onProperty ansis:mass-genesis ;
+      owl:onProperty ansis:genesis ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -2707,6 +2722,12 @@ ansis:Substrate
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass asls:Substrate-strength-class ;
+      owl:onProperty ansis:strength ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:onClass asls:Profile-construction ;
       owl:onProperty sosa:usedProcedure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2715,12 +2736,6 @@ ansis:Substrate
       a owl:Restriction ;
       owl:onDataRange asls:Field-texture-substrate ;
       owl:onProperty ansis:texture ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:onDataRange asls:Substrate-strength-class ;
-      owl:onProperty ansis:strength ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -2737,6 +2752,21 @@ ansis:Substrate
     ] ;
   skos:definition "observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil." ;
   skos:prefLabel "Substrate" ;
+.
+ansis:Survey-design
+  a rdfs:Datatype ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "free"
+          "grid"
+          "stratified"
+          "miscellaneous"
+        ) ;
+    ] ;
+  skos:note "free, grid, stratified, miscellaneous" ;
+  skos:prefLabel "Survey design" ;
 .
 ansis:Treatment
   a owl:Class ;
@@ -3227,8 +3257,24 @@ asls:Cutans-type
   skos:prefLabel "Cutans type" ;
 .
 asls:Disturbance
-  a owl:Class ;
+  a rdfs:Datatype ;
+  dcterms:source "ASLS 3ed, Land Surface p128" ;
   rdfs:subClassOf skos:Concept ;
+  rdfs:subClassOf [
+      a rdfs:Datatype ;
+      owl:oneOf (
+          "0"
+          "1"
+          "2"
+          "3"
+          "4"
+          "5"
+          "6"
+          "7"
+          "8"
+        ) ;
+    ] ;
+  owl:equivalentClass ls:disturbance-of-site ;
   skos:definition "disturbance of a site" ;
   skos:prefLabel "Disturbance" ;
 .
@@ -3252,11 +3298,26 @@ asls:Erosion-severity
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
+          "X"
           "0"
           "1"
           "2"
           "3"
           "4"
+        ) ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:unionOf (
+          ls:erosion-scald
+          ls:erosion-mass-movement
+          ls:erosion-wind
+          ls:erosion-stream-bank
+          ls:erosion-gully
+          ls:erosion-rill
+          ls:erosion-sheet
+          ls:erosion-tunnel
+          ls:erosion-wave
         ) ;
     ] ;
   skos:prefLabel "Erosion severity" ;
@@ -3292,6 +3353,7 @@ asls:Erosion-type
           "M"
         ) ;
     ] ;
+  owl:equivalentClass ls:erosion ;
   skos:prefLabel "Erosion type" ;
 .
 asls:Fabric-type
@@ -3532,6 +3594,7 @@ asls:Geomorphology-status
           "U"
         ) ;
     ] ;
+  owl:equivalentClass lf:status-of-geomorphological-activity ;
   skos:definition "Status of geomorphological activity" ;
   skos:prefLabel "Geomorphology status" ;
 .
@@ -4107,6 +4170,7 @@ asls:Microrelief-gilgai-proportions
           "D"
         ) ;
     ] ;
+  owl:equivalentClass ls:gilgai-microrelief-proportions ;
   skos:prefLabel "Gilgai proportions" ;
 .
 asls:Microrelief-gilgai-type
@@ -4896,10 +4960,11 @@ asls:Substrate-porosity
 .
 asls:Substrate-strength-class
   a rdfs:Datatype ;
-  dcterms:source "ASLS 3ed Substrate p209" ;
+  dcterms:source "ASLS 3ed Substrate p209 , p215" ;
   rdfs:subClassOf [
       a rdfs:Datatype ;
       owl:oneOf (
+          "E"
           "VW"
           "W"
           "M"
@@ -5407,6 +5472,13 @@ ansis:frequency
   skos:exactMatch prop:frequency ;
   skos:prefLabel "frequency" ;
 .
+ansis:genesis
+  a rdf:Property ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:Substrate ;
+  skos:exactMatch prop:substrate-genesis ;
+  skos:prefLabel "genesis" ;
+.
 ansis:geomorphologyMode
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -5734,13 +5806,6 @@ ansis:magnetic-attributes
 ansis:mapSheet
   a owl:ObjectProperty ;
   skos:prefLabel "on map-sheet" ;
-.
-ansis:mass-genesis
-  a rdf:Property ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:Substrate ;
-  skos:exactMatch prop:substrate-genesis ;
-  skos:prefLabel "mass genesis" ;
 .
 ansis:material
   a owl:DatatypeProperty ;
