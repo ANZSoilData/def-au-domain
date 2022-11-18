@@ -2430,14 +2430,14 @@ ansis:SoilSample
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:relatedProfile ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ansis:SoilSampleType ;
+      owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange ansis:SoilSampleType ;
-      owl:onProperty ansis:type ;
-      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty ansis:relatedProfile ;
     ] ;
   skos:example """my:S3-20-40-in-P1
   a ansis:Sample ;
@@ -2562,11 +2562,6 @@ ansis:SoilStructure
       a owl:Restriction ;
       owl:allValuesFrom asls:Pedality-type ;
       owl:onProperty ansis:type ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:clods-fragments ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -5183,12 +5178,6 @@ ansis:classification-suborder
   rdfs:subPropertyOf skos:notation ;
   skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - sub-order" ;
-.
-ansis:clods-fragments
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  schema:domainIncludes ansis:SoilStructure ;
-  skos:prefLabel "clods and fragments" ;
 .
 ansis:colour
   a rdf:Property ;
