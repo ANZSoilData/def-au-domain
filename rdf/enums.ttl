@@ -511,6 +511,14 @@ ansis:SoilSampleType
   skos:note "single vs composite" ;
   skos:prefLabel "Type of soil sample" ;
 .
+ansis:Sample-type-composite
+  a ansis:SoilSampleType ;
+  skos:prefLabel "Composite sample" ;
+.
+ansis:Sample-type-single
+  a ansis:SoilSampleType ;
+  skos:prefLabel "Single sample" ;
+.
 
 ansis:SoilSite-design
   a rdfs:Datatype ;

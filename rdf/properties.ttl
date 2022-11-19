@@ -726,18 +726,6 @@ ansis:Pores
     ] ;
   skos:prefLabel "Pores" ;
 .
-ansis:Profile-purpose
-  a rdfs:Datatype ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "characterisation"
-          "sampling"
-          "other"
-        ) ;
-    ] ;
-  skos:prefLabel "Purpose of profile" ;
-.
 ansis:Roots
   a owl:Class ;
   rdfs:subClassOf [
@@ -753,26 +741,6 @@ ansis:Roots
       owl:onProperty ansis:diameter ;
     ] ;
   skos:prefLabel "Roots" ;
-.
-ansis:Sample-type-component
-  a skos:Concept ;
-  skos:prefLabel "Component element" ;
-.
-ansis:Sample-type-composite
-  a ansis:SoilSampleType ;
-  skos:prefLabel "Composite sample" ;
-.
-ansis:Sample-type-in-place
-  a skos:Concept ;
-  skos:prefLabel "In place sample type" ;
-.
-ansis:Sample-type-material
-  a skos:Concept ;
-  skos:prefLabel "Material sample type" ;
-.
-ansis:Sample-type-single
-  a ansis:SoilSampleType ;
-  skos:prefLabel "Single sample" ;
 .
 ansis:Segregations
   a owl:Class ;
@@ -813,19 +781,6 @@ ansis:Segregations
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Segregations" ;
-.
-ansis:Site-purpose
-  a rdfs:Datatype ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "characterisation"
-          "sampling"
-          "monitoring"
-          "classification"
-        ) ;
-    ] ;
-  skos:prefLabel "Purpose of site" ;
 .
 ansis:SiteType
   a owl:Class ;
@@ -885,33 +840,6 @@ ansis:SoilPlasticity
     ] ;
   skos:note "Plasticity degree only applies to Normal plasticity" ;
   skos:prefLabel "Soil plasticity" ;
-.
-ansis:SoilSampleType
-  a rdfs:Datatype ;
-  rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "single"
-          "composite"
-        ) ;
-    ] ;
-  skos:note "single vs composite" ;
-  skos:prefLabel "Type of soil sample" ;
-.
-ansis:SoilSite-design
-  a rdfs:Datatype ;
-  rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "ASLS"
-          "grid"
-          "transect"
-        ) ;
-    ] ;
-  skos:note "ASLS, grid, transect" ;
-  skos:prefLabel "Site design" ;
 .
 ansis:SoilStrength
   a owl:Class ;
@@ -1099,21 +1027,6 @@ ansis:Substrate
     ] ;
   skos:definition "observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil." ;
   skos:prefLabel "Substrate" ;
-.
-ansis:Survey-design
-  a rdfs:Datatype ;
-  rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "free"
-          "grid"
-          "stratified"
-          "miscellaneous"
-        ) ;
-    ] ;
-  skos:note "free, grid, stratified, miscellaneous" ;
-  skos:prefLabel "Survey design" ;
 .
 ansis:abundance
   a owl:DatatypeProperty ;
