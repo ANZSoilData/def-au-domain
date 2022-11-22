@@ -35,481 +35,378 @@
 asc:Alteration-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "HZ"
-          "JZ"
-          "P"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Alteration ;
-  owl:equivalentClass asc:Alteration-instances ;
+  owl:oneOf (
+      "HZ"
+      "JZ"
+      "P"
+    ) ;
   skos:prefLabel "ASC Alteration code" ;
 .
 asc:Classifier-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AF"
-          "AG"
-          "AH"
-          "AI"
-          "AJ"
-          "AK"
-          "AL"
-          "AM"
-          "AO"
-          "AP"
-          "AQ"
-          "AR"
-          "AS"
-          "AT"
-          "AU"
-          "AV"
-          "AW"
-          "AX"
-          "AY"
-          "AZ"
-          "BA"
-          "BB"
-          "BC"
-          "BD"
-          "BE"
-          "BF"
-          "BG"
-          "BH"
-          "BI"
-          "BJ"
-          "BK"
-          "BL"
-          "BN"
-          "BP"
-          "BR"
-          "BT"
-          "BU"
-          "BV"
-          "BW"
-          "BX"
-          "BY"
-          "BZ"
-          "CB"
-          "CC"
-          "CD"
-          "CE"
-          "CF"
-          "CG"
-          "CI"
-          "CJ"
-          "CK"
-          "CL"
-          "CM"
-          "CN"
-          "CO"
-          "CP"
-          "CQ"
-          "CR"
-          "CS"
-          "CU"
-          "CV"
-          "CW"
-          "CX"
-          "CY"
-          "CZ"
-          "DA"
-          "DB"
-          "DC"
-          "DD"
-          "DF"
-          "DG"
-          "DH"
-          "DI"
-          "DJ"
-          "DK"
-          "DL"
-          "DM"
-          "DN"
-          "DO"
-          "DP"
-          "DQ"
-          "DR"
-          "DT"
-          "DU"
-          "DV"
-          "DW"
-          "DX"
-          "DY"
-          "DZ"
-          "EA"
-          "EB"
-          "EC"
-          "ED"
-          "EE"
-          "EF"
-          "EG"
-          "EH"
-          "EI"
-          "EJ"
-          "EK"
-          "EL"
-          "EM"
-          "EN"
-          "EO"
-          "EP"
-          "EQ"
-          "ER"
-          "ES"
-          "ET"
-          "EU"
-          "EV"
-          "EW"
-          "EX"
-          "EY"
-          "EZ"
-          "FB"
-          "FC"
-          "FD"
-          "FF"
-          "FG"
-          "FH"
-          "FJ"
-          "FK"
-          "FL"
-          "FM"
-          "FN"
-          "FO"
-          "FP"
-          "FQ"
-          "FR"
-          "FS"
-          "FU"
-          "FV"
-          "FW"
-          "FX"
-          "FY"
-          "FZ"
-          "GA"
-          "GB"
-          "GC"
-          "GD"
-          "GE"
-          "GF"
-          "GG"
-          "GH"
-          "GI"
-          "GJ"
-          "GK"
-          "GL"
-          "GM"
-          "GN"
-          "GO"
-          "GP"
-          "GQ"
-          "GR"
-          "GS"
-          "GT"
-          "GU"
-          "GV"
-          "GW"
-          "GX"
-          "GY"
-          "HA"
-          "HB"
-          "HC"
-          "HD"
-          "HE"
-          "HF"
-          "HG"
-          "HH"
-          "HI"
-          "HJ"
-          "HK"
-          "HL"
-          "HM"
-          "HN"
-          "HO"
-          "HR"
-          "HS"
-          "HT"
-          "HU"
-          "HV"
-          "HW"
-          "HX"
-          "IA"
-          "IB"
-          "IC"
-          "ID"
-          "IE"
-          "IF"
-          "IG"
-          "IH"
-          "IJ"
-          "IL"
-          "IM"
-          "IS"
-          "IT"
-          "IU"
-          "IV"
-          "IW"
-          "IX"
-          "IY"
-          "IZ"
-          "JA"
-          "JB"
-          "JC"
-          "JD"
-          "JE"
-          "JF"
-          "JG"
-          "JH"
-          "JI"
-          "JK"
-          "JL"
-          "JM"
-          "JN"
-          "JP"
-          "JQ"
-          "JR"
-          "JT"
-          "JU"
-          "JV"
-          "JW"
-          "JX"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Class ;
+  owl:oneOf (
+      "AF"
+      "AG"
+      "AH"
+      "AI"
+      "AJ"
+      "AK"
+      "AL"
+      "AM"
+      "AO"
+      "AP"
+      "AQ"
+      "AR"
+      "AS"
+      "AT"
+      "AU"
+      "AV"
+      "AW"
+      "AX"
+      "AY"
+      "AZ"
+      "BA"
+      "BB"
+      "BC"
+      "BD"
+      "BE"
+      "BF"
+      "BG"
+      "BH"
+      "BI"
+      "BJ"
+      "BK"
+      "BL"
+      "BN"
+      "BP"
+      "BR"
+      "BT"
+      "BU"
+      "BV"
+      "BW"
+      "BX"
+      "BY"
+      "BZ"
+      "CB"
+      "CC"
+      "CD"
+      "CE"
+      "CF"
+      "CG"
+      "CI"
+      "CJ"
+      "CK"
+      "CL"
+      "CM"
+      "CN"
+      "CO"
+      "CP"
+      "CQ"
+      "CR"
+      "CS"
+      "CU"
+      "CV"
+      "CW"
+      "CX"
+      "CY"
+      "CZ"
+      "DA"
+      "DB"
+      "DC"
+      "DD"
+      "DF"
+      "DG"
+      "DH"
+      "DI"
+      "DJ"
+      "DK"
+      "DL"
+      "DM"
+      "DN"
+      "DO"
+      "DP"
+      "DQ"
+      "DR"
+      "DT"
+      "DU"
+      "DV"
+      "DW"
+      "DX"
+      "DY"
+      "DZ"
+      "EA"
+      "EB"
+      "EC"
+      "ED"
+      "EE"
+      "EF"
+      "EG"
+      "EH"
+      "EI"
+      "EJ"
+      "EK"
+      "EL"
+      "EM"
+      "EN"
+      "EO"
+      "EP"
+      "EQ"
+      "ER"
+      "ES"
+      "ET"
+      "EU"
+      "EV"
+      "EW"
+      "EX"
+      "EY"
+      "EZ"
+      "FB"
+      "FC"
+      "FD"
+      "FF"
+      "FG"
+      "FH"
+      "FJ"
+      "FK"
+      "FL"
+      "FM"
+      "FN"
+      "FO"
+      "FP"
+      "FQ"
+      "FR"
+      "FS"
+      "FU"
+      "FV"
+      "FW"
+      "FX"
+      "FY"
+      "FZ"
+      "GA"
+      "GB"
+      "GC"
+      "GD"
+      "GE"
+      "GF"
+      "GG"
+      "GH"
+      "GI"
+      "GJ"
+      "GK"
+      "GL"
+      "GM"
+      "GN"
+      "GO"
+      "GP"
+      "GQ"
+      "GR"
+      "GS"
+      "GT"
+      "GU"
+      "GV"
+      "GW"
+      "GX"
+      "GY"
+      "HA"
+      "HB"
+      "HC"
+      "HD"
+      "HE"
+      "HF"
+      "HG"
+      "HH"
+      "HI"
+      "HJ"
+      "HK"
+      "HL"
+      "HM"
+      "HN"
+      "HO"
+      "HR"
+      "HS"
+      "HT"
+      "HU"
+      "HV"
+      "HW"
+      "HX"
+      "IA"
+      "IB"
+      "IC"
+      "ID"
+      "IE"
+      "IF"
+      "IG"
+      "IH"
+      "IJ"
+      "IL"
+      "IM"
+      "IS"
+      "IT"
+      "IU"
+      "IV"
+      "IW"
+      "IX"
+      "IY"
+      "IZ"
+      "JA"
+      "JB"
+      "JC"
+      "JD"
+      "JE"
+      "JF"
+      "JG"
+      "JH"
+      "JI"
+      "JK"
+      "JL"
+      "JM"
+      "JN"
+      "JP"
+      "JQ"
+      "JR"
+      "JT"
+      "JU"
+      "JV"
+      "JW"
+      "JX"
+    ) ;
   skos:prefLabel "ASC Classifier code" ;
 .
 asc:Clay-content-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "Q"
-          "R"
-          "S"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Clay-content ;
-  owl:equivalentClass asc:Clay-instances ;
+  owl:oneOf (
+      "Q"
+      "R"
+      "S"
+    ) ;
   skos:prefLabel "ASC Clay Content code" ;
 .
 asc:Colour-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AA"
-          "AB"
-          "AC"
-          "AD"
-          "AE"
-        ) ;
-    ] ;
   owl:equivalentClass asc:ColourClass ;
+  owl:oneOf (
+      "AA"
+      "AB"
+      "AC"
+      "AD"
+      "AE"
+    ) ;
   skos:prefLabel "ASC Colour Class code" ;
 .
 asc:Depth-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "T"
-          "U"
-          "V"
-          "X"
-          "Y"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Depth ;
-  owl:equivalentClass asc:Depth-instances ;
+  owl:oneOf (
+      "T"
+      "U"
+      "V"
+      "X"
+      "Y"
+    ) ;
   skos:prefLabel "ASC Depth code" ;
 .
 asc:Gravel-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "E"
-          "F"
-          "G"
-          "H"
-          "I"
-        ) ;
-    ] ;
-  owl:equivalentClass asc:Gravel-instances ;
   owl:equivalentClass asc:Gravel-nature ;
+  owl:oneOf (
+      "E"
+      "F"
+      "G"
+      "H"
+      "I"
+    ) ;
   skos:prefLabel "ASC Gravel Nature code" ;
 .
 asc:Order-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AN"
-          "CA"
-          "CH"
-          "DE"
-          "FE"
-          "HY"
-          "KA"
-          "KU"
-          "OR"
-          "PO"
-          "RE"
-          "RU"
-          "SO"
-          "TE"
-          "VE"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Order ;
+  owl:oneOf (
+      "AN"
+      "CA"
+      "CH"
+      "DE"
+      "FE"
+      "HY"
+      "KA"
+      "KU"
+      "OR"
+      "PO"
+      "RE"
+      "RU"
+      "SO"
+      "TE"
+      "VE"
+    ) ;
   skos:prefLabel "ASC Order code" ;
 .
 asc:Organic-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "OA"
-          "OB"
-          "OC"
-          "OD"
-          "OE"
-          "OF"
-        ) ;
-    ] ;
-  owl:equivalentClass asc:Organic-instances ;
   owl:equivalentClass asc:Organic-type ;
+  owl:oneOf (
+      "OA"
+      "OB"
+      "OC"
+      "OD"
+      "OE"
+      "OF"
+    ) ;
   skos:prefLabel "ASC Organic Type code" ;
 .
 asc:Texture-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "J"
-          "K"
-          "L"
-          "M"
-          "N"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Texture ;
-  owl:equivalentClass asc:Texture-instances ;
+  owl:oneOf (
+      "J"
+      "K"
+      "L"
+      "M"
+      "N"
+      "O"
+    ) ;
   skos:prefLabel "ASC Texture code" ;
 .
 asc:Thickness-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "B"
-          "C"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass asc:Thickness ;
-  owl:equivalentClass asc:Thickness-instances ;
+  owl:oneOf (
+      "A"
+      "B"
+      "C"
+      "D"
+    ) ;
   skos:prefLabel "ASC Thickness code" ;
 .
 asc:Water-repellence-code
   a rdfs:Datatype ;
   dcterms:source "ASC 3ed: https://www.soilscienceaustralia.org.au/asc/soilkey.htm" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "NR"
-          "SR"
-          "WR"
-        ) ;
-    ] ;
-  owl:equivalentClass asc:Water-instances ;
   owl:equivalentClass asc:Water-repellence ;
+  owl:oneOf (
+      "NR"
+      "SR"
+      "WR"
+    ) ;
   skos:prefLabel "ASC Water repellence code" ;
 .
-
-<https://anzsoil.org/def/au/domain/enums>
-  a owl:Ontology ;
-  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
-  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
-  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
-  dcterms:created "2022-07-21"^^xsd:date ;
-  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
-  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:description "A domain-model for Australian soil data" ;
-  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-11-09"^^xsd:date ;
-  dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
-  dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
-  dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
-  dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
-  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports <http://www.opengis.net/ont/sf> ;
-  owl:imports ssn: ;
-  owl:imports <https://linked.data.gov.au/def/project> ;
-.
-
 ansis:Profile-purpose
   a rdfs:Datatype ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "characterisation"
-          "sampling"
-          "other"
-        ) ;
-    ] ;
+  owl:oneOf (
+      "characterisation"
+      "sampling"
+      "other"
+    ) ;
   skos:prefLabel "Purpose of profile" ;
-.
-
-ansis:Site-purpose
-  a rdfs:Datatype ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "characterisation"
-          "sampling"
-          "monitoring"
-          "classification"
-        ) ;
-    ] ;
-  skos:prefLabel "Purpose of site" ;
-.
-ansis:SiteType
-  a owl:Class ;
-  rdfs:subClassOf skos:Concept ;
-  skos:definition "Type of land survey site e.g. monitoring, opportunistic, farm, pedology" ;
-  skos:note "e.g. monitoring, opportunistic, farm, pedology" ;
-  skos:prefLabel "Type of site" ;
-.
-
-ansis:SoilSampleType
-  a rdfs:Datatype ;
-  rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "single"
-          "composite"
-        ) ;
-    ] ;
-  skos:note "single vs composite" ;
-  skos:prefLabel "Type of soil sample" ;
 .
 ansis:Sample-type-composite
   a ansis:SoilSampleType ;
@@ -519,516 +416,436 @@ ansis:Sample-type-single
   a ansis:SoilSampleType ;
   skos:prefLabel "Single sample" ;
 .
-
+ansis:Site-purpose
+  a rdfs:Datatype ;
+  owl:oneOf (
+      "characterisation"
+      "sampling"
+      "monitoring"
+      "classification"
+    ) ;
+  skos:prefLabel "Purpose of site" ;
+.
+ansis:SiteType
+  a owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Type of land survey site e.g. monitoring, opportunistic, farm, pedology" ;
+  skos:note "e.g. monitoring, opportunistic, farm, pedology" ;
+  skos:prefLabel "Type of site" ;
+.
+ansis:SoilSampleType
+  a rdfs:Datatype ;
+  rdfs:subClassOf skos:Concept ;
+  owl:oneOf (
+      "single"
+      "composite"
+    ) ;
+  skos:note "single vs composite" ;
+  skos:prefLabel "Type of soil sample" ;
+.
 ansis:SoilSite-design
   a rdfs:Datatype ;
   rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "ASLS"
-          "grid"
-          "transect"
-        ) ;
-    ] ;
+  owl:oneOf (
+      "ASLS"
+      "grid"
+      "transect"
+    ) ;
   skos:note "ASLS, grid, transect" ;
   skos:prefLabel "Site design" ;
 .
-
 ansis:Survey-design
   a rdfs:Datatype ;
   rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "free"
-          "grid"
-          "stratified"
-          "miscellaneous"
-        ) ;
-    ] ;
+  owl:oneOf (
+      "free"
+      "grid"
+      "stratified"
+      "miscellaneous"
+    ) ;
   skos:note "free, grid, stratified, miscellaneous" ;
   skos:prefLabel "Survey design" ;
 .
-
 asls:Aggradation
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land Surface p138" ;
   rdfs:seeAlso sp:horizon-boundary-distinctness ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "X"
-          "0"
-          "1"
-        ) ;
-    ] ;
   owl:equivalentClass ls:aggradation ;
+  owl:oneOf (
+      "X"
+      "0"
+      "1"
+    ) ;
   skos:prefLabel "Aggradation type" ;
 .
 asls:Boundary-distinctness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Boundaries p199" ;
   rdfs:seeAlso sp:horizon-boundary-distinctness ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "S"
-          "A"
-          "C"
-          "G"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass sp:horizon-boundary-distinctness ;
+  owl:oneOf (
+      "S"
+      "A"
+      "C"
+      "G"
+      "D"
+    ) ;
   skos:prefLabel "Boundary distinctness" ;
 .
 asls:Boundary-shape
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Boundaries p200" ;
   rdfs:seeAlso sp:horizon-boundary-shape ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "S"
-          "W"
-          "I"
-          "T"
-          "B"
-        ) ;
-    ] ;
   owl:equivalentClass sp:horizon-boundary-shape ;
+  owl:oneOf (
+      "S"
+      "W"
+      "I"
+      "T"
+      "B"
+    ) ;
   skos:prefLabel "Boundary shape" ;
 .
 asls:Carbonate-effervescence
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Effervescence p198" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "N"
-          "S"
-          "M"
-          "H"
-          "V"
-        ) ;
-    ] ;
   owl:equivalentClass sp:effervescence-of-carbonate-in-fine-earth ;
+  owl:oneOf (
+      "N"
+      "S"
+      "M"
+      "H"
+      "V"
+    ) ;
   skos:prefLabel "Effervescence of carbonate in fine earth" ;
 .
 asls:Channel-depth-width
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p50" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "D"
-          "M"
-          "S"
-          "V"
-        ) ;
-    ] ;
   owl:equivalentClass lf:stream-channel-relative-depth-width ;
+  owl:oneOf (
+      "D"
+      "M"
+      "S"
+      "V"
+    ) ;
   skos:prefLabel "Channel depth relative to width" ;
 .
 asls:Channel-development
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p49" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "O"
-          "I"
-          "E"
-          "A"
-        ) ;
-    ] ;
   owl:equivalentClass lf:stream-channel-development ;
+  owl:oneOf (
+      "O"
+      "I"
+      "E"
+      "A"
+    ) ;
   skos:prefLabel "Stream channel development" ;
 .
 asls:Channel-directionality
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p52" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "F"
-          "D"
-          "U"
-          "C"
-          "P"
-          "B"
-          "N"
-        ) ;
-    ] ;
   owl:equivalentClass lf:stream-channel-network-directionality ;
+  owl:oneOf (
+      "F"
+      "D"
+      "U"
+      "C"
+      "P"
+      "B"
+      "N"
+    ) ;
   skos:prefLabel "Channel network directionality" ;
 .
 asls:Channel-integration
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p52" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "I"
-          "P"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass lf:stream-channel-network-integration ;
+  owl:oneOf (
+      "I"
+      "P"
+      "D"
+    ) ;
   skos:prefLabel "Channel network integration" ;
 .
 asls:Channel-migration
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p50" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "R"
-          "S"
-          "F"
-        ) ;
-    ] ;
   owl:equivalentClass lf:stream-channel-migration ;
+  owl:oneOf (
+      "R"
+      "S"
+      "F"
+    ) ;
   skos:prefLabel "Stream channel migration rate" ;
 .
 asls:Channel-pattern
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p50" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "T"
-          "N"
-          "D"
-          "R"
-        ) ;
-    ] ;
   owl:equivalentClass lf:streamwise-channel-pattern ;
+  owl:oneOf (
+      "T"
+      "N"
+      "D"
+      "R"
+    ) ;
   skos:prefLabel "Streamwise channel pattern" ;
 .
 asls:Channel-spacing
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p48" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AB"
-          "SP"
-          "VW"
-          "WS"
-          "MS"
-          "CS"
-          "VC"
-          "NU"
-        ) ;
-    ] ;
   owl:equivalentClass lf:stream-channel-spacing ;
+  owl:oneOf (
+      "AB"
+      "SP"
+      "VW"
+      "WS"
+      "MS"
+      "CS"
+      "VC"
+      "NU"
+    ) ;
   skos:prefLabel "Stream channel spacing" ;
 .
 asls:Coarse-fragments-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface: Coarse fragments p139" ;
-  rdfs:seeAlso ls:coarse-fragments-abundance ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-        ) ;
-    ] ;
   owl:equivalentClass ls:coarse-fragments-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+    ) ;
   skos:prefLabel "Abundance of coarse fragments" ;
 .
 asls:Coarse-fragments-distribution
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Coarse fragments p170" ;
   rdfs:seeAlso sp:coarse-fragments-distribution ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "U"
-          "R"
-          "S"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass sp:coarse-fragments-distribution ;
+  owl:oneOf (
+      "U"
+      "R"
+      "S"
+      "D"
+    ) ;
   skos:prefLabel "Coarse fragments disttribution" ;
 .
 asls:Coarse-fragments-shape
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface: Coarse fragments p142" ;
-  rdfs:seeAlso ls:coarse-fragments-shape ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "S"
-          "U"
-          "R"
-          "AT"
-          "ST"
-          "UT"
-          "RT"
-          "AP"
-          "SP"
-          "UP"
-          "RP"
-        ) ;
-    ] ;
   owl:equivalentClass ls:coarse-fragments-shape ;
+  owl:oneOf (
+      "A"
+      "S"
+      "U"
+      "R"
+      "AT"
+      "ST"
+      "UT"
+      "RT"
+      "AP"
+      "SP"
+      "UP"
+      "RP"
+    ) ;
   skos:prefLabel "Coarse fragments shape" ;
 .
 asls:Coarse-fragments-size
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface: Coarse fragments p140" ;
-  rdfs:seeAlso ls:coarse-fragments-size ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-          "7"
-        ) ;
-    ] ;
   owl:equivalentClass ls:coarse-fragments-size ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+      "7"
+    ) ;
   skos:prefLabel "Coarse fragments size" ;
 .
 asls:Colour-moisture-status
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
   rdfs:seeAlso sp:colour-stat ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "M"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass sp:colour-stat ;
+  owl:oneOf (
+      "M"
+      "D"
+    ) ;
   skos:prefLabel "Moisture status for colour description" ;
 .
 asls:Confidence-substrate-is-parent
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate p206" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "N"
-          "D"
-          "P"
-          "A"
-        ) ;
-    ] ;
   owl:equivalentClass subst:confidence ;
+  owl:oneOf (
+      "N"
+      "D"
+      "P"
+      "A"
+    ) ;
   skos:prefLabel "Confidence that substrate is parent material" ;
 .
 asls:Consistence-plasticity-degree
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p188" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-        ) ;
-    ] ;
   owl:equivalentClass sp:consistence-plasticity-degree ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+    ) ;
   skos:prefLabel "Consistence - plasticity-degree" ;
 .
 asls:Consistence-plasticity-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p188" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "S"
-          "N"
-          "U"
-          "T"
-        ) ;
-    ] ;
   owl:equivalentClass sp:consistence-plasticity-type ;
+  owl:oneOf (
+      "S"
+      "N"
+      "U"
+      "T"
+    ) ;
   skos:prefLabel "Consistence - plasticity-type" ;
 .
 asls:Consistence-soil-water-status
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p186" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "D"
-          "T"
-          "M"
-          "W"
-        ) ;
-    ] ;
   owl:equivalentClass sp:soil-water-status ;
+  owl:oneOf (
+      "D"
+      "T"
+      "M"
+      "W"
+    ) ;
   skos:prefLabel "Consistence - soil-water-status" ;
 .
 asls:Consistence-stickiness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p187" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-        ) ;
-    ] ;
   owl:equivalentClass sp:consistence-stickiness ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+    ) ;
   skos:prefLabel "Consistence - stickiness" ;
 .
 asls:Consistence-strength
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p187" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-          "7"
-        ) ;
-    ] ;
   owl:equivalentClass sp:consistence-strength ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+      "7"
+    ) ;
   skos:prefLabel "Consistence - strength" ;
 .
 asls:Cracks-width
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Voids p184" ;
   rdfs:seeAlso sp:voids-cracks ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass sp:voids-cracks ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Width of cracks" ;
 .
 asls:Cutans-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Cutans p183" ;
   rdfs:seeAlso ls:cutans-abundance ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-        ) ;
-    ] ;
   owl:equivalentClass sp:cutans-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+    ) ;
   skos:prefLabel "Abundance of cutans" ;
 .
 asls:Cutans-distinctness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Cutans p183" ;
   rdfs:seeAlso sp:horizon-boundary-distinctness ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "F"
-          "D"
-          "P"
-        ) ;
-    ] ;
   owl:equivalentClass sp:cutans-distinctness ;
+  owl:oneOf (
+      "F"
+      "D"
+      "P"
+    ) ;
   skos:prefLabel "Cutans distinctness" ;
 .
 asls:Cutans-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Cutans p182" ;
   rdfs:seeAlso ls:cutans-type ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "Z"
-          "U"
-          "C"
-          "M"
-          "S"
-          "K"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass sp:cutans-type ;
+  owl:oneOf (
+      "Z"
+      "U"
+      "C"
+      "M"
+      "S"
+      "K"
+      "O"
+    ) ;
   skos:prefLabel "Cutans type" ;
 .
 asls:Disturbance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land Surface p128" ;
   rdfs:subClassOf skos:Concept ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-          "7"
-          "8"
-        ) ;
-    ] ;
   owl:equivalentClass ls:disturbance-of-site ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+      "7"
+      "8"
+    ) ;
   skos:definition "disturbance of a site" ;
   skos:prefLabel "Disturbance" ;
 .
 asls:Erosion-gully-depth
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p137" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-        ) ;
-    ] ;
   owl:equivalentClass ls:erosion-gully-depth ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+    ) ;
   skos:prefLabel "Gully depth" ;
 .
 asls:Erosion-severity
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p134-138" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "X"
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass [
       a owl:Class ;
       owl:unionOf (
@@ -1043,281 +860,259 @@ asls:Erosion-severity
           ls:erosion-wave
         ) ;
     ] ;
+  owl:oneOf (
+      "X"
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Erosion severity" ;
 .
 asls:Erosion-state
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p134" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "S"
-          "P"
-        ) ;
-    ] ;
   owl:equivalentClass ls:erosion-state ;
+  owl:oneOf (
+      "A"
+      "S"
+      "P"
+    ) ;
   skos:prefLabel "Erosion state" ;
 .
 asls:Erosion-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p134-138" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "W"
-          "C"
-          "S"
-          "R"
-          "G"
-          "T"
-          "B"
-          "V"
-          "M"
-        ) ;
-    ] ;
   owl:equivalentClass ls:erosion ;
+  owl:oneOf (
+      "W"
+      "C"
+      "S"
+      "R"
+      "G"
+      "T"
+      "B"
+      "V"
+      "M"
+    ) ;
   skos:prefLabel "Erosion type" ;
 .
 asls:Fabric-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Fabric p181" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "E"
-          "G"
-          "R"
-          "S"
-        ) ;
-    ] ;
   owl:equivalentClass sp:fabric ;
+  owl:oneOf (
+      "E"
+      "G"
+      "R"
+      "S"
+    ) ;
   skos:prefLabel "Fabric type" ;
 .
 asls:Field-texture-grade-mineral
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p164" ;
   rdfs:seeAlso sp:field-texture-mineral ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          [
-            a rdfs:Datatype ;
-            owl:oneOf (
-                "CL"
-                "CLS"
-                "CS"
-                "HC"
-                "L"
-                "LC"
-                "LMC"
-                "LS"
-                "MC"
-                "MHC"
-                "S"
-                "SCL"
-                "SL"
-                "ZCL"
-                "ZL"
-              ) ;
-          ]
-          [
-            a rdfs:Datatype ;
-            owl:oneOf (
-                "CLFS"
-                "CLKS"
-                "CFS"
-                "CKS"
-                "KSHC"
-                "SHC"
-                "FSHC"
-                "ZHC"
-                "ZLC"
-                "SLC"
-                "KSLC"
-                "FSLC"
-                "ZLMC"
-                "FSLMC"
-                "KSLMC"
-                "SLMC"
-                "LFS"
-                "LKS"
-                "ZMC"
-                "SMC"
-                "FSMC"
-                "KSMC"
-                "ZMHC"
-                "SMHC"
-                "FSMHC"
-                "KSMHC"
-                "KS"
-                "FS"
-                "FSCL"
-                "KSCL"
-                "FSL"
-                "KSL"
-              ) ;
-          ]
-          [
-            a rdfs:Datatype ;
-            owl:oneOf (
-                "CL+"
-                "CL-"
-                "CLA"
-                "CLI"
-                "CLS-I"
-                "CLS-"
-                "CLS+"
-                "CLS-A"
-                "CS+"
-                "CS-"
-                "HCI"
-                "HCA"
-                "LI"
-                "LA"
-                "LCI"
-                "LCA"
-                "LMCI"
-                "LMCA"
-                "LSI"
-                "LSA"
-                "MCI"
-                "MCA"
-                "MHCA"
-                "MHCI"
-                "SA"
-                "SI"
-                "SCL-"
-                "SCL+"
-                "SCLA"
-                "SCLI"
-                "SLA"
-                "SLI"
-                "ZCL-"
-                "ZCLI"
-                "ZCLA"
-                "ZCL+"
-                "ZLI"
-                "ZLA"
-              ) ;
-          ]
-        ) ;
-    ] ;
   owl:equivalentClass sp:field-texture-mineral ;
+  owl:unionOf (
+      [
+        a rdfs:Datatype ;
+        owl:oneOf (
+            "CL"
+            "CLS"
+            "CS"
+            "HC"
+            "L"
+            "LC"
+            "LMC"
+            "LS"
+            "MC"
+            "MHC"
+            "S"
+            "SCL"
+            "SL"
+            "ZCL"
+            "ZL"
+          ) ;
+      ]
+      [
+        a rdfs:Datatype ;
+        owl:oneOf (
+            "CLFS"
+            "CLKS"
+            "CFS"
+            "CKS"
+            "KSHC"
+            "SHC"
+            "FSHC"
+            "ZHC"
+            "ZLC"
+            "SLC"
+            "KSLC"
+            "FSLC"
+            "ZLMC"
+            "FSLMC"
+            "KSLMC"
+            "SLMC"
+            "LFS"
+            "LKS"
+            "ZMC"
+            "SMC"
+            "FSMC"
+            "KSMC"
+            "ZMHC"
+            "SMHC"
+            "FSMHC"
+            "KSMHC"
+            "KS"
+            "FS"
+            "FSCL"
+            "KSCL"
+            "FSL"
+            "KSL"
+          ) ;
+      ]
+      [
+        a rdfs:Datatype ;
+        owl:oneOf (
+            "CL+"
+            "CL-"
+            "CLA"
+            "CLI"
+            "CLS-I"
+            "CLS-"
+            "CLS+"
+            "CLS-A"
+            "CS+"
+            "CS-"
+            "HCI"
+            "HCA"
+            "LI"
+            "LA"
+            "LCI"
+            "LCA"
+            "LMCI"
+            "LMCA"
+            "LSI"
+            "LSA"
+            "MCI"
+            "MCA"
+            "MHCA"
+            "MHCI"
+            "SA"
+            "SI"
+            "SCL-"
+            "SCL+"
+            "SCLA"
+            "SCLI"
+            "SLA"
+            "SLI"
+            "ZCL-"
+            "ZCLI"
+            "ZCLA"
+            "ZCL+"
+            "ZLI"
+            "ZLA"
+          ) ;
+      ]
+    ) ;
   skos:prefLabel "Field-texture grade - mineral soils" ;
 .
 asls:Field-texture-organic
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p169" ;
   rdfs:seeAlso sp:field-texture-organic ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AP"
-          "CP"
-          "GP"
-          "HP"
-          "IP"
-          "LP"
-          "SP"
-        ) ;
-    ] ;
   owl:equivalentClass sp:field-texture-organic ;
+  owl:oneOf (
+      "AP"
+      "CP"
+      "GP"
+      "HP"
+      "IP"
+      "LP"
+      "SP"
+    ) ;
   skos:prefLabel "Field-texture grade - organic soils" ;
 .
 asls:Field-texture-qualification
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p166" ;
   rdfs:seeAlso sp:field-texture-qualifier ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "-"
-          "+"
-          "A"
-          "I"
-        ) ;
-    ] ;
   owl:equivalentClass sp:field-texture-qualifier ;
+  owl:oneOf (
+      "-"
+      "+"
+      "A"
+      "I"
+    ) ;
   skos:prefLabel "Field-texture qualification" ;
 .
 asls:Field-texture-substrate
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate p207" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "F"
-          "X"
-          "P"
-          "A"
-        ) ;
-    ] ;
   owl:equivalentClass subst:texture ;
+  owl:oneOf (
+      "F"
+      "X"
+      "P"
+      "A"
+    ) ;
   skos:prefLabel "Field-texture grade - substrate" ;
 .
 asls:Geomorphology-agent
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p31" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "GR"
-          "SO"
-          "SM"
-          "WM"
-          "SH"
-          "OV"
-          "CH"
-          "WI"
-          "FR"
-          "GL"
-          "WA"
-          "TI"
-          "EU"
-          "DI"
-          "VO"
-          "BI"
-          "HU"
-          "IM"
-        ) ;
-    ] ;
   owl:equivalentClass lf:geomorphological-agents ;
+  owl:oneOf (
+      "GR"
+      "SO"
+      "SM"
+      "WM"
+      "SH"
+      "OV"
+      "CH"
+      "WI"
+      "FR"
+      "GL"
+      "WA"
+      "TI"
+      "EU"
+      "DI"
+      "VO"
+      "BI"
+      "HU"
+      "IM"
+    ) ;
   skos:prefLabel "Geomorphology agent" ;
 .
 asls:Geomorphology-mode
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p29" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "ER"
-          "EA"
-          "AG"
-          "HU"
-          "BU"
-          "EX"
-          "SU"
-        ) ;
-    ] ;
   owl:equivalentClass lf:mode-of-geomorphological-activity ;
+  owl:oneOf (
+      "ER"
+      "EA"
+      "AG"
+      "HU"
+      "BU"
+      "EX"
+      "SU"
+    ) ;
   skos:prefLabel "Geomorphology mode" ;
 .
 asls:Geomorphology-status
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p54" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "C"
-          "F"
-          "S"
-          "B"
-          "R"
-          "U"
-        ) ;
-    ] ;
   owl:equivalentClass lf:status-of-geomorphological-activity ;
+  owl:oneOf (
+      "C"
+      "F"
+      "S"
+      "B"
+      "R"
+      "U"
+    ) ;
   skos:definition "Status of geomorphological activity" ;
   skos:prefLabel "Geomorphology status" ;
 .
@@ -1325,20 +1120,17 @@ asls:Horizon-code
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Horizons p148" ;
   rdfs:seeAlso sp:horizon-type ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "B"
-          "C"
-          "D"
-          "O"
-          "P"
-          "R"
-          xsd:string
-        ) ;
-    ] ;
   owl:equivalentClass sp:horizon-type ;
+  owl:oneOf (
+      "O"
+      "P"
+      "A"
+      "B"
+      "C"
+      "D"
+      "R"
+      xsd:string
+    ) ;
   skos:note "The long-established codes O, P, A, B ,C ,D, R are used wherever possible. Transitional horizons are designated with combinations of these.  " ;
   skos:prefLabel "Horizon code" ;
 .
@@ -1346,518 +1138,463 @@ asls:Horizon-suffix
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Horizons p153" ;
   rdfs:seeAlso sp:horizon-suffix ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "b"
-          "c"
-          "d"
-          "e"
-          "f"
-          "g"
-          "h"
-          "j"
-          "k"
-          "n"
-          "p"
-          "q"
-          "r"
-          "s"
-          "t"
-          "w"
-          "x"
-          "y"
-          "z"
-          "?"
-        ) ;
-    ] ;
   owl:equivalentClass sp:horizon-suffix ;
+  owl:oneOf (
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h"
+      "j"
+      "k"
+      "n"
+      "p"
+      "q"
+      "r"
+      "s"
+      "t"
+      "w"
+      "x"
+      "y"
+      "z"
+      "?"
+    ) ;
   skos:prefLabel "Horizon designation suffix" ;
 .
 asls:Inundation-depth
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p139" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass ls:inundation-depth ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Inundation depth" ;
 .
 asls:Inundation-duration
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p139" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass ls:inundation-duration ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Inundation duration" ;
 .
 asls:Inundation-frequency
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p138" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass ls:inundation-frequency ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Inundation frequency" ;
 .
 asls:Inundation-velocity
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p139" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "L"
-          "H"
-        ) ;
-    ] ;
   owl:equivalentClass ls:inundation-runon-velocity ;
+  owl:oneOf (
+      "L"
+      "H"
+    ) ;
   skos:prefLabel "Inundation runon velocity" ;
 .
 asls:Landform-element-name
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p32" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "ALC"
-          "BAN"
-          "BAR"
-          "BEA"
-          "BEN"
-          "BER"
-          "BKP"
-          "BOU"
-          "BRI"
-          "BRK"
-          "CBE"
-          "CFS"
-          "CIR"
-          "CLI"
-          "CON"
-          "COS"
-          "CRA"
-          "CUT"
-          "DAM"
-          "DBA"
-          "DDE"
-          "DOC"
-          "DOL"
-          "DUB"
-          "DUC"
-          "DUF"
-          "DUH"
-          "DUN"
-          "DUP"
-          "DUS"
-          "EMB"
-          "EST"
-          "FAN"
-          "FIL"
-          "FLD"
-          "FOO"
-          "FOR"
-          "GUL"
-          "HCR"
-          "HSL"
-          "ITF"
-          "LAG"
-          "LAK"
-          "LDS"
-          "LEV"
-          "LUN"
-          "MAA"
-          "MOU"
-          "OXB"
-          "PED"
-          "PIT"
-          "PLA"
-          "PLY"
-          "PST"
-          "REC"
-          "REF"
-          "RER"
-          "RES"
-          "RFL"
-          "RPL"
-          "SCA"
-          "SCD"
-          "SCR"
-          "SFS"
-          "SRP"
-          "STB"
-          "STC"
-          "STF"
-          "SUS"
-          "SWL"
-          "SWP"
-          "TAL"
-          "TDC"
-          "TDF"
-          "TEF"
-          "TEP"
-          "TOR"
-          "TRE"
-          "TUM"
-          "VLF"
-        ) ;
-    ] ;
   owl:equivalentClass lf:landform-element-glossary ;
+  owl:oneOf (
+      "ALC"
+      "BAN"
+      "BAR"
+      "BEA"
+      "BEN"
+      "BER"
+      "BKP"
+      "BOU"
+      "BRI"
+      "BRK"
+      "CBE"
+      "CFS"
+      "CIR"
+      "CLI"
+      "CON"
+      "COS"
+      "CRA"
+      "CUT"
+      "DAM"
+      "DBA"
+      "DDE"
+      "DOC"
+      "DOL"
+      "DUB"
+      "DUC"
+      "DUF"
+      "DUH"
+      "DUN"
+      "DUP"
+      "DUS"
+      "EMB"
+      "EST"
+      "FAN"
+      "FIL"
+      "FLD"
+      "FOO"
+      "FOR"
+      "GUL"
+      "HCR"
+      "HSL"
+      "ITF"
+      "LAG"
+      "LAK"
+      "LDS"
+      "LEV"
+      "LUN"
+      "MAA"
+      "MOU"
+      "OXB"
+      "PED"
+      "PIT"
+      "PLA"
+      "PLY"
+      "PST"
+      "REC"
+      "REF"
+      "RER"
+      "RES"
+      "RFL"
+      "RPL"
+      "SCA"
+      "SCD"
+      "SCR"
+      "SFS"
+      "SRP"
+      "STB"
+      "STC"
+      "STF"
+      "SUS"
+      "SWL"
+      "SWP"
+      "TAL"
+      "TDC"
+      "TDF"
+      "TEF"
+      "TEP"
+      "TOR"
+      "TRE"
+      "TUM"
+      "VLF"
+    ) ;
   skos:prefLabel "Landform element name" ;
 .
 asls:Landform-element-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p20" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "C"
-          "H"
-          "R"
-          "S"
-          "U"
-          "M"
-          "L"
-          "F"
-          "V"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass lf:morphological-type ;
+  owl:oneOf (
+      "C"
+      "H"
+      "R"
+      "S"
+      "U"
+      "M"
+      "L"
+      "F"
+      "V"
+      "D"
+    ) ;
   skos:prefLabel "Landform element morphological type" ;
 .
 asls:Landform-pattern-erosional
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p47" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "RM"
-          "SM"
-          "VM"
-          "PM"
-          "UH"
-          "RH"
-          "SH"
-          "VH"
-          "PH"
-          "UL"
-          "RL"
-          "SL"
-          "VL"
-          "GR"
-          "UR"
-          "RR"
-          "SR"
-          "LP"
-          "GP"
-          "UP"
-          "RP"
-          "B"
-        ) ;
-    ] ;
   owl:equivalentClass lf:simple-erosional-landform-patterns ;
+  owl:oneOf (
+      "RM"
+      "SM"
+      "VM"
+      "PM"
+      "UH"
+      "RH"
+      "SH"
+      "VH"
+      "PH"
+      "UL"
+      "RL"
+      "SL"
+      "VL"
+      "GR"
+      "UR"
+      "RR"
+      "SR"
+      "LP"
+      "GP"
+      "UP"
+      "RP"
+      "B"
+    ) ;
   skos:prefLabel "Landform pattern - simple erosional" ;
 .
 asls:Landform-pattern-name
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p32" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "ALF"
-          "ALP"
-          "ANA"
-          "BAD"
-          "BAR"
-          "BEA"
-          "CAL"
-          "CHE"
-          "COR"
-          "COV"
-          "DEL"
-          "DUN"
-          "ESC"
-          "FLO"
-          "HIL"
-          "KAR"
-          "LAC"
-          "LAV"
-          "LON"
-          "LOW"
-          "MAD"
-          "MAR"
-          "MEA"
-          "MET"
-          "MOU"
-          "PAR"
-          "PED"
-          "PEP"
-          "PLA"
-          "PLT"
-          "PLY"
-          "PNP"
-          "RIS"
-          "SAN"
-          "SHF"
-          "STA"
-          "TEL"
-          "TER"
-          "TID"
-          "VOL"
-        ) ;
-    ] ;
   owl:equivalentClass lf:landform-pattern-glossary ;
+  owl:oneOf (
+      "ALF"
+      "ALP"
+      "ANA"
+      "BAD"
+      "BAR"
+      "BEA"
+      "CAL"
+      "CHE"
+      "COR"
+      "COV"
+      "DEL"
+      "DUN"
+      "ESC"
+      "FLO"
+      "HIL"
+      "KAR"
+      "LAC"
+      "LAV"
+      "LON"
+      "LOW"
+      "MAD"
+      "MAR"
+      "MEA"
+      "MET"
+      "MOU"
+      "PAR"
+      "PED"
+      "PEP"
+      "PLA"
+      "PLT"
+      "PLY"
+      "PNP"
+      "RIS"
+      "SAN"
+      "SHF"
+      "STA"
+      "TEL"
+      "TER"
+      "TID"
+      "VOL"
+    ) ;
   skos:prefLabel "Landform pattern name" ;
 .
 asls:Lithology-coarse-fragments
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface: Coarse fragments p142" ;
-  rdfs:seeAlso ls:coarse-fragments-lithology ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "IS"
-          "SS"
-          "CC"
-          "PU"
-          "OW"
-          "OT"
-        ) ;
-    ] ;
   owl:equivalentClass ls:coarse-fragments-lithology ;
+  owl:unionOf (
+      asls:Lithology-rock
+      asls:Lithology-unconsolidated
+      [
+        a rdfs:Datatype ;
+        owl:oneOf (
+            "M"
+            "R"
+            "IS"
+            "SS"
+            "CC"
+            "PU"
+            "OW"
+            "OT"
+          ) ;
+      ]
+    ) ;
   skos:prefLabel "Coarse fragments lithology" ;
 .
 asls:Lithology-rock
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate: Table 35 p214" ;
   rdfs:seeAlso subst:lithology-rock ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AC"
-          "AD"
-          "AF"
-          "AG"
-          "AH"
-          "AM"
-          "AN"
-          "AP"
-          "AR"
-          "AS"
-          "BA"
-          "BB"
-          "BR"
-          "C"
-          "CG"
-          "CH"
-          "CO"
-          "CU"
-          "DI"
-          "DM"
-          "DR"
-          "FC"
-          "GA"
-          "GD"
-          "GE"
-          "GN"
-          "GR"
-          "GS"
-          "GV"
-          "GW"
-          "GY"
-          "HA"
-          "HO"
-          "IG"
-          "JA"
-          "KA"
-          "KC"
-          "KL"
-          "KM"
-          "KR"
-          "KS"
-          "LC"
-          "LI"
-          "M"
-          "MB"
-          "MD"
-          "ME"
-          "MG"
-          "MI"
-          "ML"
-          "MS"
-          "MU"
-          "MY"
-          "PC"
-          "PE"
-          "PG"
-          "PH"
-          "PL"
-          "PO"
-          "PY"
-          "QP"
-          "QS"
-          "QU"
-          "QZ"
-          "R"
-          "RB"
-          "RH"
-          "S"
-          "SA"
-          "SD"
-          "SH"
-          "SK"
-          "SL"
-          "SR"
-          "ST"
-          "SY"
-          "TR"
-          "TU"
-          "UC"
-          "VB"
-          "VG"
-          "Z"
-          "ZS"
-        ) ;
-    ] ;
   owl:equivalentClass subst:lithology-rock ;
+  owl:oneOf (
+      "AC"
+      "AD"
+      "AF"
+      "AG"
+      "AH"
+      "AM"
+      "AN"
+      "AP"
+      "AR"
+      "AS"
+      "BA"
+      "BB"
+      "BR"
+      "C"
+      "CG"
+      "CH"
+      "CO"
+      "CU"
+      "DI"
+      "DM"
+      "DR"
+      "FC"
+      "GA"
+      "GD"
+      "GE"
+      "GN"
+      "GR"
+      "GS"
+      "GV"
+      "GW"
+      "GY"
+      "HA"
+      "HO"
+      "IG"
+      "JA"
+      "KA"
+      "KC"
+      "KL"
+      "KM"
+      "KR"
+      "KS"
+      "LC"
+      "LI"
+      "M"
+      "MB"
+      "MD"
+      "ME"
+      "MG"
+      "MI"
+      "ML"
+      "MS"
+      "MU"
+      "MY"
+      "PC"
+      "PE"
+      "PG"
+      "PH"
+      "PL"
+      "PO"
+      "PY"
+      "QP"
+      "QS"
+      "QU"
+      "QZ"
+      "R"
+      "RB"
+      "RH"
+      "S"
+      "SA"
+      "SD"
+      "SH"
+      "SK"
+      "SL"
+      "SR"
+      "ST"
+      "SY"
+      "TR"
+      "TU"
+      "UC"
+      "VB"
+      "VG"
+      "Z"
+      "ZS"
+    ) ;
   skos:prefLabel "Rock lithology" ;
 .
 asls:Lithology-unconsolidated
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate: Table 33 p210" ;
   rdfs:seeAlso subst:lithology-unconsolidated ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "AF"
-          "AS"
-          "BB"
-          "BO"
-          "C"
-          "CB"
-          "GV"
-          "KS"
-          "ML"
-          "S"
-          "SK"
-          "SN"
-          "Z"
-        ) ;
-    ] ;
   owl:equivalentClass subst:lithology-unconsolidated ;
+  owl:oneOf (
+      "AF"
+      "AS"
+      "BB"
+      "BO"
+      "C"
+      "CB"
+      "GV"
+      "KS"
+      "ML"
+      "S"
+      "SK"
+      "SN"
+      "Z"
+    ) ;
   skos:prefLabel "Unconsodlidated material lithology" ;
 .
 asls:Location-in-element
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p27" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "T"
-          "M"
-          "B"
-        ) ;
-    ] ;
   owl:equivalentClass lf:location-within-the-landform-element ;
+  owl:oneOf (
+      "T"
+      "M"
+      "B"
+    ) ;
   skos:prefLabel "Location within the landform element" ;
 .
 asls:Mass-genesis-code
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p211" ;
-  rdfs:subClassOf [
-      a owl:Class ;
-      owl:unionOf (
-          asls:Rock-genesis-unweathered
-          asls:Rock-genesis-weathered
-          asls:Rock-genesis-sediments
-          [
-            a owl:Class ;
-            owl:unionOf (
-                asls:Rock-genesis-hardened-chemically
-                asls:Rock-genesis-hardened-evaporite
-                asls:Rock-genesis-hardened-artificial
-              ) ;
-          ]
-        ) ;
-    ] ;
   owl:equivalentClass subst:genesis ;
+  owl:unionOf (
+      asls:Rock-genesis-unweathered
+      asls:Rock-genesis-weathered
+      asls:Rock-genesis-sediments
+      [
+        a owl:Class ;
+        owl:unionOf (
+            asls:Rock-genesis-hardened-chemically
+            asls:Rock-genesis-hardened-evaporite
+            asls:Rock-genesis-hardened-artificial
+          ) ;
+      ]
+    ) ;
   skos:prefLabel "Mass genesis code" ;
 .
 asls:Material-strength
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate: Table 32 p209" ;
   rdfs:seeAlso subst:material-strength ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "VW"
-          "W"
-          "M"
-          "S"
-          "VS"
-        ) ;
-    ] ;
   owl:equivalentClass subst:material-strength ;
+  owl:oneOf (
+      "VW"
+      "W"
+      "M"
+      "S"
+      "VS"
+    ) ;
   skos:prefLabel "Strength of material" ;
 .
 asls:Microrelief-biotic-agent
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land Surface p131" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "N"
-          "M"
-          "B"
-          "T"
-          "A"
-          "V"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass ls:biotic-microrelief-agents ;
+  owl:oneOf (
+      "N"
+      "M"
+      "B"
+      "T"
+      "A"
+      "V"
+      "O"
+    ) ;
   skos:prefLabel "Microrelief: biotic agent" ;
 .
 asls:Microrelief-component
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land Surface p131, 133" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "M"
-          "E"
-          "D"
-          "L"
-          "H"
-          "T"
-          "O"
-          "S"
-          "K"
-          "F"
-        ) ;
-    ] ;
   owl:equivalentClass [
       a owl:Class ;
       owl:unionOf (
@@ -1865,370 +1602,328 @@ asls:Microrelief-component
           ls:microrelief-component-sampled
         ) ;
     ] ;
+  owl:oneOf (
+      "M"
+      "E"
+      "D"
+      "L"
+      "H"
+      "T"
+      "O"
+      "S"
+      "K"
+      "F"
+    ) ;
   skos:prefLabel "Microrelief-component" ;
 .
 asls:Microrelief-gilgai-proportions
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p130" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "A"
-          "B"
-          "C"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass ls:gilgai-microrelief-proportions ;
+  owl:oneOf (
+      "A"
+      "B"
+      "C"
+      "D"
+    ) ;
   skos:prefLabel "Gilgai proportions" ;
 .
 asls:Microrelief-gilgai-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p129" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "C"
-          "N"
-          "L"
-          "A"
-          "M"
-          "G"
-        ) ;
-    ] ;
   owl:equivalentClass ls:gilgai-microrelief-type ;
+  owl:oneOf (
+      "C"
+      "N"
+      "L"
+      "A"
+      "M"
+      "G"
+    ) ;
   skos:prefLabel "Gilgai type" ;
 .
 asls:Microrelief-hummocky-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p132" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "U"
-          "K"
-          "I"
-          "S"
-          "R"
-          "T"
-          "P"
-          "H"
-          "O"
-        ) ;
-    ] ;
-  owl:equivalentClass ls:other-microrelief-type ;
+  owl:equivalentClass ls:hummocky-microrelief-type ;
+  owl:oneOf (
+      "U"
+      "K"
+      "I"
+      "S"
+      "R"
+      "T"
+      "P"
+      "H"
+      "O"
+    ) ;
   skos:prefLabel "Hummocky microrelief type" ;
 .
 asls:Microrelief-other-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface p132" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "U"
-          "K"
-          "I"
-          "S"
-          "R"
-          "T"
-          "P"
-          "H"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass ls:other-microrelief-type ;
+  owl:oneOf (
+      "U"
+      "K"
+      "I"
+      "S"
+      "R"
+      "T"
+      "P"
+      "H"
+      "O"
+    ) ;
   skos:prefLabel "Gilgai type" ;
 .
 asls:Mottle-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
   rdfs:seeAlso sp:mottle-abundance ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:mottle-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Abundance of Mottles" ;
 .
 asls:Mottle-colour
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
   rdfs:seeAlso sp:mottle-colour ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "R"
-          "O"
-          "B"
-          "Y"
-          "G"
-          "D"
-          "L"
-          "P"
-        ) ;
-    ] ;
   owl:equivalentClass sp:mottle-colour ;
+  owl:oneOf (
+      "R"
+      "O"
+      "B"
+      "Y"
+      "G"
+      "D"
+      "L"
+      "P"
+    ) ;
   skos:prefLabel "Mottle colour" ;
 .
 asls:Mottle-contrast
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
   rdfs:seeAlso sp:mottle-contrast ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "F"
-          "D"
-          "P"
-        ) ;
-    ] ;
   owl:equivalentClass sp:mottle-contrast ;
+  owl:oneOf (
+      "F"
+      "D"
+      "P"
+    ) ;
   skos:prefLabel "Mottle contrast" ;
 .
 asls:Mottle-distinctness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
   rdfs:seeAlso sp:mottle-distinctness ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "S"
-          "C"
-          "D"
-        ) ;
-    ] ;
   owl:equivalentClass sp:mottle-boundary-distinctness ;
+  owl:oneOf (
+      "S"
+      "C"
+      "D"
+    ) ;
   skos:prefLabel "Mottle distinctness of boundaries" ;
 .
 asls:Mottle-size
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
   rdfs:seeAlso sp:mottle-type ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:mottle-size ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Mottle size" ;
 .
 asls:Mottle-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Mottles and other colour patterns p160" ;
   rdfs:seeAlso sp:mottle-type ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "M"
-          "X"
-          "Y"
-          "Z"
-        ) ;
-    ] ;
   owl:equivalentClass sp:mottle-type ;
+  owl:oneOf (
+      "M"
+      "X"
+      "Y"
+      "Z"
+    ) ;
   skos:prefLabel "Mottle type" ;
 .
 asls:Outcrop-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land surface: Rock outcrop p143" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass ls:rock-outcrop-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Outcrop abundance" ;
 .
 asls:Pans-cementation
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Pans p192" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:pans-cementation ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Pans cementation" ;
 .
 asls:Pans-continuity
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Pans p195" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "C"
-          "D"
-          "B"
-        ) ;
-    ] ;
   owl:equivalentClass sp:pans-continuity ;
+  owl:oneOf (
+      "C"
+      "D"
+      "B"
+    ) ;
   skos:prefLabel "Pans continuity" ;
 .
 asls:Pans-structure
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Pans p195" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "V"
-          "S"
-          "C"
-          "N"
-          "L"
-          "R"
-        ) ;
-    ] ;
   owl:equivalentClass sp:pans-structure ;
+  owl:oneOf (
+      "V"
+      "S"
+      "C"
+      "N"
+      "L"
+      "R"
+    ) ;
   skos:prefLabel "Pans structure" ;
 .
 asls:Pans-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Pans p192" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "Z"
-          "K"
-          "L"
-          "R"
-          "D"
-          "F"
-          "D"
-          "I"
-          "E"
-          "A"
-          "M"
-          "t"
-          "C"
-          "V"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass sp:pans-type ;
+  owl:oneOf (
+      "Z"
+      "K"
+      "L"
+      "R"
+      "D"
+      "F"
+      "D"
+      "I"
+      "E"
+      "A"
+      "M"
+      "t"
+      "C"
+      "V"
+      "O"
+    ) ;
   skos:prefLabel "Pans type" ;
 .
 asls:Pedality-grade
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Structure p171" ;
   rdfs:seeAlso sp:structure-pedality-grade ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "G"
-          "V"
-          "W"
-          "M"
-          "S"
-        ) ;
-    ] ;
   owl:equivalentClass sp:structure-pedality-grade ;
+  owl:oneOf (
+      "G"
+      "V"
+      "W"
+      "M"
+      "S"
+    ) ;
   skos:prefLabel "Pedality grade" ;
 .
 asls:Pedality-size
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Structure p172" ;
   rdfs:seeAlso sp:structure-pedality-size ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-          "7"
-          "8"
-          "9"
-        ) ;
-    ] ;
   owl:equivalentClass sp:structure-pedality-size ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+      "7"
+      "8"
+      "9"
+    ) ;
   skos:prefLabel "Pedality size" ;
 .
 asls:Pedality-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Structure p173, 181" ;
   rdfs:seeAlso sp:structure-pedality-type ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "PL"
-          "PR"
-          "CO"
-          "AB"
-          "SB"
-          "PO"
-          "LE"
-          "GR"
-          "CA"
-          "CL"
-          "FR"
-        ) ;
-    ] ;
   owl:equivalentClass sp:structure-pedality-type ;
+  owl:oneOf (
+      "PL"
+      "PR"
+      "CO"
+      "AB"
+      "SB"
+      "PO"
+      "LE"
+      "GR"
+      "CA"
+      "CL"
+      "FR"
+    ) ;
   skos:prefLabel "Pedality type" ;
 .
 asls:Pore-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Voids p184" ;
   rdfs:seeAlso ls:voids-macropores-abundance ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-        ) ;
-    ] ;
   owl:equivalentClass sp:voids-macropores-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+    ) ;
   skos:prefLabel "Abundance of macropores" ;
 .
 asls:Pore-diameter
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Voids p185" ;
   rdfs:seeAlso sp:voids-macropores-diameter ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:voids-macropores-diameter ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Diameter of macropores" ;
 .
 asls:Profile-construction
-  a owl:Class ;
+  a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile p147" ;
-  rdfs:subClassOf skos:Concept ;
   owl:equivalentClass sp:type-of-soil-observation ;
+  owl:oneOf (
+      "P"
+      "E"
+      "C"
+      "A"
+      "composite"
+    ) ;
   skos:definition "Construction of soil observation profile e.g. pit, auger bore, core, exposure, or composite" ;
   skos:note "e.g. pit, auger bore, core, exposure, or composite" ;
   skos:prefLabel "Construction of profile" ;
@@ -2236,48 +1931,39 @@ asls:Profile-construction
 asls:Relative-inclination
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p22" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "X"
-          "N"
-          "A"
-          "I"
-        ) ;
-    ] ;
   owl:equivalentClass lf:relative-inclination-of-slope-elements ;
+  owl:oneOf (
+      "X"
+      "N"
+      "A"
+      "I"
+    ) ;
   skos:prefLabel "Relative inclination" ;
 .
 asls:Relief
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p47" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "M"
-          "H"
-          "L"
-          "R"
-          "P"
-        ) ;
-    ] ;
   owl:equivalentClass lf:relief ;
+  owl:oneOf (
+      "M"
+      "H"
+      "L"
+      "R"
+      "P"
+    ) ;
   skos:prefLabel "Relief" ;
 .
 asls:Rock-alteration
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p211" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "F"
-          "L"
-          "S"
-          "K"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass subst:alteration ;
+  owl:oneOf (
+      "F"
+      "L"
+      "S"
+      "K"
+      "O"
+    ) ;
   skos:prefLabel "Type of alteration of rock material" ;
 .
 asls:Rock-genesis-hardened-artificial
@@ -2367,378 +2053,335 @@ asls:Root-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Roots p199" ;
   rdfs:seeAlso sp:roots-abundance ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:roots-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Root abundance" ;
 .
 asls:Root-size
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Roots p199" ;
   rdfs:seeAlso sp:roots-size ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:roots-size ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Root size" ;
 .
 asls:Runoff
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Land Surface p144" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass ls:runoff ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Runoff" ;
 .
 asls:Segregations-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p196" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass sp:segregations-abundance ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Abundance of segregations" ;
 .
 asls:Segregations-form
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p196" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "C"
-          "N"
-          "F"
-          "X"
-          "S"
-          "V"
-          "R"
-          "T"
-          "L"
-        ) ;
-    ] ;
   owl:equivalentClass sp:segregations-form ;
+  owl:oneOf (
+      "C"
+      "N"
+      "F"
+      "X"
+      "S"
+      "V"
+      "R"
+      "T"
+      "L"
+    ) ;
   skos:prefLabel "Form of segregations" ;
 .
 asls:Segregations-magnetic-attributes
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p198" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "N"
-          "M"
-        ) ;
-    ] ;
   owl:equivalentClass sp:segregations-magnetic ;
+  owl:oneOf (
+      "N"
+      "M"
+    ) ;
   skos:prefLabel "Magnetic attributes of segregations" ;
 .
 asls:Segregations-nature
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p196" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "U"
-          "K"
-          "Y"
-          "M"
-          "N"
-          "F"
-          "A"
-          "S"
-          "Z"
-          "H"
-          "G"
-          "L"
-          "E"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass sp:segregations-nature ;
+  owl:oneOf (
+      "U"
+      "K"
+      "Y"
+      "M"
+      "N"
+      "F"
+      "A"
+      "S"
+      "Z"
+      "H"
+      "G"
+      "L"
+      "E"
+      "O"
+    ) ;
   skos:prefLabel "Nature of segregations" ;
 .
 asls:Segregations-size
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p197" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-        ) ;
-    ] ;
   owl:equivalentClass sp:segregations-size ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+    ) ;
   skos:prefLabel "Size of segregations" ;
 .
 asls:Segregations-strength
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Segregations p197" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-        ) ;
-    ] ;
   owl:equivalentClass sp:segregations-strength ;
+  owl:oneOf (
+      "1"
+      "2"
+    ) ;
   skos:prefLabel "Strength of segregations" ;
 .
 asls:Site-drainage
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Soil Water Regime p202" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-          "5"
-          "6"
-        ) ;
-    ] ;
   owl:equivalentClass sp:soil-water-drainage ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+      "5"
+      "6"
+    ) ;
   skos:prefLabel "Site drainage" ;
 .
 asls:Slope-class
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p19" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "LE"
-          "VG"
-          "GE"
-          "MO"
-          "ST"
-          "VS"
-          "PR"
-          "CL"
-        ) ;
-    ] ;
   owl:equivalentClass lf:slope-class ;
+  owl:oneOf (
+      "LE"
+      "VG"
+      "GE"
+      "MO"
+      "ST"
+      "VS"
+      "PR"
+      "CL"
+    ) ;
   skos:prefLabel "Slope class" ;
 .
 asls:Slope-modal
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p47" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "LE"
-          "VG"
-          "GE"
-          "MO"
-          "ST"
-          "VS"
-          "PR"
-        ) ;
-    ] ;
   owl:equivalentClass lf:modal-slope ;
+  owl:oneOf (
+      "LE"
+      "VG"
+      "GE"
+      "MO"
+      "ST"
+      "VS"
+      "PR"
+    ) ;
   skos:prefLabel "Modal terrain slope" ;
 .
 asls:Slope-procedure
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Landform p18" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "T"
-          "A"
-          "P"
-          "E"
-        ) ;
-    ] ;
   owl:equivalentClass lf:slope-evaluation ;
+  owl:oneOf (
+      "T"
+      "A"
+      "P"
+      "E"
+    ) ;
   skos:definition "Means of evaluation of slope" ;
   skos:prefLabel "Slope procedure" ;
 .
 asls:Soil-permeability
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Soil Water Regime p200" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-          "4"
-        ) ;
-    ] ;
   owl:equivalentClass sp:soil-water-permeability ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+      "4"
+    ) ;
   skos:prefLabel "Soil permeability" ;
 .
 asls:Substrate-discontinuity-spacing
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate p210" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "S"
-          "M"
-          "B"
-          "F"
-          "C"
-        ) ;
-    ] ;
   owl:equivalentClass subst:discontinuity-spacing ;
+  owl:oneOf (
+      "S"
+      "M"
+      "B"
+      "F"
+      "C"
+    ) ;
   skos:prefLabel "Spacing of discontinuities" ;
 .
 asls:Substrate-grain-size
   a rdfs:Datatype ;
   dcterms:source "ASLS 3edSubstrate p207" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "1"
-          "2"
-          "3"
-        ) ;
-    ] ;
   owl:equivalentClass subst:grain-size ;
+  owl:oneOf (
+      "1"
+      "2"
+      "3"
+    ) ;
   skos:prefLabel "Substrate grain size" ;
 .
 asls:Substrate-mineral-composition
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p208" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "Q"
-          "F"
-          "M"
-          "D"
-          "L"
-          "K"
-          "S"
-          "G"
-          "C"
-          "Y"
-        ) ;
-    ] ;
   owl:equivalentClass subst:mineral-composition ;
+  owl:oneOf (
+      "Q"
+      "F"
+      "M"
+      "D"
+      "L"
+      "K"
+      "S"
+      "G"
+      "C"
+      "Y"
+    ) ;
   skos:prefLabel "Substrate mineral composition" ;
 .
 asls:Substrate-porosity
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p208" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "0"
-          "1"
-          "2"
-        ) ;
-    ] ;
   owl:equivalentClass subst:porosity ;
+  owl:oneOf (
+      "0"
+      "1"
+      "2"
+    ) ;
   skos:prefLabel "Substrate porosity" ;
 .
 asls:Substrate-strength-class
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p209 , p215" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "E"
-          "VW"
-          "W"
-          "M"
-          "S"
-          "VS"
-        ) ;
-    ] ;
   owl:equivalentClass subst:material-strength ;
+  owl:oneOf (
+      "E"
+      "VW"
+      "W"
+      "M"
+      "S"
+      "VS"
+    ) ;
   skos:prefLabel "Substrate strength" ;
 .
 asls:Substrate-structure
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p208" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "V"
-          "S"
-          "C"
-          "P"
-          "R"
-          "B"
-          "F"
-          "L"
-        ) ;
-    ] ;
   owl:equivalentClass subst:material-structure ;
+  owl:oneOf (
+      "V"
+      "S"
+      "C"
+      "P"
+      "R"
+      "B"
+      "F"
+      "L"
+    ) ;
   skos:prefLabel "Substrate structure" ;
 .
 asls:Surface-condition-codes
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Condition p189" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "G"
-          "M"
-          "L"
-          "S"
-          "F"
-          "H"
-          "C"
-          "X"
-          "Y"
-          "T"
-          "P"
-          "R"
-          "Z"
-          "O"
-        ) ;
-    ] ;
   owl:equivalentClass sp:condition-of-surface-soil-when-dry ;
+  owl:oneOf (
+      "G"
+      "M"
+      "L"
+      "S"
+      "F"
+      "H"
+      "C"
+      "X"
+      "Y"
+      "T"
+      "P"
+      "R"
+      "Z"
+      "O"
+    ) ;
   skos:prefLabel "Condition of surface soil when dry" ;
 .
 asls:Water-repellence-codes
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Water repellence p191" ;
-  rdfs:subClassOf [
-      a rdfs:Datatype ;
-      owl:oneOf (
-          "N"
-          "R"
-          "S"
-        ) ;
-    ] ;
   owl:equivalentClass sp:water-repellence ;
+  owl:oneOf (
+      "N"
+      "R"
+      "S"
+    ) ;
   skos:prefLabel "Water repellence" ;
+.
+ansis:enums
+  a owl:Ontology ;
+  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
+  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
+  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
+  dcterms:created "2022-07-21"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:description "Enumerated datatypes for a domain-model for Australian soil data" ;
+  dcterms:isPartOf <https://anzsoil.org/def/au/domain> ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:modified "2022-11-22"^^xsd:date ;
+  dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
+  dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
+  dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
+  dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
+  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.opengis.net/ont/sf> ;
+  owl:imports ssn: ;
+  owl:imports <https://linked.data.gov.au/def/project> ;
 .
