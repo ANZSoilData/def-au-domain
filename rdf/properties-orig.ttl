@@ -29,7 +29,7 @@
 
 Observable properties taken initially from ASLS (Yellow Book) as interpreted for the ANSIS project. """ ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-08-23"^^xsd:date ;
+  dcterms:modified "2022-11-23"^^xsd:date ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://qudt.org/2.1/schema/qudt> ;
@@ -43,7 +43,7 @@ sprop:CoarseFragments
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance> ;
+      owl:allValuesFrom <http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-abundance> ;
       owl:onProperty sprop:coarseFragmentsAbundance ;
     ] ;
   skos:prefLabel "Coarse Fragments" ;

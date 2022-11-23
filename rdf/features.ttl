@@ -49,28 +49,6 @@ sosa:usedProcedure
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:Substrate ;
 .
-<https://anzsoil.org/def/au/domain/features>
-  a owl:Ontology ;
-  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
-  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
-  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
-  dcterms:created "2022-07-21"^^xsd:date ;
-  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
-  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:description "A domain-model for Australian soil data" ;
-  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-11-09"^^xsd:date ;
-  dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
-  dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
-  dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
-  dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
-  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports <http://www.opengis.net/ont/sf> ;
-  owl:imports ssn: ;
-  owl:imports <https://linked.data.gov.au/def/project> ;
-.
 ansis:LandscapeEntity
   a owl:Class ;
   rdfs:subClassOf geo:Feature ;
@@ -380,7 +358,7 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Water-repellence-codes ;
+      owl:onDataRange asls:Water-repellence ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
   rdfs:subClassOf [
@@ -633,13 +611,13 @@ ansis:SoilSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Surface-condition-codes ;
+      owl:onDataRange asls:Surface-condition ;
       owl:onProperty ansis:condition-when-dry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Water-repellence-codes ;
+      owl:onDataRange asls:Water-repellence ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
   rdfs:subClassOf [
@@ -660,6 +638,28 @@ ansis:Treatment
   rdfs:subClassOf sosa:Actuation ;
   skos:definition "Intervention or treatment" ;
   skos:prefLabel "Treatment" ;
+.
+ansis:features
+  a owl:Ontology ;
+  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
+  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
+  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
+  dcterms:created "2022-07-21"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:description "A domain-model for Australian soil data" ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:modified "2022-11-23"^^xsd:date ;
+  dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
+  dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
+  dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
+  dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
+  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.opengis.net/ont/sf> ;
+  owl:imports ssn: ;
+  owl:imports <https://linked.data.gov.au/def/project> ;
 .
 ansis:relatedActivity
   a owl:ObjectProperty ;
