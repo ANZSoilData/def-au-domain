@@ -3,7 +3,6 @@
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
 # imports: http://www.w3.org/ns/ssn/
-# imports: https://linked.data.gov.au/def/project
 
 @prefix ansis: <https://anzsoil.org/def/au/domain/> .
 @prefix asc: <http://anzsoil.org/def/au/asc/> .
@@ -50,27 +49,6 @@ sosa:ObservableProperty
 sosa:usedProcedure
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:Substrate ;
-.
-<https://anzsoil.org/def/au/domain/properties>
-  a owl:Ontology ;
-  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
-  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
-  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
-  dcterms:created "2022-07-21"^^xsd:date ;
-  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
-  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:description "A domain-model for Australian soil data" ;
-  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-11-09"^^xsd:date ;
-  dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
-  dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
-  dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
-  dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
-  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
-  owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports <http://www.opengis.net/ont/geosparql> ;
-  owl:imports <http://www.opengis.net/ont/sf> ;
-  owl:imports ssn: ;
 .
 ansis:ASC-SoilClassification
   a owl:Class ;
@@ -1049,12 +1027,6 @@ ansis:abundance
   skos:narrowMatch prop:voids-macropores-abundance ;
   skos:prefLabel "abundance" ;
 .
-ansis:acid-sulfate
-  a rdf:Property ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "acid sulfate soils" ;
-.
 ansis:agent
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
@@ -1070,12 +1042,6 @@ ansis:aggradation
   schema:domainIncludes ansis:LandSurface ;
   skos:prefLabel "aggradation" ;
 .
-ansis:alk-earth-carbonates
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil alkaline earth carbonates" ;
-.
 ansis:alteration
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -1089,12 +1055,6 @@ ansis:aspect
   schema:domainIncludes ansis:LandsurveySite ;
   rdfs:range xsd:integer ;
   skos:prefLabel "aspect" ;
-.
-ansis:c_n_ratio
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil carbon/nitrogen ratio" ;
 .
 ansis:carbon
   a owl:DatatypeProperty ;
@@ -1121,18 +1081,6 @@ ansis:chemistry
   schema:domainIncludes ansis:SoilLayer ;
   skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "soil chemical property" ;
-.
-ansis:chloride
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soluble chloride" ;
-.
-ansis:chroma
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  skos:definition "colour chroma" ;
-  skos:prefLabel "chroma" ;
 .
 ansis:classification
   a owl:ObjectProperty ;
@@ -1276,13 +1224,6 @@ ansis:density
   skos:exactMatch prop:density ;
   skos:narrowMatch prop:density-bulk ;
   skos:prefLabel "density" ;
-.
-ansis:density-bulk
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:density ;
-  skos:exactMatch prop:density-bulk ;
-  skos:prefLabel "bulk density" ;
 .
 ansis:depth
   a owl:DatatypeProperty ;
@@ -1489,12 +1430,6 @@ ansis:fabric
   schema:domainIncludes ansis:SoilLayer ;
   skos:prefLabel "fabric" ;
 .
-ansis:fe_al_si
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil extractable iron, aluminium and silicon" ;
-.
 ansis:frequency
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
@@ -1542,12 +1477,6 @@ ansis:grain-size
   skos:definition "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin." ;
   skos:exactMatch prop:grain-size ;
   skos:prefLabel "grain size" ;
-.
-ansis:gypsum
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil gypsum" ;
 .
 ansis:hasCoarseFragments
   a owl:ObjectProperty ;
@@ -1770,22 +1699,11 @@ ansis:height-drainage
   rdfs:subPropertyOf ansis:height ;
   skos:prefLabel "drainage height" ;
 .
-ansis:hue
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  skos:prefLabel "hue" ;
-.
 ansis:integration
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:StreamChannel ;
   skos:prefLabel "network integration" ;
-.
-ansis:ion-exchange
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil ion-exchange properties" ;
 .
 ansis:length
   a owl:DatatypeProperty ;
@@ -1795,12 +1713,6 @@ ansis:length
   skos:exactMatch prop:length ;
   skos:narrowMatch prop:element-dimension-length ;
   skos:prefLabel "length" ;
-.
-ansis:lime-req
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil lime requirement" ;
 .
 ansis:lithology
   a owl:DatatypeProperty ;
@@ -1857,29 +1769,11 @@ ansis:method-slope
   skos:definition "Means of evaluation of slope" ;
   skos:prefLabel "slope method" ;
 .
-ansis:micronutrients
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil micronutrients" ;
-.
 ansis:migration-rate
   a owl:DatatypeProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:StreamChannel ;
   skos:prefLabel "migration rate" ;
-.
-ansis:misc-elements
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil total miscellaneous elements" ;
-.
-ansis:misc-extractable-elements
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil miscellaneous extractable elements" ;
 .
 ansis:moisture-status
   a owl:DatatypeProperty ;
@@ -1894,12 +1788,6 @@ ansis:morphological-type
   schema:domainIncludes ansis:LandformElement ;
   skos:definition "Morphological type of landform element" ;
   skos:prefLabel "morphological type" ;
-.
-ansis:nitrogen
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil nitrogen" ;
 .
 ansis:pH
   a owl:DatatypeProperty ;
@@ -1921,12 +1809,6 @@ ansis:permeability
   schema:domainIncludes ansis:SoilLayer ;
   skos:prefLabel "permeability" ;
 .
-ansis:phosphorus
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil phosphorus" ;
-.
 ansis:physical
   a rdf:Property ;
   a sosa:ObservableProperty ;
@@ -1947,6 +1829,27 @@ ansis:porosity
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Substrate ;
   skos:prefLabel "porosity" ;
+.
+ansis:properties
+  a owl:Ontology ;
+  dcterms:contributor <https://orcid.org/0000-0002-0693-1899> ;
+  dcterms:contributor <https://orcid.org/0000-0003-1625-1253> ;
+  dcterms:contributor <mailto:peter.wilson@csiro.au> ;
+  dcterms:created "2022-07-21"^^xsd:date ;
+  dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
+  dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
+  dcterms:description "A domain-model for Australian soil data" ;
+  dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+  dcterms:modified "2022-11-09"^^xsd:date ;
+  dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
+  dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
+  dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
+  dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
+  schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.opengis.net/ont/sf> ;
+  owl:imports ssn: ;
 .
 ansis:proportions
   a owl:DatatypeProperty ;
@@ -1979,12 +1882,6 @@ ansis:runoff
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:LandSurface ;
   skos:prefLabel "runoff" ;
-.
-ansis:sat-extracts
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil saturation extracts" ;
 .
 ansis:shape
   a owl:DatatypeProperty ;
@@ -2073,12 +1970,6 @@ ansis:structure
   skos:narrowMatch prop:soil-structure ;
   skos:narrowMatch prop:structure-artificial-aggregates ;
   skos:prefLabel "structure" ;
-.
-ansis:sulfur
-  a owl:DatatypeProperty ;
-  a sosa:ObservableProperty ;
-  rdfs:subPropertyOf ansis:chemistry ;
-  skos:prefLabel "soil sulfur" ;
 .
 ansis:texture
   a owl:DatatypeProperty ;
