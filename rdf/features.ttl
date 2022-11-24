@@ -39,6 +39,20 @@ prov:Activity
       owl:onProperty ansis:relatedProject ;
     ] ;
 .
+sosa:Observation
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty ansis:relatedActivity ;
+      owl:someValuesFrom ansis:SiteVisit ;
+    ] ;
+.
+sosa:Sampling
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty ansis:relatedActivity ;
+      owl:someValuesFrom ansis:SiteVisit ;
+    ] ;
+.
 sosa:isSampleOf
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilProfile ;
@@ -636,6 +650,11 @@ ansis:SoilSurface
 ansis:Treatment
   a owl:Class ;
   rdfs:subClassOf sosa:Actuation ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty ansis:relatedActivity ;
+      owl:someValuesFrom ansis:SiteVisit ;
+    ] ;
   skos:definition "Intervention or treatment" ;
   skos:prefLabel "Treatment" ;
 .
