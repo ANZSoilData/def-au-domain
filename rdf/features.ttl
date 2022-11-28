@@ -49,6 +49,11 @@ sosa:Observation
 sosa:Sampling
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:allValuesFrom owl:Class ;
+      owl:onProperty ansis:component ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:onProperty ansis:relatedActivity ;
       owl:someValuesFrom ansis:SiteVisit ;
     ] ;
