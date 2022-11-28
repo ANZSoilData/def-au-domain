@@ -1257,7 +1257,9 @@ ansis:colour
 .
 ansis:component
   a owl:ObjectProperty ;
-  schema:domainIncludes ansis:SoilSampleType ;
+  schema:domainIncludes ansis:Sampling ;
+  schema:domainIncludes ansis:SoilSample ;
+  rdfs:range owl:Class ;
   skos:prefLabel "type of component element" ;
 .
 ansis:compound-pedality

@@ -408,6 +408,10 @@ ansis:Sample-type-composite
   a ansis:SoilSampleType ;
   skos:prefLabel "Composite sample" ;
 .
+ansis:Sample-type-component
+  a ansis:SoilSampleType ;
+  skos:prefLabel "Component of a sample" ;
+.
 ansis:Sample-type-single
   a ansis:SoilSampleType ;
   skos:prefLabel "Single sample" ;
@@ -434,9 +438,10 @@ ansis:SoilSampleType
   rdfs:subClassOf skos:Concept ;
   owl:oneOf (
       "single"
+      "component"
       "composite"
     ) ;
-  skos:note "single vs composite" ;
+  skos:note "single vs composite vs component" ;
   skos:prefLabel "Type of soil sample" ;
 .
 ansis:SoilSite-design
