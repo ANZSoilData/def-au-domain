@@ -404,6 +404,10 @@ ansis:Profile-purpose
     ) ;
   skos:prefLabel "Purpose of profile" ;
 .
+ansis:Sample-type-component
+  a ansis:SoilSampleType ;
+  skos:prefLabel "Component of a sample" ;
+.
 ansis:Sample-type-composite
   a ansis:SoilSampleType ;
   skos:prefLabel "Composite sample" ;
