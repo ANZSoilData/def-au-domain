@@ -39,6 +39,25 @@ prov:Activity
       owl:onProperty ansis:relatedProject ;
     ] ;
 .
+sosa:Observation
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty ansis:relatedActivity ;
+      owl:someValuesFrom ansis:SiteVisit ;
+    ] ;
+.
+sosa:Sampling
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom owl:Class ;
+      owl:onProperty ansis:component ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty ansis:relatedActivity ;
+      owl:someValuesFrom ansis:SiteVisit ;
+    ] ;
+.
 sosa:isSampleOf
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilProfile ;
@@ -96,7 +115,7 @@ ansis:LandsurveySite
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Site-drainage ;
+      owl:onClass sp:Site-drainage ;
       owl:onProperty ansis:drainage ;
     ] ;
   rdfs:subClassOf [
@@ -215,13 +234,13 @@ ansis:SoilHorizon
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Boundary-distinctness ;
+      owl:onClass sp:Boundary-distinctness ;
       owl:onProperty ansis:distinctness ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Boundary-shape ;
+      owl:onClass sp:Boundary-shape ;
       owl:onProperty ansis:shape ;
     ] ;
   rdfs:subClassOf [
@@ -322,6 +341,30 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass sp:Consistence-stickiness ;
+      owl:onProperty ansis:stickiness ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass sp:Fabric-type ;
+      owl:onProperty ansis:fabric ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass sp:Soil-permeability ;
+      owl:onProperty ansis:permeability ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass sp:Water-repellence ;
+      owl:onProperty ansis:waterRepellence ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onClass ansis:SoilPlasticity ;
       owl:onProperty ansis:plasticity ;
     ] ;
@@ -340,35 +383,11 @@ ansis:SoilLayer
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Consistence-stickiness ;
-      owl:onProperty ansis:stickiness ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Fabric-type ;
-      owl:onProperty ansis:fabric ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Soil-permeability ;
-      owl:onProperty ansis:permeability ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Water-repellence ;
-      owl:onProperty ansis:waterRepellence ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange [
+      owl:onClass [
           a owl:Class ;
           owl:unionOf (
-              asls:Field-texture-grade-mineral
-              asls:Field-texture-organic
+              sp:Field-texture-mineral
+              sp:Field-texture-organic
             ) ;
         ] ;
       owl:onProperty ansis:texture ;
@@ -427,14 +446,14 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:SoilClassification ;
-      owl:onProperty ansis:classification ;
+      owl:onClass sp:Site-drainage ;
+      owl:onProperty ansis:drainage ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Site-drainage ;
-      owl:onProperty ansis:drainage ;
+      owl:onClass ansis:SoilClassification ;
+      owl:onProperty ansis:classification ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -443,14 +462,14 @@ ansis:SoilProfile
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass sf:Point ;
-      owl:onProperty geo:hasGeometry ;
+      owl:onClass sp:Profile-construction ;
+      owl:onProperty sosa:usedProcedure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Profile-construction ;
-      owl:onProperty sosa:usedProcedure ;
+      owl:onClass sf:Point ;
+      owl:onProperty geo:hasGeometry ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
@@ -611,13 +630,13 @@ ansis:SoilSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Surface-condition ;
+      owl:onClass sp:Surface-condition ;
       owl:onProperty ansis:condition-when-dry ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Water-repellence ;
+      owl:onClass sp:Water-repellence ;
       owl:onProperty ansis:waterRepellence ;
     ] ;
   rdfs:subClassOf [
@@ -636,6 +655,11 @@ ansis:SoilSurface
 ansis:Treatment
   a owl:Class ;
   rdfs:subClassOf sosa:Actuation ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty ansis:relatedActivity ;
+      owl:someValuesFrom ansis:SiteVisit ;
+    ] ;
   skos:definition "Intervention or treatment" ;
   skos:prefLabel "Treatment" ;
 .

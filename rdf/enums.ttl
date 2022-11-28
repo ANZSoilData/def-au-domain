@@ -476,7 +476,7 @@ asls:Aggradation
 asls:Boundary-distinctness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Boundaries p199" ;
-  owl:equivalentClass sp:horizon-boundary-distinctness ;
+  owl:equivalentClass sp:Boundary-distinctness ;
   owl:oneOf (
       "S"
       "A"
@@ -666,7 +666,7 @@ asls:Coarse-fragments-size
 asls:Colour-moisture-status
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Colour p159" ;
-  owl:equivalentClass sp:colour-stat ;
+  owl:equivalentClass sp:Colour-moisture-status ;
   owl:oneOf (
       "M"
       "D"
@@ -688,7 +688,7 @@ asls:Confidence-substrate-is-parent
 asls:Consistence-plasticity-degree
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p188" ;
-  owl:equivalentClass sp:consistence-plasticity-degree ;
+  owl:equivalentClass sp:Consistence-plasticity-degree ;
   owl:oneOf (
       "0"
       "1"
@@ -700,7 +700,7 @@ asls:Consistence-plasticity-degree
 asls:Consistence-plasticity-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p188" ;
-  owl:equivalentClass sp:consistence-plasticity-type ;
+  owl:equivalentClass sp:Consistence-plasticity-type ;
   owl:oneOf (
       "S"
       "N"
@@ -712,7 +712,7 @@ asls:Consistence-plasticity-type
 asls:Consistence-soil-water-status
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p186" ;
-  owl:equivalentClass sp:soil-water-status ;
+  owl:equivalentClass sp:Soil-water-status ;
   owl:oneOf (
       "D"
       "T"
@@ -724,7 +724,7 @@ asls:Consistence-soil-water-status
 asls:Consistence-stickiness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p187" ;
-  owl:equivalentClass sp:consistence-stickiness ;
+  owl:equivalentClass sp:Consistence-stickiness ;
   owl:oneOf (
       "0"
       "1"
@@ -736,7 +736,7 @@ asls:Consistence-stickiness
 asls:Consistence-strength
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Consistence p187" ;
-  owl:equivalentClass sp:consistence-strength ;
+  owl:equivalentClass sp:Consistence-strength ;
   owl:oneOf (
       "0"
       "1"
@@ -752,7 +752,7 @@ asls:Consistence-strength
 asls:Cracks-width
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Voids p184" ;
-  owl:equivalentClass sp:voids-cracks ;
+  owl:equivalentClass sp:Cracks-width ;
   owl:oneOf (
       "1"
       "2"
@@ -765,7 +765,7 @@ asls:Cracks-width
 asls:Cutans-abundance
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Cutans p183" ;
-  owl:equivalentClass sp:cutans-abundance ;
+  owl:equivalentClass sp:Cutans-abundance ;
   owl:oneOf (
       "0"
       "1"
@@ -777,7 +777,7 @@ asls:Cutans-abundance
 asls:Cutans-distinctness
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Cutans p183" ;
-  owl:equivalentClass sp:cutans-distinctness ;
+  owl:equivalentClass sp:Cutans-distinctness ;
   owl:oneOf (
       "F"
       "D"
@@ -788,7 +788,7 @@ asls:Cutans-distinctness
 asls:Cutans-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Cutans p182" ;
-  owl:equivalentClass sp:cutans-type ;
+  owl:equivalentClass sp:Cutans-type ;
   owl:oneOf (
       "Z"
       "U"
@@ -888,7 +888,7 @@ asls:Erosion-type
 asls:Fabric-type
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil profile: Fabric p181" ;
-  owl:equivalentClass sp:fabric ;
+  owl:equivalentClass sp:Fabric-type ;
   owl:oneOf (
       "E"
       "G"
@@ -900,7 +900,7 @@ asls:Fabric-type
 asls:Field-texture-grade-mineral
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p164" ;
-  owl:equivalentClass sp:field-texture-mineral ;
+  owl:equivalentClass sp:Field-texture-mineral ;
   owl:unionOf (
       [
         a rdfs:Datatype ;
@@ -1008,7 +1008,7 @@ asls:Field-texture-grade-mineral
 asls:Field-texture-organic
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p169" ;
-  owl:equivalentClass sp:field-texture-organic ;
+  owl:equivalentClass sp:Field-texture-organic ;
   owl:oneOf (
       "AP"
       "CP"
@@ -1023,7 +1023,7 @@ asls:Field-texture-organic
 asls:Field-texture-qualification
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Field texture p166" ;
-  owl:equivalentClass sp:field-texture-qualifier ;
+  owl:equivalentClass sp:Field-texture-qualifier ;
   owl:oneOf (
       "-"
       "+"
@@ -1116,7 +1116,7 @@ asls:Geomorphology-status
 asls:Horizon-code
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Horizons p148" ;
-  owl:equivalentClass sp:horizon-type ;
+  owl:equivalentClass sp:Horizon-code ;
   owl:oneOf (
       "O"
       "P"
@@ -1133,7 +1133,7 @@ asls:Horizon-code
 asls:Horizon-suffix
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Soil Profile: Horizons p153" ;
-  owl:equivalentClass sp:horizon-suffix ;
+  owl:equivalentClass sp:Horizon-suffix ;
   owl:oneOf (
       "b"
       "c"
@@ -1559,7 +1559,7 @@ asls:Mass-genesis-code
 asls:Material-strength
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed, Substrate: Table 32 p209" ;
-  owl:equivalentClass subst:Substrate-strength-class ;
+  owl:equivalentClass subst:Material-strength ;
   owl:oneOf (
       "VW"
       "W"
@@ -1971,7 +1971,7 @@ asls:Rock-genesis-hardened-artificial
 .
 asls:Rock-genesis-hardened-chemically
   a rdfs:Datatype ;
-  owl:equivalentClass subst:Rock-genesis-hardened-chemically ;
+  owl:equivalentClass subst:Rock-genesis-hardened-chemical ;
   owl:oneOf (
       "RB"
       "FC"
@@ -2293,7 +2293,7 @@ asls:Substrate-porosity
 asls:Substrate-strength-class
   a rdfs:Datatype ;
   dcterms:source "ASLS 3ed Substrate p209 , p215" ;
-  owl:equivalentClass subst:Substrate-strength-class ;
+  owl:equivalentClass subst:Material-strength ;
   owl:oneOf (
       "E"
       "VW"

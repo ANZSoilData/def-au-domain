@@ -1,4 +1,8 @@
 # baseURI: https://anzsoil.org/def/au/domain
+# imports: http://anzsoil.org/def/au/asls/land-surface
+# imports: http://anzsoil.org/def/au/asls/landform
+# imports: http://anzsoil.org/def/au/asls/soil-profile
+# imports: http://anzsoil.org/def/au/asls/substrate
 # imports: http://purl.org/dc/elements/1.1/
 # imports: https://anzsoil.org/def/au/domain/enums
 # imports: https://anzsoil.org/def/au/domain/features
@@ -47,6 +51,10 @@
   dcterms:source "Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain" ;
   dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://anzsoil.org/def/au/asls/land-surface> ;
+  owl:imports <http://anzsoil.org/def/au/asls/landform> ;
+  owl:imports <http://anzsoil.org/def/au/asls/soil-profile> ;
+  owl:imports <http://anzsoil.org/def/au/asls/substrate> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports ansis:enums ;
   owl:imports ansis:features ;

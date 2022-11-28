@@ -197,24 +197,37 @@ ansis:Erosion
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Erosion-gully-depth ;
+      owl:onClass ls:Erosion-depth-gully ;
       owl:onProperty ansis:depth-gully ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Erosion-severity ;
-      owl:onProperty ansis:degree ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Erosion-state ;
+      owl:onClass ls:Erosion-state ;
       owl:onProperty ansis:state ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Erosion-type ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              ls:Erosion-severity-scald
+              ls:Erosion-severity-mass-movement
+              ls:Erosion-severity-wind
+              ls:Erosion-severity-stream-bank
+              ls:Erosion-severity-gully
+              ls:Erosion-severity-rill
+              ls:Erosion-severity-sheet
+              ls:Erosion-severity-tunnel
+              ls:Erosion-severity-wave
+            ) ;
+        ] ;
+      owl:onProperty ansis:degree ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass ls:Erosion-type ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -235,12 +248,12 @@ ansis:HorizonDesignation
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Horizon-suffix ;
+      owl:onClass sp:Horizon-suffix ;
       owl:onProperty ansis:designation-suffix ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Horizon-code ;
+      owl:onClass sp:Horizon-code ;
       owl:onProperty ansis:designation-master ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -257,24 +270,24 @@ ansis:Inundation
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Inundation-depth ;
+      owl:onClass ls:Inundation-depth ;
       owl:onProperty ansis:depth ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Inundation-duration ;
+      owl:onClass ls:Inundation-duration ;
       owl:onProperty ansis:duration ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Inundation-frequency ;
+      owl:onClass ls:Inundation-frequency ;
       owl:onProperty ansis:frequency ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Inundation-velocity ;
+      owl:onClass ls:Inundation-runon-velocity ;
       owl:onProperty ansis:velocity ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -294,7 +307,7 @@ ansis:LandSurface
   rdfs:subClassOf ansis:LandscapeEntity ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom asls:Runoff ;
+      owl:allValuesFrom ls:Runoff ;
       owl:onProperty ansis:runoff ;
     ] ;
   rdfs:subClassOf [
@@ -340,7 +353,7 @@ ansis:LandSurface
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Aggradation ;
+      owl:onClass ls:Aggradation ;
       owl:onProperty ansis:aggradation ;
     ] ;
   rdfs:subClassOf [
@@ -393,43 +406,56 @@ ansis:LandformElement
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Geomorphology-agent ;
-      owl:onProperty ansis:agent ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Geomorphology-mode ;
+      owl:onClass lf:Geomorphology-mode ;
       owl:onProperty ansis:geomorphologyMode ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Landform-element-name ;
+      owl:onClass lf:Landform-element-name ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Landform-element-type ;
+      owl:onClass lf:Landform-element-type ;
       owl:onProperty ansis:morphological-type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Relative-inclination ;
+      owl:onClass lf:Relative-inclination ;
       owl:onProperty ansis:relative-inclination ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Slope-procedure ;
+      owl:onClass lf:Slope-procedure ;
       owl:onProperty ansis:method-slope ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              lf:Geomorphology-agent-bio
+              lf:Geomorphology-agent-extra
+              lf:Geomorphology-agent-gravity
+              lf:Geomorphology-agent-ice
+              lf:Geomorphology-agent-internal
+              lf:Geomorphology-agent-precipitation
+              lf:Geomorphology-agent-stand
+              lf:Geomorphology-agent-streamflow
+              lf:Geomorphology-agent-wind
+            ) ;
+        ] ;
+      owl:onProperty ansis:agent ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Slope-class ;
+      owl:onClass lf:Slope-class ;
       owl:onProperty ansis:slope ;
     ] ;
   rdfs:subClassOf [
@@ -437,8 +463,8 @@ ansis:LandformElement
       owl:onClass [
           a owl:Class ;
           owl:unionOf (
-              asls:Lithology-rock
-              asls:Lithology-unconsolidated
+              subst:Lithology-rock
+              subst:Lithology-unconsolidated
             ) ;
         ] ;
       owl:onProperty ansis:underlyingMaterial ;
@@ -457,44 +483,57 @@ ansis:LandformPattern
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Geomorphology-agent ;
-      owl:onProperty ansis:agent ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Geomorphology-mode ;
+      owl:onClass lf:Geomorphology-mode ;
       owl:onProperty ansis:geomorphologyMode ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Geomorphology-status ;
+      owl:onClass lf:Geomorphology-status ;
       owl:onProperty ansis:geomorphologyStatus ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Landform-pattern-erosional ;
+      owl:onClass lf:Landform-pattern-erosional ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Landform-pattern-name ;
+      owl:onClass lf:Landform-pattern-name ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Relief ;
+      owl:onClass lf:Relief ;
       owl:onProperty ansis:relief ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Slope-modal ;
+      owl:onClass lf:Slope-modal ;
       owl:onProperty ansis:slope ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              lf:Geomorphology-agent-bio
+              lf:Geomorphology-agent-extra
+              lf:Geomorphology-agent-gravity
+              lf:Geomorphology-agent-ice
+              lf:Geomorphology-agent-internal
+              lf:Geomorphology-agent-precipitation
+              lf:Geomorphology-agent-stand
+              lf:Geomorphology-agent-streamflow
+              lf:Geomorphology-agent-wind
+            ) ;
+        ] ;
+      owl:onProperty ansis:agent ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -547,7 +586,13 @@ ansis:Microrelief
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Microrelief-component ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              ls:Microrelief-component-biotic
+              ls:Microrelief-component-sampled
+            ) ;
+        ] ;
       owl:onProperty ansis:component ;
     ] ;
   skos:prefLabel "Microrelief" ;
@@ -560,12 +605,12 @@ ansis:Microrelief-biotic
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Microrelief-component ;
+      owl:onClass ls:Microrelief-component-biotic ;
       owl:onProperty ansis:component ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Microrelief-biotic-agent ;
+      owl:onClass ls:Microrelief-agent-biotic ;
       owl:onProperty ansis:agent ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -577,12 +622,12 @@ ansis:Microrelief-gilgai
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Microrelief-gilgai-proportions ;
+      owl:onClass ls:Microrelief-proportions-gilgai ;
       owl:onProperty ansis:proportions ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Microrelief-gilgai-type ;
+      owl:onClass ls:Microrelief-type-gilgai ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -593,7 +638,7 @@ ansis:Microrelief-hummocky
   rdfs:subClassOf ansis:Microrelief ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Microrelief-hummocky-type ;
+      owl:onClass ls:Microrelief-type-hummocky ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -604,7 +649,7 @@ ansis:Microrelief-other
   rdfs:subClassOf ansis:Microrelief ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Microrelief-other-type ;
+      owl:onClass ls:Microrelief-type-other ;
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -614,36 +659,36 @@ ansis:Mottles
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom asls:Mottle-type ;
+      owl:allValuesFrom sp:Mottle-type ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Mottle-colour ;
+      owl:onClass sp:Mottle-colour ;
       owl:onProperty ansis:colour ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Mottle-contrast ;
+      owl:onClass sp:Mottle-contrast ;
       owl:onProperty ansis:contrast ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Mottle-distinctness ;
+      owl:onClass sp:Mottle-distinctness ;
       owl:onProperty ansis:distinctness ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Mottle-size ;
+      owl:onClass sp:Mottle-size ;
       owl:onProperty ansis:size ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Mottle-abundance ;
+      owl:onClass sp:Mottle-abundance ;
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -654,16 +699,16 @@ ansis:Outcrop
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Outcrop-abundance ;
+      owl:onClass ls:Rock-outcrop-abundance ;
       owl:onProperty ansis:abundance ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange [
+      owl:onClass [
           a owl:Class ;
           owl:unionOf (
-              asls:Lithology-rock
-              asls:Lithology-unconsolidated
+              subst:Lithology-rock
+              subst:Lithology-unconsolidated
             ) ;
         ] ;
       owl:onProperty ansis:lithology ;
@@ -675,25 +720,25 @@ ansis:Pans
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom asls:Pans-type ;
+      owl:allValuesFrom sp:Pans-type ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Pans-cementation ;
+      owl:onClass sp:Pans-cementation ;
       owl:onProperty ansis:cementation ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Pans-continuity ;
+      owl:onClass sp:Pans-continuity ;
       owl:onProperty ansis:continuity ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Pans-structure ;
+      owl:onClass sp:Pans-structure ;
       owl:onProperty ansis:structure ;
     ] ;
   skos:prefLabel "Pans" ;
@@ -703,12 +748,18 @@ ansis:Pores
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Pore-diameter ;
+      owl:onClass sp:Pore-diameter ;
       owl:onProperty ansis:diameter ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Pore-abundance ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              sp:Pore-abundance-fine
+              sp:Pore-abundance-coarse
+            ) ;
+        ] ;
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -719,13 +770,13 @@ ansis:Roots
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Root-abundance ;
+      owl:onClass sp:Root-abundance ;
       owl:onProperty ansis:abundance ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Root-size ;
+      owl:onClass sp:Root-size ;
       owl:onProperty ansis:diameter ;
     ] ;
   skos:prefLabel "Roots" ;
@@ -735,36 +786,36 @@ ansis:Segregations
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Segregations-form ;
+      owl:onClass sp:Segregations-form ;
       owl:onProperty ansis:shape ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Segregations-magnetic-attributes ;
+      owl:onClass sp:Segregations-magnetic-attributes ;
       owl:onProperty ansis:magnetic-attributes ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Segregations-size ;
+      owl:onClass sp:Segregations-size ;
       owl:onProperty ansis:size ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Segregations-strength ;
+      owl:onClass sp:Segregations-strength ;
       owl:onProperty ansis:strength ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Segregations-abundance ;
+      owl:onClass sp:Segregations-abundance ;
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Segregations-nature ;
+      owl:onClass sp:Segregations-nature ;
       owl:onProperty ansis:material ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -803,7 +854,7 @@ ansis:SoilColour
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Colour-moisture-status ;
+      owl:onClass sp:Colour-moisture-status ;
       owl:onProperty ansis:moisture-status ;
     ] ;
   skos:prefLabel "Soil colour" ;
@@ -817,13 +868,13 @@ ansis:SoilPlasticity
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom asls:Consistence-plasticity-type ;
+      owl:allValuesFrom sp:Consistence-plasticity-type ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Consistence-plasticity-degree ;
+      owl:onClass sp:Consistence-plasticity-degree ;
       owl:onProperty ansis:degree ;
     ] ;
   skos:note "Plasticity degree only applies to Normal plasticity" ;
@@ -833,14 +884,14 @@ ansis:SoilStrength
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Consistence-soil-water-status ;
-      owl:onProperty ansis:moisture-status ;
+      owl:onClass sp:Consistence-strength ;
+      owl:onProperty ansis:strength ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Consistence-strength ;
-      owl:onProperty ansis:strength ;
+      owl:onClass sp:Soil-water-status ;
+      owl:onProperty ansis:moisture-status ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:prefLabel "Soil strength" ;
@@ -849,7 +900,7 @@ ansis:SoilStructure
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom asls:Pedality-type ;
+      owl:allValuesFrom sp:Pedality-type ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
@@ -860,12 +911,18 @@ ansis:SoilStructure
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Pedality-size ;
+      owl:onClass sp:Pedality-size ;
       owl:onProperty ansis:size ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Pedality-grade ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              sp:Pedality-grade-pedal
+              sp:Pedality-grade-apedal
+            ) ;
+        ] ;
       owl:onProperty ansis:grade ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
@@ -881,43 +938,43 @@ ansis:StreamChannel
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-depth-width ;
+      owl:onClass lf:Channel-depth-width ;
       owl:onProperty ansis:depth-width-ratio ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-development ;
+      owl:onClass lf:Channel-development ;
       owl:onProperty ansis:development ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-directionality ;
+      owl:onClass lf:Channel-directionality ;
       owl:onProperty ansis:directionality ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-integration ;
+      owl:onClass lf:Channel-integration ;
       owl:onProperty ansis:integration ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-migration ;
+      owl:onClass lf:Channel-migration ;
       owl:onProperty ansis:migration-rate ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-pattern ;
+      owl:onClass lf:Channel-pattern ;
       owl:onProperty ansis:pattern ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Channel-spacing ;
+      owl:onClass lf:Channel-spacing ;
       owl:onProperty ansis:spacing ;
     ] ;
   skos:prefLabel "Stream channel details" ;
@@ -943,71 +1000,86 @@ ansis:Substrate
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Confidence-substrate-is-parent ;
+      owl:onClass subst:Confidence ;
       owl:onProperty ansis:confidence ;
       skos:definition "Degree of confidence that the observed substrate material is the parent material of the observed soil profile or a major part of that profile" ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Mass-genesis-code ;
-      owl:onProperty ansis:genesis ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Rock-alteration ;
+      owl:onClass subst:Rock-alteration ;
       owl:onProperty ansis:alteration ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Substrate-discontinuity-spacing ;
+      owl:onClass subst:Substrate-discontinuity-spacing ;
       owl:onProperty ansis:spacing ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Substrate-grain-size ;
+      owl:onClass subst:Substrate-grain-size ;
       owl:onProperty ansis:grain-size ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Substrate-mineral-composition ;
+      owl:onClass subst:Substrate-mineral-composition ;
       owl:onProperty ansis:material ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onDataRange asls:Substrate-structure ;
+      owl:onClass subst:Substrate-structure ;
       owl:onProperty ansis:structure ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              subst:Rock-genesis-unweathered
+              subst:Rock-genesis-weathered
+              subst:Rock-genesis-sediments
+              [
+                a owl:Class ;
+                owl:unionOf (
+                    subst:Rock-genesis-hardened-chemical
+                    subst:Rock-genesis-hardened-evaporite
+                    subst:Rock-genesis-hardened-artificial
+                  ) ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty ansis:genesis ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass asls:Substrate-strength-class ;
+      owl:onClass subst:Material-strength ;
       owl:onProperty ansis:strength ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onClass asls:Profile-construction ;
+      owl:onClass sp:Profile-construction ;
       owl:onProperty sosa:usedProcedure ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange asls:Field-texture-substrate ;
+      owl:onClass subst:Field-texture ;
       owl:onProperty ansis:texture ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onDataRange [
+      owl:onClass [
           a owl:Class ;
           owl:unionOf (
-              asls:Lithology-unconsolidated
-              asls:Lithology-rock
+              subst:Lithology-unconsolidated
+              subst:Lithology-rock
             ) ;
         ] ;
       owl:onProperty ansis:lithology ;
