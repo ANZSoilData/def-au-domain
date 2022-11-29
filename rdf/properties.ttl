@@ -1130,6 +1130,13 @@ ansis:alteration
   schema:domainIncludes ansis:Substrate ;
   skos:prefLabel "alteration" ;
 .
+ansis:analyte
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:subPropertyOf sosa:observedProperty ;
+  skos:definition "Link to a chemical substance - typically an entry in ChEBI" ;
+  skos:prefLabel "Analyte" ;
+.
 ansis:aspect
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
