@@ -1,5 +1,4 @@
 # baseURI: https://my.example.org/soil/
-# imports: https://anzsoil.org/def/au/domain
 # prefix: my
 
 @prefix ansis: <https://anzsoil.org/def/au/domain/> .
@@ -25,7 +24,6 @@ my:
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:modified "2022-09-14"^^xsd:date ;
-  owl:imports <https://anzsoil.org/def/au/domain> ;
 .
 my:A11
   a ansis:SoilHorizon ;
@@ -110,6 +108,7 @@ my:A12P1
     ] ;
   ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-C> ;
   ansis:hasCoarseFragments [
+      a ansis:CoarseFragments ;
       ansis:abundance <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-2> ;
       ansis:abundance [
           a qudt:QuantityValue ;
@@ -131,6 +130,7 @@ my:A12P1CF
   sosa:isSampleOf my:A12P1 ;
   ansis:component ansis:CoarseFragments ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "component" ;
 .
 my:A12P1R
   a ansis:SoilSample ;
@@ -138,6 +138,7 @@ my:A12P1R
   sosa:isSampleOf my:A12P1 ;
   ansis:component ansis:Roots ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "component" ;
 .
 my:A12P1S
   a ansis:SoilSample ;
@@ -145,6 +146,7 @@ my:A12P1S
   sosa:isSampleOf my:A12P1 ;
   ansis:component ansis:SoilStructure ;
   ansis:relatedProfile my:P1 ;
+  ansis:type "component" ;
 .
 my:A2
   a ansis:SoilHorizon ;
