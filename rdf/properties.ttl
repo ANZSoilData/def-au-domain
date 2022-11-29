@@ -1098,15 +1098,6 @@ ansis:abundance
   schema:domainIncludes ansis:Outcrop ;
   schema:domainIncludes ansis:Roots ;
   schema:domainIncludes ansis:Segregations ;
-  skos:exactMatch prop:abundance ;
-  skos:narrowMatch prop:coarse-fragments-abundance ;
-  skos:narrowMatch prop:cutans-abundance ;
-  skos:narrowMatch prop:gilgai-microrelief-proportions ;
-  skos:narrowMatch prop:mottles-and-colour-pattern-abundance ;
-  skos:narrowMatch prop:rock-outcrop-abundance ;
-  skos:narrowMatch prop:roots-abundance ;
-  skos:narrowMatch prop:segregations-abundance ;
-  skos:narrowMatch prop:voids-macropores-abundance ;
   skos:prefLabel "abundance" ;
 .
 ansis:agent
@@ -1169,7 +1160,6 @@ ansis:chemistry
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilHorizon ;
   schema:domainIncludes ansis:SoilLayer ;
-  skos:narrowMatch prop:chemical-concentration ;
   skos:prefLabel "soil chemical property" ;
 .
 ansis:classification
@@ -1178,7 +1168,6 @@ ansis:classification
   schema:domainIncludes ansis:SoilBody ;
   schema:domainIncludes ansis:SoilProfile ;
   rdfs:subPropertyOf ansis:type ;
-  skos:exactMatch prop:soil-classification ;
   skos:prefLabel "has classification" ;
 .
 ansis:classification-family-A1texture
@@ -1186,7 +1175,6 @@ ansis:classification-family-A1texture
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon texture" ;
 .
 ansis:classification-family-A1thickness
@@ -1194,7 +1182,6 @@ ansis:classification-family-A1thickness
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - A1 horizon thickness" ;
 .
 ansis:classification-family-Btexture
@@ -1202,7 +1189,6 @@ ansis:classification-family-Btexture
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - B horizon texture" ;
 .
 ansis:classification-family-depth
@@ -1210,7 +1196,6 @@ ansis:classification-family-depth
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Soil depth" ;
 .
 ansis:classification-family-gravel
@@ -1218,7 +1203,6 @@ ansis:classification-family-gravel
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "family criteria - Gravel of the surface and A1 horizon" ;
 .
 ansis:classification-greatgroup
@@ -1226,7 +1210,6 @@ ansis:classification-greatgroup
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - great group" ;
 .
 ansis:classification-order
@@ -1234,7 +1217,6 @@ ansis:classification-order
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - order" ;
 .
 ansis:classification-subgroup
@@ -1242,7 +1224,6 @@ ansis:classification-subgroup
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - subgroup" ;
 .
 ansis:classification-suborder
@@ -1250,7 +1231,6 @@ ansis:classification-suborder
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:broadMatch prop:soil-classification ;
   skos:prefLabel "soil classification - sub-order" ;
 .
 ansis:colour
@@ -1259,7 +1239,6 @@ ansis:colour
   schema:domainIncludes ansis:Mottles ;
   schema:domainIncludes ansis:SoilHorizon ;
   schema:domainIncludes ansis:SoilLayer ;
-  skos:exactMatch prop:colour ;
   skos:prefLabel "colour" ;
 .
 ansis:component
@@ -1280,7 +1259,6 @@ ansis:condition-when-dry
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilSurface ;
   rdfs:range asls:Surface-Condition ;
-  skos:exactMatch prop:condition-of-surface-soil-when-dry ;
   skos:prefLabel "condition when dry" ;
 .
 ansis:confidence
@@ -1298,7 +1276,6 @@ ansis:contrast
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Mottles ;
-  skos:exactMatch prop:contrast ;
   skos:prefLabel "contrast" ;
 .
 ansis:degree
@@ -1314,8 +1291,6 @@ ansis:density
   schema:domainIncludes ansis:SoilHorizon ;
   schema:domainIncludes ansis:SoilLayer ;
   rdfs:range qudt:QuantityValue ;
-  skos:exactMatch prop:density ;
-  skos:narrowMatch prop:density-bulk ;
   skos:prefLabel "density" ;
 .
 ansis:depth
@@ -1326,15 +1301,6 @@ ansis:depth
   schema:domainIncludes ansis:SoilProfile ;
   schema:domainIncludes ansis:Substrate ;
   skos:definition "depth of entity" ;
-  skos:exactMatch prop:depth ;
-  skos:narrowMatch prop:depth-free-water ;
-  skos:narrowMatch prop:depth-of-horizon ;
-  skos:narrowMatch prop:depth-of-horizon-lower ;
-  skos:narrowMatch prop:depth-of-horizon-upper ;
-  skos:narrowMatch prop:depth-to-r-horizon ;
-  skos:narrowMatch prop:erosion-gully-depth ;
-  skos:narrowMatch prop:inundation-depth ;
-  skos:narrowMatch prop:observation-depth ;
   skos:prefLabel "depth" ;
 .
 ansis:depth-gully
@@ -1353,7 +1319,6 @@ ansis:depth-lower
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range qudt:QuantityValue ;
   rdfs:subPropertyOf ansis:depth ;
-  skos:exactMatch prop:depth-lower ;
   skos:prefLabel "lower depth" ;
 .
 ansis:depth-r-horizon
@@ -1362,7 +1327,6 @@ ansis:depth-r-horizon
   schema:domainIncludes ansis:SoilProfile ;
   rdfs:range qudt:QuantityValue ;
   rdfs:subPropertyOf ansis:depth ;
-  skos:exactMatch prop:depth-upper ;
   skos:prefLabel "depth to R-Horizon" ;
 .
 ansis:depth-reason
@@ -1380,7 +1344,6 @@ ansis:depth-upper
   schema:domainIncludes ansis:SoilSample ;
   rdfs:range qudt:QuantityValue ;
   rdfs:subPropertyOf ansis:depth ;
-  skos:exactMatch prop:depth-upper ;
   skos:prefLabel "upper depth" ;
 .
 ansis:depth-width-ratio
@@ -1408,7 +1371,6 @@ ansis:designation
   schema:domainIncludes ansis:SoilHorizon ;
   rdfs:subPropertyOf ansis:classification ;
   skos:definition "soil horizon designation" ;
-  skos:exactMatch prop:horizon-classification ;
   skos:prefLabel "horizon designation" ;
 .
 ansis:designation-master
@@ -1452,7 +1414,6 @@ ansis:diameter
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Cracks ;
   schema:domainIncludes ansis:Roots ;
-  skos:exactMatch prop:diameter ;
   skos:prefLabel "diameter" ;
 .
 ansis:directionality
@@ -1475,7 +1436,6 @@ ansis:distinctness
   schema:domainIncludes ansis:Mottles ;
   schema:domainIncludes ansis:SoilHorizon ;
   skos:definition "distinctness of boundary" ;
-  skos:exactMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "distinctness" ;
   skos:scopeNote "In the context of a soil horizon, this refers to the distinctness of the lower boundary" ;
 .
@@ -1483,7 +1443,6 @@ ansis:distribution
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:CoarseFragments ;
-  skos:exactMatch prop:coarse-fragments-distribution ;
   skos:prefLabel "distribution" ;
 .
 ansis:disturbance
@@ -1492,7 +1451,6 @@ ansis:disturbance
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilSite ;
   rdfs:range asls:Disturbance ;
-  skos:exactMatch prop:disturbance-of-site ;
   skos:prefLabel "disturbance of site" ;
 .
 ansis:drainage
@@ -1508,7 +1466,6 @@ ansis:duration
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Inundation ;
   rdfs:range qudt:QuantityValue ;
-  skos:exactMatch prop:duration ;
   skos:prefLabel "duration" ;
 .
 ansis:elevation
@@ -1517,7 +1474,6 @@ ansis:elevation
   schema:domainIncludes ansis:LandSurface ;
   schema:domainIncludes ansis:LandsurveySite ;
   rdfs:range qudt:QuantityValue ;
-  skos:exactMatch prop:elevation ;
   skos:prefLabel "elevation above MSL" ;
 .
 ansis:fabric
@@ -1532,14 +1488,12 @@ ansis:frequency
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Inundation ;
   rdfs:range qudt:QuantityValue ;
-  skos:exactMatch prop:frequency ;
   skos:prefLabel "frequency" ;
 .
 ansis:genesis
   a rdf:Property ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Substrate ;
-  skos:exactMatch prop:substrate-genesis ;
   skos:prefLabel "genesis" ;
 .
 ansis:geomorphologyMode
@@ -1548,7 +1502,6 @@ ansis:geomorphologyMode
   schema:domainIncludes ansis:LandformElement ;
   schema:domainIncludes ansis:LandformPattern ;
   skos:definition "mode of geomorphological activity" ;
-  skos:exactMatch prop:geomorphology-mode ;
   skos:prefLabel "geomorphology mode" ;
 .
 ansis:geomorphologyStatus
@@ -1561,7 +1514,6 @@ ansis:grade
   a owl:ObjectProperty ;
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilStructure ;
-  skos:exactMatch prop:structure-pedality-grade ;
   skos:prefLabel "grade" ;
 .
 ansis:grain-size
@@ -1572,7 +1524,6 @@ ansis:grain-size
   schema:domainIncludes ansis:Substrate ;
   rdfs:subPropertyOf ansis:size ;
   skos:definition "It is informative to estimate the size of the most common particles of a substrate material whether the material is thought to be of sedimentary, metamorphic or igneous origin." ;
-  skos:exactMatch prop:grain-size ;
   skos:prefLabel "grain size" ;
 .
 ansis:hasCoarseFragments
@@ -1604,7 +1555,6 @@ ansis:hasErosion
   schema:domainIncludes ansis:LandsurveySite ;
   schema:domainIncludes ansis:SoilSite ;
   rdfs:range ansis:Erosion ;
-  skos:closeMatch prop:erosion-state ;
   skos:prefLabel "erosion " ;
 .
 ansis:hasInundation
@@ -1782,12 +1732,6 @@ ansis:height
   schema:domainIncludes ansis:LandformElement ;
   schema:domainIncludes ansis:Microrelief ;
   rdfs:range qudt:QuantityValue ;
-  skos:exactMatch prop:extent-vertical ;
-  skos:narrowMatch prop:element-dimension-height ;
-  skos:narrowMatch prop:erosion-gully-depth ;
-  skos:narrowMatch prop:inundation-depth ;
-  skos:narrowMatch prop:microrelief-vertical-interval ;
-  skos:narrowMatch prop:relief ;
   skos:prefLabel "height" ;
 .
 ansis:height-drainage
@@ -1807,8 +1751,6 @@ ansis:length
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:LandformElement ;
   rdfs:range qudt:QuantityValue ;
-  skos:exactMatch prop:length ;
-  skos:narrowMatch prop:element-dimension-length ;
   skos:prefLabel "length" ;
 .
 ansis:lithology
@@ -1819,10 +1761,6 @@ ansis:lithology
   schema:domainIncludes ansis:Substrate ;
   rdfs:subPropertyOf ansis:material ;
   skos:definition "lithological type of material" ;
-  skos:exactMatch prop:lithology ;
-  skos:narrowMatch prop:coarse-fragments-lithology ;
-  skos:narrowMatch prop:rock-outcrop-lithology ;
-  skos:narrowMatch prop:substrate-lithology ;
   skos:prefLabel "lithological type" ;
 .
 ansis:location-in-element
@@ -1991,9 +1929,6 @@ ansis:shape
   schema:domainIncludes ansis:Segregations ;
   schema:domainIncludes ansis:SoilHorizon ;
   skos:definition "shape of entity or entity boundary" ;
-  skos:exactMatch prop:shape ;
-  skos:narrowMatch prop:coarse-fragments-shape ;
-  skos:narrowMatch prop:horizon-boundary-shape ;
   skos:prefLabel "shape" ;
   skos:scopeNote "In the context of a soil horizon, this refers to the shape of the lower boundary" ;
 .
@@ -2004,14 +1939,6 @@ ansis:size
   schema:domainIncludes ansis:Mottles ;
   schema:domainIncludes ansis:Segregations ;
   schema:domainIncludes ansis:SoilStructure ;
-  skos:exactMatch prop:size ;
-  skos:narrowMatch prop:coarse-fragments-size ;
-  skos:narrowMatch prop:diameter ;
-  skos:narrowMatch prop:grain-size ;
-  skos:narrowMatch prop:mottles-and-colour-pattern-size ;
-  skos:narrowMatch prop:roots-size ;
-  skos:narrowMatch prop:segregations-size ;
-  skos:narrowMatch prop:structure-pedality-size ;
   skos:narrower ansis:grain-size ;
   skos:prefLabel "size" ;
 .
@@ -2027,7 +1954,6 @@ ansis:spacing
   schema:domainIncludes ansis:StreamChannel ;
   schema:domainIncludes ansis:Substrate ;
   skos:definition "spacing of features" ;
-  skos:exactMatch prop:horizon-boundary-distinctness ;
   skos:prefLabel "spacing " ;
   skos:scopeNote "in the context of substrate this refers to the spacing of discontinuities" ;
 .
@@ -2054,9 +1980,6 @@ ansis:strength
   schema:domainIncludes ansis:SoilStrength ;
   schema:domainIncludes ansis:Substrate ;
   skos:definition "strength of material" ;
-  skos:exactMatch prop:strength ;
-  skos:narrowMatch prop:consistence-strength ;
-  skos:narrowMatch prop:material-strength ;
   skos:prefLabel "strength" ;
 .
 ansis:structure
@@ -2065,11 +1988,6 @@ ansis:structure
   schema:domainIncludes ansis:Pans ;
   schema:domainIncludes ansis:SoilHorizon ;
   schema:domainIncludes ansis:SoilLayer ;
-  skos:exactMatch prop:structure ;
-  skos:narrowMatch prop:material-structure ;
-  skos:narrowMatch prop:pans-structure ;
-  skos:narrowMatch prop:soil-structure ;
-  skos:narrowMatch prop:structure-artificial-aggregates ;
   skos:prefLabel "structure" ;
 .
 ansis:texture
@@ -2079,9 +1997,6 @@ ansis:texture
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:Substrate ;
   skos:definition "texture of material" ;
-  skos:exactMatch prop:texture ;
-  skos:narrowMatch prop:field-texture ;
-  skos:narrowMatch prop:substrate-texture ;
   skos:prefLabel "texture" ;
 .
 ansis:type
@@ -2099,17 +2014,6 @@ ansis:type
   schema:domainIncludes ansis:SoilStructure ;
   skos:closeMatch dcterms:type ;
   skos:definition "type of ansis soil entity" ;
-  skos:exactMatch prop:type ;
-  skos:narrowMatch prop:consistence-plasticity-type ;
-  skos:narrowMatch prop:cutans-type ;
-  skos:narrowMatch prop:gilgai-microrelief-type ;
-  skos:narrowMatch prop:hummocky-microrelief-type ;
-  skos:narrowMatch prop:morphological-type ;
-  skos:narrowMatch prop:other-microrelief-type ;
-  skos:narrowMatch prop:pans-type ;
-  skos:narrowMatch prop:segregations-nature ;
-  skos:narrowMatch prop:streamwise-channel-pattern ;
-  skos:narrowMatch prop:structure-pedality-type ;
   skos:prefLabel "type" ;
 .
 ansis:underlyingMaterial
@@ -2146,7 +2050,6 @@ ansis:waterRepellence
   schema:domainIncludes ansis:SoilLayer ;
   schema:domainIncludes ansis:SoilSurface ;
   rdfs:range asls:Water-repellence ;
-  skos:exactMatch prop:water-repellence ;
   skos:prefLabel "water repellence" ;
 .
 ansis:width
@@ -2154,8 +2057,5 @@ ansis:width
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Cracks ;
   schema:domainIncludes ansis:LandformElement ;
-  skos:exactMatch prop:width ;
-  skos:narrowMatch prop:element-dimension-width ;
-  skos:narrowMatch prop:voids-cracks-width ;
   skos:prefLabel "width" ;
 .
