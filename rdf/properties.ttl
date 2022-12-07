@@ -924,6 +924,34 @@ ansis:Roots
   skos:member ansis:diameter ;
   skos:prefLabel "Roots" ;
 .
+ansis:SOSA-properties
+  a skos:Collection ;
+  skos:definition "Properties associated with Observations, Samplings and Actuations/Treatments" ;
+  skos:member sosa:actsOnProperty ;
+  skos:member sosa:hasFeatureOfInterest ;
+  skos:member sosa:hasResult ;
+  skos:member sosa:hasSample ;
+  skos:member sosa:hasSimpleResult ;
+  skos:member sosa:hosts ;
+  skos:member sosa:isActedOnBy ;
+  skos:member sosa:isFeatureOfInterestOf ;
+  skos:member sosa:isHostedBy ;
+  skos:member sosa:isObservedBy ;
+  skos:member sosa:isResultOf ;
+  skos:member sosa:isSampleOf ;
+  skos:member sosa:madeActuation ;
+  skos:member sosa:madeByActuator ;
+  skos:member sosa:madeBySampler ;
+  skos:member sosa:madeBySensor ;
+  skos:member sosa:madeObservation ;
+  skos:member sosa:madeSampling ;
+  skos:member sosa:observedProperty ;
+  skos:member sosa:observes ;
+  skos:member sosa:phenomenonTime ;
+  skos:member sosa:resultTime ;
+  skos:member sosa:usedProcedure ;
+  skos:prefLabel "Observations & Sampling " ;
+.
 ansis:Segregations
   a owl:Class ;
   a skos:Collection ;
@@ -2365,7 +2393,7 @@ ansis:properties
   dcterms:created "2022-07-21"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-2991-2308> ;
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
-  dcterms:description "A domain-model for Australian soil data" ;
+  dcterms:description "A domain-model for Australian soil data - properties and complex value-types" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-12-07"^^xsd:date ;
   dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
