@@ -85,11 +85,6 @@ ansis:LandsurveySite
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty ansis:disturbance ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasLandCover ;
     ] ;
   rdfs:subClassOf [
@@ -111,6 +106,12 @@ ansis:LandsurveySite
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasLandform ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass ls:Disturbance-of-site ;
+      owl:onProperty ansis:disturbance ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
