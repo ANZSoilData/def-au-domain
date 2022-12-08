@@ -1,6 +1,5 @@
 # baseURI: https://anzsoil.org/def/au/domain
 # imports: http://purl.org/dc/elements/1.1/
-# imports: https://anzsoil.org/def/au/domain/enums
 # imports: https://anzsoil.org/def/au/domain/features
 # imports: https://anzsoil.org/def/au/domain/properties
 
@@ -48,7 +47,6 @@
   dcterms:source "Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain" ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
-  owl:imports ansis:enums ;
   owl:imports ansis:features ;
   owl:imports ansis:properties ;
 .
