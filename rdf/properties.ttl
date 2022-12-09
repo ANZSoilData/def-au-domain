@@ -55,13 +55,14 @@ geo:hasGeometry
   schema:rangeIncludes sf:Point ;
   skos:prefLabel "has geometry"@en ;
 .
-owl:Class
-  a skos:Concept ;
-  skos:prefLabel "Class"@en ;
-.
-prov:Activity
-  a skos:Concept ;
-  skos:prefLabel "Activity"@en ;
+sosa:Actuation
+  a skos:Collection ;
+  skos:member sosa:actsOnProperty ;
+  skos:member sosa:hasFeatureOfInterest ;
+  skos:member sosa:madeByActuator ;
+  skos:member sosa:resultTime ;
+  skos:member sosa:usedProcedure ;
+  skos:prefLabel "Actuation"@en ;
 .
 sosa:Observation
   a skos:Collection ;
@@ -1067,6 +1068,7 @@ ansis:Roots
 ansis:SOSA-properties
   a skos:Collection ;
   skos:definition "Properties associated with Observations, Samplings and Actuations/Treatments" ;
+  skos:member sosa:Actuation ;
   skos:member sosa:Observation ;
   skos:member sosa:Sampling ;
   skos:member sosa:actsOnProperty ;
@@ -1150,6 +1152,10 @@ ansis:SiteType
 .
 ansis:SiteVisit
   a skos:Collection ;
+  skos:member sosa:Actuation ;
+  skos:member sosa:Observation ;
+  skos:member sosa:Sampling ;
+  skos:member ansis:Treatment ;
   skos:member ansis:purpose ;
   skos:member ansis:relatedActivity ;
   skos:member ansis:relatedLandsurveySite ;
@@ -1636,6 +1642,17 @@ ansis:Substrate
   skos:member ansis:strength ;
   skos:member ansis:texture ;
   skos:prefLabel "Substrate" ;
+.
+ansis:Treatment
+  a skos:Collection ;
+  skos:member sosa:actsOnProperty ;
+  skos:member sosa:hasFeatureOfInterest ;
+  skos:member sosa:madeByActuator ;
+  skos:member sosa:resultTime ;
+  skos:member sosa:usedProcedure ;
+  skos:member ansis:relatedProject ;
+  skos:member <https://linked.data.gov.au/def/project#Project> ;
+  skos:prefLabel "Treatment"@en ;
 .
 ansis:abundance
   a owl:ObjectProperty ;
@@ -2665,7 +2682,7 @@ WHERE {
     ?r a owl:Restriction ; owl:onProperty ?p ; owl:onClass ?v . 
 }
 ```
-
+etc
 and convert union classes to lists of rangeIncludes""" ;
 .
 ansis:proportions
@@ -2687,7 +2704,12 @@ ansis:purpose
 .
 ansis:relatedActivity
   a skos:Concept ;
-  schema:rangeIncludes [] ;
+  schema:rangeIncludes prov:Activity ;
+  schema:rangeIncludes sosa:Actuation ;
+  schema:rangeIncludes sosa:Observation ;
+  schema:rangeIncludes sosa:Sampling ;
+  schema:rangeIncludes ansis:SiteVisit ;
+  schema:rangeIncludes ansis:Treatment ;
   skos:prefLabel "related activity" ;
 .
 ansis:relatedHorizon
