@@ -1651,7 +1651,6 @@ ansis:Treatment
   skos:member sosa:resultTime ;
   skos:member sosa:usedProcedure ;
   skos:member ansis:relatedProject ;
-  skos:member <https://linked.data.gov.au/def/project#Project> ;
   skos:prefLabel "Treatment"@en ;
 .
 ansis:abundance
