@@ -1,4 +1,6 @@
 # baseURI: https://my.example.org/soil/
+# imports: http://www.w3.org/ns/ssn/
+# imports: https://anzsoil.org/def/au/domain
 # prefix: my
 
 @prefix ansis: <https://anzsoil.org/def/au/domain/> .
@@ -24,6 +26,8 @@ my:
   dcterms:creator <https://orcid.org/0000-0002-3884-3420> ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:modified "2022-09-14"^^xsd:date ;
+  owl:imports <http://www.w3.org/ns/ssn/> ;
+  owl:imports <https://anzsoil.org/def/au/domain> ;
 .
 my:A11
   a ansis:SoilHorizon ;
