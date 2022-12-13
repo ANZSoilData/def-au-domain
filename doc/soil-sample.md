@@ -12,4 +12,4 @@ The primary types of soil sample are
 
 The observable properties of a soil sample are the properties of the type of entity that it is a sample of. Soil samples serve as the proximate entity-of-interest for observations of the properties of a soil entity. 
 
-![Soil sample](image/Soil-sample.png)
+![Soil sample](../fig/Soil-sample.png)

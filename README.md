@@ -12,12 +12,12 @@ Important prior work includes:
 
 See individual pages for diagrams and explanation.
 
-- [Soil and land survey site](site.md)
-- [Soil body](soil-body.md)
-- [Soil layer and soil horizon](soil-layer.md)
-- [Soil profile](soil-profile.md)
-- [Soil sample](soil-sample.md)
-- [Site visit](site-visit.md)
-- [Observations samplings and treatments](sosa.md)
+- [Soil and land survey site](doc/site.md)
+- [Soil body](doc/soil-body.md)
+- [Soil layer and soil horizon](doc/soil-layer.md)
+- [Soil profile](doc/soil-profile.md)
+- [Soil sample](doc/soil-sample.md)
+- [Site visit](doc/site-visit.md)
+- [Observations samplings and treatments](doc/sosa.md)
 
 More to come. 

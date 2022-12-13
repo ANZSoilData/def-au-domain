@@ -11,7 +11,7 @@ Soil bodies are characterised through [observations](sosa.md) made on [soil prof
 
 Soil bodies may be be classified using the order-suborder-greatgroup-subgroup-family system used for [soil profiles](soil-profile.md). 
 
-![Soil body](image/Soil-body.png)
+![Soil body](../fig/Soil-body.png)
 
 Note: [Soil Horizon](soil-layer.md) is a special kind of layer, defined on pedological grounds. 
 Note: A Soil Body is usually characterized by observations made in a [Soil Profile](soil-profile.md).

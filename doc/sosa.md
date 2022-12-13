@@ -17,6 +17,6 @@ The **phenomenonTime** is the date and time that the result of an observation ap
 
 The result of an **Actuation** is a change of value of some **actuatable property** relating to the **entity of interest**. Treatments such as application of lime or a fertilizer are a kind of Actuation. 
 
-![Sampling, Actuation and Observation](image/SOSA.png)
+![Sampling, Actuation and Observation](../fig/SOSA.png)
 
 [Back to README](README.md)

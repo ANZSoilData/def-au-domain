@@ -7,7 +7,7 @@ In particular a Soil Site is intended to sample a [soil body](soil-body.md) thro
 
 
 
-![Soil and Land Survey Site](image/Site.png)
+![Soil and Land Survey Site](../fig/Site.png)
 
 (text from [ASLS](https://catalogue.nla.gov.au/Record/4273240))
 
