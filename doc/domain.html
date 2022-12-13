@@ -198,7 +198,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>A domain-model for Australian soil data, including observations and sampling. </p>\n<p>This domain model was developed in 2022 for the Australian National Soil Information System (ANSIS). \nIt is based primarily on the elements described in the Australian Soil and Land Survey Field Handbook (ASLS). \nThe value space of most properties are encoded as controlled vocabularies hosted, which are currently available from Research Vocabularies Australia. </p>\n<p>The model is formalized as an OWL Ontology. Cardinalities and property value-spaces are encoded as owl:Restrictions. </p>"
+        "@value": "<p>A domain-model for Australian soil data, including observations and sampling. </p>\n<p>This domain model was developed in 2022 for the Australian National Soil Information System (ANSIS). \nIt is based primarily on the elements described in the Australian Soil and Land Survey Field Handbook (ASLS). \nThe value space of most properties are encoded as controlled vocabularies which are currently hosted in Research Vocabularies Australia. </p>\n<p>The model is formalized as an OWL Ontology. Cardinalities and property value-spaces are encoded as owl:Restrictions. </p>"
       }
     ],
     "https://schema.org/license": [
@@ -352,7 +352,8 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <dt>License</dt>
         <dd><a href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</a></dd>
         <dt>Source</dt>
-        <dd>Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain
+        <dd>Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain
+
 Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain</dd>
         <dt>Ontology RDF</dt>
         <dd><a href="domain.ttl">RDF (turtle)</a></dd>
@@ -449,10 +450,14 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>[
-      a ansis:SoilClassification ;
-      ansis:classification-order "CH" ;
-      ansis:classification-suborder "AB" ;
+                    <pre>[
+
+      a ansis:SoilClassification ;
+
+      ansis:classification-order "CH" ;
+
+      ansis:classification-suborder "AB" ;
+
 ]</pre><br/>
                 </td>
             </tr>
@@ -591,11 +596,16 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>[
-   a ansis:HorizonDesignation ;
-   ansis:designation-master "B" ;
-   ansis:designation-subdivision "22" ;
-   ansis:designation-suffix "s" ;
+                    <pre>[
+
+   a ansis:HorizonDesignation ;
+
+   ansis:designation-master "B" ;
+
+   ansis:designation-subdivision "22" ;
+
+   ansis:designation-suffix "s" ;
+
 ]</pre><br/>
                 </td>
             </tr>
@@ -1340,26 +1350,46 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:visit-S1-2
-  a ansis:SiteVisit ;
-  prov:endedAtTime "2022-09-07T13:00:00+10:00"^^xsd:dateTime ;
-  prov:startedAtTime "2022-09-07T09:00:00+10:00"^^xsd:dateTime ;
-  ansis:relatedActivity my:O1-dens-A12-in-P1 ;
-  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
-  ansis:relatedActivity my:O3-dens-S2-L20-80-in-P1 ;
-  ansis:relatedActivity my:O4-dens-S3-20-40-in-P1 ;
-  ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
-  ansis:relatedProject &lt;https://example.org/project-9765&gt; ;
-  ansis:relatedSite my:Site_1 ;
-  ansis:visitor &lt;https://orcid.org/0000-0002-0693-1899&gt; ;
-.
-my:O1-dens-A12-in-P1
-  a sosa:Observation ;
-  skos:prefLabel "Measurement of bulk density of a layer A12 in profile P1" ;
-  sosa:hasFeatureOfInterest my:A12-in-P1 ;
-  sosa:hasSimpleResult "1.4 g/cm3" ;
-  sosa:observedProperty ansis:density-bulk ;
-  sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
+                    <pre>my:visit-S1-2
+
+  a ansis:SiteVisit ;
+
+  prov:endedAtTime "2022-09-07T13:00:00+10:00"^^xsd:dateTime ;
+
+  prov:startedAtTime "2022-09-07T09:00:00+10:00"^^xsd:dateTime ;
+
+  ansis:relatedActivity my:O1-dens-A12-in-P1 ;
+
+  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
+
+  ansis:relatedActivity my:O3-dens-S2-L20-80-in-P1 ;
+
+  ansis:relatedActivity my:O4-dens-S3-20-40-in-P1 ;
+
+  ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
+
+  ansis:relatedProject &lt;https://example.org/project-9765&gt; ;
+
+  ansis:relatedSite my:Site_1 ;
+
+  ansis:visitor &lt;https://orcid.org/0000-0002-0693-1899&gt; ;
+
+.
+
+my:O1-dens-A12-in-P1
+
+  a sosa:Observation ;
+
+  skos:prefLabel "Measurement of bulk density of a layer A12 in profile P1" ;
+
+  sosa:hasFeatureOfInterest my:A12-in-P1 ;
+
+  sosa:hasSimpleResult "1.4 g/cm3" ;
+
+  sosa:observedProperty ansis:density-bulk ;
+
+  sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1402,9 +1432,12 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Body-88
-  a ansis:SoilBody ;
-  skos:prefLabel "Monivae gravelly loam" ;
+                    <pre>my:Body-88
+
+  a ansis:SoilBody ;
+
+  skos:prefLabel "Monivae gravelly loam" ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1491,15 +1524,24 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Horizon_B22s
-  a ansis:SoilHorizon ;
-  skos:prefLabel "Horizon B22s" ;
-  ansis:designation [
-      ansis:designation-master "B" ;
-      ansis:designation-subdivision "22" ;
-      ansis:designation-suffix "s" ;
-    ] ;
-  ansis:relatedBody my:Body-88 ;
+                    <pre>my:Horizon_B22s
+
+  a ansis:SoilHorizon ;
+
+  skos:prefLabel "Horizon B22s" ;
+
+  ansis:designation [
+
+      ansis:designation-master "B" ;
+
+      ansis:designation-subdivision "22" ;
+
+      ansis:designation-suffix "s" ;
+
+    ] ;
+
+  ansis:relatedBody my:Body-88 ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1574,12 +1616,18 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Layer_20-80
-  a ansis:SoilLayer ;
-  skos:prefLabel "layer 20-80 cm" ;
-  ansis:depth-lower "80 cm" ;
-  ansis:depth-upper "20 cm" ;
-  ansis:relatedBody my:Body-88 ;
+                    <pre>my:Layer_20-80
+
+  a ansis:SoilLayer ;
+
+  skos:prefLabel "layer 20-80 cm" ;
+
+  ansis:depth-lower "80 cm" ;
+
+  ansis:depth-upper "20 cm" ;
+
+  ansis:relatedBody my:Body-88 ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1678,24 +1726,42 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Profile_1
-  a ansis:SoilProfile ;
-  geo:hasGeometry my:Point_1 ;
-  skos:prefLabel "profile 1" ;
-  sosa:isSampleOf my:Body-88 ;
-  ansis:classification-order &lt;http://anzsoil.org/def/au/asc/CH-AB&gt; ;
-  ansis:coarse-fragment-distribution &lt;http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R&gt; ;
-  ansis:depth-RHorizon "106 cm" ;
-  ansis:depth-Substrate "106 cm" ;
-  ansis:depth-lower "106 cm" ;
-  ansis:depth-upper "0 cm" ;
-  ansis:relatedHorizon my:Horizon_A11 ;
-  ansis:relatedHorizon my:Horizon_A12 ;
-  ansis:relatedHorizon my:Horizon_A2 ;
-  ansis:relatedHorizon my:Horizon_B21s ;
-  ansis:relatedHorizon my:Horizon_B22s ;
-  ansis:relatedSite my:Site_1 ;
-  ansis:type-profile &lt;http://anzsoil.org/def/au/asls/soil-profile/observation-type-C&gt; ;
+                    <pre>my:Profile_1
+
+  a ansis:SoilProfile ;
+
+  geo:hasGeometry my:Point_1 ;
+
+  skos:prefLabel "profile 1" ;
+
+  sosa:isSampleOf my:Body-88 ;
+
+  ansis:classification-order &lt;http://anzsoil.org/def/au/asc/CH-AB&gt; ;
+
+  ansis:coarse-fragment-distribution &lt;http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R&gt; ;
+
+  ansis:depth-RHorizon "106 cm" ;
+
+  ansis:depth-Substrate "106 cm" ;
+
+  ansis:depth-lower "106 cm" ;
+
+  ansis:depth-upper "0 cm" ;
+
+  ansis:relatedHorizon my:Horizon_A11 ;
+
+  ansis:relatedHorizon my:Horizon_A12 ;
+
+  ansis:relatedHorizon my:Horizon_A2 ;
+
+  ansis:relatedHorizon my:Horizon_B21s ;
+
+  ansis:relatedHorizon my:Horizon_B22s ;
+
+  ansis:relatedSite my:Site_1 ;
+
+  ansis:type-profile &lt;http://anzsoil.org/def/au/asls/soil-profile/observation-type-C&gt; ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1745,23 +1811,40 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:S3-20-40-in-P1
-  a ansis:Sample ;
-  skos:prefLabel "Sample 3 from depth 20-40 in profile 1" ;
-  sosa:isResultOf my:Sg-20-40-in-P1 ;
-  sosa:isSampleOf my:Body-88 ;
-  ansis:depth-lower "40 cm" ;
-  ansis:depth-upper "20 cm" ;
-  ansis:relatedProfile my:Profile_1 ;
-.
-my:Sg-20-40-in-P1
-  a sosa:Sampling ;
-  sosa:hasFeatureOfInterest my:Profile_1 ;
-  sosa:hasResult my:S3-20-40-in-P1 ;
-  sosa:madeBySampler &lt;mailto:peter.wilson@csiro.au&gt; ;
-  sosa:resultTime "2002-09-19T13:35:00"^^xsd:dateTime ;
-  sosa:usedProcedure &lt;https://example.org/soil-sampling-procedure-AVH&gt; ;
-  ansis:relatedProject &lt;https://example.org/project-438&gt; ;
+                    <pre>my:S3-20-40-in-P1
+
+  a ansis:Sample ;
+
+  skos:prefLabel "Sample 3 from depth 20-40 in profile 1" ;
+
+  sosa:isResultOf my:Sg-20-40-in-P1 ;
+
+  sosa:isSampleOf my:Body-88 ;
+
+  ansis:depth-lower "40 cm" ;
+
+  ansis:depth-upper "20 cm" ;
+
+  ansis:relatedProfile my:Profile_1 ;
+
+.
+
+my:Sg-20-40-in-P1
+
+  a sosa:Sampling ;
+
+  sosa:hasFeatureOfInterest my:Profile_1 ;
+
+  sosa:hasResult my:S3-20-40-in-P1 ;
+
+  sosa:madeBySampler &lt;mailto:peter.wilson@csiro.au&gt; ;
+
+  sosa:resultTime "2002-09-19T13:35:00"^^xsd:dateTime ;
+
+  sosa:usedProcedure &lt;https://example.org/soil-sampling-procedure-AVH&gt; ;
+
+  ansis:relatedProject &lt;https://example.org/project-438&gt; ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1805,16 +1888,26 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Site_1
-  a ansis:SoilSite ;
-  geo:hasGeometry my:Polygon_1 ;
-  skos:prefLabel "site 1" ;
-  ansis:abundance-cover &lt;http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2&gt; ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-  ansis:has-erosion ls:erosion-wind ;
-  ansis:has-land-use &lt;http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses&gt; ;
-  ansis:has-landform-element &lt;http://anzsoil.org/def/au/asls/landform/landform-element-PLA&gt; ;
-  ansis:has-landform-pattern &lt;http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP&gt; ;
+                    <pre>my:Site_1
+
+  a ansis:SoilSite ;
+
+  geo:hasGeometry my:Polygon_1 ;
+
+  skos:prefLabel "site 1" ;
+
+  ansis:abundance-cover &lt;http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2&gt; ;
+
+  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
+
+  ansis:has-erosion ls:erosion-wind ;
+
+  ansis:has-land-use &lt;http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses&gt; ;
+
+  ansis:has-landform-element &lt;http://anzsoil.org/def/au/asls/landform/landform-element-PLA&gt; ;
+
+  ansis:has-landform-pattern &lt;http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP&gt; ;
+
 .</pre><br/>
                 </td>
             </tr>
@@ -1920,10 +2013,14 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Surface_3
-  a ansis:SoilSurface ;
-  skos:prefLabel "Soil surface 3" ;
-  ansis:relatedBody my:Body-88 ;
+                    <pre>my:Surface_3
+
+  a ansis:SoilSurface ;
+
+  skos:prefLabel "Soil surface 3" ;
+
+  ansis:relatedBody my:Body-88 ;
+
 .</pre><br/>
                 </td>
             </tr>
