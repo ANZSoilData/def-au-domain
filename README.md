@@ -10,7 +10,9 @@ Important prior work includes:
 
 (ii) [ANZSoilML](https://github.com/ANZSoilData/ANZSoilML)
 
-See individual pages for diagrams and explanation.
+See [ANSIS Domain Information Model (ontology) documentation](https://raw.githack.com/ANZSoilData/def-au-domain/main/doc/domain.html). 
+
+See these individual pages for diagrams and explanation.
 
 - [Soil and land survey site](doc/site.md)
 - [Soil body](doc/soil-body.md)
