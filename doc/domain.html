@@ -339,7 +339,7 @@ EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/created">Created</a></dt>
         <dd>2022-07-21</dd>
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
-        <dd>2022-12-09</dd>
+        <dd>2022-12-15</dd>
         <dt>Imports</dt>
         <dd>
             <a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a><br/>
@@ -427,7 +427,7 @@ The value space of most properties are encoded as controlled vocabularies hosted
       <li><a href="#Soilorder">Soil order</a></li>
       <li><a href="#Soilplasticity">Soil plasticity</a></li>
       <li><a href="#Soilprofile">Soil profile</a></li>
-      <li><a href="#Sampleofsoilorsoilentity">Sample of soil or soil entity</a></li>
+      <li><a href="#Soilsample">Soil sample</a></li>
       <li><a href="#Soilsite">Soil site</a></li>
       <li><a href="#Soilstrength">Soil strength</a></li>
       <li><a href="#Soilstructure">Soil structure</a></li>
@@ -468,15 +468,15 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#classification-A1horizontexture">classification - A1 horizon texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#classification-Greatgroup">classification - Great group</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#classification-Sub-order">classification - Sub-order</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#classification-Subgroup">classification - Subgroup</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#classification-Order">classification - Order</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#classification-Bhorizontexture">classification - B horizon texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#classification-A1horizonthickness">classification - A1 horizon thickness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#classification-Soildepth">classification - Soil depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#classification-GravelofthesurfaceandA1horizon">classification - Gravel of the surface and A1 horizon</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-Soildepth">classification - Soil depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-A1horizonthickness">classification - A1 horizon thickness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-Greatgroup">classification - Great group</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-Subgroup">classification - Subgroup</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-A1horizontexture">classification - A1 horizon texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-Bhorizontexture">classification - B horizon texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#classification-Sub-order">classification - Sub-order</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -496,13 +496,35 @@ The value space of most properties are encoded as controlled vocabularies hosted
                 <td><img alt="Coarse fragments - class diagram" src="../fig/CoarseFragments.png"/></td>
             </tr>
             <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>[
+
+      a ansis:CoarseFragments ;
+
+      ansis:abundance &lt;http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-3&gt; ;
+
+      ansis:abundance [
+
+          a qudt:QuantityValue ;
+
+          qudt:unit unit:PERCENT ;
+
+          qudt:value "10." ;
+
+        ]
+
+]</pre><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#shape">shape</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-shape">ls:Coarse-fragments-shape</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-abundance">ls:Coarse-fragments-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-size">ls:Coarse-fragments-size</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#distribution">distribution</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Coarse-fragments-distribution">sp:Coarse-fragments-distribution</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-abundance">ls:Coarse-fragments-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lithology">lithology</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
+                    <a href="#distribution">distribution</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Coarse-fragments-distribution">sp:Coarse-fragments-distribution</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shape">shape</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Coarse-fragments-shape">ls:Coarse-fragments-shape</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#strength">strength</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Material-strength">subst:Material-strength</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -555,9 +577,9 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#type">type</a> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/soil-profile/Cutans-type">sp:Cutans-type</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Cutans-abundance">sp:Cutans-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#distinctness">distinctness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Cutans-distinctness">sp:Cutans-distinctness</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#type">type</a> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/soil-profile/Cutans-type">sp:Cutans-type</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -586,9 +608,9 @@ The value space of most properties are encoded as controlled vocabularies hosted
                 <th>Restrictions</th>
                 <td>
                     <a href="#type">type</a> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Erosion-type">ls:Erosion-type</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#gullydepth">gully depth</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Erosion-depth-gully">ls:Erosion-depth-gully</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#degreeorintensity">degree or intensity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
                     <a href="#state">state</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Erosion-state">ls:Erosion-state</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#gullydepth">gully depth</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Erosion-depth-gully">ls:Erosion-depth-gully</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -629,15 +651,15 @@ The value space of most properties are encoded as controlled vocabularies hosted
                 <th>Restrictions</th>
                 <td>
                     <a href="#designationsuffix">designation suffix</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Horizon-suffix">sp:Horizon-suffix</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#designationprefix">designation prefix</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#designationmaster">designation master</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Horizon-code">sp:Horizon-code</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#designationsubdivision">designation subdivision</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#designationprefix">designation prefix</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Members</th>
                 <td>
-                    <a href="ub1bL1573C20">ub1bL1573C20</a><br/>
+                    <a href="ub1bL1602C20">ub1bL1602C20</a><br/>
                 </td>
             </tr>
         </table>
@@ -659,8 +681,8 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#frequency">frequency</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Inundation-frequency">ls:Inundation-frequency</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#velocity">velocity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Inundation-runon-velocity">ls:Inundation-runon-velocity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#frequency">frequency</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Inundation-frequency">ls:Inundation-frequency</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#duration">duration</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Inundation-duration">ls:Inundation-duration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#depth">depth</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Inundation-depth">ls:Inundation-depth</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
@@ -744,17 +766,17 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#aspect">aspect</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#runoff">runoff</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/land-surface/Runoff">ls:Runoff</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#elevationmethod">elevation method</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#hascoarsefragments">has coarse fragments</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#haserosion">has erosion</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="#hasmicrorelief">has microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#runoff">runoff</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/land-surface/Runoff">ls:Runoff</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#aggradation">aggradation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Aggradation">ls:Aggradation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#elevation">elevation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#hasinundation">has inundation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#drainageheight">drainage height</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#aspect">aspect</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#elevationmethod">elevation method</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#hasoutcrop">has outcrop</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#hasmicrorelief">has microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#elevation">elevation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#aggradation">aggradation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Aggradation">ls:Aggradation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#haserosion">has erosion</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -812,8 +834,8 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#haslandformpattern">has landform pattern</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
                     <a href="#haslandformelement">has landform element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
+                    <a href="#haslandformpattern">has landform pattern</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
                 </td>
             </tr>
             <tr>
@@ -843,17 +865,17 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#relativeinclination">relative inclination</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Relative-inclination">lf:Relative-inclination</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#height">height</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-element-name">lf:Landform-element-name</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#length">length</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#width">width</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#slopemethod">slope method</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Slope-procedure">lf:Slope-procedure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geomorphologymode">geomorphology mode</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Geomorphology-mode">lf:Geomorphology-mode</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#morphologicaltype">morphological type</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-element-type">lf:Landform-element-type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#height">height</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#slope">slope</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Slope-class">lf:Slope-class</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#relativeinclination">relative inclination</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Relative-inclination">lf:Relative-inclination</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#agent">agent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
                     <a href="#underlyingmaterial">underlying material</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-element-name">lf:Landform-element-name</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#slope">slope</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Slope-class">lf:Slope-class</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#length">length</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#slopemethod">slope method</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Slope-procedure">lf:Slope-procedure</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#morphologicaltype">morphological type</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-element-type">lf:Landform-element-type</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -883,15 +905,15 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#hasstreamchannel">has stream channel </a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#geomorphologymode">geomorphology mode</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Geomorphology-mode">lf:Geomorphology-mode</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#relief">relief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Relief">lf:Relief</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#geomorphologicalstatus">geomorphological status</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Geomorphology-status">lf:Geomorphology-status</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#agent">agent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
-                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-pattern-erosional">lf:Landform-pattern-erosional</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#geomorphologymode">geomorphology mode</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Geomorphology-mode">lf:Geomorphology-mode</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#haslandformelement">has landform element</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
-                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-pattern-name">lf:Landform-pattern-name</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#agent">agent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
                     <a href="#slope">slope</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Slope-modal">lf:Slope-modal</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-pattern-erosional">lf:Landform-pattern-erosional</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasstreamchannel">has stream channel </a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Landform-pattern-name">lf:Landform-pattern-name</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#relief">relief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Relief">lf:Relief</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -923,8 +945,8 @@ The value space of most properties are encoded as controlled vocabularies hosted
                 <th>Sub-classes</th>
                 <td>
                     <a href="#Landform">Landform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Landsurface">Land surface</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Landcover,includingvegetation">Land cover, including vegetation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Landsurface">Land surface</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Soilbody">Soil body</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -953,7 +975,7 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Scope Notes</th>
                 <td>
-                    <p>'Site' is a geospatial entity (feature) which has a geometry (incl. location)</p>
+                    <p>More specific types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site</p>
                 </td>
             </tr>
             <tr>
@@ -965,17 +987,17 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#haslandform">has landform</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">min</span> 1<br/>
-                    <a href="#haslanduse">has land use</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#drainageofsiteorprofile">drainage of site or profile</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Site-drainage">sp:Site-drainage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#relatedproject">related project</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#disturbance">disturbance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Disturbance-of-site">ls:Disturbance-of-site</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#haslandcover">has land cover</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/isSampleOf">sosa:isSampleOf</a> <span class="cardinality">some</span> <a href="#Landscapeentity">Landscape entity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#haslandmanagement">has land management</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#haslandsurface">has land surface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#disturbance">disturbance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Disturbance-of-site">ls:Disturbance-of-site</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#type">type</a> <span class="cardinality">min</span> 0<br/>
-                    <a href="#haslandcover">has land cover</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#haslandsurface">has land surface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#drainageofsiteorprofile">drainage of site or profile</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Site-drainage">sp:Site-drainage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#haslanduse">has land use</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#haslandform">has landform</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="#relatedproject">related project</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -1040,21 +1062,21 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="#height">height</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#hasgilgaimicrorelief">has gilgai microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#length">length</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#hasbioticmicrorelief">has biotic microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#component">component</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Microrelief-component-sampled">ls:Microrelief-component-sampled</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hashummockymicrorelief">has hummocky microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#hasothermicrorelief">has other microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#height">height</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#component">component</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Microrelief-component-sampled">ls:Microrelief-component-sampled</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasbioticmicrorelief">has biotic microrelief</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#length">length</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Bioticmicrorelief">Biotic microrelief</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#Hummockymicrorelief">Hummocky microrelief</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Othermicrorelief">Other microrelief</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Hummockymicrorelief">Hummocky microrelief</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Bioticmicrorelief">Biotic microrelief</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Gilgaimicrorelief">Gilgai microrelief</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1211,12 +1233,12 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#contrast">contrast</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-contrast">sp:Mottle-contrast</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-size">sp:Mottle-size</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#colour">colour</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-colour">sp:Mottle-colour</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#type">type</a> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-type">sp:Mottle-type</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#distinctness">distinctness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-distinctness">sp:Mottle-distinctness</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#contrast">contrast</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-contrast">sp:Mottle-contrast</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#colour">colour</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-colour">sp:Mottle-colour</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-abundance">sp:Mottle-abundance</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#distinctness">distinctness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-distinctness">sp:Mottle-distinctness</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Mottle-size">sp:Mottle-size</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1244,8 +1266,8 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Rock-outcrop-abundance">ls:Rock-outcrop-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#lithology">lithology</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 ()<br/>
+                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/land-surface/Rock-outcrop-abundance">ls:Rock-outcrop-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1273,10 +1295,10 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#structure">structure</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pans-structure">sp:Pans-structure</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#type">type</a> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/soil-profile/Pans-type">sp:Pans-type</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#cementation">cementation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pans-cementation">sp:Pans-cementation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#structure">structure</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pans-structure">sp:Pans-structure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#continuity">continuity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pans-continuity">sp:Pans-continuity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#type">type</a> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/soil-profile/Pans-type">sp:Pans-type</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1304,14 +1326,14 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 ()<br/>
                     <a href="#diameter">diameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pore-diameter">sp:Pore-diameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 ()<br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#linktodescriptionofmacropores">link to description of macropores</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasmacropores">has macropores</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1333,8 +1355,8 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Root-abundance">sp:Root-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#diameter">diameter</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Root-size">sp:Root-size</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Root-abundance">sp:Root-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1362,18 +1384,18 @@ The value space of most properties are encoded as controlled vocabularies hosted
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-abundance">sp:Segregations-abundance</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#strength">strength</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-strength">sp:Segregations-strength</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#shape">shape</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-form">sp:Segregations-form</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-size">sp:Segregations-size</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#material">material</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-nature">sp:Segregations-nature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#magneticattributes">magnetic attributes</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-magnetic-attributes">sp:Segregations-magnetic-attributes</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#shape">shape</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-form">sp:Segregations-form</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#strength">strength</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-strength">sp:Segregations-strength</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-size">sp:Segregations-size</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#abundance">abundance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Segregations-abundance">sp:Segregations-abundance</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="#hassegregations">has segregations</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#linktodescriptionofsegregations">link to description of segregations</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1427,39 +1449,49 @@ The value space of most properties are encoded as controlled vocabularies hosted
 
   prov:startedAtTime "2022-09-07T09:00:00+10:00"^^xsd:dateTime ;
 
-  ansis:relatedActivity my:O1-dens-A12-in-P1 ;
+  ansis:relatedActivity my:O1 ;
 
-  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
+  ansis:relatedActivity my:O3 ;
 
-  ansis:relatedActivity my:O3-dens-S2-L20-80-in-P1 ;
+  ansis:relatedActivity my:O4 ;
 
-  ansis:relatedActivity my:O4-dens-S3-20-40-in-P1 ;
-
-  ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
+  ansis:relatedActivity my:O5 ;
 
   ansis:relatedProject &lt;https://example.org/project-9765&gt; ;
 
-  ansis:relatedSite my:Site_1 ;
+  ansis:relatedSite my:St1 ;
 
   ansis:visitor &lt;https://orcid.org/0000-0002-0693-1899&gt; ;
 
+  ansis:visitor &lt;https://orcid.org/0000-0002-1805-2517&gt; ;
+
 .
 
-my:O1-dens-A12-in-P1
+my:O1
 
   a sosa:Observation ;
 
-  skos:prefLabel "Measurement of bulk density of a layer A12 in profile P1" ;
+  rdfs:comment "Measurement of bulk density of a layer A12 in profile P1" ;
 
-  sosa:hasFeatureOfInterest my:A12-in-P1 ;
+  sosa:hasFeatureOfInterest my:A12P1 ;
 
-  sosa:hasSimpleResult "1.4 g/cm3" ;
+  sosa:hasResult [
+
+      a qudt:QuantityValue ;
+
+      qudt:unit unit:GM-PER-CentiM3 ;
+
+      qudt:value "1.4" ;
+
+    ] ;
 
   sosa:observedProperty ansis:density-bulk ;
 
   sosa:resultTime "2022-09-14T11:35:00"^^xsd:dateTime ;
 
-.</pre><br/>
+.
+
+</pre><br/>
                 </td>
             </tr>
             <tr>
@@ -1471,13 +1503,13 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#endedAtTime">prov:endedAtTime</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#relatedactivity">related activity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 ()<br/>
-                    <a href="http://www.w3.org/ns/prov#startedAtTime">prov:startedAtTime</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#visitor">visitor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/prov#Person">prov:Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#purpose">purpose</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#relatedactivity">related activity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 ()<br/>
                     <a href="#relatedsite">related site</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/prov#endedAtTime">prov:endedAtTime</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#relatedproject">related project</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#visitor">visitor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/prov#Person">prov:Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/prov#startedAtTime">prov:startedAtTime</a> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -1547,8 +1579,8 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://purl.org/dc/terms/source">dcterms:source</a> <span class="cardinality">exactly</span> 1 <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#value">value</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://purl.org/dc/terms/source">dcterms:source</a> <span class="cardinality">exactly</span> 1 <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1601,23 +1633,25 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Horizon_B22s
+                    <pre>my:B22s
 
   a ansis:SoilHorizon ;
 
-  skos:prefLabel "Horizon B22s" ;
+  rdfs:comment "Horizon B22s" ;
 
   ansis:designation [
 
-      ansis:designation-master "B" ;
+      a ansis:HorizonDesignation ;
+
+      ansis:designation-master &lt;http://anzsoil.org/def/au/asls/soil-profile/horizons-B&gt; ;
 
       ansis:designation-subdivision "22" ;
 
-      ansis:designation-suffix "s" ;
+      ansis:designation-suffix &lt;http://anzsoil.org/def/au/asls/soil-profile/horizon-suffix-s&gt; ;
 
     ] ;
 
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 
 .</pre><br/>
                 </td>
@@ -1631,8 +1665,8 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#horizondesignation">horizon designation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#Soilhorizondesignation">Soil horizon designation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#distinctness">distinctness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Boundary-distinctness">sp:Boundary-distinctness</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#horizondesignation">horizon designation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#Soilhorizondesignation">Soil horizon designation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#shape">shape</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Boundary-shape">sp:Boundary-shape</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1669,7 +1703,7 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#horizondesignation">horizon designation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">value</span> <a href="ub1bL1573C20">ub1bL1573C20</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#horizondesignation">horizon designation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">value</span> <a href="ub1bL1602C20">ub1bL1602C20</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1715,26 +1749,26 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#hasmottles">has mottles</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#plasticity">plasticity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="#Soilplasticity">Soil plasticity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#texture">texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
-                    <a href="#structure">structure</a> <span class="cardinality">max</span> 1 <a href="#Soilstructure">Soil structure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hascoarsefragments">has coarse fragments</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#permeability">permeability</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Soil-permeability">sp:Soil-permeability</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#upperdepth">upper depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#linktodescriptionofmacropores">link to description of macropores</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#hassegregations">has segregations</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#hascutans">has cutans</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#hasroots">has roots</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#waterrepellence">water repellence</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Water-repellence">sp:Water-repellence</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#strength">strength</a> <span class="cardinality">max</span> 1 <a href="#Soilstrength">Soil strength</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#stickiness">stickiness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Consistence-stickiness">sp:Consistence-stickiness</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#haspans">has pans</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#lowerdepth">lower depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#hascracks">has cracks</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#plasticity">plasticity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="#Soilplasticity">Soil plasticity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasmacropores">has macropores</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#colour">colour</a> <span class="cardinality">only</span> <a href="#Soilcolour">Soil colour</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#strength">strength</a> <span class="cardinality">max</span> 1 <a href="#Soilstrength">Soil strength</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#fabric">fabric</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Fabric-type">sp:Fabric-type</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#lowerdepth">lower depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#hascutans">has cutans</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#structure">structure</a> <span class="cardinality">max</span> 1 <a href="#Soilstructure">Soil structure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#upperdepth">upper depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#linktodescriptionofsegregations">link to description of segregations</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#texture">texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
+                    <a href="#hascracks">has cracks</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#permeability">permeability</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Soil-permeability">sp:Soil-permeability</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#waterrepellence">water repellence</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Water-repellence">sp:Water-repellence</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasmottles">has mottles</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#hasroots">has roots</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#relatedsoilbody">related soil body</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#haspans">has pans</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#stickiness">stickiness</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Consistence-stickiness">sp:Consistence-stickiness</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1811,41 +1845,61 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Profile_1
+                    <pre>my:P1
 
   a ansis:SoilProfile ;
 
   geo:hasGeometry my:Point_1 ;
 
-  skos:prefLabel "profile 1" ;
+  rdfs:comment "profile 1" ;
 
-  sosa:isSampleOf my:Body-88 ;
+  sosa:isSampleOf my:B88 ;
 
-  ansis:classification-order &lt;http://anzsoil.org/def/au/asc/CH-AB&gt; ;
+  sosa:usedProcedure &lt;http://anzsoil.org/def/au/asls/soil-profile/observation-type-C&gt; ;
+
+  ansis:classification [
+
+      a ansis:ASC-SoilClassification ;
+
+      ansis:classification-order &lt;http://anzsoil.org/def/au/asc/CH&gt; ;
+
+      ansis:classification-suborder &lt;http://anzsoil.org/def/au/asc/AB&gt; ;
+
+    ] ;
 
   ansis:coarse-fragment-distribution &lt;http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R&gt; ;
 
-  ansis:depth-RHorizon "106 cm" ;
+  ansis:depth [
 
-  ansis:depth-Substrate "106 cm" ;
+      a qudt:QuantityValue ;
 
-  ansis:depth-lower "106 cm" ;
+      qudt:unit unit:CentiM ;
 
-  ansis:depth-upper "0 cm" ;
+      qudt:value "106." ;
 
-  ansis:relatedHorizon my:Horizon_A11 ;
+    ] ;
 
-  ansis:relatedHorizon my:Horizon_A12 ;
+  ansis:depth-reason "depth of interest" ;
 
-  ansis:relatedHorizon my:Horizon_A2 ;
+  ansis:purpose "characterisation" ;
 
-  ansis:relatedHorizon my:Horizon_B21s ;
+  ansis:relatedLayer my:A11 ;
 
-  ansis:relatedHorizon my:Horizon_B22s ;
+  ansis:relatedLayer my:A12 ;
 
-  ansis:relatedSite my:Site_1 ;
+  ansis:relatedLayer my:A2 ;
 
-  ansis:type-profile &lt;http://anzsoil.org/def/au/asls/soil-profile/observation-type-C&gt; ;
+  ansis:relatedLayer my:B21s ;
+
+  ansis:relatedLayer my:B22s ;
+
+  ansis:relatedLayer my:R ;
+
+  ansis:relatedSoilSite my:St1 ;
+
+  ansis:relatedSoilSurface my:Sf3 ;
+
+  ansis:relatedSubstrate my:Sb1 ;
 
 .</pre><br/>
                 </td>
@@ -1853,26 +1907,26 @@ my:O1-dens-A12-in-P1
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#drainageofsiteorprofile">drainage of site or profile</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Site-drainage">sp:Site-drainage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">exactly</span> 1 <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#purpose">purpose</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#depth">depth</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#relatedsoilsurface">related soil surface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Profile-construction">sp:Profile-construction</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#reasonforprofiledepth">reason for profile depth</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#hasclassification">has classification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
                     <a href="#relatedsoillayer">related soil layer</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
                     <a href="#hassubstrate">has substrate</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/isSampleOf">sosa:isSampleOf</a> <span class="cardinality">only</span> <a href="#Soilbody">Soil body</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasclassification">has classification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
+                    <a href="#reasonforprofiledepth">reason for profile depth</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#relatedsite">related site</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Profile-construction">sp:Profile-construction</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#depth">depth</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="#purpose">purpose</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">exactly</span> 1 <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#depthtoR-Horizon">depth to R-Horizon</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#drainageofsiteorprofile">drainage of site or profile</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Site-drainage">sp:Site-drainage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#relatedsoilsurface">related soil surface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/isSampleOf">sosa:isSampleOf</a> <span class="cardinality">only</span> <a href="#Soilbody">Soil body</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1883,10 +1937,10 @@ my:O1-dens-A12-in-P1
             </tr>
         </table>
     </div>
-    <div class="entity class" id="Sampleofsoilorsoilentity">
+    <div class="entity class" id="Soilsample">
         <h3>
-          Sample of soil or soil entity<sup title="class" class="sup-c">c</sup>
-          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Sampleofsoilorsoilentity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+          Soil sample<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Soilsample" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
         </h3>
         <table>
             <tr>
@@ -1898,41 +1952,78 @@ my:O1-dens-A12-in-P1
                 <td><img alt="Sample - class diagram" src="../fig/Sample.png"/></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    <p>Sample of soil or soil entity</p>
+<p>Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: </p>
+<ul>
+<li>
+<p><code>sosa:isSampleOf</code> to indicate the entity that this sample represents</p>
+</li>
+<li>
+<p><code>ansis:component</code> (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles</p>
+</li>
+<li>
+<p><code>ansis:relatedProfile</code> to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location)</p>
+</li>
+<li>
+<p><code>ansis:depth-lower</code> + <code>ansis:depth-upper</code> (if necessary) to indicate the precise depth range within the profile where the sample was taken</p>
+</li>
+</ul>
+                </td>
+            </tr>
+            <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:S3-20-40-in-P1
+                    <pre>my:A11P1
 
-  a ansis:Sample ;
+  a ansis:SoilSample ;
 
-  skos:prefLabel "Sample 3 from depth 20-40 in profile 1" ;
+  rdfs:comment "Horizon A11 in Profile 1" ;
 
-  sosa:isResultOf my:Sg-20-40-in-P1 ;
+  sosa:isSampleOf my:A11 ;
 
-  sosa:isSampleOf my:Body-88 ;
+  ansis:depth-lower [
 
-  ansis:depth-lower "40 cm" ;
+      a qudt:QuantityValue ;
 
-  ansis:depth-upper "20 cm" ;
+      qudt:unit unit:CentiM ;
 
-  ansis:relatedProfile my:Profile_1 ;
+      qudt:value "17." ;
+
+    ] ;
+
+  ansis:depth-upper [
+
+      a qudt:QuantityValue ;
+
+      qudt:unit unit:CentiM ;
+
+      qudt:value "0." ;
+
+    ] ;
+
+  ansis:relatedProfile my:P1 ;
+
+  ansis:type "simple" ;
 
 .
 
-my:Sg-20-40-in-P1
 
-  a sosa:Sampling ;
 
-  sosa:hasFeatureOfInterest my:Profile_1 ;
+my:A12P1R
 
-  sosa:hasResult my:S3-20-40-in-P1 ;
+  a ansis:SoilSample ;
 
-  sosa:madeBySampler &lt;mailto:peter.wilson@csiro.au&gt; ;
+  rdfs:comment "Roots component in Horizon A12 in Profile P1" ;
 
-  sosa:resultTime "2002-09-19T13:35:00"^^xsd:dateTime ;
+  sosa:isSampleOf my:A12P1 ;
 
-  sosa:usedProcedure &lt;https://example.org/soil-sampling-procedure-AVH&gt; ;
+  ansis:component ansis:Roots ;
 
-  ansis:relatedProject &lt;https://example.org/project-438&gt; ;
+  ansis:relatedProfile my:P1 ;
+
+  ansis:type "component" ;
 
 .</pre><br/>
                 </td>
@@ -1946,13 +2037,13 @@ my:Sg-20-40-in-P1
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/isSampleOf">sosa:isSampleOf</a> <span class="cardinality">only</span> (<a href="#Soillayer">Soil layer</a><sup class="sup-c" title="class">c</sup> or <a href="#Soilhorizon">Soil horizon</a><sup class="sup-c" title="class">c</sup> or <a href="#Soilsurface">Soil surface</a><sup class="sup-c" title="class">c</sup> or <a href="#Sampleofsoilorsoilentity">Sample of soil or soil entity</a><sup class="sup-c" title="class">c</sup>)<br/>
                     <a href="#lowerdepth">lower depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="https://anzsoil.org/def/au/domain/SoilSampleType">https://anzsoil.org/def/au/domain/SoilSampleType</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#component">component</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#component">component</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#relatedsoilprofile">related soil profile</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="#type">type</a> <span class="cardinality">max</span> 1 <a href="https://anzsoil.org/def/au/domain/SoilSampleType">https://anzsoil.org/def/au/domain/SoilSampleType</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#upperdepth">upper depth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#component">component</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#relatedsoilprofile">related soil profile</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/isSampleOf">sosa:isSampleOf</a> <span class="cardinality">only</span> (<a href="#Soillayer">Soil layer</a><sup class="sup-c" title="class">c</sup> or <a href="#Soilhorizon">Soil horizon</a><sup class="sup-c" title="class">c</sup> or <a href="#Soilsurface">Soil surface</a><sup class="sup-c" title="class">c</sup> or <a href="#Soilsample">Soil sample</a><sup class="sup-c" title="class">c</sup>)<br/>
                 </td>
             </tr>
         </table>
@@ -1981,25 +2072,27 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Example(s)</th>
                 <td>
-                    <pre>my:Site_1
+                    <pre>my:St1
 
   a ansis:SoilSite ;
 
   geo:hasGeometry my:Polygon_1 ;
 
-  skos:prefLabel "site 1" ;
+  rdfs:comment "site 1" ;
 
   ansis:abundance-cover &lt;http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2&gt; ;
 
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-
-  ansis:has-erosion ls:erosion-wind ;
+  ansis:has-erosion &lt;http://anzsoil.org/def/au/asls/land-surface/erosion-wind&gt; ;
 
   ansis:has-land-use &lt;http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses&gt; ;
 
-  ansis:has-landform-element &lt;http://anzsoil.org/def/au/asls/landform/landform-element-PLA&gt; ;
+  ansis:hasCoarseFragments [
 
-  ansis:has-landform-pattern &lt;http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP&gt; ;
+      a ansis:CoarseFragments ;
+
+      ansis:abundance &lt;http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-2&gt; ;
+
+    ] ;
 
 .</pre><br/>
                 </td>
@@ -2013,11 +2106,11 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#sitedesign">site design</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#relatedsoilsurface">related soil surface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#surveydesign">survey design</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="#hassubstrate">has substrate</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#relatedsoilsurface">related soil surface</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="#purpose">purpose</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#hassubstrate">has substrate</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#sitedesign">site design</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/isSampleOf">sosa:isSampleOf</a> <span class="cardinality">max</span> 1 <a href="#Soilbody">Soil body</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -2046,8 +2139,8 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#strength">strength</a> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Consistence-strength">sp:Consistence-strength</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#moisturestatus">moisture status</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Soil-water-status">sp:Soil-water-status</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#strength">strength</a> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Consistence-strength">sp:Consistence-strength</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2073,12 +2166,24 @@ Samples are taken from profiles, and observations made on those samples in order
                 </td>
             </tr>
             <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>[
+
+      a ansis:SoilStructure ;
+
+      ansis:grade &lt;http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M&gt; ;
+
+]</pre><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pedality-size">sp:Pedality-size</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#type">type</a> <span class="cardinality">only</span> <a href="http://anzsoil.org/def/au/asls/soil-profile/Pedality-type">sp:Pedality-type</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#grade">grade</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 ()<br/>
                     <a href="#compoundpedality">compound pedality</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#size">size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Pedality-size">sp:Pedality-size</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2138,9 +2243,9 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="#hascoarsefragments">has coarse fragments</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
                     <a href="#waterrepellence">water repellence</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Water-repellence">sp:Water-repellence</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#conditionwhendry">condition when dry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Surface-condition">sp:Surface-condition</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hascoarsefragments">has coarse fragments</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
                 </td>
             </tr>
             <tr>
@@ -2174,13 +2279,13 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="#migrationrate">migration rate</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-migration">lf:Channel-migration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#development">development</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-development">lf:Channel-development</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#pattern">pattern</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-pattern">lf:Channel-pattern</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#networkintegration">network integration</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-integration">lf:Channel-integration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#directionality">directionality</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-directionality">lf:Channel-directionality</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#spacing">spacing </a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-spacing">lf:Channel-spacing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#depthwidthratio">depth width ratio</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-depth-width">lf:Channel-depth-width</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#development">development</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-development">lf:Channel-development</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#migrationrate">migration rate</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-migration">lf:Channel-migration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#directionality">directionality</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-directionality">lf:Channel-directionality</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#pattern">pattern</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/landform/Channel-pattern">lf:Channel-pattern</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2214,20 +2319,20 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#relatedsoilbody">related soil body</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="#texture">texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Field-texture">subst:Field-texture</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#distance">distance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/soil-profile/Profile-construction">sp:Profile-construction</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#grainsize">grain size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Substrate-grain-size">subst:Substrate-grain-size</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#distance">distance</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#lithology">lithology</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
+                    <a href="#confidence">confidence</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Confidence">subst:Confidence</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#depth">depth</a> <span class="cardinality">max</span> 1<br/>
                     <a href="#structure">structure</a> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Substrate-structure">subst:Substrate-structure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#alteration">alteration</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Rock-alteration">subst:Rock-alteration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#genesis">genesis</a> <span class="cardinality">max</span> 1 ()<br/>
+                    <a href="#texture">texture</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Field-texture">subst:Field-texture</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#relatedsoilbody">related soil body</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="#spacing">spacing </a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Substrate-discontinuity-spacing">subst:Substrate-discontinuity-spacing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#material">material</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Substrate-mineral-composition">subst:Substrate-mineral-composition</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#depth">depth</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="#confidence">confidence</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Confidence">subst:Confidence</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#alteration">alteration</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Rock-alteration">subst:Rock-alteration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#grainsize">grain size</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Substrate-grain-size">subst:Substrate-grain-size</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#strength">strength</a> <span class="cardinality">min</span> 1 <a href="http://anzsoil.org/def/au/asls/substrate/Material-strength">subst:Material-strength</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#lithology">lithology</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 ()<br/>
-                    <a href="#genesis">genesis</a> <span class="cardinality">max</span> 1 ()<br/>
                 </td>
             </tr>
             <tr>
@@ -2345,9 +2450,9 @@ Samples are taken from profiles, and observations made on those samples in order
         <li><a href="#hasmottles">has mottles</a></li>
         <li><a href="#hasoutcrop">has outcrop</a></li>
         <li><a href="#haspans">has pans</a></li>
-        <li><a href="#linktodescriptionofmacropores">link to description of macropores</a></li>
+        <li><a href="#hasmacropores">has macropores</a></li>
         <li><a href="#hasroots">has roots</a></li>
-        <li><a href="#hassegregations">has segregations</a></li>
+        <li><a href="#linktodescriptionofsegregations">link to description of segregations</a></li>
         <li><a href="#hasstreamchannel">has stream channel </a></li>
         <li><a href="#hassubstrate">has substrate</a></li>
         <li><a href="#height">height</a></li>
@@ -2431,6 +2536,20 @@ Samples are taken from profiles, and observations made on those samples in order
                 <th>Description</th>
                 <td>
                     <p>abundance of items</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>ansis:abundance [
+
+          a qudt:QuantityValue ;
+
+          qudt:unit unit:PERCENT ;
+
+          qudt:value "0." ;
+
+        ] ;</pre><br/>
                 </td>
             </tr>
         </table>
@@ -2949,6 +3068,20 @@ Samples are taken from profiles, and observations made on those samples in order
                 </td>
             </tr>
             <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>  ansis:density [
+
+      a qudt:QuantityValue ;
+
+      qudt:unit unit:GM-PER-CentiM3 ;
+
+      qudt:value "1.3" ;
+
+    ] ;</pre><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a><sup class="sup-c" title="class">c</sup>
@@ -2969,6 +3102,20 @@ Samples are taken from profiles, and observations made on those samples in order
                 <th>Description</th>
                 <td>
                     <p>depth from local surface to the base of the element</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>  ansis:depth-lower [
+
+      a qudt:QuantityValue ;
+
+      qudt:unit unit:CentiM ;
+
+      qudt:value "80." ;
+
+    ] ;</pre><br/>
                 </td>
             </tr>
             <tr>
@@ -3030,6 +3177,20 @@ Samples are taken from profiles, and observations made on those samples in order
                 </td>
             </tr>
             <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>  ansis:depth-upper [
+
+      a qudt:QuantityValue ;
+
+      qudt:unit unit:CentiM ;
+
+      qudt:value "58." ;
+
+    ] ;</pre><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Super-properties</th>
                 <td>
                     <a href="#depth">depth</a>
@@ -3072,7 +3233,7 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>designation of soil horizon with the sequence composing the Profile or Soil Body</p>
+                    <p>soil horizon designation</p>
                 </td>
             </tr>
             <tr>
@@ -3248,6 +3409,12 @@ Samples are taken from profiles, and observations made on those samples in order
                 <td><code>https://anzsoil.org/def/au/domain/distance</code></td>
             </tr>
             <tr>
+                <th>Description</th>
+                <td>
+                    <p>spatial separation of objects</p>
+                </td>
+            </tr>
+            <tr>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a><sup class="sup-c" title="class">c</sup>
@@ -3274,6 +3441,12 @@ Samples are taken from profiles, and observations made on those samples in order
                 <th>Scope Notes</th>
                 <td>
                     <p>In the context of a soil horizon, this refers to the distinctness of the lower boundary</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>  ansis:distinctness &lt;http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-G&gt; ;</pre><br/>
                 </td>
             </tr>
         </table>
@@ -3352,7 +3525,7 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>elevation of element above MSL</p>
+                    <p>elevation of element above a datum (usually MSL)</p>
                 </td>
             </tr>
             <tr>
@@ -3943,9 +4116,9 @@ Samples are taken from profiles, and observations made on those samples in order
             </tr>
         </table>
     </div>
-    <div class="entity property" id="linktodescriptionofmacropores">
-        <h3>link to description of macropores<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#linktodescriptionofmacropores" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="hasmacropores">
+        <h3>has macropores<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasmacropores" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
@@ -3983,9 +4156,9 @@ Samples are taken from profiles, and observations made on those samples in order
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hassegregations">
-        <h3>has segregations<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
-            <a href="#hassegregations" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+    <div class="entity property" id="linktodescriptionofsegregations">
+        <h3>link to description of segregations<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#linktodescriptionofsegregations" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
         </h3>
         <table>
             <tr>
@@ -4850,6 +5023,12 @@ Samples are taken from profiles, and observations made on those samples in order
                     <p>material texture, in terms of particle size distribution and component materials</p>
                 </td>
             </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>  ansis:texture &lt;http://anzsoil.org/def/au/asls/soil-profile/field-texture-LMC&gt; ;</pre><br/>
+                </td>
+            </tr>
         </table>
     </div>
     <div class="entity property" id="underlyingmaterial">
@@ -5124,7 +5303,7 @@ Samples are taken from profiles, and observations made on those samples in order
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>depth of entity</p>
+                    <p>depth from local surface of entity</p>
                 </td>
             </tr>
         </table>
@@ -5210,6 +5389,18 @@ Samples are taken from profiles, and observations made on those samples in order
                 <th>Description</th>
                 <td>
                     <p>internal arrangement of elements of the material or entity</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example(s)</th>
+                <td>
+                    <pre>  ansis:structure [
+
+      a ansis:SoilStructure ;
+
+      ansis:grade &lt;http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M&gt; ;
+
+    ] ;</pre><br/>
                 </td>
             </tr>
         </table>
