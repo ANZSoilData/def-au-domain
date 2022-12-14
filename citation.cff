@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Cox
+    given-names: Simon
+    orcid: https://orcid.org/0000-0002-3884-3420
+  - family-names: Wong
+    given-names: Megan
+    orcid: https://orcid.org/0000-0002-2991-2308
+title: "ANSIS Information Model"
+version: 1.0
+url: https://anzsoil.org/def/au/domain
+date-released: 2022-12-15
+license: CC0
+license-url: https://creativecommons.org/choose/zero/
+abstract: >
+  A domain-model for Australian soil data, including observations and sampling.
+
+  This domain model was developed in 2022 for the Australian National Soil Information System (ANSIS). It is based primarily on the elements described in the Australian Soil and Land Survey Field Handbook (ASLS). The value space of most properties are encoded as controlled vocabularies hosted, which are currently available from Research Vocabularies Australia.
+
+  The model is formalized as an OWL Ontology. Cardinalities and property value-spaces are encoded as owl:Restrictions.
