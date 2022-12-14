@@ -649,7 +649,6 @@ ansis:Landform
 ansis:LandformElement
   a owl:Class ;
   a skos:Collection ;
-  rdfs:subClassOf ansis:Landform ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -725,6 +724,7 @@ ansis:LandformElement
       owl:onClass lf:Slope-class ;
       owl:onProperty ansis:slope ;
     ] ;
+  skos:definition "Landform element (~40m)" ;
   skos:member ansis:agent ;
   skos:member ansis:geomorphologyMode ;
   skos:member ansis:height ;
@@ -736,12 +736,11 @@ ansis:LandformElement
   skos:member ansis:type ;
   skos:member ansis:underlyingMaterial ;
   skos:member ansis:width ;
-  skos:prefLabel "Landform element (~40m)" ;
+  skos:prefLabel "Landform element" ;
 .
 ansis:LandformPattern
   a owl:Class ;
   a skos:Collection ;
-  rdfs:subClassOf ansis:Landform ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -807,13 +806,14 @@ ansis:LandformPattern
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasLandformElement ;
     ] ;
+  skos:definition "Landform pattern (>600m)" ;
   skos:member ansis:LandformElement ;
   skos:member ansis:agent ;
   skos:member ansis:geomorphologyMode ;
   skos:member ansis:geomorphologyStatus ;
   skos:member ansis:hasLandformElement ;
   skos:member ansis:relief ;
-  skos:prefLabel "Landform pattern (>600m)" ;
+  skos:prefLabel "Landform pattern" ;
 .
 ansis:LandscapeEntity
   a owl:Class ;
@@ -920,7 +920,8 @@ ansis:Literal
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:value ;
     ] ;
-  skos:prefLabel "Literal value (text)" ;
+  skos:definition "Generic container class for objects with a 'literal' value (i.e. text-string, number, etc) " ;
+  skos:prefLabel "Literal value" ;
 .
 ansis:Microrelief
   a owl:Class ;
@@ -1080,13 +1081,14 @@ ansis:Mottles
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "Mottles and other colour patterns" ;
   skos:member ansis:abundance ;
   skos:member ansis:colour ;
   skos:member ansis:contrast ;
   skos:member ansis:distinctness ;
   skos:member ansis:size ;
   skos:member ansis:type ;
-  skos:prefLabel "Mottles and other colour patterns" ;
+  skos:prefLabel "Mottles" ;
 .
 ansis:Outcrop
   a owl:Class ;
@@ -1366,7 +1368,13 @@ ansis:SoilBody
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:SoilClassification ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              ansis:SoilClassification
+              ansis:ASC-SoilClassification
+            ) ;
+        ] ;
       owl:onProperty ansis:classification ;
     ] ;
   skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
@@ -1759,7 +1767,13 @@ ansis:SoilProfile
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ansis:SoilClassification ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              ansis:SoilClassification
+              ansis:ASC-SoilClassification
+            ) ;
+        ] ;
       owl:onProperty ansis:classification ;
     ] ;
   rdfs:subClassOf [
@@ -2041,11 +2055,12 @@ ansis:SoilStructure
       owl:onProperty ansis:grade ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "Soil structure or pedality" ;
   skos:member ansis:compound-pedality ;
   skos:member ansis:grade ;
   skos:member ansis:size ;
   skos:member ansis:type ;
-  skos:prefLabel "Soil structure (pedality)" ;
+  skos:prefLabel "Soil structure" ;
 .
 ansis:SoilSuborder
   a owl:Class ;
@@ -2130,6 +2145,7 @@ ansis:StreamChannel
       owl:onClass lf:Channel-spacing ;
       owl:onProperty ansis:spacing ;
     ] ;
+  skos:definition "Stream channel details" ;
   skos:member ansis:depth-width-ratio ;
   skos:member ansis:development ;
   skos:member ansis:directionality ;
@@ -2137,7 +2153,7 @@ ansis:StreamChannel
   skos:member ansis:migration-rate ;
   skos:member ansis:pattern ;
   skos:member ansis:spacing ;
-  skos:prefLabel "Stream channel details" ;
+  skos:prefLabel "Stream channel" ;
 .
 ansis:Substrate
   a owl:Class ;
@@ -2448,8 +2464,8 @@ ansis:classification-greatgroup
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:definition "soil classification - great group" ;
-  skos:prefLabel "classification - great group" ;
+  skos:definition "soil classification - Great group" ;
+  skos:prefLabel "classification - Great group" ;
 .
 ansis:classification-order
   a owl:ObjectProperty ;
@@ -2457,8 +2473,8 @@ ansis:classification-order
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:definition "soil classification - order" ;
-  skos:prefLabel "classification - order" ;
+  skos:definition "soil classification - Order" ;
+  skos:prefLabel "classification - Order" ;
 .
 ansis:classification-subgroup
   a owl:ObjectProperty ;
@@ -2466,8 +2482,8 @@ ansis:classification-subgroup
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:definition "soil classification - subgroup" ;
-  skos:prefLabel "classification - subgroup" ;
+  skos:definition "soil classification - Subgroup" ;
+  skos:prefLabel "classification - Subgroup" ;
 .
 ansis:classification-suborder
   a owl:ObjectProperty ;
@@ -2475,8 +2491,8 @@ ansis:classification-suborder
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:ASC-SoilClassification ;
   rdfs:subPropertyOf skos:notation ;
-  skos:definition "soil classification - sub-order" ;
-  skos:prefLabel "classification - sub-order" ;
+  skos:definition "soil classification - Sub-order" ;
+  skos:prefLabel "classification - Sub-order" ;
 .
 ansis:colour
   a rdf:Property ;
@@ -2836,7 +2852,7 @@ ansis:frequency
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:Inundation ;
   schema:rangeIncludes ls:Inundation-frequency ;
-  rdfs:range qudt:QuantityValue ;
+  schema:rangeIncludes qudt:QuantityValue ;
   skos:definition "temporal frequency of event or phenomenon" ;
   skos:prefLabel "frequency" ;
 .
