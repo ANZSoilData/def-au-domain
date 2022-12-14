@@ -240,7 +240,7 @@ The value space of most properties are encoded as controlled vocabularies hosted
 
 The model is formalized as an OWL Ontology. Cardinalities and property value-spaces are encoded as owl:Restrictions. """ ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-12-09"^^xsd:date ;
+  dcterms:modified "2022-12-15"^^xsd:date ;
   dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
   dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
   dcterms:source """Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain
@@ -374,6 +374,15 @@ ansis:CoarseFragments
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:example """[
+      a ansis:CoarseFragments ;
+      ansis:abundance <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-3> ;
+      ansis:abundance [
+          a qudt:QuantityValue ;
+          qudt:unit unit:PERCENT ;
+          qudt:value \"10.\" ;
+        ]
+]""" ;
   skos:member ansis:abundance ;
   skos:member ansis:distribution ;
   skos:member ansis:lithology ;
@@ -1332,23 +1341,28 @@ ansis:SiteVisit
   a ansis:SiteVisit ;
   prov:endedAtTime \"2022-09-07T13:00:00+10:00\"^^xsd:dateTime ;
   prov:startedAtTime \"2022-09-07T09:00:00+10:00\"^^xsd:dateTime ;
-  ansis:relatedActivity my:O1-dens-A12-in-P1 ;
-  ansis:relatedActivity my:O2-dens-S1-A12-in-P1 ;
-  ansis:relatedActivity my:O3-dens-S2-L20-80-in-P1 ;
-  ansis:relatedActivity my:O4-dens-S3-20-40-in-P1 ;
-  ansis:relatedActivity my:O5-upperdepth-A12-in-P1 ;
+  ansis:relatedActivity my:O1 ;
+  ansis:relatedActivity my:O3 ;
+  ansis:relatedActivity my:O4 ;
+  ansis:relatedActivity my:O5 ;
   ansis:relatedProject <https://example.org/project-9765> ;
-  ansis:relatedSite my:Site_1 ;
+  ansis:relatedSite my:St1 ;
   ansis:visitor <https://orcid.org/0000-0002-0693-1899> ;
+  ansis:visitor <https://orcid.org/0000-0002-1805-2517> ;
 .
-my:O1-dens-A12-in-P1
+my:O1
   a sosa:Observation ;
-  skos:prefLabel \"Measurement of bulk density of a layer A12 in profile P1\" ;
-  sosa:hasFeatureOfInterest my:A12-in-P1 ;
-  sosa:hasSimpleResult \"1.4 g/cm3\" ;
+  rdfs:comment \"Measurement of bulk density of a layer A12 in profile P1\" ;
+  sosa:hasFeatureOfInterest my:A12P1 ;
+  sosa:hasResult [
+      a qudt:QuantityValue ;
+      qudt:unit unit:GM-PER-CentiM3 ;
+      qudt:value \"1.4\" ;
+    ] ;
   sosa:observedProperty ansis:density-bulk ;
   sosa:resultTime \"2022-09-14T11:35:00\"^^xsd:dateTime ;
-.""" ;
+.
+""" ;
   skos:member sosa:Actuation ;
   skos:member sosa:Observation ;
   skos:member sosa:Sampling ;
@@ -1463,15 +1477,16 @@ ansis:SoilHorizon
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
-  skos:example """my:Horizon_B22s
+  skos:example """my:B22s
   a ansis:SoilHorizon ;
-  skos:prefLabel \"Horizon B22s\" ;
+  rdfs:comment \"Horizon B22s\" ;
   ansis:designation [
-      ansis:designation-master \"B\" ;
+      a ansis:HorizonDesignation ;
+      ansis:designation-master <http://anzsoil.org/def/au/asls/soil-profile/horizons-B> ;
       ansis:designation-subdivision \"22\" ;
-      ansis:designation-suffix \"s\" ;
+      ansis:designation-suffix <http://anzsoil.org/def/au/asls/soil-profile/horizon-suffix-s> ;
     ] ;
-  ansis:relatedBody my:Body-88 ;
+  ansis:relatedBody my:B88 ;
 .""" ;
   skos:member ansis:CoarseFragments ;
   skos:member ansis:Cracks ;
@@ -1800,24 +1815,34 @@ ansis:SoilProfile
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
-  skos:example """my:Profile_1
+  skos:example """my:P1
   a ansis:SoilProfile ;
   geo:hasGeometry my:Point_1 ;
-  skos:prefLabel \"profile 1\" ;
-  sosa:isSampleOf my:Body-88 ;
-  ansis:classification-order <http://anzsoil.org/def/au/asc/CH-AB> ;
+  rdfs:comment \"profile 1\" ;
+  sosa:isSampleOf my:B88 ;
+  sosa:usedProcedure <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
+  ansis:classification [
+      a ansis:ASC-SoilClassification ;
+      ansis:classification-order <http://anzsoil.org/def/au/asc/CH> ;
+      ansis:classification-suborder <http://anzsoil.org/def/au/asc/AB> ;
+    ] ;
   ansis:coarse-fragment-distribution <http://anzsoil.org/def/au/asls/soil-profile/coarse-fragments-distribution-R> ;
-  ansis:depth-RHorizon \"106 cm\" ;
-  ansis:depth-Substrate \"106 cm\" ;
-  ansis:depth-lower \"106 cm\" ;
-  ansis:depth-upper \"0 cm\" ;
-  ansis:relatedHorizon my:Horizon_A11 ;
-  ansis:relatedHorizon my:Horizon_A12 ;
-  ansis:relatedHorizon my:Horizon_A2 ;
-  ansis:relatedHorizon my:Horizon_B21s ;
-  ansis:relatedHorizon my:Horizon_B22s ;
-  ansis:relatedSite my:Site_1 ;
-  ansis:type-profile <http://anzsoil.org/def/au/asls/soil-profile/observation-type-C> ;
+  ansis:depth [
+      a qudt:QuantityValue ;
+      qudt:unit unit:CentiM ;
+      qudt:value \"106.\" ;
+    ] ;
+  ansis:depth-reason \"depth of interest\" ;
+  ansis:purpose \"characterisation\" ;
+  ansis:relatedLayer my:A11 ;
+  ansis:relatedLayer my:A12 ;
+  ansis:relatedLayer my:A2 ;
+  ansis:relatedLayer my:B21s ;
+  ansis:relatedLayer my:B22s ;
+  ansis:relatedLayer my:R ;
+  ansis:relatedSoilSite my:St1 ;
+  ansis:relatedSoilSurface my:Sf3 ;
+  ansis:relatedSubstrate my:Sb1 ;
 .""" ;
   skos:member geo:hasGeometry ;
   skos:member sosa:isSampleOf ;
@@ -1896,23 +1921,42 @@ ansis:SoilSample
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:relatedProfile ;
     ] ;
-  skos:example """my:S3-20-40-in-P1
-  a ansis:Sample ;
-  skos:prefLabel \"Sample 3 from depth 20-40 in profile 1\" ;
-  sosa:isResultOf my:Sg-20-40-in-P1 ;
-  sosa:isSampleOf my:Body-88 ;
-  ansis:depth-lower \"40 cm\" ;
-  ansis:depth-upper \"20 cm\" ;
-  ansis:relatedProfile my:Profile_1 ;
+  skos:definition """Sample of soil or soil entity
+
+Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: 
+
+- `sosa:isSampleOf` to indicate the entity that this sample represents
+
+- `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles
+
+- `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location)
+
+- `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken""" ;
+  skos:example """my:A11P1
+  a ansis:SoilSample ;
+  rdfs:comment \"Horizon A11 in Profile 1\" ;
+  sosa:isSampleOf my:A11 ;
+  ansis:depth-lower [
+      a qudt:QuantityValue ;
+      qudt:unit unit:CentiM ;
+      qudt:value \"17.\" ;
+    ] ;
+  ansis:depth-upper [
+      a qudt:QuantityValue ;
+      qudt:unit unit:CentiM ;
+      qudt:value \"0.\" ;
+    ] ;
+  ansis:relatedProfile my:P1 ;
+  ansis:type \"simple\" ;
 .
-my:Sg-20-40-in-P1
-  a sosa:Sampling ;
-  sosa:hasFeatureOfInterest my:Profile_1 ;
-  sosa:hasResult my:S3-20-40-in-P1 ;
-  sosa:madeBySampler <mailto:peter.wilson@csiro.au> ;
-  sosa:resultTime \"2002-09-19T13:35:00\"^^xsd:dateTime ;
-  sosa:usedProcedure <https://example.org/soil-sampling-procedure-AVH> ;
-  ansis:relatedProject <https://example.org/project-438> ;
+
+my:A12P1R
+  a ansis:SoilSample ;
+  rdfs:comment \"Roots component in Horizon A12 in Profile P1\" ;
+  sosa:isSampleOf my:A12P1 ;
+  ansis:component ansis:Roots ;
+  ansis:relatedProfile my:P1 ;
+  ansis:type \"component\" ;
 .""" ;
   skos:member sosa:isSampleOf ;
   skos:member ansis:component ;
@@ -1921,8 +1965,8 @@ my:Sg-20-40-in-P1
   skos:member ansis:relatedProfile ;
   skos:member ansis:type ;
   skos:note """A soil sample must be associated to a profile. 
-In the case of a composite-sample, the 'virtual profile' is composed of multiple individual profiles at a single site or on a face. """ ;
-  skos:prefLabel "Sample of soil or soil entity" ;
+""" ;
+  skos:prefLabel "Soil sample" ;
 .
 ansis:SoilSite
   a owl:Class ;
@@ -1964,16 +2008,17 @@ ansis:SoilSite
     ] ;
   skos:definition """A site where samples, observations, and treatments of soil are carried out.  
 Samples are taken from profiles, and observations made on those samples in order to characterize the soil-body in which the site is located. """ ;
-  skos:example """my:Site_1
+  skos:example """my:St1
   a ansis:SoilSite ;
   geo:hasGeometry my:Polygon_1 ;
-  skos:prefLabel \"site 1\" ;
+  rdfs:comment \"site 1\" ;
   ansis:abundance-cover <http://anzsoil.org/def/au/asls/vegetation/cover-abundance-2> ;
-  ansis:coarse-fragment-abundance ls:coarse-fragments-abundance-2 ;
-  ansis:has-erosion ls:erosion-wind ;
+  ansis:has-erosion <http://anzsoil.org/def/au/asls/land-surface/erosion-wind> ;
   ansis:has-land-use <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Sown-grasses> ;
-  ansis:has-landform-element <http://anzsoil.org/def/au/asls/landform/landform-element-PLA> ;
-  ansis:has-landform-pattern <http://anzsoil.org/def/au/asls/landform/simple-erosional-landform-pattern-UP> ;
+  ansis:hasCoarseFragments [
+      a ansis:CoarseFragments ;
+      ansis:abundance <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-2> ;
+    ] ;
 .""" ;
   skos:member geo:hasGeometry ;
   skos:member sosa:isSampleOf ;
@@ -2056,6 +2101,10 @@ ansis:SoilStructure
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
   skos:definition "Soil structure or pedality" ;
+  skos:example """[
+      a ansis:SoilStructure ;
+      ansis:grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+]""" ;
   skos:member ansis:compound-pedality ;
   skos:member ansis:grade ;
   skos:member ansis:size ;
@@ -2314,6 +2363,11 @@ ansis:abundance
   schema:rangeIncludes sp:Root-abundance ;
   schema:rangeIncludes sp:Segregations-abundance ;
   skos:definition "abundance of items" ;
+  skos:example """ansis:abundance [
+          a qudt:QuantityValue ;
+          qudt:unit unit:PERCENT ;
+          qudt:value \"0.\" ;
+        ] ;""" ;
   skos:prefLabel "abundance" ;
 .
 ansis:agent
@@ -2588,6 +2642,11 @@ ansis:density
   schema:domainIncludes ansis:SoilLayer ;
   rdfs:range qudt:QuantityValue ;
   skos:definition "mass per unit volume of a substance" ;
+  skos:example """  ansis:density [
+      a qudt:QuantityValue ;
+      qudt:unit unit:GM-PER-CentiM3 ;
+      qudt:value \"1.3\" ;
+    ] ;""" ;
   skos:prefLabel "density" ;
 .
 ansis:depth
@@ -2625,6 +2684,11 @@ ansis:depth-lower
   rdfs:range qudt:QuantityValue ;
   rdfs:subPropertyOf ansis:depth ;
   skos:definition "depth from local surface to the base of the element" ;
+  skos:example """  ansis:depth-lower [
+      a qudt:QuantityValue ;
+      qudt:unit unit:CentiM ;
+      qudt:value \"80.\" ;
+    ] ;""" ;
   skos:prefLabel "lower depth" ;
 .
 ansis:depth-r-horizon
@@ -2655,6 +2719,11 @@ ansis:depth-upper
   rdfs:range qudt:QuantityValue ;
   rdfs:subPropertyOf ansis:depth ;
   skos:definition "depth from local surface to the top of the element" ;
+  skos:example """  ansis:depth-upper [
+      a qudt:QuantityValue ;
+      qudt:unit unit:CentiM ;
+      qudt:value \"58.\" ;
+    ] ;""" ;
   skos:prefLabel "upper depth" ;
 .
 ansis:depth-width-ratio
@@ -2784,6 +2853,7 @@ ansis:distinctness
   schema:rangeIncludes sp:Cutans-distinctness ;
   schema:rangeIncludes sp:Mottle-distinctness ;
   skos:definition "distinctness of boundary" ;
+  skos:example "  ansis:distinctness <http://anzsoil.org/def/au/asls/soil-profile/horizon-boundary-distinctness-G> ;" ;
   skos:prefLabel "distinctness" ;
   skos:scopeNote "In the context of a soil horizon, this refers to the distinctness of the lower boundary" ;
 .
@@ -3615,6 +3685,10 @@ ansis:structure
   schema:rangeIncludes subst:Substrate-structure ;
   schema:rangeIncludes ansis:SoilStructure ;
   skos:definition "internal arrangement of elements of the material or entity" ;
+  skos:example """  ansis:structure [
+      a ansis:SoilStructure ;
+      ansis:grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
+    ] ;""" ;
   skos:prefLabel "structure" ;
 .
 ansis:texture
@@ -3628,6 +3702,7 @@ ansis:texture
   schema:rangeIncludes sp:Field-texture-organic ;
   schema:rangeIncludes subst:Field-texture ;
   skos:definition "material texture, in terms of particle size distribution and component materials" ;
+  skos:example "  ansis:texture <http://anzsoil.org/def/au/asls/soil-profile/field-texture-LMC> ;" ;
   skos:prefLabel "texture" ;
 .
 ansis:type
