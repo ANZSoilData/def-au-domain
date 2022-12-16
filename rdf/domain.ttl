@@ -1,4 +1,5 @@
 # baseURI: https://anzsoil.org/def/au/domain
+# imports: http://anzsoil.org/def/au/asls/substrate
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.opengis.net/ont/geosparql
 # imports: http://www.opengis.net/ont/sf
@@ -698,13 +699,14 @@ The model is formalized as an OWL Ontology. Cardinalities and property value-spa
 
 ![Main classes and relationships in the ANSIS domain model](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Overview-noatts.png)""" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2022-12-15"^^xsd:date ;
+  dcterms:modified "2022-12-16"^^xsd:date ;
   dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
   dcterms:references <https://catalogue.nla.gov.au/Record/8558027> ;
   dcterms:source """Adapted from: Australian soil and land survey field handbook / The National Committee on Soil and Terrain
 Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) and the National Committee on Soil and Terrain""" ;
   dcterms:title "ANSIS Ontology" ;
   schema:codeRepository <https://github.com/ANZSoilData/def-au-domain> ;
+  owl:imports <http://anzsoil.org/def/au/asls/substrate> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
   owl:imports <http://www.opengis.net/ont/geosparql> ;
   owl:imports <http://www.opengis.net/ont/sf> ;
@@ -1992,6 +1994,7 @@ ansis:SoilHorizon
   skos:member ansis:SoilPlasticity ;
   skos:member ansis:SoilStrength ;
   skos:member ansis:SoilStructure ;
+  skos:member ansis:carbonate-effervescence ;
   skos:member ansis:chemistry ;
   skos:member ansis:colour ;
   skos:member ansis:density ;
@@ -2174,6 +2177,7 @@ ansis:SoilLayer
   skos:member ansis:SoilPlasticity ;
   skos:member ansis:SoilStrength ;
   skos:member ansis:SoilStructure ;
+  skos:member ansis:carbonate-effervescence ;
   skos:member ansis:chemistry ;
   skos:member ansis:colour ;
   skos:member ansis:density ;
@@ -2524,6 +2528,7 @@ ansis:SoilSite
   skos:member ansis:Landform ;
   skos:member ansis:Microrelief ;
   skos:member ansis:Outcrop ;
+  skos:member ansis:depth-free-water ;
   skos:member ansis:design-site ;
   skos:member ansis:design-survey ;
   skos:member ansis:disturbance ;
@@ -2536,6 +2541,7 @@ ansis:SoilSite
   skos:member ansis:hasLandform ;
   skos:member ansis:hasMicrorelief ;
   skos:member ansis:hasOutcrop ;
+  skos:member ansis:height-drainage ;
   skos:member ansis:location-in-element ;
   skos:member ansis:location-in-toposequence ;
   skos:member ansis:purpose ;
@@ -2573,7 +2579,13 @@ ansis:SoilStructure
   a skos:Collection ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom sp:Pedality-type ;
+      owl:allValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              sp:Pedality-type
+              sp:Artificial-aggregates-structure
+            ) ;
+        ] ;
       owl:onProperty ansis:type ;
     ] ;
   rdfs:subClassOf [
@@ -2943,7 +2955,11 @@ ansis:carbon
 .
 ansis:carbonate-effervescence
   a owl:ObjectProperty ;
+  a skos:Concept ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilHorizon ;
+  schema:domainIncludes ansis:SoilLayer ;
+  schema:rangeIncludes sp:Carbonate-effervescence ;
   rdfs:subPropertyOf ansis:chemistry ;
   skos:definition "effervescence of carbonate in fine earth" ;
   skos:prefLabel "effervescence of carbonate" ;
@@ -3171,6 +3187,20 @@ ansis:depth
   skos:definition "depth from local surface of entity" ;
   skos:prefLabel "depth" ;
 .
+ansis:depth-free-water
+  a owl:ObjectProperty ;
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilSite ;
+  rdfs:range qudt:QuantityValue ;
+  rdfs:subPropertyOf ansis:depth-upper ;
+  skos:definition """depth to free water at the site of soil observation, either above or below the soil surface, excluding litter and living vegetation
+
+Positive values indicate water above the soil surface
+
+Negative values indicate water below the soil surface""" ;
+  skos:prefLabel "depth to free water" ;
+.
 ansis:depth-gully
   a rdf:Property ;
   a skos:Concept ;
@@ -3206,7 +3236,7 @@ ansis:depth-r-horizon
   a sosa:ObservableProperty ;
   schema:domainIncludes ansis:SoilProfile ;
   rdfs:range qudt:QuantityValue ;
-  rdfs:subPropertyOf ansis:depth ;
+  rdfs:subPropertyOf ansis:depth-upper ;
   skos:definition "depth from local surface to the top of the R-Horizon" ;
   skos:prefLabel "depth to R-Horizon" ;
 .
@@ -3447,7 +3477,7 @@ ansis:genesis
   schema:rangeIncludes subst:Rock-genesis-sediments ;
   schema:rangeIncludes subst:Rock-genesis-unweathered ;
   schema:rangeIncludes subst:Rock-genesis-weathered ;
-  skos:definition "formation process for rock material" ;
+  skos:definition "formation process for material" ;
   skos:prefLabel "genesis" ;
 .
 ansis:geomorphologyMode
@@ -3757,7 +3787,9 @@ ansis:height
 .
 ansis:height-drainage
   a owl:ObjectProperty ;
+  a skos:Concept ;
   a sosa:ObservableProperty ;
+  schema:domainIncludes ansis:SoilSite ;
   rdfs:subPropertyOf ansis:height ;
   skos:definition "vertical extent of drainage" ;
   skos:prefLabel "drainage height" ;
@@ -3840,6 +3872,9 @@ ansis:material
 .
 ansis:method-elevation
   a owl:ObjectProperty ;
+  a skos:Concept ;
+  schema:domainIncludes ansis:LandSurface ;
+  schema:rangeIncludes ls:Elevation-evaluation-means ;
   rdfs:subPropertyOf sosa:usedProcedure ;
   skos:definition "means of evaluation of elevation" ;
   skos:prefLabel "elevation method" ;
@@ -4239,6 +4274,7 @@ ansis:type
   schema:rangeIncludes lf:Landform-element-name ;
   schema:rangeIncludes lf:Landform-pattern-erosional ;
   schema:rangeIncludes lf:Landform-pattern-name ;
+  schema:rangeIncludes sp:Artificial-aggregates-structure ;
   schema:rangeIncludes sp:Consistence-plasticity-type ;
   schema:rangeIncludes sp:Cutans-type ;
   schema:rangeIncludes sp:Fabric-type ;
