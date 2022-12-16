@@ -79,7 +79,6 @@ prov:Activity
 sosa:Actuation
   a owl:Class ;
   a skos:Collection ;
-  rdfs:comment "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Actuation"@en ;
   rdfs:subClassOf owl:Thing ;
@@ -133,7 +132,9 @@ sosa:Actuation
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty sosa:hasResult ;
     ] ;
-  skos:definition "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en ;
+  skos:definition """An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator. 
+
+![Actuation - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Actuation.png)"""@en ;
   skos:example "The activity of automatically closing a window if the temperature in a room drops below 20 degree Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. "@en ;
   skos:member sosa:actsOnProperty ;
   skos:member sosa:hasFeatureOfInterest ;
@@ -169,7 +170,6 @@ sosa:FeatureOfInterest
 sosa:Observation
   a owl:Class ;
   a skos:Collection ;
-  rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Observation"@en ;
   rdfs:subClassOf owl:Thing ;
@@ -248,7 +248,9 @@ sosa:Observation
       owl:onProperty ansis:relatedActivity ;
       owl:someValuesFrom ansis:SiteVisit ;
     ] ;
-  skos:definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+  skos:definition """Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with. 
+
+![Observation - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Observation.png)"""@en ;
   skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en ;
   skos:member sosa:hasFeatureOfInterest ;
   skos:member sosa:hasResult ;
@@ -301,8 +303,8 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
   skos:member sosa:isFeatureOfInterestOf ;
   skos:member sosa:isResultOf ;
   skos:member sosa:isSampleOf ;
-  skos:note "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly."@en ;
   skos:prefLabel "Sample"@en ;
+  skos:scopeNote "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly."@en ;
 .
 sosa:Sampler
   a owl:Class ;
@@ -326,7 +328,6 @@ sosa:Sampler
 sosa:Sampling
   a owl:Class ;
   a skos:Collection ;
-  rdfs:comment "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Sampling"@en ;
   rdfs:subClassOf owl:Thing ;
@@ -390,7 +391,9 @@ sosa:Sampling
       owl:onProperty ansis:relatedActivity ;
       owl:someValuesFrom ansis:SiteVisit ;
     ] ;
-  skos:definition "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en ;
+  skos:definition """An act of Sampling carries out a sampling Procedure to create or transform one or more samples. 
+
+![Sampling - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Sampling.png)"""@en ;
   skos:example "Crushing a rock sample in a ball mill."@en ;
   skos:example "Digging a pit through a soil sequence."@en ;
   skos:example "Dividing a field site into quadrants."@en ;
@@ -675,7 +678,9 @@ This domain model was developed in 2022 for the Australian National Soil Informa
 It is based primarily on the elements described in the Australian Soil and Land Survey Field Handbook (ASLS). 
 The value space of most properties are encoded as controlled vocabularies hosted, which are currently available from Research Vocabularies Australia. 
 
-The model is formalized as an OWL Ontology. Cardinalities and property value-spaces are encoded as owl:Restrictions. """ ;
+The model is formalized as an OWL Ontology. Cardinalities and property value-spaces are encoded as owl:Restrictions. 
+
+![Main classes and relationships in the ANSIS domain model](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Overview-noatts.png)""" ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2022-12-15"^^xsd:date ;
   dcterms:references <https://catalogue.nla.gov.au/Record/4273240> ;
@@ -690,7 +695,7 @@ Uses: Australian soil classification / R.F. Isbell (Raymond Frederick Isbell) an
   owl:imports <http://www.w3.org/ns/prov-o#> ;
   owl:imports ssn: ;
   owl:imports <https://linked.data.gov.au/def/project> ;
-  skos:note """1. usage of properties is encoded using schema:domainIncludes and schema:rangeIncludes annotations, generally in preference to rdfs:domain and rdfs:range
+  skos:scopeNote """1. usage of properties is encoded using schema:domainIncludes and schema:rangeIncludes annotations, generally in preference to rdfs:domain and rdfs:range
 
 2. Most classes are also tagged type=skos:Collection, and properties are tagged type=skos:Concept, with skos:member-ship arranged to support presentation of the Ontology in a simplified view in Research Vocabularies Australia - https://demo.vocabs.ardc.edu.au/viewById/966""" ;
 .
@@ -751,6 +756,7 @@ ansis:ASC-SoilClassification
       owl:onProperty ansis:classification-order ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Australian soil classification - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/ASC.png)" ;
   skos:example """[
       a ansis:SoilClassification ;
       ansis:classification-order \"CH\" ;
@@ -814,6 +820,7 @@ ansis:CoarseFragments
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Coarse fragments - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/CoarseFragments.png)" ;
   skos:example """[
       a ansis:CoarseFragments ;
       ansis:abundance <http://anzsoil.org/def/au/asls/land-surface/coarse-fragments-abundance-3> ;
@@ -863,6 +870,7 @@ ansis:Cutans
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Cutans - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Cutans.png)" ;
   skos:member ansis:abundance ;
   skos:member ansis:distinctness ;
   skos:member ansis:type ;
@@ -908,6 +916,7 @@ ansis:Erosion
       owl:onProperty ansis:type ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Erosion - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Erosion.png)" ;
   skos:member ansis:degree ;
   skos:member ansis:depth-gully ;
   skos:member ansis:height ;
@@ -979,6 +988,7 @@ ansis:Inundation
       owl:onProperty ansis:velocity ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Inundation - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Inundation.png)" ;
   skos:member ansis:depth ;
   skos:member ansis:duration ;
   skos:member ansis:frequency ;
@@ -1054,7 +1064,9 @@ ansis:LandSurface
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasErosion ;
     ] ;
-  skos:definition "surface landscape features of a site" ;
+  skos:definition """surface landscape features of a site
+
+![Landsurface - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/LandSurface.png)""" ;
   skos:member ansis:CoarseFragments ;
   skos:member ansis:Erosion ;
   skos:member ansis:Inundation ;
@@ -1085,13 +1097,15 @@ ansis:Landform
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasLandformPattern ;
     ] ;
-  skos:definition "landscape features within which the site is located" ;
+  skos:definition """landscape features within which the site is located
+
+![Landform - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Landform.png)""" ;
   skos:member ansis:LandformElement ;
   skos:member ansis:LandformPattern ;
   skos:member ansis:hasLandformElement ;
   skos:member ansis:hasLandformPattern ;
-  skos:note "The larger tiles, more than 600 m across, are called landform patterns….. The smaller tiles, which form mosaics within landform patterns, are about 40 m or more across. . These are called landform elements." ;
   skos:prefLabel "Landform" ;
+  skos:scopeNote "The larger tiles, more than 600 m across, are called landform patterns….. The smaller tiles, which form mosaics within landform patterns, are about 40 m or more across. . These are called landform elements." ;
 .
 ansis:LandformElement
   a owl:Class ;
@@ -1332,7 +1346,9 @@ ansis:LandsurveySite
       owl:onProperty sosa:isSampleOf ;
       owl:someValuesFrom ansis:LandscapeEntity ;
     ] ;
-  skos:definition "A Site established to make observations of landscape entities" ;
+  skos:definition """A Site established to make observations of landscape entities
+
+![Site - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Site.png)""" ;
   skos:member geo:hasGeometry ;
   skos:member sosa:isSampleOf ;
   skos:member ansis:Erosion ;
@@ -1358,10 +1374,13 @@ ansis:LandsurveySite
   skos:member ansis:relatedLandsurveySite ;
   skos:member ansis:type ;
   skos:prefLabel "Land survey site" ;
-  skos:scopeNote "'Site' acts as a kind of platform, where sensors may be deployed. " ;
-  skos:scopeNote "'Site' is a geospatial entity (feature) which has a geometry (incl. location)" ;
-  skos:scopeNote "'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity" ;
-  skos:scopeNote "More specific types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site" ;
+  skos:scopeNote """'Site' is a geospatial entity (feature) which has a geometry (incl. location)
+
+'Site' may be considered as a kind of Sample, since it is selected to be representative of a landscape entity
+
+'Site' acts as a kind of platform, where sensors may be deployed. 
+
+More specific types of site may include (i) SoilSite (ii) TERN Monitoring Site (iii) Farmer site""" ;
 .
 ansis:Literal
   a owl:Class ;
@@ -1412,6 +1431,7 @@ ansis:Microrelief
       owl:onClass ls:Microrelief-component-sampled ;
       owl:onProperty ansis:component ;
     ] ;
+  skos:definition "![Microrelief - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Microrelief.png)" ;
   skos:member ansis:Microrelief-biotic ;
   skos:member ansis:Microrelief-gilgai ;
   skos:member ansis:Microrelief-hummocky ;
@@ -1531,7 +1551,9 @@ ansis:Mottles
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:definition "Mottles and other colour patterns" ;
+  skos:definition """Mottles and other colour patterns
+
+![Mottles - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Mottles.png)""" ;
   skos:member ansis:abundance ;
   skos:member ansis:colour ;
   skos:member ansis:contrast ;
@@ -1562,6 +1584,7 @@ ansis:Outcrop
       owl:onProperty ansis:lithology ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Outcrop - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Outcrop.png)" ;
   skos:member ansis:abundance ;
   skos:member ansis:grain-size ;
   skos:member ansis:lithology ;
@@ -1596,6 +1619,7 @@ ansis:Pans
       owl:onClass sp:Pans-structure ;
       owl:onProperty ansis:structure ;
     ] ;
+  skos:definition "![Pans - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Pans.png)" ;
   skos:member ansis:cementation ;
   skos:member ansis:continuity ;
   skos:member ansis:structure ;
@@ -1623,6 +1647,7 @@ ansis:Pores
       owl:onProperty ansis:abundance ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Pores - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Pores.png)" ;
   skos:member ansis:abundance ;
   skos:member ansis:diameter ;
   skos:prefLabel "Pores" ;
@@ -1642,6 +1667,7 @@ ansis:Roots
       owl:onClass sp:Root-size ;
       owl:onProperty ansis:diameter ;
     ] ;
+  skos:definition "![Roots - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Roots.png)" ;
   skos:member ansis:abundance ;
   skos:member ansis:diameter ;
   skos:prefLabel "Roots" ;
@@ -1716,6 +1742,7 @@ ansis:Segregations
       owl:onProperty ansis:material ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Segregations - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Segregations.png)" ;
   skos:member ansis:abundance ;
   skos:member ansis:magnetic-attributes ;
   skos:member ansis:material ;
@@ -1728,8 +1755,8 @@ ansis:SiteType
   a owl:Class ;
   rdfs:subClassOf skos:Concept ;
   skos:definition "Type of land survey site e.g. monitoring, opportunistic, farm, pedology" ;
-  skos:note "e.g. monitoring, opportunistic, farm, pedology" ;
   skos:prefLabel "Type of site" ;
+  skos:scopeNote "e.g. monitoring, opportunistic, farm, pedology" ;
 .
 ansis:SiteVisit
   a owl:Class ;
@@ -1778,6 +1805,9 @@ ansis:SiteVisit
         ] ;
       owl:onProperty ansis:relatedActivity ;
     ] ;
+  skos:definition """A visit to a designated site, for the purpose of taking samples, making observations, and other activities
+
+![Sitevisit - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/SiteVisit.png)""" ;
   skos:example """my:visit-S1-2
   a ansis:SiteVisit ;
   prov:endedAtTime \"2022-09-07T13:00:00+10:00\"^^xsd:dateTime ;
@@ -1833,6 +1863,8 @@ ansis:SoilBody
       owl:onProperty ansis:classification ;
     ] ;
   skos:definition """part of the soil cover that is delineated at a scale useful for an application, and is homogeneous with regard to properties and/or spatial patterns. 
+
+![Soilbody - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/SoilBody.png)
 """ ;
   skos:example """my:Body-88
   a ansis:SoilBody ;
@@ -1855,8 +1887,8 @@ ansis:SoilBody
   skos:member ansis:relatedSample ;
   skos:member ansis:relatedSite ;
   skos:member ansis:relatedSoilSurface ;
-  skos:note "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
   skos:prefLabel "Soil body" ;
+  skos:scopeNote "A soil body is usually described as a sequence of layers or arrangement of soil horizons. This may be a single layer. " ;
 .
 ansis:SoilClassification
   a owl:Class ;
@@ -1917,7 +1949,9 @@ ansis:SoilHorizon
       owl:onProperty ansis:designation ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:definition "soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries " ;
+  skos:definition """soil layer which is compositionally and/or structurally homogeneous, delineated by pedological boundaries 
+
+![Soillayer - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Soillayer.png)""" ;
   skos:example """my:B22s
   a ansis:SoilHorizon ;
   rdfs:comment \"Horizon B22s\" ;
@@ -1969,8 +2003,8 @@ ansis:SoilHorizon
   skos:member ansis:structure ;
   skos:member ansis:texture ;
   skos:member ansis:waterRepellence ;
-  skos:note "Soil horizons are designated A1, B2, R etc. " ;
   skos:prefLabel "Soil horizon" ;
+  skos:scopeNote "Soil horizons are designated A1, B2, R etc. " ;
 .
 ansis:SoilHorizonR
   a owl:Class ;
@@ -2103,7 +2137,8 @@ ansis:SoilLayer
       owl:onProperty ansis:texture ;
     ] ;
   skos:definition """region within a soil body usually observed as a specified depth interval within a profile
-""" ;
+
+![Soillayer - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Soillayer.png)""" ;
   skos:example """my:Layer_20-80
   a ansis:SoilLayer ;
   skos:prefLabel \"layer 20-80 cm\" ;
@@ -2147,8 +2182,8 @@ ansis:SoilLayer
   skos:member ansis:structure ;
   skos:member ansis:texture ;
   skos:member ansis:waterRepellence ;
-  skos:note "A depth-defined layer could be considered to be a sample of a soil-body. " ;
   skos:prefLabel "Soil layer" ;
+  skos:scopeNote "A depth-defined layer could be considered to be a sample of a soil-body. " ;
 .
 ansis:SoilOrder
   a owl:Class ;
@@ -2171,8 +2206,8 @@ ansis:SoilPlasticity
     ] ;
   skos:member ansis:degree ;
   skos:member ansis:type ;
-  skos:note "Plasticity degree only applies to Normal plasticity" ;
   skos:prefLabel "Soil plasticity" ;
+  skos:scopeNote "Plasticity degree only applies to Normal plasticity" ;
 .
 ansis:SoilProfile
   a owl:Class ;
@@ -2255,7 +2290,9 @@ ansis:SoilProfile
       owl:onProperty ansis:purpose ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:definition "A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. " ;
+  skos:definition """A soil profile is a vertical section of a soil from the soil surface through all its horizons to parent material, other consolidated substrate material or selected depth in unconsolidated material. 
+
+![Soilprofile - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/SoilProfile.png)""" ;
   skos:example """my:P1
   a ansis:SoilProfile ;
   geo:hasGeometry my:Point_1 ;
@@ -2308,11 +2345,11 @@ ansis:SoilProfile
   skos:member ansis:relatedSite ;
   skos:member ansis:relatedSoilSurface ;
   skos:member ansis:type ;
-  skos:note """A soil profile is a local sample of a soil body. Importantly, it records the set of horizons present at this location. 
-Each horizon may then have a detailed description determined through a set of observations relating to the different characteristic properties. """ ;
-  skos:note "If type=composite, then it is expected that there are 2::n related profiles whose type=single" ;
-  skos:note "The geometry of a composite soil-profile is a polygon or set of points.  " ;
   skos:prefLabel "Soil profile" ;
+  skos:scopeNote """A soil profile is a local sample of a soil body. Importantly, it records the set of horizons present at this location. 
+Each horizon may then have a detailed description determined through a set of observations relating to the different characteristic properties. """ ;
+  skos:scopeNote "If type=composite, then it is expected that there are 2::n related profiles whose type=single" ;
+  skos:scopeNote "The geometry of a composite soil-profile is a polygon or set of points.  " ;
 .
 ansis:SoilSample
   a owl:Class ;
@@ -2365,14 +2402,16 @@ ansis:SoilSample
   skos:definition """Sample of soil or soil entity
 
 Sample is a key class in the context of observations. The sample is an intermediate object, which is intended to be representative of the entity that we wish to characterize. The relationship of the sample to the ultimate entity-of-interest is recorded through the following properties: 
-
+<br/>
 - `sosa:isSampleOf` to indicate the entity that this sample represents
-
+<br/>
 - `ansis:component` (if necessary) to indicate which component of the entity the observation related to, such as coarse-fragments or mottles
-
+<br/>
 - `ansis:relatedProfile` to indicate the 'profile' where it is taken (this may be a formal, complete profile, or an informal profile such as a shallow auger or shovel location)
+<br/>
+- `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken
 
-- `ansis:depth-lower` + `ansis:depth-upper` (if necessary) to indicate the precise depth range within the profile where the sample was taken""" ;
+![Sample - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Sample.png)""" ;
   skos:example """my:A11P1
   a ansis:SoilSample ;
   rdfs:comment \"Horizon A11 in Profile 1\" ;
@@ -2405,9 +2444,9 @@ my:A12P1R
   skos:member ansis:depth-upper ;
   skos:member ansis:relatedProfile ;
   skos:member ansis:type ;
-  skos:note """A soil sample must be associated to a profile. 
-""" ;
   skos:prefLabel "Soil sample" ;
+  skos:scopeNote """A soil sample must be associated to a profile. 
+""" ;
 .
 ansis:SoilSite
   a owl:Class ;
@@ -2448,7 +2487,8 @@ ansis:SoilSite
       owl:onProperty ansis:design-survey ;
     ] ;
   skos:definition """A site where samples, observations, and treatments of soil are carried out.  
-Samples are taken from profiles, and observations made on those samples in order to characterize the soil-body in which the site is located. """ ;
+
+![Site - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Site.png)""" ;
   skos:example """my:St1
   a ansis:SoilSite ;
   geo:hasGeometry my:Polygon_1 ;
@@ -2490,6 +2530,7 @@ Samples are taken from profiles, and observations made on those samples in order
   skos:member ansis:relatedSoilSurface ;
   skos:member ansis:type ;
   skos:prefLabel "Soil site" ;
+  skos:scopeNote "Samples are taken from profiles, and observations made on those samples in order to characterize the soil-body in which the site is located. " ;
 .
 ansis:SoilStrength
   a owl:Class ;
@@ -2506,6 +2547,7 @@ ansis:SoilStrength
       owl:onProperty ansis:moisture-status ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
+  skos:definition "![Soilstrength - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/SoilStrength.png)" ;
   skos:member ansis:moisture-status ;
   skos:member ansis:strength ;
   skos:prefLabel "Soil strength" ;
@@ -2541,7 +2583,9 @@ ansis:SoilStructure
       owl:onProperty ansis:grade ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:definition "Soil structure or pedality" ;
+  skos:definition """Soil structure or pedality
+
+![Soilstructure - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/SoilStructure.png)""" ;
   skos:example """[
       a ansis:SoilStructure ;
       ansis:grade <http://anzsoil.org/def/au/asls/soil-profile/structure-pedality-grade-M> ;
@@ -2577,7 +2621,9 @@ ansis:SoilSurface
       owl:minCardinality "0"^^xsd:nonNegativeInteger ;
       owl:onProperty ansis:hasCoarseFragments ;
     ] ;
-  skos:definition "the surface of the soil body" ;
+  skos:definition """the surface of the soil body
+
+![Soilsurface - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/SoilSurface.png)""" ;
   skos:example """my:Surface_3
   a ansis:SoilSurface ;
   skos:prefLabel \"Soil surface 3\" ;
@@ -2635,7 +2681,9 @@ ansis:StreamChannel
       owl:onClass lf:Channel-spacing ;
       owl:onProperty ansis:spacing ;
     ] ;
-  skos:definition "Stream channel details" ;
+  skos:definition """Stream channel details
+
+![Streamchannel - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/StreamChannel.png)""" ;
   skos:member ansis:depth-width-ratio ;
   skos:member ansis:development ;
   skos:member ansis:directionality ;
@@ -2748,7 +2796,9 @@ ansis:Substrate
       owl:onProperty ansis:texture ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
-  skos:definition "observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil." ;
+  skos:definition """observed or inferred materials and masses of earth or rock that do not show pedological development. They are not soils, but typically underlie them. The substrate includes the R horizon and that part of the C horizon that shows no pedological development, but excludes the solum, buried soil horizons (including D horizons), and pans. The substrate beneath a soil profile may or may not be the parent material of the soil.
+
+![Substrate - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Substrate.png)""" ;
   skos:member sosa:usedProcedure ;
   skos:member ansis:alteration ;
   skos:member ansis:confidence ;
@@ -2774,7 +2824,9 @@ ansis:Treatment
       owl:onProperty ansis:relatedActivity ;
       owl:someValuesFrom ansis:SiteVisit ;
     ] ;
-  skos:definition "Intervention or treatment" ;
+  skos:definition """Intervention or treatment
+
+![Actuation - class diagram](https://raw.githubusercontent.com/ANZSoilData/def-au-domain/main/fig/Actuation.png)""" ;
   skos:member sosa:actsOnProperty ;
   skos:member sosa:hasFeatureOfInterest ;
   skos:member sosa:madeByActuator ;
@@ -4252,7 +4304,7 @@ Project stakeholders are indicated using `prov:wasAssociatedWith` or the `prov:q
 
 Activities within a project are indicated using the `proj:hasSubActivity` (simple) or `proj:subActivityAssociation` properties - the latter allowing the nature of the relationshp to be described as well. 
 
-![Project details](../images/Project.png)
+![Project details](https://dr-shorthair.github.io/project-ont/images/Project.png)
 
 """ ;
   rdfs:label "Project" ;
