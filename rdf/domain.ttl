@@ -60,8 +60,10 @@ geo:hasGeometry
 .
 prov:Activity
   a owl:Class ;
+  dcterms:source <https://www.w3.org/TR/prov-o/> ;
   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
   rdfs:label "Activity" ;
+  rdfs:seeAlso <https://www.w3.org/TR/prov-o/> ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -79,8 +81,10 @@ prov:Activity
 sosa:Actuation
   a owl:Class ;
   a skos:Collection ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Actuation"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -145,9 +149,11 @@ sosa:Actuation
 .
 sosa:FeatureOfInterest
   a owl:Class ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Feature Of Interest"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -170,8 +176,10 @@ sosa:FeatureOfInterest
 sosa:Observation
   a owl:Class ;
   a skos:Collection ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Observation"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -267,6 +275,7 @@ sosa:Observation
 sosa:Sample
   a owl:Class ;
   a skos:Collection ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:comment "A Sample is the result from an act of Sampling."@en ;
   rdfs:comment "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en ;
   rdfs:comment "Physical samples are sometimes known as 'specimens'."@en ;
@@ -275,6 +284,7 @@ sosa:Sample
 A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features."""@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Sample"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf sosa:FeatureOfInterest ;
   rdfs:subClassOf sosa:Result ;
   rdfs:subClassOf [
@@ -308,9 +318,11 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 .
 sosa:Sampler
   a owl:Class ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:comment "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Sampler"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf ssn:System ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -328,8 +340,10 @@ sosa:Sampler
 sosa:Sampling
   a owl:Class ;
   a skos:Collection ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Sampling"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -419,9 +433,11 @@ sosa:Sampling
 .
 sosa:Sensor
   a owl:Class ;
+  dcterms:source <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
   rdfs:isDefinedBy sosa: ;
   rdfs:label "Sensor"@en ;
+  rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn/> ;
   rdfs:subClassOf ssn:System ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -4304,10 +4320,10 @@ Project stakeholders are indicated using `prov:wasAssociatedWith` or the `prov:q
 
 Activities within a project are indicated using the `proj:hasSubActivity` (simple) or `proj:subActivityAssociation` properties - the latter allowing the nature of the relationshp to be described as well. 
 
-![Project details](https://dr-shorthair.github.io/project-ont/images/Project.png)
-
-""" ;
+![Project details](https://dr-shorthair.github.io/project-ont/images/Project.png)""" ;
+  dcterms:source <https://linked.data.gov.au/def/project> ;
   rdfs:label "Project" ;
+  rdfs:seeAlso <https://linked.data.gov.au/def/project> ;
   rdfs:subClassOf prov:Activity ;
   rdfs:subClassOf [
       a owl:Restriction ;
