@@ -18,7 +18,7 @@ A layer is not necessarily homogenous in its properties - some properties of a l
 
 A depth-defined layer could be considered a sample of a soil-body.
 
-![Soil layers and horizons](../fig/Soil-layer.png)
+![Soil layers and horizons](../fig/Soillayer.png)
 
 (text from [ASLS](https://catalogue.nla.gov.au/Record/4273240))
 
