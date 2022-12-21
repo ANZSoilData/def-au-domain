@@ -16,7 +16,7 @@ Where samples are composited from several physical profiles, we associate these 
 
 Soil profiles may be be classified using the order-suborder-greatgroup-subgroup-family system. 
 
-![Soil profile](../fig/Soil-profile.png)
+![Soil profile](../fig/Soil-profile-noatts.png)
 
 (text from [ASLS](https://catalogue.nla.gov.au/Record/4273240))
 
