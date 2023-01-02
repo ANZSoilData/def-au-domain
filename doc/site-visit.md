@@ -4,4 +4,5 @@ A visit to a [site](site.md) for the purpose(s) of one or more sub-activities, i
 
 Establishing the site might be considered to be the first act of sampling. 
 
-![Site visit and associated activities](../fig/Site-visit.png)
+![Site visit and associated activities](../fig/SiteVisit.png)
+
