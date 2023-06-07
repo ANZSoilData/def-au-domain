@@ -2891,6 +2891,13 @@ ansis:abundance
         ] ;""" ;
   skos:prefLabel "abundance" ;
 .
+ansis:acidNeutralisingCapacity
+  a owl:ObjectProperty ;
+  a sosa:ObservableProperty ;
+  rdfs:range qudt:QuantityValue ;
+  rdfs:subPropertyOf ansis:chemistry ;
+  skos:prefLabel "acidNeutralisingCapacity" ;
+.
 ansis:agent
   a owl:ObjectProperty ;
   a skos:Concept ;
