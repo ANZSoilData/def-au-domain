@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this dataset, please cite it as below."
 authors:
   - family-names: Cox
     given-names: Simon
@@ -8,7 +8,8 @@ authors:
     given-names: Megan
     orcid: https://orcid.org/0000-0002-2991-2308
 title: "ANSIS Information Model"
-version: 1.0
+version: 1.0.0
+doi: 10.5281/zenodo.15321470
 url: https://anzsoil.org/def/au/domain
 date-released: 2022-12-15
 license: CC0
