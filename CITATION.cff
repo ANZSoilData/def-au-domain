@@ -10,7 +10,8 @@ authors:
 title: "ANSIS Information Model"
 version: 1.0.0
 doi: 10.5281/zenodo.15321470
-url: https://anzsoil.org/def/au/domain
+repository-code: 'https://anzsoil.org/def/au/domain'
+url: 'https://raw.githack.com/ANZSoilData/def-au-domain/main/doc/domain.html'
 date-released: 2022-12-15
 license: CC0
 license-url: https://creativecommons.org/choose/zero/
