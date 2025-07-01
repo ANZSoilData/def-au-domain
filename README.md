@@ -1,4 +1,7 @@
-# ANSIS model for soil surveys and observations
+# ANSIS ontology for soil surveys and observations
+
+Cite as: ![image](https://github.com/user-attachments/assets/6ba6bcf0-52d8-40d9-a1da-28a38b417e5c)
+
 
 The ANSIS domain-model for soils, in the form of a set of classes and properties that define the entities ('features' in GIS-speak) that comprise the important concepts in soils.
 
